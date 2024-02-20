@@ -1,0 +1,90 @@
+@import "../../../../styles/global.scss";
+
+.topHost {
+  background-color: $cream-color;
+  margin: 50px 0 0 0;
+  padding: 131px 0 145px;
+  position: relative;
+  :global {
+    .container {
+      .hostSlider {
+        width: 1165px;
+        margin: 0 auto;
+        max-width: 85%;
+      }
+      .allLocation {
+        & > .slick-list {
+          margin: 0 -25px;
+          & > .slick-track {
+            & > .slick-slide {
+              padding: 0 25px;
+              .slide {
+                .slideImg {
+                  position: relative;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .slideInfo {
+                  margin: 16px 0 0 0;
+                  .subDetail {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 3px;
+                    align-items: baseline;
+                    h3 {
+                      font-family: $default-font;
+                      font-size: 18px;
+                      text-transform: uppercase;
+                      flex: 0 0 85%;
+                      margin: 0;
+                    }
+                    .rating {
+                      display: flex;
+                      align-items: center;
+                      text-decoration: underline;
+                    }
+                  }
+                  .subDetailLast {
+                    p {
+                      margin-bottom: 0;
+                    }
+                    svg {
+                      margin: 4px 5px -1px 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slick-dots {
+          bottom: -47px;
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 95%;
+    height: 5%;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    background: $white-color;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    width: 50%;
+    height: 13%;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    background: $cream-color;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
+    z-index: 1;
+  }
+}

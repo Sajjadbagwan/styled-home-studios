@@ -1,0 +1,42 @@
+@import "../../../../styles/global.scss";
+
+.locationFilter {
+  flex: 0 0 100%;
+  margin: 0 0 43px 0;
+  :global {
+    .container {
+      padding: 0;
+      .filterMain {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .filterCat {
+          display: flex;
+          align-items: center;
+          margin: 0 0 0 105px;
+          li {
+            margin: 0 93px 0 0;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        .allBtn {
+          margin: 0;
+          svg {
+            margin: 0 15px 0 0;
+          }
+          &:hover {
+            svg {
+              g {
+                path {
+                  stroke: $white-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../../../styles/global.scss";
+
+.lovedBy {
+  background-color: #8b9297;
+  margin: 122px 0 0 0;
+  padding: 37px 0;
+  position: relative;
+  :global {
+    .container {
+      .row {
+        align-items: center;
+        .title {
+          flex: 0 0 26%;
+          justify-content: center;
+          margin: 0;
+          h2 {
+            color: $white-color;
+            margin: 0;
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 1px;
+          }
+        }
+        .logos {
+          flex: 0 0 74%;
+          .logoList {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            img {
+              max-width: 180px;
+              margin: 0 45px 0 0;
+              &:last-child {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    background: #8b9297;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
+    z-index: 1;
+  }
+}

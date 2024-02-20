@@ -1,0 +1,39 @@
+@import "../../../../styles/global.scss";
+
+.browseByStyle {
+  background-color: $cream-color;
+  margin: 0;
+  padding: 105px 0;
+  :global {
+    .container {
+      h2 {
+        margin-bottom: 40px;
+      }
+      .styleSlider {
+        & > .slick-list {
+          margin: 0 -18px;
+          & > .slick-track {
+            & > .slick-slide {
+              padding: 0 18px;
+              .slideInfo {
+                img {
+                  height: 100%;
+                }
+                h3 {
+                  text-align: center;
+                  font-family: $default-font;
+                  margin: 15px 0 0 0;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+        .slick-dots {
+          bottom: -53px;
+        }
+      }
+    }
+  }
+}

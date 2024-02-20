@@ -1,0 +1,17 @@
+@import "../../../../styles/global.scss";
+
+.breadcrumb {
+  margin: 0;
+  padding: 12px 0 5px;
+  p {
+    margin: 0;
+    font-size: 12px;
+    a {
+      text-decoration: underline;
+      font-weight: 600;
+      &:last-child {
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../../styles/global.scss";
+
+.bottomBoxes {
+  position: relative;
+  margin: 0;
+  padding-bottom: 75px;
+  :global {
+    .backImg {
+      height: 510px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .container {
+      .ctaData {
+        position: absolute;
+        top: 100px;
+        //transform: translate(0, -50%);
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        color: $white-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1440px;
+        max-width: 90%;
+        .boxInfo {
+          background-color: $cream-color;
+          flex: 0 0 21.5%;
+          padding: 55px 0;
+          h3 {
+            color: $black-color;
+            font-size: 22px;
+            margin: 0;
+          }
+          .allBtn {
+            //margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

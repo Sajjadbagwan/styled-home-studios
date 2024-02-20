@@ -1,0 +1,42 @@
+@import "../../../../styles/global.scss";
+
+.signUpForm {
+  margin: 155px 0 100px;
+  :global {
+    .container {
+      .innerForm {
+        background-color: $cream-color;
+        width: 1160px;
+        margin: 0 auto;
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        .formImg {
+          flex: 0 0 42%;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          &::after {
+            content: "";
+            width: 35%;
+            height: 18%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $cream-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+          }
+        }
+        .formRight {
+          flex: 0 0 58%;
+          padding: 90px 85px;
+          form {
+            margin: 28px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../../../styles/global.scss";
+
+.homeHero {
+  background-color: $cream-color;
+  margin: 0;
+  :global {
+    .container-fluid {
+      padding: 0;
+      .row {
+        align-items: center;
+        .heroImg {
+          position: relative;
+          padding-bottom: 43%;
+          flex: 0 0 50%;
+          &::after {
+            content: "";
+            width: 44%;
+            height: 15%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $white-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+          }
+        }
+        .heroDetail {
+          flex: 0 0 50%;
+          .inner {
+            width: 720px;
+            float: right;
+            padding: 0 125px 0 0;
+            h1 {
+              font-family: $default-font;
+              font-weight: 300;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              line-height: 55px;
+            }
+            form {
+              background: $white-color;
+              padding: 10px 0 10px 20px;
+              margin-bottom: 38px;
+              display: flex;
+              align-items: center;
+              width: 95%;
+              & > div {
+                flex: 0 0 45%;
+                display: flex;
+                flex-direction: column;
+                label {
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+              }
+              input {
+                border: none;
+                font-size: 14px;
+                padding: 0;
+                min-height: auto;
+                margin: 0;
+              }
+              button {
+                flex: 0 0 10%;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+              }
+            }
+            ul {
+              display: flex;
+              li {
+                margin-right: 90px;
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

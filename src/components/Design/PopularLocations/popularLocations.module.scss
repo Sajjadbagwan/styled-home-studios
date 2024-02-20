@@ -1,0 +1,60 @@
+@import "../../../../styles/global.scss";
+
+.popularLocations {
+  background-color: $cream-color;
+  margin: 0;
+  padding: 105px 0 165px;
+  position: relative;
+  // overflow: hidden;
+  :global {
+    .container {
+      .styleSlider {
+        & > .slick-list {
+          margin: 0 -25px;
+          & > .slick-track {
+            & > .slick-slide {
+              padding: 0 25px;
+              .slideInfo {
+                img {
+                  height: 100%;
+                }
+                h3 {
+                  text-align: center;
+                  font-family: $default-font;
+                  margin: 10px 0 0 0;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+        .slick-dots {
+          bottom: -59px;
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 50%;
+    height: 11%;
+    position: absolute;
+    bottom: -77px;
+    right: 0;
+    background: $cream-color;
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 0 0);
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    width: 50%;
+    height: 14%;
+    position: absolute;
+    top: -95px;
+    right: 0;
+    background: #e6e2df;
+    clip-path: polygon(100% 100%, 0 100%, 100% 0, 100% 100%, 0 0);
+    z-index: 1;
+  }
+}

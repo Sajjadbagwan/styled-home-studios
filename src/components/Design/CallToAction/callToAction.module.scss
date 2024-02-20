@@ -1,0 +1,29 @@
+@import "../../../../styles/global.scss";
+
+.callToAction {
+  position: relative;
+  margin: 0;
+  :global {
+    .backImg {
+      height: 430px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .container {
+      .ctaData {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        text-align: center;
+        left: 0;
+        right: 0;
+        width: 850px;
+        margin: 0 auto;
+        max-width: 90%;
+        color: $white-color;
+      }
+    }
+  }
+}

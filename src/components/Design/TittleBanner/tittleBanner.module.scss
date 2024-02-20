@@ -1,0 +1,71 @@
+@import "../../../../styles/global.scss";
+
+.tittleBanner {
+  background-color: $cream-color;
+  margin: 25px 0 0 0;
+  position: relative;
+  :global {
+    .heroImg {
+      position: relative;
+      padding-bottom: 11.5%;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+    }
+    .container {
+      .heroDetail {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 600px;
+        max-width: 80%;
+        .inner {
+          form {
+            background: $white-color;
+            padding: 10px 0 10px 20px;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            width: 95%;
+            & > div {
+              flex: 0 0 45%;
+              display: flex;
+              flex-direction: column;
+              label {
+                font-size: 16px;
+                font-weight: 600;
+              }
+            }
+            input {
+              border: none;
+              font-size: 14px;
+              padding: 0;
+              min-height: auto;
+              margin: 0;
+            }
+            button {
+              flex: 0 0 10%;
+              border: none;
+              background: transparent;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 28%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $white-color;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+  }
+}
