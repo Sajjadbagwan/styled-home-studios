@@ -1,0 +1,62 @@
+@import "../../../../styles/global.scss";
+.mainPopup {
+  :global {
+    .innerPopup {
+      padding: 45px 88px;
+      h2 {
+        margin: 0 0 16px 0;
+      }
+    }
+    .popupInfo {
+      .filterUl {
+        margin-bottom: 45px;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+      }
+      .outerMain {
+        h4 {
+          font-size: 25px;
+          margin-bottom: 40px;
+        }
+        & > div {
+          border-bottom: 1px solid #4d4d4f80;
+          padding: 35px 0 12px;
+          &:nth-of-type(1) {
+            padding-top: 0;
+          }
+          .selectBtns {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            & > div {
+              flex: 0 0 auto;
+              margin-right: 3%;
+              margin-bottom: 28px;
+              min-width: 10%;
+              .allBtn {
+                cursor: pointer;
+                color: $green-color;
+              }
+              input {
+                width: 0;
+                margin: 0;
+                padding: 0;
+                height: 0;
+                &:checked {
+                  & + .allBtn {
+                    background-color: $green-color;
+                    color: $white-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
