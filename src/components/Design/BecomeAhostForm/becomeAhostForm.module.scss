@@ -1,0 +1,64 @@
+@import "../../../../styles/global.scss";
+.BecomeAhostForm {
+    margin: 0;
+    :global{
+        .formDiv{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            .backbtn{
+                display: flex;
+                align-items: center;
+                max-width: 200px;
+                img{
+                    margin-right: 10px;
+                }
+            }
+            .formDetails{
+                max-width: 1115px;
+                margin: 0 auto;
+                h2{
+                    text-align: center;
+                    font-family: $title-font;
+                }
+                form{
+                    .inputGroup{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        .halfInput{
+                            width: 49%;
+                        }
+                    }
+                    hr{
+                        opacity: .5;
+                        height: 1px;
+                        background-color: $breadcumb-color;
+                        border: 0;
+                        margin: 50px 0;
+                    }
+                    .aboutYou{
+                        h2{
+                            text-align: left;
+                        }
+                    }
+                    .imageSection{
+                        h2{
+                            text-align: left;
+                        }
+                        p{
+                            margin: 0;
+                        }
+                    }
+                    .allBtn{
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-left: auto;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}

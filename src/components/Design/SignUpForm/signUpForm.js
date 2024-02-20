@@ -48,7 +48,7 @@ function SignUpForm() {
                     name="consent"
                     value="consent"
                   />
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                 </label>
               </div>
               <input type="submit" className="allBtn dark" value="Submit" />

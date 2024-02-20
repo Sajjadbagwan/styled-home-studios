@@ -69,7 +69,7 @@ function Header() {
                   <Link href="#">Book A Location</Link>
                 </li>
                 <li>
-                  <Link href="#">Become A Host</Link>
+                  <Link href="/become-a-host/">Become A Host</Link>
                 </li>
                 <li>
                   <Link href="#">Directory</Link>
