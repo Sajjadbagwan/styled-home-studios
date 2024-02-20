@@ -39,7 +39,8 @@ ol {
 a {
   color: $green-color;
   &:hover {
-    color: $cream-color;
+    color: $green-color;
+    text-decoration: none;
   }
 }
 
@@ -119,6 +120,21 @@ section {
   margin: 115px 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $cream-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $green-color;
+}
+
 body {
   &:not(.homePage) {
     .mainContent {
@@ -175,6 +191,9 @@ body {
   margin-top: 25px;
   .allBtn {
     margin: 0 43px 0 0;
+  }
+  a {
+    color: $green-color;
   }
 }
 
