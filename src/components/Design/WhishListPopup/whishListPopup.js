@@ -5,6 +5,21 @@ import Image from "next/image";
 import styles from "./whishListPopup.module.scss";
 
 function WhishListPopup() {
+  const FavouriteData = [
+    {
+      image: "/assets/images/whishlist-popup.png",
+      groupname: "Favourite List Group Name",
+    },
+    {
+      image: "/assets/images/whishlist-popup.png",
+      groupname: "Favourite List Group Name",
+    },
+    {
+      image: "/assets/images/whishlist-popup.png",
+      groupname: "Favourite List Group Name",
+    },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClickPopup = () => {
@@ -24,7 +39,7 @@ function WhishListPopup() {
       {isOpen && (
         <div className={styles.mainPopup}>
           <div className="innerPopup">
-            <button onClick={handleClickPopup}>
+            <button className="close" onClick={handleClickPopup}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="10.012"
@@ -57,8 +72,43 @@ function WhishListPopup() {
                 </g>
               </svg>
             </button>
-            <h3>Add To Favourites</h3>
-            <div className="popupInfo"></div>
+            <h2>Add To Favourites</h2>
+            <div className="popupInfo">
+              {FavouriteData.map((product, index) => (
+                <div key={index} className="popupBox">
+                  <div className="popupImg">
+                    <Image
+                      src={product.image}
+                      width={474}
+                      height={325}
+                      alt=""
+                    />
+                  </div>
+                  <h3>{product.groupname}</h3>
+                </div>
+              ))}
+              <div className="popupBox createGroup">
+                <div className="popupImg">
+                  <Image
+                    src="/assets/images/create-group.png"
+                    width={474}
+                    height={325}
+                    alt=""
+                  />
+                </div>
+                <div className="addGroup">
+                  <Link href="#">
+                    <Image
+                      src="/assets/images/add-group.png"
+                      width={85}
+                      height={85}
+                      alt=""
+                    />
+                    <span>Create New Favourites Group</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
