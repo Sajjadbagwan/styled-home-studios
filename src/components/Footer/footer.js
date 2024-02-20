@@ -119,7 +119,7 @@ function Footer() {
                       name="consent1"
                       value="consent1"
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                 </div>
                 <input type="submit" className="allBtn dark" value="Submit" />

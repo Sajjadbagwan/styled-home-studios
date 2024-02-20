@@ -404,6 +404,31 @@ form {
   }
 }
 
+.inputGroup {
+  input {
+    padding: 5px 20px;
+    border: 1px solid $breadcumb-color;
+    color: $breadcumb-color;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    font-family: $default-font;
+    &:placeholder {
+      opacity: 0.5;
+    }
+  }
+  textarea {
+    padding: 15px 20px 5px 20px;
+    border: 1px solid $breadcumb-color;
+    color: $breadcumb-color;
+    outline: none;
+    font-size: 15px;
+    width: 100% !important;
+    min-height: 210px;
+    height: auto !important;
+    font-family: $default-font;
+  }
+}
 .menuClose {
   .menuOverlay {
     &::after {
