@@ -2,60 +2,287 @@
 .mainPopup {
   :global {
     .innerPopup {
-      padding: 45px 88px;
+      padding: 45px 30px 45px 88px;
+      width: 1160px;
+      overflow: hidden;
       h2 {
         margin: 0 0 16px 0;
       }
     }
     .popupInfo {
+      .scrollDiv {
+        max-height: 63vh;
+        overflow-y: auto;
+        width: 99%;
+        padding: 0 33px 0 0;
+      }
       .filterUl {
-        margin-bottom: 45px;
+        width: 95%;
         ul {
           display: flex;
           align-items: center;
           justify-content: space-between;
           flex-wrap: wrap;
+          margin-bottom: 45px;
         }
       }
       .outerMain {
+        margin-top: 45px;
+        &:first-child {
+          margin-top: 0;
+        }
         h4 {
           font-size: 25px;
           margin-bottom: 40px;
-        }
-        & > div {
-          border-bottom: 1px solid #4d4d4f80;
-          padding: 35px 0 12px;
-          &:nth-of-type(1) {
-            padding-top: 0;
+          position: relative;
+          cursor: pointer;
+          &::after {
+            content: "";
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15.319" height="8.659" viewBox="0 0 15.319 8.659"><path id="Path_3994" data-name="Path 3994" d="M6.952,0,0,6.952,6.952,13.9" transform="translate(0.707 7.659) rotate(-90)" fill="none" stroke="%2320535a" stroke-width="2"/></svg>');
+            width: 15px;
+            height: 9px;
+            position: absolute;
+            right: 7px;
+            top: 5px;
           }
-          .selectBtns {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            & > div {
-              flex: 0 0 auto;
-              margin-right: 3%;
-              margin-bottom: 28px;
-              min-width: 10%;
-              .allBtn {
-                cursor: pointer;
-                color: $green-color;
-              }
-              input {
-                width: 0;
-                margin: 0;
-                padding: 0;
-                height: 0;
-                &:checked {
-                  & + .allBtn {
-                    background-color: $green-color;
+        }
+        .showContent {
+          display: none;
+          & > div {
+            border-bottom: 1px solid #4d4d4f80;
+            padding: 35px 0 12px;
+            &:nth-of-type(1) {
+              padding-top: 0;
+            }
+            .selectBtns {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              & > div {
+                flex: 0 0 auto;
+                margin-right: 3%;
+                margin-bottom: 28px;
+                min-width: 10%;
+                .allBtn {
+                  cursor: pointer;
+                  color: $green-color;
+                  &:hover {
                     color: $white-color;
                   }
+                }
+                input {
+                  width: 0;
+                  margin: 0;
+                  padding: 0;
+                  height: 0;
+                  &:checked {
+                    & + .allBtn {
+                      background-color: $green-color;
+                      color: $white-color;
+                    }
+                  }
+                }
+              }
+              .allBtn {
+                padding: 9px 43px;
+                font-size: 12px;
+              }
+            }
+            .simpleCheckbox {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              .checkMain {
+                position: relative;
+                margin-bottom: 12px;
+                margin-right: 35px;
+                min-width: 13%;
+                label {
+                  padding: 0 0 0 30px;
+                }
+                input {
+                  position: absolute;
+                  opacity: 0;
+                  cursor: pointer;
+                  height: 0;
+                  width: 0;
+                  &:checked {
+                    & ~ .checkmark {
+                      background-color: $green-color;
+                      &:after {
+                        display: block;
+                      }
+                    }
+                  }
+                }
+                .checkmark {
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  height: 18px;
+                  width: 18px;
+                  background-color: $white-color;
+                  transform: translate(0, -50%);
+                  border: 1px solid $black-color;
+                  &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 4px;
+                    top: 1px;
+                    width: 5px;
+                    height: 8px;
+                    border: solid $white-color;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                  }
+                }
+              }
+            }
+            &.minBooking {
+              .multi-range-slider {
+                .caption {
+                  left: -36px;
+                }
+              }
+            }
+            .multi-range-slider {
+              box-shadow: none;
+              border: none;
+              padding: 7px 0;
+              margin-bottom: 60px;
+              width: 100%;
+              .ruler {
+                display: none;
+              }
+              .bar {
+                width: 89%;
+                margin: 12px auto 0;
+                & > div {
+                  box-shadow: none;
+                  padding: 0;
+                  border: 1px solid $green-color;
+                  &.bar-right {
+                    border: 1px solid #8b9297;
+                  }
+                  &.bar-left {
+                    border: 1px solid #8b9297;
+                  }
+                }
+                &::after {
+                  content: "";
+                  width: 12px;
+                  height: 12px;
+                  background-color: #8b9297;
+                  box-shadow: none;
+                  border: none;
+                  border-radius: 0px;
+                  margin: -5px 0;
+                }
+                &::before {
+                  content: "";
+                  width: 12px;
+                  height: 12px;
+                  background-color: #8b9297;
+                  box-shadow: none;
+                  border: none;
+                  border-radius: 0px;
+                  margin: -5px 0;
+                }
+                .thumb {
+                  width: 12px;
+                  &::before {
+                    width: 12px;
+                    height: 12px;
+                    background-color: $green-color;
+                    box-shadow: none;
+                    border: none;
+                    border-radius: 0px;
+                    margin: -6px 0;
+                  }
+                }
+              }
+              .labels {
+                margin: -35px 0 0 0;
+                .label {
+                  font-size: 14px;
+                  display: block;
+                  width: auto;
+                  &::before {
+                    content: "£";
+                  }
+                }
+              }
+              .caption {
+                display: block;
+                bottom: -13px;
+                left: -55px;
+                span {
+                  background: $green-color;
+                  box-shadow: none;
+                  font-size: 14px;
+                  color: $white-color;
+                  padding: 3px 15px;
+                  width: auto;
+                  height: auto;
+                  min-width: auto;
+                  border-radius: 0;
+                  pointer-events: none;
+                  &::after {
+                    content: "";
+                    background: transparent;
+                    position: absolute;
+                    top: -7px;
+                    left: 48%;
+                    transform: translate(-50%, 0);
+                    width: 0;
+                    height: 0;
+                    border-color: transparent transparent $green-color
+                      transparent;
+                    border-top: 0;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-bottom: 10px solid $green-color;
+                  }
+                  &.min-caption {
+                    &::before {
+                      content: "£";
+                    }
+
+                    &::after {
+                      left: 50%;
+                    }
+                  }
+                  &.max-caption {
+                    &::before {
+                      content: "£";
+                    }
+                  }
+                }
+              }
+              .thumb-right {
+                .caption {
+                  // left: 2px;
                 }
               }
             }
           }
         }
+        &.show {
+          h4 {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+          .showContent {
+            display: block;
+          }
+        }
+      }
+      .filterSubmit {
+        text-align: right;
+        padding: 50px 0;
+        width: 95%;
       }
     }
   }
