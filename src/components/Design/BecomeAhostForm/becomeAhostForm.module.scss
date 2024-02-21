@@ -15,11 +15,14 @@
                 }
             }
             .formDetails{
-                max-width: 1115px;
+                max-width: 985px;
                 margin: 0 auto;
                 h2{
                     text-align: center;
                     font-family: $title-font;
+                }
+                p{
+                    margin-bottom: 21px;
                 }
                 form{
                     .inputGroup{
@@ -35,19 +38,89 @@
                         height: 1px;
                         background-color: $breadcumb-color;
                         border: 0;
-                        margin: 50px 0;
+                        margin: 44px 0 38px 0;
                     }
                     .aboutYou{
                         h2{
                             text-align: left;
+                            letter-spacing: 0;
+                            margin-bottom: 27px;
+                        }
+                        textarea{
+                            min-height: 147px;
                         }
                     }
                     .imageSection{
                         h2{
                             text-align: left;
+                            letter-spacing: 0;
                         }
                         p{
                             margin: 0;
+                        }
+                        .upload-btn{
+                            max-width: 132px;
+                            width: 100%;
+                            display: inline-block;
+                            cursor: pointer;
+                            background-color: transparent;
+                            border: none;
+                            box-shadow: none;
+                            outline: 0;
+                            padding: 0;
+                            .file-btn{
+                                height: 130px;
+                                width: 130px;
+                                background-color: $grey-color;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-top: 30px;
+                                img{
+                                    height: 105px;
+                                    width: 105px;
+                                }
+                            }
+                            .add-img{
+                                text-align: center;
+                                width: 100%;
+                                display: inline-block;
+                                margin-top: 10px;
+                                text-decoration: underline;
+                                color: $green-color;
+                                text-decoration: underline;
+                                font-size: 16px;
+                            }
+                        }
+                        & + hr{
+                            margin-top: 30px;
+                        }
+                    }
+                    .selected-file{
+                        margin-top: 20px;
+                        max-width: 132px;
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                        p{
+                            width: 100%;
+                            line-height: normal;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                        button{
+                            text-decoration: underline;
+                            cursor: pointer;
+                            background-color: transparent;
+                            border: none;
+                            box-shadow: none;
+                            outline: 0;
+                            padding: 0;
+                            color: $green-color;
+                            text-align: center;
+                            width: 100%;
+                            font-size: 14px;
                         }
                     }
                     .allBtn{
