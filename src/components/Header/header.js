@@ -53,7 +53,7 @@ function Header() {
         <div className="container">
           <div className="row">
             <div className="logoMain">
-              <Link href="#">
+              <Link href="/">
                 <Image
                   src="/assets/images/logo-new.png"
                   width={177}

@@ -1,0 +1,30 @@
+@import "../../../../styles/global.scss";
+.becomeAhostThankYouMessage{
+    margin: -45px 0 0 0;
+    background-color: $cream-color;
+    padding: 50px 0 70px 0;
+    :global{
+        .titleText{
+            max-width: 1164px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-items: center;
+            .icon-img{
+                margin-right: 33px;
+                img{
+                    height: 75px;
+                    width: 75px;
+                }
+            }
+            .contentText{
+                margin-top: 6px;
+            }
+            h2{
+                margin-bottom: 10px;
+                text-align: left;   
+            }
+        }
+    }
+}

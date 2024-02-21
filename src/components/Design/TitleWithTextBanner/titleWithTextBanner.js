@@ -7,7 +7,7 @@ import styles from "./titleWithTextBanner.module.scss";
 
 function TitleWithTextBanner() {
   return (
-    <section className={styles.titleWithTextBanner}>
+    <div className={styles.titleWithTextBanner}>
       <div className="heroImg overlayInner">
         <Image
           src={MainBanner}
@@ -24,7 +24,7 @@ function TitleWithTextBanner() {
           <p>Join our community of hosts, earn extra money and see your home become a hub ion creativity.</p>
         </div>        
       </div>
-    </section>
+    </div>
   );
 }
 
