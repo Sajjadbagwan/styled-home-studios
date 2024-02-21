@@ -3,12 +3,30 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./filterPopup.module.scss";
+import MultiRangeSlider from "multi-range-slider-react";
+import MultiRangeSlidertwo from "multi-range-slider-react";
 
 function FilterPopup() {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleClickPopup = () => {
     setIsOpen(!isOpen);
+  };
+
+  const [isOpenList, setIsOpenList] = useState(false);
+  const handleClickPopupList = () => {
+    setIsOpenList(!isOpenList);
+  };
+
+  const [isOpenList2, setIsOpenList2] = useState(false);
+  const handleClickPopupList2 = () => {
+    setIsOpenList2(!isOpenList2);
+  };
+
+  const [minValue, set_minValue] = useState(25);
+  const [maxValue, set_maxValue] = useState(875);
+  const handleInput = (e) => {
+    set_minValue(e.minValue);
+    set_maxValue(e.maxValue);
   };
 
   return (
@@ -93,14 +111,16 @@ function FilterPopup() {
               </svg>
             </button>
             <h2>Filter</h2>
-            <div className="popupInfo">
+            <form className="popupInfo">
               <div className="filterUl">
                 <ul>
                   <li>
                     <Link href="#shoot-essentials">Shoot Essentials</Link>
                   </li>
                   <li>
-                    <Link href="#">Colours, Patterns & Materials</Link>
+                    <Link href="#colours-Patterns-Materials">
+                      Colours, Patterns & Materials
+                    </Link>
                   </li>
                   <li>
                     <Link href="#">Spaces</Link>
@@ -116,104 +136,732 @@ function FilterPopup() {
                   </li>
                 </ul>
               </div>
-              <div className="outerMain shootMain" id="shoot-essentials">
-                <h4>Shoot Essentials</h4>
-                <div className="price">
-                  <h5>Price</h5>
-                </div>
-                <div className="minBooking">
-                  <h5>Minimum Booking Hours</h5>
-                </div>
-                <div className="parking">
-                  <h5>Parking</h5>
-                  <div className="selectBtns">
-                    <div>
-                      <input type="checkbox" id="1" value="1" />
-                      <label class="allBtn border" for="1">
-                        Any
-                      </label>
+              <div className="scrollDiv">
+                <div
+                  className={`${"outerMain shootMain"} ${
+                    isOpenList ? "" : "show"
+                  }`}
+                  id="shoot-essentials"
+                >
+                  <h4 onClick={handleClickPopupList}>Shoot Essentials</h4>
+                  <div className="showContent">
+                    <div className="price">
+                      <h5>Price</h5>
+
+                      <MultiRangeSlider
+                        min={100}
+                        max={900}
+                        step={5}
+                        minValue={minValue}
+                        maxValue={maxValue}
+                        minCaption={minValue + " per hour"}
+                        maxCaption={maxValue + " per hour"}
+                        label={true}
+                        labels={[
+                          minValue + " per hour",
+                          maxValue + " per hour",
+                        ]}
+                        onInput={(e) => {
+                          handleInput(e);
+                        }}
+                      />
                     </div>
-                    <div>
-                      <input type="checkbox" id="2" value="2" />
-                      <label class="allBtn border" for="2">
-                        Onsite parking
-                      </label>
+                    <div className="minBooking">
+                      <h5>Minimum Booking Hours</h5>
                     </div>
-                    <div>
-                      <input type="checkbox" id="3" value="3" />
-                      <label class="allBtn border" for="3">
-                        Free parking
-                      </label>
+                    <div className="parking">
+                      <h5>Parking</h5>
+                      <div className="selectBtns">
+                        <div>
+                          <input type="checkbox" id="1" value="1" />
+                          <label class="allBtn border" for="1">
+                            Any
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="2" value="2" />
+                          <label class="allBtn border" for="2">
+                            Onsite parking
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="3" value="3" />
+                          <label class="allBtn border" for="3">
+                            Free parking
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="Lighting">
+                      <h5>Lighting</h5>
+                      <div className="selectBtns">
+                        <div>
+                          <input type="checkbox" id="4" value="4" />
+                          <label class="allBtn border" for="4">
+                            Any
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="5" value="5" />
+                          <label class="allBtn border" for="5">
+                            Abundant Natural Light
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="6" value="6" />
+                          <label class="allBtn border" for="6">
+                            Blackout Blinds
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="7" value="7" />
+                          <label class="allBtn border" for="7">
+                            North Facing
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="8" value="8" />
+                          <label class="allBtn border" for="8">
+                            South Facing
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="9" value="9" />
+                          <label class="allBtn border" for="9">
+                            Artificial light
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="Sound">
+                      <h5>Sound</h5>
+                      <div className="selectBtns">
+                        <div>
+                          <input type="checkbox" id="10" value="10" />
+                          <label class="allBtn border" for="10">
+                            Any
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="11" value="11" />
+                          <label class="allBtn border" for="11">
+                            Low Ambient Noise
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="12" value="12" />
+                          <label class="allBtn border" for="12">
+                            Soundproof
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="Accessibility">
+                      <h5>Accessibility</h5>
+                      <div className="selectBtns">
+                        <div>
+                          <input type="checkbox" id="13" value="13" />
+                          <label class="allBtn border" for="13">
+                            Any
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="14" value="14" />
+                          <label class="allBtn border" for="14">
+                            Wheelchair Accessible
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="15" value="15" />
+                          <label class="allBtn border" for="15">
+                            Ramps Available
+                          </label>
+                        </div>
+                        <div>
+                          <input type="checkbox" id="16" value="16" />
+                          <label class="allBtn border" for="16">
+                            Lift Available
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="colorPattern">
+                      <h5>Amenities</h5>
+                      <div className="simpleCheckbox">
+                        <div className="checkMain">
+                          <label for="18">
+                            Wifi
+                            <input type="checkbox" id="18" value="18" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="19">
+                            Tea & Coffee
+                            <input type="checkbox" id="19" value="19" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="20">
+                            Lighting Equipment
+                            <input type="checkbox" id="20" value="20" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="21">
+                            White Dropdown
+                            <input type="checkbox" id="21" value="21" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="22">
+                            Wardrobe Rail
+                            <input type="checkbox" id="22" value="22" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="23">
+                            Clothes Steamer
+                            <input type="checkbox" id="23" value="23" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="Lighting">
-                  <h5>Lighting</h5>
-                  <div className="selectBtns">
-                    <div>
-                      <input type="checkbox" id="4" value="4" />
-                      <label class="allBtn border" for="4">
-                        Any
-                      </label>
+                <div
+                  className={`${"outerMain colorMain"} ${
+                    isOpenList2 ? "" : "show"
+                  }`}
+                  id="colours-Patterns-Materials"
+                >
+                  <h4 onClick={handleClickPopupList2}>
+                    Colours, Patterns & Materials
+                  </h4>
+                  <div className="showContent">
+                    <div className="colorPattern">
+                      <h5>Colours & Patterns</h5>
+                      <div className="simpleCheckbox">
+                        <div className="checkMain">
+                          <label for="Silver">
+                            Silver
+                            <input type="checkbox" id="Silver" value="Silver" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Teal">
+                            Teal
+                            <input type="checkbox" id="Teal" value="Teal" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Black">
+                            Black
+                            <input type="checkbox" id="Black" value="Black" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Grey">
+                            Grey
+                            <input type="checkbox" id="Grey" value="Grey" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Neon">
+                            Neon
+                            <input type="checkbox" id="Neon" value="Neon" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Tartan">
+                            Tartan
+                            <input type="checkbox" id="Tartan" value="Tartan" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Red">
+                            Red
+                            <input type="checkbox" id="Red" value="Red" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Blue">
+                            Blue
+                            <input type="checkbox" id="Blue" value="Blue" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Animal Print">
+                            Animal Print
+                            <input
+                              type="checkbox"
+                              id="Animal Print"
+                              value="Animal Print"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Botanical">
+                            Botanical
+                            <input
+                              type="checkbox"
+                              id="Botanical"
+                              value="Botanical"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Cream">
+                            Cream
+                            <input type="checkbox" id="Cream" value="Cream" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Neutral">
+                            Neutral
+                            <input
+                              type="checkbox"
+                              id="Neutral"
+                              value="Neutral"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Taupe">
+                            Taupe
+                            <input type="checkbox" id="Taupe" value="Taupe" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Magenta">
+                            Magenta
+                            <input
+                              type="checkbox"
+                              id="Magenta"
+                              value="Magenta"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Green">
+                            Green
+                            <input type="checkbox" id="Green" value="Green" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Geometric">
+                            Geometric
+                            <input
+                              type="checkbox"
+                              id="Geometric"
+                              value="Geometric"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Brown">
+                            Brown
+                            <input type="checkbox" id="Brown" value="Brown" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Gold">
+                            Gold
+                            <input type="checkbox" id="Gold" value="Gold" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Pink">
+                            Pink
+                            <input type="checkbox" id="Pink" value="Pink" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="White">
+                            White
+                            <input type="checkbox" id="White" value="White" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Cyan">
+                            Cyan
+                            <input type="checkbox" id="Cyan" value="Cyan" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Pastel">
+                            Pastel
+                            <input type="checkbox" id="Pastel" value="Pastel" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Aquamarine">
+                            Aquamarine
+                            <input
+                              type="checkbox"
+                              id="Aquamarine"
+                              value="Aquamarine"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Orange">
+                            Orange
+                            <input type="checkbox" id="Orange" value="Orange" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Purple">
+                            Purple
+                            <input type="checkbox" id="Purple" value="Purple" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Peach">
+                            Peach
+                            <input type="checkbox" id="Peach" value="Peach" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Yellow">
+                            Yellow
+                            <input type="checkbox" id="Yellow" value="Yellow" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Maroon">
+                            Maroon
+                            <input type="checkbox" id="Maroon" value="Maroon" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <input type="checkbox" id="5" value="5" />
-                      <label class="allBtn border" for="5">
-                        Abundant Natural Light
-                      </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="6" value="6" />
-                      <label class="allBtn border" for="6">
-                        Blackout Blinds
-                      </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="7" value="7" />
-                      <label class="allBtn border" for="7">
-                        North Facing
-                      </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="8" value="8" />
-                      <label class="allBtn border" for="8">
-                        South Facing
-                      </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="9" value="9" />
-                      <label class="allBtn border" for="9">
-                        Artificial light
-                      </label>
+                    <div className="materials">
+                      <h5>Materials</h5>
+                      <div className="simpleCheckbox">
+                        <div className="checkMain">
+                          <label for="Silver">
+                            Silver
+                            <input type="checkbox" id="Silver" value="Silver" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Teal">
+                            Teal
+                            <input type="checkbox" id="Teal" value="Teal" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Black">
+                            Black
+                            <input type="checkbox" id="Black" value="Black" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Grey">
+                            Grey
+                            <input type="checkbox" id="Grey" value="Grey" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Neon">
+                            Neon
+                            <input type="checkbox" id="Neon" value="Neon" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Tartan">
+                            Tartan
+                            <input type="checkbox" id="Tartan" value="Tartan" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Red">
+                            Red
+                            <input type="checkbox" id="Red" value="Red" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Blue">
+                            Blue
+                            <input type="checkbox" id="Blue" value="Blue" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Animal Print">
+                            Animal Print
+                            <input
+                              type="checkbox"
+                              id="Animal Print"
+                              value="Animal Print"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Botanical">
+                            Botanical
+                            <input
+                              type="checkbox"
+                              id="Botanical"
+                              value="Botanical"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Cream">
+                            Cream
+                            <input type="checkbox" id="Cream" value="Cream" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Neutral">
+                            Neutral
+                            <input
+                              type="checkbox"
+                              id="Neutral"
+                              value="Neutral"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Taupe">
+                            Taupe
+                            <input type="checkbox" id="Taupe" value="Taupe" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Magenta">
+                            Magenta
+                            <input
+                              type="checkbox"
+                              id="Magenta"
+                              value="Magenta"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Green">
+                            Green
+                            <input type="checkbox" id="Green" value="Green" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Geometric">
+                            Geometric
+                            <input
+                              type="checkbox"
+                              id="Geometric"
+                              value="Geometric"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Brown">
+                            Brown
+                            <input type="checkbox" id="Brown" value="Brown" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Gold">
+                            Gold
+                            <input type="checkbox" id="Gold" value="Gold" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Pink">
+                            Pink
+                            <input type="checkbox" id="Pink" value="Pink" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="White">
+                            White
+                            <input type="checkbox" id="White" value="White" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Cyan">
+                            Cyan
+                            <input type="checkbox" id="Cyan" value="Cyan" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Pastel">
+                            Pastel
+                            <input type="checkbox" id="Pastel" value="Pastel" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Aquamarine">
+                            Aquamarine
+                            <input
+                              type="checkbox"
+                              id="Aquamarine"
+                              value="Aquamarine"
+                            />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Orange">
+                            Orange
+                            <input type="checkbox" id="Orange" value="Orange" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Purple">
+                            Purple
+                            <input type="checkbox" id="Purple" value="Purple" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Peach">
+                            Peach
+                            <input type="checkbox" id="Peach" value="Peach" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Yellow">
+                            Yellow
+                            <input type="checkbox" id="Yellow" value="Yellow" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+
+                        <div className="checkMain">
+                          <label for="Maroon">
+                            Maroon
+                            <input type="checkbox" id="Maroon" value="Maroon" />
+                            <span className="checkmark"></span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="Sound">
-                  <h5>Sound</h5>
-                  <div className="selectBtns">
-                    <div>
-                      <input type="checkbox" id="10" value="10" />
-                      <label class="allBtn border" for="10">
-                        Any
-                      </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="11" value="11" />
-                      <label class="allBtn border" for="11">
-                        Low Ambient Noise
-                      </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" id="12" value="12" />
-                      <label class="allBtn border" for="12">
-                        Soundproof
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className="Accessibility"></div>
               </div>
-            </div>
+              <div className="filterSubmit">
+                <button type="submit" className="allBtn dark border">
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
