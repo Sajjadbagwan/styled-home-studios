@@ -151,6 +151,60 @@
                         p{
                             margin: 0;
                         }
+                        .imageBox{
+                            margin: 30px 0 0 0;
+                            ul{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                grid-row-gap: 50px;
+                                li{
+                                    text-align: center;
+                                    padding-top: 20px;
+                                    padding-bottom: 0;
+                                    &.featuredImage{
+                                        background-color: $green-color;
+                                        h3{
+                                            color: #fff;
+                                            font-size: 22px;
+                                        }
+                                    }
+                                    .upload-btn{
+                                        max-width: 132px;
+                                        width: 100%;
+                                        display: inline-block;
+                                        cursor: pointer;
+                                        background-color: transparent;
+                                        border: none;
+                                        box-shadow: none;
+                                        outline: 0;
+                                        padding: 0;
+                                        .file-btn{
+                                            height: 130px;
+                                            width: 130px;
+                                            background-color: $grey-color;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-top: 30px;
+                                            img{
+                                                height: 105px;
+                                                width: 105px;
+                                            }
+                                        }
+                                        .add-img{
+                                            text-align: center;
+                                            width: 100%;
+                                            display: inline-block;
+                                            margin-top: 10px;
+                                            text-decoration: underline;
+                                            color: $green-color;
+                                            text-decoration: underline;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         .upload-btn{
                             max-width: 132px;
                             width: 100%;

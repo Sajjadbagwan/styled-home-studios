@@ -8,9 +8,28 @@ import Image2 from "../../../../public/assets/images/color-2.png"
 import Image3 from "../../../../public/assets/images/color-3.png"
 import Image4 from "../../../../public/assets/images/color-4.png"
 import Image5 from "../../../../public/assets/images/color-5.png"
+import UploadButton from "../../../../public/assets/images/upload-image.svg"
 import styles from "./confirmPropertyDetailsForm.module.scss";
 
 function ConfirmPropertyDetailsStep1() {
+    const inputRef = useRef();
+
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  // Handle the change event when a file is selected
+  const handleOnChange = event => {
+    if (event.target.files && event.target.files.length > 0) {
+      setSelectedFile(event.target.files[0]);
+    }
+  };
+
+  const onChooseFile = () => {
+    inputRef.current.click();
+  };
+
+  const removeFile = () => {
+    setSelectedFile(null);
+  };
   
   return (
     <div className={styles.confirmPropertyDetailsStep1}>
@@ -37,9 +56,10 @@ function ConfirmPropertyDetailsStep1() {
                 {/* <input type="file" accept="image/png, image/jpeg" name="image" multiple/> */}
                 <div className="imageBox">
                     <ul>
-                        <li>
+                        <li className="featuredImage">
                             <Link href="">
                                 <Image src={Image1} alt="image1" height={267} width={267} />
+                                <h3>Featured Image</h3>
                             </Link>
                         </li>
                         <li>
@@ -64,7 +84,32 @@ function ConfirmPropertyDetailsStep1() {
                         </li>
                         <li>
                             <Link href="">
-                                
+                            <div>
+                                {/* Hidden file input element */}
+                                <input
+                                    type="file"
+                                    ref={inputRef}
+                                    onChange={handleOnChange}
+                                    style={{ display: "none" }}
+                                    multiple
+                                />
+                                {/* Button to trigger the file input dialog */}
+                                <button type="button" className="upload-btn" onClick={onChooseFile}>
+                                    <span className="file-btn">
+                                    <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
+                                    </span>
+                                    <span className="add-img">+ Add image</span>
+                                </button>
+                                {selectedFile && (
+                                    <div className="selected-file">                      
+                                    <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
+                                    <p>{selectedFile.name}</p>
+                                    <button type="button" onClick={removeFile}>
+                                        <span class="material-symbols-rounded">Delete</span>
+                                    </button>
+                                    </div>
+                                )}
+                                </div>
                             </Link>
                         </li>
                     </ul>
