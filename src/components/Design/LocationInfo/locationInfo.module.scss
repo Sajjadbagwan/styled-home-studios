@@ -1,0 +1,25 @@
+@import "../../../../styles/global.scss";
+
+.locationInfo {
+  background-color: $cream-color;
+  margin: 0;
+  padding: 35px 0 90px;
+  :global {
+    .container {
+      .aboutinfo {
+        width: 60%;
+        .titleDouble {
+          span {
+            color: $black-color;
+          }
+          h2 {
+            color: $black-color;
+          }
+          &::before {
+            background-color: $black-color;
+          }
+        }
+      }
+    }
+  }
+}

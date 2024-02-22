@@ -1,0 +1,60 @@
+@import "../../../../styles/global.scss";
+
+.locationReview {
+  background-color: $cream-color;
+  margin: 0;
+  padding: 105px 0 165px;
+  position: relative;
+  // overflow: hidden;
+  :global {
+    .container {
+      .allReviews {
+        width: 1160px;
+        margin: 0 auto;
+        max-width: 90%;
+        .title {
+          h2 {
+            svg {
+              margin: 0 10px -7px 0;
+            }
+          }
+        }
+        .mainReview {
+          display: flex;
+          justify-content: space-between;
+          .reviewBox {
+            flex: 0 0 48%;
+            padding: 0 10px 0 0;
+            .img {
+              margin-bottom: 28px;
+              display: flex;
+              img {
+                width: 120px;
+                height: auto;
+                margin: 0 27px 0 0;
+              }
+            }
+            .info {
+              h5 {
+                font-family: $default-font;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &::before {
+    content: "";
+    width: 50%;
+    height: 15%;
+    position: absolute;
+    top: -95px;
+    right: 0;
+    background: #e6e2df;
+    clip-path: polygon(100% 100%, 0 100%, 100% 0, 100% 100%, 0 0);
+    z-index: 1;
+  }
+}

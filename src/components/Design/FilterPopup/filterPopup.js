@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./filterPopup.module.scss";
 import MultiRangeSlider from "multi-range-slider-react";
-import MultiRangeSlidertwo from "multi-range-slider-react";
 
 function FilterPopup() {
   const [isOpen, setIsOpen] = useState(false);
