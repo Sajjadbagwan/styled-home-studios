@@ -8,6 +8,8 @@ import LocationInfo from "@/components/Design/LocationInfo/locationInfo";
 import LocationInfowithform from "@/components/Design/LocationInfoWithForm/locationInfowithform";
 import LocationReview from "@/components/Design/LocationReview/locationReview";
 
+import TrendingLocations from "@/components/Design/TrendingLocations/trendingLocations";
+import LocationFaq from "@/components/Design/LocationFaq/locationFaq";
 import LatestNews from "@/components/Design/LatestNews/latestNews";
 
 function Layout({ children }) {
@@ -19,7 +21,9 @@ function Layout({ children }) {
       <LocationInfowithform />
       <LocationReview />
 
-      <LatestNews/>
+      <TrendingLocations />
+      <LocationFaq />
+      <LatestNews />
     </div>
   );
 }
