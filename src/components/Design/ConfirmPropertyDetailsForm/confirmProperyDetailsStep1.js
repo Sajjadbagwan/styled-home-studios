@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Select from 'react-select';
 import InstaIcon from "../../../../public/assets/images/insta-white.svg"
 import Image1 from "../../../../public/assets/images/color-1.png"
 import Image2 from "../../../../public/assets/images/color-2.png"
@@ -9,10 +10,19 @@ import Image3 from "../../../../public/assets/images/color-3.png"
 import Image4 from "../../../../public/assets/images/color-4.png"
 import Image5 from "../../../../public/assets/images/color-5.png"
 import UploadButton from "../../../../public/assets/images/upload-image.svg"
+import SelectedImage from "../../../../public/assets/images/host-2.png"
 import styles from "./confirmPropertyDetailsForm.module.scss";
 
 function ConfirmPropertyDetailsStep1() {
-    const inputRef = useRef();
+    const optionstitle = [
+        { value: 'Living Area', label: 'Living Area' },
+        { value: 'Bedrooms', label: 'Bedrooms' },
+        { value: 'Bathrooms', label: 'Bathrooms' },
+        { value: 'Dinning Area', label: 'Dinning Area' },
+        { value: 'Exteriors', label: 'Exteriors' },
+        { value: 'Outdoor Space', label: 'Outdoor Space' },
+      ];
+  const inputRef = useRef();
 
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -66,51 +76,89 @@ function ConfirmPropertyDetailsStep1() {
                             <Link href="">
                                 <Image src={Image2} alt="image2" height={267} width={267} />
                             </Link>
+                            <div className="drop_down">
+                              <div className="wrapper_dropdown">
+                                <Select
+                                      classNamePrefix="react-select"
+                                      placeholder="Please select category"
+                                      options={optionstitle}
+                                      className={styles.selectCheckout}
+                                  />
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <Link href="">
                                 <Image src={Image3} alt="image3" height={267} width={267} />
                             </Link>
+                            <div className="drop_down">
+                              <div className="wrapper_dropdown">
+                                <Select
+                                      classNamePrefix="react-select"
+                                      placeholder="Please select category"
+                                      options={optionstitle}
+                                      className={styles.selectCheckout}
+                                  />
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <Link href="">
                                 <Image src={Image4} alt="image4" height={267} width={267} />
                             </Link>
+                            <div className="drop_down">
+                              <div className="wrapper_dropdown">
+                                <Select
+                                      classNamePrefix="react-select"
+                                      placeholder="Please select category"
+                                      options={optionstitle}
+                                      className={styles.selectCheckout}
+                                  />
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <Link href="">
                                 <Image src={Image5} alt="image5" height={267} width={267} />
                             </Link>
+                            <div className="drop_down">
+                              <div className="wrapper_dropdown">
+                                <Select
+                                      classNamePrefix="react-select"
+                                      placeholder="Please select category"
+                                      options={optionstitle}
+                                      className={styles.selectCheckout}
+                                  />
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <Link href="">
                             <div>
-                                {/* Hidden file input element */}
-                                <input
-                                    type="file"
-                                    ref={inputRef}
-                                    onChange={handleOnChange}
-                                    style={{ display: "none" }}
-                                    multiple
-                                />
-                                {/* Button to trigger the file input dialog */}
-                                <button type="button" className="upload-btn" onClick={onChooseFile}>
-                                    <span className="file-btn">
-                                    <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
-                                    </span>
-                                    <span className="add-img">+ Add image</span>
-                                </button>
-                                {selectedFile && (
-                                    <div className="selected-file">                      
-                                    <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
-                                    <p>{selectedFile.name}</p>
-                                    <button type="button" onClick={removeFile}>
-                                        <span class="material-symbols-rounded">Delete</span>
+                                    {/* Hidden file input element */}
+                                    <input
+                                        type="file"
+                                        ref={inputRef}
+                                        onChange={handleOnChange}
+                                        style={{ display: "none" }}
+                                        multiple
+                                    />
+                                    {/* Button to trigger the file input dialog */}
+                                    <button type="button" className="upload-btn" onClick={onChooseFile}>
+                                        <span className="file-btn">
+                                        <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
+                                        </span>
+                                        <span className="add-img">+ Add image</span>
                                     </button>
-                                    </div>
-                                )}
-                                </div>
-                            </Link>
+                                    {selectedFile && (
+                                        <div className="selected-file">                      
+                                        <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
+                                        <p>{selectedFile.name}</p>
+                                        <button type="button" onClick={removeFile}>
+                                            <span class="material-symbols-rounded">Delete</span>
+                                        </button>
+                                        </div>
+                                    )}
+                            </div>
                         </li>
                     </ul>
                 </div>

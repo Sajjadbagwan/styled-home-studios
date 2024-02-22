@@ -8,8 +8,8 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: nowrap;
-            max-width: 1315px;
-            margin: 30px auto 30px auto;
+            max-width: 1165px;
+            margin: 6px auto 50px auto;
             text-align: center;
             position: relative;
             .singlestep{
@@ -93,7 +93,7 @@
                         margin: 0;
                     }
                     p{
-                        margin-bottom: 21px;
+                        margin-bottom: 25px;
                     }
                     .inputGroup{
                         display: flex;
@@ -117,8 +117,8 @@
                                     display: flex;
                                     align-items: center;
                                     span{
-                                        height: 35px;
-                                        width: 35px;
+                                        height: 32px;
+                                        width: 32px;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
@@ -128,7 +128,7 @@
                                         margin-top: -15px;
                                     }
                                     input{
-                                        width: 84%;
+                                        width: 89%;
                                     }
                                 }
                             }
@@ -142,34 +142,52 @@
                         textarea{
                             min-height: 147px;
                         }
+                        hr{
+                            margin-top: 23px;
+                        }
                     }
                     .imageSection{
                         h2{
                             text-align: left;
                             letter-spacing: 0;
+                            margin-bottom: 20px;
                         }
                         p{
                             margin: 0;
                         }
                         .imageBox{
-                            margin: 30px 0 0 0;
+                            margin: 25px 0 0 0;
+                            max-width: 890px;
                             ul{
                                 display: grid;
                                 grid-template-columns: 1fr 1fr 1fr;
-                                grid-row-gap: 50px;
+                                grid-row-gap: 8px;
+                                align-items: flex-start;
+                                grid-column-gap: 12px;
                                 li{
                                     text-align: center;
-                                    padding-top: 20px;
+                                    padding-top: 30px;
                                     padding-bottom: 0;
-                                    &.featuredImage{
+                                    a{
+                                        max-width: 235px;
+                                        width: 100%;
+                                        img{
+                                            width: 235px;
+                                            height: 235px;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                    &.featuredImage{    
                                         background-color: $green-color;
                                         h3{
                                             color: #fff;
                                             font-size: 22px;
+                                            margin-bottom: 23px;
+                                            margin-top: 12px;
                                         }
                                     }
                                     .upload-btn{
-                                        max-width: 132px;
+                                        max-width: 240px;
                                         width: 100%;
                                         display: inline-block;
                                         cursor: pointer;
@@ -179,27 +197,186 @@
                                         outline: 0;
                                         padding: 0;
                                         .file-btn{
-                                            height: 130px;
-                                            width: 130px;
+                                            height: 235px;
+                                            width: 100%;
                                             background-color: $grey-color;
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
-                                            margin-top: 30px;
+                                            margin-top: 0;
                                             img{
-                                                height: 105px;
-                                                width: 105px;
+                                                height: 205px;
+                                                width: 205px;
                                             }
                                         }
                                         .add-img{
                                             text-align: center;
                                             width: 100%;
                                             display: inline-block;
-                                            margin-top: 10px;
+                                            margin-top: 25px;
                                             text-decoration: underline;
                                             color: $green-color;
                                             text-decoration: underline;
                                             font-size: 16px;
+                                        }
+                                    }
+                                    .drop_down{
+                                        max-width: 240px;
+                                        width: 100%;
+                                        margin: 7px auto 0 auto;
+                                        .wrapper_dropdown{
+                                          width: 100%;
+                                          background: #fff;
+                                          position: relative;
+                                          transition: 0.5s li;
+                                          margin-bottom: 0;
+                                          .selected_value{
+                                            width: 100%;
+                                            padding: 10px 25px;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            color: #4D4D4F;
+                                            text-align: left;
+                                            position: relative;
+                                            z-index: 9;
+                                            cursor: pointer;
+                                            // @include ipad_view {
+                                            //   font-size: 14px;
+                                            //   padding: 12px 20px;
+                                            // }
+                                          }
+                                          > div{
+                                            width: 100%;
+                                            cursor: pointer;
+                                            position: relative;
+                                            z-index: 99;                  
+                                        }
+                                        :global{
+                                          .react-select__control {
+                                            border: 0;
+                                            border-radius: 0;
+                                            outline: none !important;
+                                            box-shadow: none !important;
+                                            padding: 0;
+                                            cursor: pointer;
+                                            background-color: #fff;
+                                            min-height: 50px;
+                                            padding: 0 15px;
+                                            text-align: left;
+                                            border: 1px solid rgba(77,77,79,.5);
+                                            // @include ipad_view {
+                                            //   padding-left: 20px;
+                                            //   padding-right: 20px;
+                                            // }
+                                            :global{
+                                                .react-select__placeholder{
+                                                  font-size: 14px;
+                                                  font-weight: 400;
+                                                  color: #4D4D4F;
+                                                //   @include ipad_view {
+                                                //     font-size: 14px;
+                                                //   }
+                                                }
+                                                .react-select__value-container{
+                                                    padding: 0;
+                                                    
+                                                    .react-select__single-value{
+                                                      color: #4D4D4F;
+                                                      font-weight: 400;
+                                                      font-size: 15px;
+                                                      @media only screen and (max-width:1240px){
+                                                        font-size: 14px;
+                                                      }
+                                                    }
+                                                }
+                                                .react-select__input-container{
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    color: #000;
+                                                    input[type="text"]{
+                                                        height: 35px !important;
+                                                        color: #000 !important;
+                                                        min-height: auto;
+                                                    }
+                                                }
+                                            }
+                                            &.react-select__control--menu-is-open{
+                                              border: 1px solid rgba(77,77,79,.5);
+                                              border-bottom: 0;
+                                              .react-select__indicators{
+                                                &::after{
+                                                  transform: rotate(180deg);
+                                                }
+                                              }
+                                            }
+                                          } 
+                                          .react-select__menu{
+                                            margin: 0;
+                                            border-radius: 0;
+                                            box-shadow: none;
+                                            border: 1px solid rgba(77,77,79,.5);
+                                            border-top: 0;
+                                            font-size: 15px;
+                                            .react-select__menu-list {
+                                              padding-left: 25px;
+                                              padding-right: 25px;
+                                              padding-top: 0;
+                                              padding-bottom: 20px;
+                                              max-height: 320px;
+                                              .react-select__option{
+                                                color: $black-color;
+                                                font-weight: 400;
+                                                padding: 10px 0;
+                                                border-top: 1px solid rgba(77,77,79,.25);
+                                                cursor: pointer;
+                                                text-align: left;
+                                                background-color: #fff;     
+                                                font-size: 15px;                 
+                                                // @include ipad_view {
+                                                //   font-size: 14px;
+                                                // }
+                                                &:last-child{
+                                                    border-bottom: 1px solid rgba(77,77,79,.25);
+                                                }
+                                                &.react-select__option--is-focused{
+                                                  background-color: #fff;
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                        
+                                        input{
+                                            box-shadow: none!important;
+                                            height: 36px;
+                                        }
+                                        
+                                        >div{
+                                            >div{
+                                                >div{
+                                                    span{
+                                                        display:none;
+                                                    }
+                                                    svg{
+                                                        display:none;
+                                                    }
+                                                    & + div:after{
+                                                        content:"";
+                                                        background-image:url('/assets/images/down-arrow.svg');
+                                                        background-position: right center;
+                                                        background-size: contain;
+                                                        background-origin: border-box;
+                                                        background-repeat: no-repeat !important;
+                                                        position: absolute;
+                                                        width: 12px;
+                                                        height: 12px;
+                                                        right: 15px;                                  
+                                                    }
+                                                }
+                                            }
+                                        }
                                         }
                                     }
                                 }
