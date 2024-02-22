@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./confirmPropertyDetailsForm.module.scss";
 import ConfirmPropertyDetailsStep1 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep1";
 import ConfirmPropertyDetailsStep2 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep2";
+import ConfirmPropertyDetailsStep3 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep3";
 
 function ConfirmPropertyDetailsForm() {
   
@@ -105,8 +106,9 @@ function ConfirmPropertyDetailsForm() {
           </li>
         </ul>
         <form>
-          {/* <ConfirmPropertyDetailsStep1 /> */}
+          <ConfirmPropertyDetailsStep1 />
           <ConfirmPropertyDetailsStep2 />
+          <ConfirmPropertyDetailsStep3 />
         </form>
       </div>
     </div>

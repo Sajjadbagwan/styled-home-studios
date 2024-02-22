@@ -25,7 +25,7 @@ function ConfirmPropertyDetailsStep2() {
             </label>
             <hr/>
             <div className="commonSection">
-                <h2>Tax</h2>
+                <h3>Tax</h3>
                 <p>I agree to pay my own TAX. <span><Image src={InfoIcon} alt="infoicon" height={14} width={14}/>Why do we need this information?</span></p>
                 <div className="checkboxDiv">
                     <div className="singleCheckbox">
@@ -49,7 +49,7 @@ function ConfirmPropertyDetailsStep2() {
             </div>
             <hr />
             <div className="commonSection">
-                <h2>Days Of The Week You Accept Bookings For.</h2>
+                <h3>Days Of The Week You Accept Bookings For.</h3>
                 <div className="checkboxDiv">
                     <div className="singleCheckbox">
                         <input id="monday" type="checkbox" name="monday"/>
@@ -97,7 +97,7 @@ function ConfirmPropertyDetailsStep2() {
             </div>
             <hr/>
             <div className="commonSection">
-                <h2>What Is The Minimum Amount Of Hours You Can Make A Booking For At Your Property?</h2>
+                <h3>What Is The Minimum Amount Of Hours You Can Make A Booking For At Your Property?</h3>
                 <div className="hourDiv">
                     <div className="inputGroup">
                         <div className="halfInput">
@@ -109,7 +109,7 @@ function ConfirmPropertyDetailsStep2() {
             </div>
             <hr/>
             <div className="commonSection">
-                <h2>Would You Like To Accept Corporate Event Bookings?</h2>
+                <h3>Would You Like To Accept Corporate Event Bookings?</h3>
                 <div className="checkboxDiv">
                     <div className="singleCheckbox">
                         <input id="cyes" type="radio" name="Yes"/>
