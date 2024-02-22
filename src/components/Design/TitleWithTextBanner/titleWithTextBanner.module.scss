@@ -19,7 +19,7 @@
       position: relative;
       .titleText {
         position: absolute;
-        top: -145px;
+        top: -152px;
         left: 51%;
         width: 100%;
         transform: translate(-50%, 0);  
@@ -29,6 +29,7 @@
           font-weight: 500;
           text-transform: uppercase;
           letter-spacing: 1px;
+          margin: 0 0 10px 0;
         }
         p{
           color: $white-color;

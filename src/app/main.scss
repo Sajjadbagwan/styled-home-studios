@@ -277,7 +277,7 @@ body {
 
 form {
   input[type="email"],
-  [type="text"] {
+  [type="text"],[type="number"]  {
     width: 100%;
     background-color: $white-color;
     border: none;
@@ -286,6 +286,10 @@ form {
     min-height: 64px;
     font-size: 15px;
     font-family: $default-font;
+    appearance: none;
+  }
+  input[type="number"]::-webkit-inner-spin-button {
+    display: none;
   }
   .selectMain {
     position: relative;

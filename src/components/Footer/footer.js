@@ -197,7 +197,7 @@ function Footer() {
               </ul>
             </div>
             <div className="copyInfo">
-              <p>© Styled Home Studios 2023</p>
+              <p>© Styled Home Studios 2024</p>
             </div>
           </div>
         </div>

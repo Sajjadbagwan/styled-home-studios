@@ -6,7 +6,7 @@ import styles from "./aboutRightImg.module.scss";
 
 function AboutRightImg() {
   return (
-    <section className={styles.aboutRightImg}>
+    <section className={styles.aboutRightImg + " aboutRightImg"}>
       <div className="container">
         <div className="row">
           <div className="aboutInfo">
@@ -31,7 +31,7 @@ function AboutRightImg() {
             <div className="innerImg">
               <div className="imgFront">
                 <Image
-                  src="/assets/images/about-1.jpg"
+                  src="/assets/images/about-1.png"
                   width={428}
                   height={706}
                   alt=""
