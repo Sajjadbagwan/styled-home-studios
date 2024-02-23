@@ -133,6 +133,14 @@ function ConfirmPropertyDetailsStep3() {
                         <label className="form-control" htmlFor="other">
                             other
                         </label>
+                        <div className="hideDiv">
+                            <div className="inputGroup">
+                                <div className="halfDiv">
+                                    <input type="text" name="space" placeholder="Please enter space"/>
+                                    <button type="button" className="allBtn dark">Submit</button>
+                                </div>
+                            </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -241,6 +249,14 @@ function ConfirmPropertyDetailsStep3() {
                         <label className="form-control" htmlFor="other1">
                             other
                         </label>
+                        <div className="hideDiv">
+                            <div className="inputGroup">
+                                <div className="halfDiv">
+                                    <input type="text" name="space" placeholder="Please enter space"/>
+                                    <button type="button" className="allBtn dark">Submit</button>
+                                </div>
+                            </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -349,6 +365,14 @@ function ConfirmPropertyDetailsStep3() {
                         <label className="form-control" htmlFor="other2">
                             other
                         </label>
+                        <div className="hideDiv">
+                            <div className="inputGroup">
+                                <div className="halfDiv">
+                                    <input type="text" name="space" placeholder="Please enter space"/>
+                                    <button type="button" className="allBtn dark">Submit</button>
+                                </div>
+                            </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
