@@ -1,0 +1,154 @@
+@import "../../../../styles/global.scss";
+.propertyListingSection{
+    margin: 0;
+    :global {
+        .container {
+          .allLocation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            row-gap: 95px;
+            max-width: 1380px;
+            margin: 85px auto 0 auto;
+            .slide {
+                width: 30%;
+                .slideImg {
+                  position: relative;
+                  &.permenantDeclined{
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        z-index: 1;
+                        background: rgb(139 146 151 / 75%); 
+                    }
+                  }
+                  .category {
+                    position: absolute;
+                    width: 100%;
+                    background: rgb(255 255 255 / 75%);
+                    z-index: 9;
+                    padding: 9px 20px;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    color: $white-color;
+                    &.awaiting{
+                        background: rgb(77 77 79 / 75%); 
+                    }
+                    &.incomplete{
+                        background: rgb(173 100 0 / 75%); 
+                    }
+                    &.active{
+                        background: rgb(32 83 90 / 75%); 
+                    }
+                    &.declined{
+                        background: rgb(190 22 0 / 75%); 
+                    }
+                    &.inactive{
+                        background: rgb(139 146 151 / 75%); 
+                    }
+                  }
+                  .subLocation {
+                    .slick-slide {
+                      & > div {
+                        padding-bottom: 69%;
+                        position: relative;
+                        img {
+                          width: 100%;
+                          height: 100%;
+                          object-fit: cover;
+                          position: absolute;
+                        }
+                      }
+                    }
+                    .slick-dots {
+                      bottom: 8px;
+                      z-index: 2;
+                      li {
+                        margin: 0 2px;
+                        button {
+                          &::before {
+                            opacity: 1;
+                            color: $black-color;
+                            font-size: 12px;
+                          }
+                        }
+                        &.slick-active {
+                          button {
+                            &::before {
+                              color: $white-color;
+                            }
+                          }
+                        }
+                        &:last-child {
+                          button {
+                            &::before {
+                              font-size: 9px;
+                              top: 1px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .whishList {
+                    position: absolute;
+                    right: 20px;
+                    bottom: 13px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $white-color;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                    &.added {
+                      background-image: url('data:image/svg+xml,<svg id="Group_1385" data-name="Group 1385" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.388" height="14.86" viewBox="0 0 17.388 14.86"><defs><clipPath id="clip-path"><rect id="Rectangle_389" data-name="Rectangle 389" width="17.388" height="14.86" fill="none"/></clipPath></defs><g id="Group_1364" data-name="Group 1364" clip-path="url(%23clip-path)"><path id="Path_169" data-name="Path 169" d="M14.954,2.174A3.153,3.153,0,0,0,11.548.251C9.392.265,7.863,2.812,7.7,3.038,7.541,2.812,6.011.265,3.855.251A3.153,3.153,0,0,0,.45,2.174,5.728,5.728,0,0,0,.4,4.986c.109.355,1.379,5.1,7.3,7.984,5.923-2.889,7.193-7.63,7.3-7.984A5.728,5.728,0,0,0,14.954,2.174Z" transform="translate(0.992 0.63)" fill="%2320535a"/></g></svg>');
+                    }
+                  }
+                }
+                .slideInfo {
+                  margin: 16px 0 0 0;
+                  .subDetail {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    align-items: baseline;
+                    h3 {
+                      font-family: $default-font;
+                      font-size: 18px;
+                      text-transform: uppercase;
+                      flex: 0 0 85%;
+                      margin: 0;
+                    }
+                    .rating {
+                      display: flex;
+                      align-items: center;
+                      text-decoration: underline;
+                      width: 42px;
+                      justify-content: space-between;
+                    }
+                  }
+                  .allBtn{
+                    width: 100%;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                  }
+                  a{
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block;
+                  }
+                }
+              }
+          }
+        }
+      }
+}

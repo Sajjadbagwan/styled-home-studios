@@ -4,6 +4,7 @@
   background-color: $cream-color;
   margin: 25px 0 0 0;
   position: relative;
+  z-index: 1;
   :global {
     .heroImg {
       position: relative;

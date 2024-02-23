@@ -1,0 +1,40 @@
+@import "../../../../styles/global.scss";
+.propertyFilterTab{
+    margin: -60px 0 0 0;
+    background-color: $cream-color;
+    padding: 68px 0 50px 0;
+    transform: rotate(1deg);
+    width: 101%;
+    :global{
+        .titleText{
+            max-width: 1164px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform: rotate(-1deg);
+            h3{
+                margin: 0 158px 0 0;
+            }
+           .filter-tab{
+                display: flex;
+                justify-content: flex-start;
+                li{
+                    padding-right: 98px;
+                    a{
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        &.active{
+                            text-decoration: underline;
+                        }
+                    }
+                    &:last-child{
+                        padding: 0;
+                    }
+                }
+           }
+        }
+    }
+}

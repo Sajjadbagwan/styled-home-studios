@@ -3,6 +3,8 @@
 .breadcrumb {
   margin: 0;
   padding: 12px 0 5px;
+  position: relative;
+  z-index: 2;
   p {
     margin: 0;
     font-size: 12px;
