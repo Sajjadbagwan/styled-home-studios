@@ -172,7 +172,7 @@ function PropertyListingSection() {
                 </div>
                 <div className="subDetail">
                   <p>Area: Edinburgh</p>
-                  <p>£100 Per Hour</p>
+                  <p>£150 Per Hour</p>
                 </div>
                 <Link href="" className="allBtn dark border">Request to pUblish</Link>
                 <Link href="" className="allBtn border">View bookings</Link>
