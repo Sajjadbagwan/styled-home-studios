@@ -621,14 +621,14 @@
             .formDiv{
                 .formDetails{
                     h2{
-                        margin-bottom: 28px;
+                        margin-bottom:33px;
                     }
                     hr{
                         margin: 18px 0 20px 0;
                     }
                     .commonSection{
                         h3{
-                            margin-bottom: 22px;
+                            margin-bottom: 17px;
                         }
                         .checkboxDiv{
                             justify-content: flex-start;
@@ -654,8 +654,8 @@
                                             justify-content: flex-start;
                                             width: 100%;
                                             align-items: center;
-                                            margin: 12px auto 0 auto;
-                                            input{
+                                            margin: 19px auto 13px auto;
+                                            input[type="number"]{
                                                 max-width: 70px;
                                                 padding-left: 5px;
                                                 padding-right: 5px;
@@ -669,10 +669,62 @@
                                         }
                                     }    
                                 }
+                                &:last-child{
+                                    width: 100%;
+                                    .hideDiv{
+                                        .inputGroup{
+                                            .halfDiv{
+                                                input[type="text"]{
+                                                    margin-right: 30px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             
                         }
                         
+                    }
+                    .button-container{
+                        margin-top: 34px;
+                    }
+                }
+            }
+        }
+    }
+    .confirmPropertyDetailsStep4{
+        :global{
+            .formDiv{
+                .formDetails{
+                    h2{
+                        margin-bottom:33px;
+                    }
+                    hr{
+                        margin: 18px 0 20px 0;
+                    }
+                    .commonSection{
+                        h3{
+                            margin-bottom: 17px;
+                        }
+                        .checkboxDiv{
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+                            align-items: flex-start;
+                            .singleCheckbox{
+                                width: auto;
+                                margin-right: 20px;
+                                margin-bottom: 15px;
+                                position: relative;
+                            }
+                            
+                        }
+                        &.designStyle{
+                            .singleCheckbox{
+                                width: 16.66%;
+                                margin-right: 0;
+                            }
+                        }
                     }
                     .button-container{
                         margin-top: 34px;
