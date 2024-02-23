@@ -4,14 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./locationFilter.module.scss";
 import FilterPopup from "../FilterPopup/filterPopup";
-import MapResults from "../MapResults/mapResults";
 
 function LocationFilter() {
   return (
     <section className={styles.locationFilter}>
       <div className="container">
         <div className="filterMain">
-          <MapResults />
+          <Link href="#" className="allBtn dark border">
+            Show results as map
+          </Link>
 
           <ul className="filterCat">
             <li>
