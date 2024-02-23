@@ -42,10 +42,10 @@ function ConfirmPropertyDetailsStep2() {
                     </div>
                 </div>
                 <div className="inputGroup">
-                        <div className="halfInput">
-                            <input type="number" name="vat" placeholder="VAT Number*"/>
-                        </div>
-                    </div>         
+                    <div className="halfInput">
+                        <input type="number" name="vat" placeholder="VAT Number*"/>
+                    </div>
+                </div>         
             </div>
             <hr />
             <div className="commonSection">

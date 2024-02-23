@@ -8,6 +8,8 @@ import ConfirmPropertyDetailsStep2 from "@/components/Design/ConfirmPropertyDeta
 import ConfirmPropertyDetailsStep3 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep3";
 import ConfirmPropertyDetailsStep4 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep4";
 import ConfirmPropertyDetailsStep5 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep5";
+import ConfirmPropertyDetailsStep6 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep6";
+import ConfirmPropertyDetailsStep7 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep7";
 
 function ConfirmPropertyDetailsForm() {
   
@@ -108,11 +110,13 @@ function ConfirmPropertyDetailsForm() {
           </li>
         </ul>
         <form>
-          <ConfirmPropertyDetailsStep1 />
+          {/* <ConfirmPropertyDetailsStep1 />
           <ConfirmPropertyDetailsStep2 /> 
           <ConfirmPropertyDetailsStep3 /> 
           <ConfirmPropertyDetailsStep4 />
-          <ConfirmPropertyDetailsStep5 />
+          <ConfirmPropertyDetailsStep5 /> 
+          <ConfirmPropertyDetailsStep6 />*/} 
+          <ConfirmPropertyDetailsStep7 />
         </form>
       </div>
     </div>
