@@ -3,7 +3,7 @@
 .locationReview {
   background-color: $cream-color;
   margin: 0;
-  padding: 105px 0 165px;
+  padding: 105px 0 90px;
   position: relative;
   // overflow: hidden;
   :global {
@@ -24,7 +24,6 @@
           justify-content: space-between;
           .reviewBox {
             flex: 0 0 48%;
-            padding: 0 10px 0 0;
             .img {
               margin-bottom: 28px;
               display: flex;
@@ -49,9 +48,9 @@
   &::before {
     content: "";
     width: 50%;
-    height: 15%;
+    height: 18%;
     position: absolute;
-    top: -95px;
+    top: -90px;
     right: 0;
     background: #e6e2df;
     clip-path: polygon(100% 100%, 0 100%, 100% 0, 100% 100%, 0 0);

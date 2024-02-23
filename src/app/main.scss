@@ -170,6 +170,19 @@ body {
       background: $white-color;
       left: 0;
     }
+    &.dark {
+      &::before {
+        background: $black-color;
+      }
+    }
+  }
+  &.dark {
+    span {
+      color: $black-color;
+    }
+    h2 {
+      color: $black-color;
+    }
   }
 }
 
@@ -277,7 +290,8 @@ body {
 
 form {
   input[type="email"],
-  [type="text"],[type="number"]  {
+  [type="text"],
+  [type="number"] {
     width: 100%;
     background-color: $white-color;
     border: none;

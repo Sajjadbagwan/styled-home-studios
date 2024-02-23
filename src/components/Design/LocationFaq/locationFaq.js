@@ -100,7 +100,11 @@ function LocationFaq() {
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                   </p>
                 </AccordionDetails>
               </Accordion>
@@ -168,86 +172,6 @@ function LocationFaq() {
                   }
                   aria-controls="panel4-content"
                   id="panel4-header"
-                >
-                  <Typography>
-                    FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur
-                    Adipiscing
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-
-              <Accordion
-                expanded={expanded === "panel5"}
-                onChange={handleChange("panel5")}
-              >
-                <AccordionSummary
-                  expandIcon={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15.319"
-                      height="8.659"
-                      viewBox="0 0 15.319 8.659"
-                    >
-                      <path
-                        id="Path_3990"
-                        data-name="Path 3990"
-                        d="M6.952,0,0,6.952,6.952,13.9"
-                        transform="translate(0.707 7.659) rotate(-90)"
-                        fill="none"
-                        stroke="#20535a"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  }
-                  aria-controls="panel5-content"
-                  id="panel5-header"
-                >
-                  <Typography>
-                    FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur
-                    Adipiscing
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-
-              <Accordion
-                expanded={expanded === "panel6"}
-                onChange={handleChange("panel6")}
-              >
-                <AccordionSummary
-                  expandIcon={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15.319"
-                      height="8.659"
-                      viewBox="0 0 15.319 8.659"
-                    >
-                      <path
-                        id="Path_3990"
-                        data-name="Path 3990"
-                        d="M6.952,0,0,6.952,6.952,13.9"
-                        transform="translate(0.707 7.659) rotate(-90)"
-                        fill="none"
-                        stroke="#20535a"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  }
-                  aria-controls="panel6-content"
-                  id="panel6-header"
                 >
                   <Typography>
                     FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur

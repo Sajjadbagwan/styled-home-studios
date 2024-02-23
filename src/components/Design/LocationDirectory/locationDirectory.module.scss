@@ -1,0 +1,76 @@
+@import "../../../../styles/global.scss";
+
+.locationDirectory {
+  background-color: $cream-color;
+  margin: 125px 0 0 0;
+  padding: 103px 0 90px;
+  position: relative;
+  :global {
+    .container {
+      .hostSlider {
+        width: 1165px;
+        margin: 0 auto;
+        max-width: 85%;
+        .line {
+          padding: 0;
+          h2 {
+            margin-bottom: 40px;
+          }
+          &::before {
+            left: -13px;
+          }
+        }
+      }
+      .allDirectory {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 53px;
+        .slide {
+          min-width: 100%;
+          .slideImg {
+            position: relative;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .slideInfo {
+            margin: 6px 0 0 0;
+            .subDetail {
+              h3 {
+                font-family: $default-font;
+                font-size: 18px;
+                text-transform: uppercase;
+                flex: 0 0 85%;
+                margin: 0;
+              }
+            }
+            .subDetailLast {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 3px;
+              align-items: baseline;
+              p {
+                margin-bottom: 0;
+              }
+              img {
+                margin: 4px 5px -1px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    background: $cream-color;
+    clip-path: polygon(0 0, 100% 25%, 100% 0, 0 0, 0 0);
+    z-index: 1;
+  }
+}
