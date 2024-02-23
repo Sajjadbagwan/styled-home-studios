@@ -14,6 +14,8 @@
     "@mui/icons-material": "^5.15.10",
     "@mui/lab": "^5.0.0-alpha.165",
     "@mui/material": "^5.15.10",
+    "@mui/x-date-pickers": "^6.19.4",
+    "dayjs": "^1.11.10",
     "multi-range-slider-react": "^2.0.7",
     "next": "14.1.0",
     "react": "^18",

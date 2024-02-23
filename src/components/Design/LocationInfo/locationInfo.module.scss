@@ -20,6 +20,73 @@
           }
         }
       }
+      .aboutForm {
+        position: relative;
+        width: 40%;
+        & > div {
+          background-color: $white-color;
+          position: absolute;
+          width: 100%;
+          box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+          padding: 50px 60px;
+          form {
+            h3 {
+              margin: 30px 0 20px 0;
+            }
+            .dateFiled {
+              position: relative;
+              input {
+                &[type="date"] {
+                  width: 100%;
+                  padding: 21px 20px;
+                  font-size: 16px;
+                  margin-bottom: 17px;
+                }
+              }
+              &::after {
+                content: "";
+                background-image: url("/assets/images/calendar.png");
+                width: 35px;
+                height: 36px;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                background-color: $white-color;
+              }
+            }
+            .timeFiled {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              input {
+                flex: 0 0 48%;
+                border: 1px solid $black-color;
+                margin-bottom: 12px;
+              }
+            }
+            .dayAdd {
+              font-size: 15px;
+              text-decoration: underline;
+            }
+            .costBox {
+              display: flex;
+              justify-content: space-between;
+              margin: 35px 0 0 0;
+              h4 {
+                margin-bottom: 8px;
+                font-size: 23px;
+              }
+            }
+            .allBtn {
+              width: 100%;
+              margin-bottom: 15px;
+            }
+            .askForm {
+              text-align: center;
+            }
+          }
+        }
+      }
     }
   }
 }
