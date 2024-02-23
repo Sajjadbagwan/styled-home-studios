@@ -4,6 +4,8 @@
   margin: 0;
   :global {
     .container {
+      position: relative;
+      z-index: 3;
       .backBtn {
         margin: 18px 0;
         font-size: 16px;
