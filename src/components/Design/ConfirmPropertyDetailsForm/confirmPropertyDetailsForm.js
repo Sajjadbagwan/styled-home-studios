@@ -108,10 +108,10 @@ function ConfirmPropertyDetailsForm() {
           </li>
         </ul>
         <form>
-          {/* <ConfirmPropertyDetailsStep1 />
+          <ConfirmPropertyDetailsStep1 />
           <ConfirmPropertyDetailsStep2 /> 
           <ConfirmPropertyDetailsStep3 /> 
-          <ConfirmPropertyDetailsStep4 />*/}
+          <ConfirmPropertyDetailsStep4 />
           <ConfirmPropertyDetailsStep5 />
         </form>
       </div>
