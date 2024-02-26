@@ -72,6 +72,32 @@
             }
         }
         form{
+
+            .declinedError{
+                max-width: 1165px;
+                margin:-23px  auto 61px auto;
+                text-align: center;
+                position: relative;
+                background-color: #BE1600;
+                color: $white-color;
+                padding: 29px 50px;
+                .reason{
+                    display: flex;
+                    align-items: flex-start;
+                    margin-top: 12px;
+                    img{
+                        width: 36px;
+                        height: 36px;
+                    }
+                    .warningDiv{
+                        text-align: left;
+                        margin-left: 20px;
+                        h3{
+                            margin: 10px 0 10px 0;
+                        }
+                    }
+                }
+            }
             .formDiv{
                 width: 100%;
                 margin: 0;

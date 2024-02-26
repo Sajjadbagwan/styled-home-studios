@@ -11,6 +11,7 @@ import Image4 from "../../../../public/assets/images/color-4.png"
 import Image5 from "../../../../public/assets/images/color-5.png"
 import UploadButton from "../../../../public/assets/images/upload-image.svg"
 import SelectedImage from "../../../../public/assets/images/host-2.png"
+import DeclineProp from "../../../../public/assets/images/decline-prop.svg"
 import styles from "./confirmPropertyDetailsForm.module.scss";
 
 function ConfirmPropertyDetailsStep1() {
@@ -44,6 +45,15 @@ function ConfirmPropertyDetailsStep1() {
   return (
     <div className={styles.confirmPropertyDetailsStep1}>
       <div className="formDiv">
+        <div className="declinedError">
+            <div className="reason">
+                <Image src={DeclineProp} alt="question" height={41} width={41} />
+                <div className="warningDiv">
+                    <h3>Why Was My Property Declined?</h3>
+                    <p>Please provide more photos with wider angles. We need to see a more general view of the property. Please update your application and resubmit for approval.</p>
+                </div>
+            </div>
+        </div>
         <div className="formDetails">           
             <h2>Step 1 Property Details - Please Enter Below</h2>
             <p>Please check the details your previously entered and fill out any new information.</p>
