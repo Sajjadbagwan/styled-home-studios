@@ -2,17 +2,44 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import VerifyIdentityPopup from "@/components/Design/CommonPopup/verifyIdentity";
+import RemovePropertyPopup from "@/components/Design/CommonPopup/removePropertyPopup";
+import DeactivatePropertyPopup from "@/components/Design/CommonPopup/deactivatePropertyPopup";
 import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 import Listing1 from "../../../../public/assets/images/listing1.jpg";
 import Listing2 from "../../../../public/assets/images/listing2.jpg";
 import Listing3 from "../../../../public/assets/images/listing3.jpg";
+import NewProperty from "../../../../public/assets/images/new-property.jpg";
+import AddNewIcon from "../../../../public/assets/images/add-property-icon.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./propertyListingSection.module.scss";
 
 function PropertyListingSection() {
-    
+    const [VerifyIdentityIsOpen, SetVerifyIdentityIsOpen] = useState(false);
+    const [RemovePropertyIsOpen, SetRemovePropertyIsOpen] = useState(false);
+    const [DeactivatePropertyIsOpen, SetDeactivatePropertyIsOpen] = useState(false);
+    const openVerifyIdentityModal = ()=> {
+      SetVerifyIdentityIsOpen(true);
+    }
+    const closeVerifyIdentityModal =()=> {
+      SetVerifyIdentityIsOpen(false);
+    }
+
+    const openRemovePropertyModal = ()=> {
+      SetRemovePropertyIsOpen(true);
+    }
+    const closeRemovePropertyModal =()=> {
+      SetRemovePropertyIsOpen(false);
+    }
+
+    const openDeactivatePropertyodal = ()=> {
+      SetDeactivatePropertyIsOpen(true);
+    }
+    const closeDeactivatePropertyodal =()=> {
+      SetDeactivatePropertyIsOpen(false);
+    }
       const innersettings = {
         dots: true,
         arrows: false,
@@ -46,7 +73,7 @@ function PropertyListingSection() {
                   <p>£100 Per Hour</p>
                 </div>
                 <Link href="" className="allBtn dark border">View Submission</Link>
-                <Link href="">Cancel Application</Link>
+                <button className="normalLink" type="button" onClick={openRemovePropertyModal}>Cancel Application</button>
               </div>
             </div>
             <div className="slide">
@@ -68,7 +95,7 @@ function PropertyListingSection() {
                   <p>Area: South West</p>
                   <p>£215 Per Hour</p>
                 </div>
-                <Link href="" className="allBtn dark border">Complete listing</Link>
+                <button type="button" onClick={openVerifyIdentityModal} className="allBtn dark border">Complete listing</button>
               </div>
             </div>
             <div className="slide">
@@ -109,7 +136,7 @@ function PropertyListingSection() {
                 <Link href="">View Listing</Link>
                 <Link href="" className="allBtn dark border">Edit Listing</Link>
                 <Link href="" className="allBtn border">View bookings</Link>
-                <Link href="">Deactivate</Link>
+                <button type="button" className="normalLink" onClick={openDeactivatePropertyodal}>Deactivate</button>
               </div>
             </div>
             <div className="slide">
@@ -178,8 +205,23 @@ function PropertyListingSection() {
                 <Link href="" className="allBtn border">View bookings</Link>
               </div>
             </div>
+            <div className="slide">
+              <div className="slideImg">
+                <Image src={NewProperty} alt="listing" height={770} width={474}/>
+              </div>
+              <div className="addNew">
+                <Link href="">
+                  <Image src={AddNewIcon} alt="addnew-icon" height={85} width={85} />
+                  Add New Property
+                </Link>
+                <p>Submit a new property to be listed</p>
+              </div>
+            </div>
         </div>
       </EqualHeight>
+      <VerifyIdentityPopup VerifyIdentityIsOpen={VerifyIdentityIsOpen} closeVerifyIdentityModal={closeVerifyIdentityModal} />
+      <RemovePropertyPopup RemovePropertyIsOpen={RemovePropertyIsOpen} closeRemovePropertyModal={closeRemovePropertyModal} />
+      <DeactivatePropertyPopup DeactivatePropertyIsOpen={DeactivatePropertyIsOpen} closeDeactivatePropertyodal={closeDeactivatePropertyodal} />
       </div>
     </div>
   );

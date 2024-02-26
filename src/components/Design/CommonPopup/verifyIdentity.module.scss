@@ -1,0 +1,52 @@
+@import "../../../../styles/global.scss";
+.verifyIdentityPopup{
+    margin: 0 auto!important;
+    max-width: 635px !important;
+    height: 338px !important;
+    padding: 40px !important;
+    top: 50%;
+    transform: translate(0%, -50%);
+    :global{
+        .productAdded{
+                display: flex;
+                justify-content: flex-end;
+                text-decoration: none;
+            .close-btn{                
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                color: $green-color;
+            }
+        }
+        .popup-body{
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-top: 17px;
+            .allBtn{
+                margin-top: 20px;
+            }
+            button{
+                height: 50px;
+                font-family: $default-font;
+                cursor: pointer;
+                font-size: 14px;
+              }
+        }
+    }
+    &.removePropertyPopup{
+        margin: 0 auto !important;
+        :global{
+            .popup-body{
+                p{
+                    &:last-child{
+                        margin: 0;
+                    }
+                }
+                .allBtn{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
