@@ -3,8 +3,18 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./locationReview.module.scss";
+import AllReviewPopup from "../CommonPopup/allReviewPopup";
 
 function LocationReview() {
+  const [AllReviewIsOpen, SetAllReviewIsOpen] = useState(false);
+  const openAllReviewModal = () => {
+    SetAllReviewIsOpen(true);
+  };
+
+  const closeAllReviewModal = () => {
+    SetAllReviewIsOpen(false);
+  };
+
   return (
     <section className={styles.locationReview}>
       <div className="container">
@@ -26,7 +36,7 @@ function LocationReview() {
               </svg>
               4.7
             </h2>
-            <Link href="#">View All 37 Reviews</Link>
+            <span onClick={openAllReviewModal}>View All 37 Reviews</span>
           </div>
           <div className="mainReview">
             <div className="reviewBox">
@@ -105,6 +115,10 @@ function LocationReview() {
             </div>
           </div>
         </div>
+        <AllReviewPopup
+          AllReviewIsOpen={AllReviewIsOpen}
+          closeAllReviewModal={closeAllReviewModal}
+        />
       </div>
     </section>
   );

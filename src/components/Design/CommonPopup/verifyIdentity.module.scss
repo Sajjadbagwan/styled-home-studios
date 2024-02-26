@@ -1,52 +1,99 @@
 @import "../../../../styles/global.scss";
-.verifyIdentityPopup{
-    margin: 0 auto!important;
-    max-width: 635px !important;
-    height: 338px !important;
-    padding: 40px !important;
-    top: 50%;
-    transform: translate(0%, -50%);
-    :global{
-        .productAdded{
-                display: flex;
-                justify-content: flex-end;
-                text-decoration: none;
-            .close-btn{                
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                color: $green-color;
-            }
+.verifyIdentityPopup {
+  margin: 0 auto !important;
+  max-width: 635px !important;
+  height: 338px !important;
+  padding: 40px !important;
+  top: 50%;
+  transform: translate(0%, -50%);
+  :global {
+    .productAdded {
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      .close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: $green-color;
+      }
+    }
+    .popup-body {
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-top: 17px;
+      .allBtn {
+        margin-top: 20px;
+      }
+      button {
+        height: 50px;
+        font-family: $default-font;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+  }
+  &.removePropertyPopup {
+    margin: 0 auto !important;
+    :global {
+      .popup-body {
+        p {
+          &:last-child {
+            margin: 0;
+          }
         }
-        .popup-body{
-            text-align: center;
-            display: block;
-            width: 100%;
-            margin-top: 17px;
-            .allBtn{
-                margin-top: 20px;
-            }
-            button{
-                height: 50px;
-                font-family: $default-font;
-                cursor: pointer;
-                font-size: 14px;
+        .allBtn {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &.allReviewPopup {
+    margin: 0 auto !important;
+    max-width: 1035px !important;
+    height: 80vh !important;
+    padding: 75px 40px 55px 90px !important;
+    overflow: hidden;
+    :global {
+      .productAdded {
+        .close-btn {
+          padding: 0 3px;
+          font-size: 20px;
+          position: absolute;
+          top: 35px;
+          right: 36px;
+        }
+      }
+      .popup-body {
+        text-align: left;
+        overflow-y: auto;
+        height: 62vh;
+        padding: 0 40px 0 0;
+        .reviewList {
+          margin: 40px 0 0 0;
+          .reviewBox {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 29px;
+            border-bottom: 1px solid rgba(77, 77, 79, 0.5);
+            padding: 0 0 33px 0;
+            .img {
+              flex: 0 0 14%;
+              img {
+                width: 100%;
+                height: 96%;
               }
-        }
-    }
-    &.removePropertyPopup{
-        margin: 0 auto !important;
-        :global{
-            .popup-body{
-                p{
-                    &:last-child{
-                        margin: 0;
-                    }
-                }
-                .allBtn{
-                    margin-right: 20px;
-                }
             }
+            .info {
+              flex: 0 0 16%;
+            }
+            .content {
+              flex: 0 0 64%;
+            }
+          }
         }
+      }
     }
+  }
 }
