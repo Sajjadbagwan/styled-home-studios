@@ -8,11 +8,13 @@
             justify-content: space-between;
             width: 100%;
             flex-wrap: wrap;
-            row-gap: 95px;
-            max-width: 1380px;
-            margin: 85px auto 0 auto;
+            row-gap: 33px;
+            //max-width: 1380px;
+            margin: 55px auto 0 auto;
             .slide {
-                width: 30%;
+                width: 32%;
+                background-color: rgba(139,146,151,0.05);
+                padding: 28px 20px 28px 23px;
                 .slideImg {
                   position: relative;
                   &.permenantDeclined{
@@ -119,13 +121,18 @@
                   .subDetail {
                     display: flex;
                     justify-content: space-between;
-                    margin-bottom: 10px;
+                    margin-bottom: 5px;
                     align-items: baseline;
+                    .equal-height-JlocK{
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: baseline;
+                    }
                     h3 {
                       font-family: $default-font;
                       font-size: 18px;
                       text-transform: uppercase;
-                      flex: 0 0 85%;
+                      flex: 0 0 93%;
                       margin: 0;
                     }
                     .rating {
@@ -138,16 +145,97 @@
                   }
                   .allBtn{
                     width: 100%;
-                    margin-top: 20px;
+                    margin-top: 15px;
                     margin-bottom: 10px;
                   }
                   a{
                     text-align: center;
-                    margin: 0 auto;
+                    margin: 25px auto 0 auto;
                     display: block;
+                    &:last-child{
+                      margin-top: 18px;
+                    }
+                  }
+                  button{
+                    height: 50px;
+                    font-family: $default-font;
+                    cursor: pointer;
+                    font-size: 14px;
+                    &.normalLink{
+                      background-color: transparent;
+                      border: none;
+                      text-align: center;
+                      color: $green-color;
+                      text-decoration: underline;
+                      margin: 0 auto;
+                      display: block;
+                      &:hover{
+                        text-decoration: none;
+                      }
+                    }
+                  }
+                }
+                &:last-child{
+                  position: relative;
+                  background-color: transparent;
+                  padding: 0;
+                  margin-top: 75px;
+                  width: 33%;
+                  .slideImg{
+                    img{
+                      height: 685px;
+                    }
+                    &::before{
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 98.5%;
+                      width: 100%;
+                      background-color: rgba(139,146,151,.30);
+                    }
+                  }
+                  .addNew{
+                    position: absolute;
+                    top: 49%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    a,p{
+                      display: inline-block;
+                      text-align: center;
+                      color: $white-color;
+                      margin-bottom: 10px;
+                      img{
+                        margin: 0 auto 10px auto;
+                        width: 100%;
+                        max-width: 70px;
+                        height: 70px;
+                        display: block;
+                      }
+                    }
+                    p{
+                      margin: 0;
+                    }
+                  }
+                  &::after{
+                    clip-path: polygon(0 0, 100% 100%, 100% 0);
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    background-color: #fff;
+                    height: 158px;
+                    width: 198px;
                   }
                 }
               }
+              
           }
         }
       }
