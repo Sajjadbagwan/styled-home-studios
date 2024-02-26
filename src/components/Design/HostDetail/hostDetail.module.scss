@@ -5,6 +5,7 @@
   :global {
     .container {
       .row {
+        justify-content: space-between;
         .hostLeft {
           flex: 0 0 29%;
           width: 29%;
