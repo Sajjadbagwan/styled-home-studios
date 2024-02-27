@@ -1,0 +1,22 @@
+@import "../../../styles/global.scss";
+
+.viewHostDetails {
+  margin: 0;
+  :global {
+    .aboutRightImg {
+      .container {
+        .row {
+          .aboutImg {
+            .innerImg {
+              .imgFront {
+                &::before {
+                  background-color: $white-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

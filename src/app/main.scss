@@ -507,3 +507,11 @@ button {
     text-decoration: none;
   }
 }
+
+.halfInput {
+  display: flex;
+  justify-content: space-between;
+  & > .inputGroup {
+    flex: 0 0 48.5%;
+  }
+}

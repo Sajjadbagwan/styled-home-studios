@@ -1,0 +1,39 @@
+@import "../../../../styles/global.scss";
+
+.createAccountForm {
+  margin: 25px 0 0 0;
+  :global {
+    .container {
+      .mainForm {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        .signup {
+          flex: 0 0 58%;
+          & > div {
+            background-color: $cream-color;
+            padding: 100px;
+            input {
+              border: none !important;
+            }
+          }
+          .rightAlign {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .allBtn {
+              margin-top: 0;
+            }
+          }
+        }
+        .login {
+          flex: 0 0 38%;
+          & > div {
+            padding: 100px;
+            border: 1px solid rgba(0 0 0 / 25%);
+          }
+        }
+      }
+    }
+  }
+}
