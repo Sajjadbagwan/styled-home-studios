@@ -10,10 +10,10 @@ function BookingSidebar() {
     <div className={styles.bookingSidebarPage}>
       <ul>
         <li>
-            <Link href="">Requested Bookings</Link>
+            <Link className="activeSidebar" href="">Requested Bookings</Link>
         </li>
         <li>
-            <Link className="activeSidebar" href="">Confirmed Bookings</Link>
+            <Link href="">Confirmed Bookings</Link>
         </li>
         <li>
             <Link href="">Booking History</Link>
