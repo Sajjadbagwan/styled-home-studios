@@ -122,6 +122,40 @@
             }
           }
         }
+        .loginMain {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          position: relative;
+          & > div {
+            flex: 0 0 45%;
+            text-align: left;
+            h3 {
+              margin-bottom: 28px;
+            }
+            &.loginRight {
+              div {
+                background-color: $cream-color;
+                padding: 55px 50px;
+                .allBtn {
+                  border-color: $green-color;
+                  &:hover {
+                    border-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background: rgb(0 0 0 / 25%);
+          }
+        }
       }
     }
   }

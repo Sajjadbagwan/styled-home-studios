@@ -21,7 +21,37 @@ const AllReviewPopup = (props) => {
               className="close-btn"
               onClick={closeAllReviewModal}
             >
-              x
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10.012"
+                height="10.012"
+                viewBox="0 0 10.012 10.012"
+              >
+                <g
+                  id="Group_4550"
+                  data-name="Group 4550"
+                  transform="translate(0.53 0.53)"
+                >
+                  <path
+                    id="Path_3990"
+                    data-name="Path 3990"
+                    d="M8.951,0,0,8.951"
+                    transform="translate(0 8.951) rotate(-90)"
+                    fill="none"
+                    stroke="#20535a"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    id="Path_4026"
+                    data-name="Path 4026"
+                    d="M8.951,8.951,0,0"
+                    transform="translate(0 8.951) rotate(-90)"
+                    fill="none"
+                    stroke="#20535a"
+                    stroke-width="1.5"
+                  ></path>
+                </g>
+              </svg>
             </button>
           </div>
           <div className="popup-body removeCompare-body">
