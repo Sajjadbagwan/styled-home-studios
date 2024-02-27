@@ -18,6 +18,11 @@
               margin: 0 10px -7px 0;
             }
           }
+          span {
+            cursor: pointer;
+            color: $green-color;
+            text-decoration: underline;
+          }
         }
         .mainReview {
           display: flex;

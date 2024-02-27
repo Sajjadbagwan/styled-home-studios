@@ -57,12 +57,18 @@
           display: flex;
           justify-content: right;
           align-items: center;
-          a {
+          a,
+          span {
             margin: 30px 0 0 65px;
             display: flex;
             align-items: center;
             font-family: $title-font;
             font-size: 16px;
+            cursor: pointer;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
             img {
               margin: 0 15px 0 0;
               width: 30px;

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.scss";
+import LoginPopup from "../Design/CommonPopup/LoginPopup";
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -47,6 +48,15 @@ function Header() {
     setIsActiveClose(!isActiveClose);
   };
 
+  const [LoginPopupIsOpen, SetLoginPopupIsOpen] = useState(false);
+  const openLoginPopupModal = () => {
+    SetLoginPopupIsOpen(true);
+  };
+
+  const closeLoginPopupModal = () => {
+    SetLoginPopupIsOpen(false);
+  };
+
   return (
     <section className={styles.mainHeader}>
       <div className={`${"menuOverlay"} ${isActive ? "active" : ""}`}>
@@ -87,12 +97,14 @@ function Header() {
                 <div className="secondMenu">
                   <ul>
                     <li className="hasBorder">
-                      <Link href="#" onClick={handleClickLogin}>
+                      <Link href="#" onClick={openLoginPopupModal}>
                         Login
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">Sign Up</Link>
+                      <Link href="#" onClick={handleClickLogin}>
+                        Sign Up
+                      </Link>
                     </li>
                   </ul>
 
@@ -218,6 +230,10 @@ function Header() {
             </div>
           </div>
         </div>
+        <LoginPopup
+          LoginPopupIsOpen={LoginPopupIsOpen}
+          closeLoginPopupModal={closeLoginPopupModal}
+        />
       </div>
     </section>
   );

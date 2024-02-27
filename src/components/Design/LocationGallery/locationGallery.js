@@ -4,8 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import Masonry from "@mui/lab/Masonry";
 import styles from "./locationGallery.module.scss";
+import DownloadPdfPopup from "../CommonPopup/downloadPdf";
 
 function LocationGallery() {
+  const [DownloadPdfIsOpen, SetDownloadPdfIsOpen] = useState(false);
+  const openDownloadPdfModal = () => {
+    SetDownloadPdfIsOpen(true);
+  };
+
+  const closeDownloadPdfModal = () => {
+    SetDownloadPdfIsOpen(false);
+  };
   return (
     <section className={styles.locationGallery}>
       <div className="container">
@@ -60,7 +69,7 @@ function LocationGallery() {
             </div>
           </div>
           <div className="right">
-            <Link href="#">
+            <span onClick={openDownloadPdfModal}>
               <Image
                 src="/assets/images/download.svg"
                 width={33}
@@ -68,7 +77,7 @@ function LocationGallery() {
                 alt=""
               />
               Download PDF
-            </Link>
+            </span>
             <Link href="#">
               <Image
                 src="/assets/images/share.svg"
@@ -130,6 +139,10 @@ function LocationGallery() {
             View all images
           </Link>
         </div>
+        <DownloadPdfPopup
+          DownloadPdfIsOpen={DownloadPdfIsOpen}
+          closeDownloadPdfModal={closeDownloadPdfModal}
+        />
       </div>
     </section>
   );
