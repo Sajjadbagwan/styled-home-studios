@@ -6,7 +6,7 @@ import TitleWithTextBanner from "@/components/Design/TitleWithTextBanner/titleWi
 import Breadcrumb from "@/components/Design/Breadcrumb/breadcrumb";
 import CreateAccountForm from "@/components/Design/CreateAccountForm/createAccountForm";
 
-export default function CreateAnAccount() {
+function Layout({ children }) {
   return (
     <div className={styles.createAnAccount}>
       <TitleWithTextBanner />
@@ -15,3 +15,5 @@ export default function CreateAnAccount() {
     </div>
   );
 }
+
+export default Layout;

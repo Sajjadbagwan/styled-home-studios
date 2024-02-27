@@ -1,0 +1,15 @@
+@import "../../../styles/global.scss";
+
+.requestBookingCheckout {
+  margin: 0;
+  :global {
+    .mainBooking {
+      display: flex;
+      justify-content: space-between;
+      .leftBooking {
+        flex: 0 0 30%;
+        width: 30%;
+      }
+    }
+  }
+}

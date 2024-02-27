@@ -1,90 +1,276 @@
 @import "../../../../styles/global.scss";
-.verifyIdentityPopup{
-    margin: 0 auto!important;
-    max-width: 635px !important;
-    height: 338px !important;
-    padding: 40px !important;
-    top: 50%;
-    transform: translate(0%, -50%);
-    :global{
-        .productAdded{
-                display: flex;
-                justify-content: flex-end;
-                text-decoration: none;
-            .close-btn{                
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                color: $green-color;
+.verifyIdentityPopup {
+  margin: 0 auto !important;
+  max-width: 635px !important;
+  height: 338px !important;
+  padding: 40px !important;
+  top: 50%;
+  transform: translate(0%, -50%);
+  :global {
+    .productAdded {
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      .close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: $green-color;
+      }
+    }
+    .popup-body {
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-top: 17px;
+      .allBtn {
+        margin-top: 20px;
+      }
+      .button-container {
+        button {
+          &:last-child {
+            margin-left: 40px;
+            color: $green-color;
+            text-decoration: underline;
+            font-size: 14px;
+          }
+          &.allBtn {
+            color: $white-color;
+            text-decoration: none;
+            margin: 20px 0 0 0;
+            &:hover {
+              border: 1px solid $green-color;
+              color: $green-color;
             }
+          }
         }
-        .popup-body{
-            text-align: center;
-            display: block;
-            width: 100%;
-            margin-top: 17px;
-            .allBtn{
-                margin-top: 20px;
+      }
+      button {
+        height: 50px;
+        font-family: $default-font;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+  }
+  &.removePropertyPopup {
+    margin: 0 auto !important;
+    :global {
+      .popup-body {
+        p {
+          &:last-child {
+            margin: 0;
+          }
+        }
+        .allBtn {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &.confirmDeclineBookingPopup {
+    height: 300px !important;
+  }
+  &.declinedBooking {
+    margin: 0 auto !important;
+    height: auto !important;
+    :global {
+      .popup-body {
+        form {
+          .inputGroup {
+            textarea {
+              min-height: 150px;
             }
-            .button-container{
-                button{
-                    &:last-child{
-                        margin-left: 40px;
-                        color: $green-color;
-                        text-decoration: underline;
-                        font-size: 14px;
-                    }
-                    &.allBtn{
-                        color: $white-color;
-                        text-decoration: none;
-                        margin: 20px 0 0 0;
-                        &:hover{
-                            border: 1px solid $green-color;
-                            color: $green-color;
-                        }
-                    }
-                    
-                }
-            }
-            button{
-                height: 50px;
-                font-family: $default-font;
-                cursor: pointer;
-                font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  &.allReviewPopup {
+    margin: 0 auto !important;
+    max-width: 1035px !important;
+    height: 80vh !important;
+    padding: 75px 40px 55px 90px !important;
+    overflow: hidden;
+    :global {
+      .productAdded {
+        .close-btn {
+          padding: 0 3px;
+          font-size: 20px;
+          position: absolute;
+          top: 35px;
+          right: 36px;
+        }
+      }
+      .popup-body {
+        text-align: left;
+        overflow-y: auto;
+        height: 62vh;
+        padding: 0 40px 0 0;
+        .reviewList {
+          margin: 40px 0 0 0;
+          .reviewBox {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 29px;
+            border-bottom: 1px solid rgba(77, 77, 79, 0.5);
+            padding: 0 0 33px 0;
+            .img {
+              flex: 0 0 14%;
+              img {
+                width: 100%;
+                height: 96%;
               }
-        }
-    }
-    &.removePropertyPopup{
-        margin: 0 auto !important;
-        :global{
-            .popup-body{
-                p{
-                    &:last-child{
-                        margin: 0;
-                    }
-                }
-                .allBtn{
-                    margin-right: 20px;
-                }
             }
-        }
-    }
-    &.confirmDeclineBookingPopup{
-        height: 300px !important;
-    }
-    &.declinedBooking{
-        margin: 0 auto !important;
-        height: auto !important;
-        :global{
-            .popup-body{
-                form{
-                    .inputGroup{
-                        textarea{
-                            min-height: 150px;
-                        }
-                    }
-                }
+            .info {
+              flex: 0 0 16%;
             }
+            .content {
+              flex: 0 0 64%;
+            }
+          }
         }
+      }
     }
+  }
+  &.downloadPdf {
+    :global {
+      .popup-body {
+        text-align: center !important;
+        h3 {
+          margin-bottom: 43px;
+        }
+        form {
+          input {
+            margin-top: 0;
+            border: 1px solid $breadcumb-color;
+          }
+          .rightAlign {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          }
+          .checkMain {
+            .checkmark {
+              border: 1px solid #8b9297;
+            }
+          }
+        }
+        .loginMain {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          position: relative;
+          & > div {
+            flex: 0 0 45%;
+            text-align: left;
+            h3 {
+              margin-bottom: 28px;
+            }
+            &.loginRight {
+              div {
+                background-color: $cream-color;
+                padding: 55px 50px;
+                .allBtn {
+                  border-color: $green-color;
+                  &:hover {
+                    border-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background: rgb(0 0 0 / 25%);
+          }
+        }
+      }
+    }
+  }
+  &.avalibleSpace {
+    :global {
+      .popup-body {
+        h2 {
+          margin-bottom: 35px;
+        }
+        h3 {
+          font-size: 20px;
+          margin-bottom: 25px;
+        }
+        .spaceBox {
+          border-top: 1px solid rgba(77, 77, 79, 0.25);
+          padding-top: 50px;
+          margin-top: 23px;
+          margin-bottom: -23px;
+          &:last-child {
+            // margin-bottom: -70px;
+          }
+        }
+        .allAvalible {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom: 0;
+          & > div {
+            flex: 0 0 33.33%;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 23px;
+            position: relative;
+            padding-bottom: 30px;
+            & > p {
+              position: absolute;
+              font-size: 12px;
+              text-transform: capitalize;
+              left: 52px;
+              bottom: 0;
+              margin: 0;
+              line-height: 15px;
+            }
+            img {
+              height: 35px;
+              margin: 0 25px 0 0;
+              width: auto;
+            }
+          }
+          &.tick {
+            justify-content: left;
+            margin-top: 35px;
+            & > div {
+              // flex: 0 0 46%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.autoSizePopup {
+    max-width: fit-content !important;
+    height: auto !important;
+    padding: 98px !important;
+    min-width: 40%;
+    :global {
+      .productAdded {
+        .close-btn {
+          padding: 0 3px;
+          font-size: 20px;
+          position: absolute;
+          top: 35px;
+          right: 36px;
+        }
+      }
+      .popup-body {
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+  }
 }
