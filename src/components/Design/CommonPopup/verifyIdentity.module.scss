@@ -26,6 +26,26 @@
             .allBtn{
                 margin-top: 20px;
             }
+            .button-container{
+                button{
+                    &:last-child{
+                        margin-left: 40px;
+                        color: $green-color;
+                        text-decoration: underline;
+                        font-size: 14px;
+                    }
+                    &.allBtn{
+                        color: $white-color;
+                        text-decoration: none;
+                        margin: 20px 0 0 0;
+                        &:hover{
+                            border: 1px solid $green-color;
+                            color: $green-color;
+                        }
+                    }
+                    
+                }
+            }
             button{
                 height: 50px;
                 font-family: $default-font;
@@ -45,6 +65,24 @@
                 }
                 .allBtn{
                     margin-right: 20px;
+                }
+            }
+        }
+    }
+    &.confirmDeclineBookingPopup{
+        height: 300px !important;
+    }
+    &.declinedBooking{
+        margin: 0 auto !important;
+        height: auto !important;
+        :global{
+            .popup-body{
+                form{
+                    .inputGroup{
+                        textarea{
+                            min-height: 150px;
+                        }
+                    }
                 }
             }
         }

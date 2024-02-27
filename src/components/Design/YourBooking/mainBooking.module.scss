@@ -51,30 +51,41 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                flex-wrap: wrap;
                 background-color: $white-color;
-                padding: 10px 20px;
+                padding: 42px 36px 42px 45px;
+                margin-bottom: 30px;
                 .bookingId{
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
-                    max-width: 400px;
+                    max-width: 350px;
                     width: 100%;
                     justify-content: space-between;
+                    margin-top: 11px;
+                    button{
+                        color: $green-color;
+                        text-decoration: underline;
+                        font-family: $default-font;
+                        font-size: 14px;
+                    }
                     h3{
                         margin: 0;
                     }
                     p{
                         margin: 10px 0 0 0;
+                        font-size: 20px;
                     }
                 }
                 .requestDate{
-                    max-width: 350px;
+                    max-width: 370px;
                     width: 100%;
-                    padding: 10px 15px;
-                    background-color: $grey-color;
+                    padding: 13px 28px;
+                    background-color: #8B9297;
                     display: flex;
                     align-items: center;
-                    color: $white-color;
+                    color: #ffffff;
+                    margin-left: 35px;
                     img{
                         margin-right: 10px;
                     }
@@ -86,9 +97,198 @@
                 button{
                     img{
                         height: 10px;
-                        width: 18px;
+                        width: 16px;
+                        position: relative;
+                        top: 9px;
+                    }
+                    &.openAccordion{
+                        img{
+                            transform: rotate(180deg);
+                        }
+                        & + .accordionSummary{
+                            display: block;
+                        }
                     }
                 }
+                .accordionSummary{
+                    width: 100%;
+                    border-top: 1px solid rgba(77,77,79,.25);
+                    margin-top: 40px;
+                    display: none;
+                    .summaryBox{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 44px 0 30px 0;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        .bookingInfo{
+                            width: 37%;
+                            .dateTimeBox{
+                                background-color: $cream-color;
+                                padding: 48px 44px 20px 44px;                            
+                                margin-bottom: 44px;
+                                width: 100%;
+                                .dayCrew{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: flex-start;
+                                    margin-bottom: 15px;
+                                    &:last-child{
+                                        border-top: 1px solid rgba(77,77,79,.25);
+                                        padding-top: 34px;
+                                        margin-top: 20px;
+                                    }
+                                }
+                                p{
+                                    font-size: 15px;
+                                    color: $black-color;
+                                    line-height: normal;
+                                    margin: 0;
+                                }
+                                .timeDiv{
+                                    p{
+                                        text-align: right;
+                                        line-height: 22px;
+                                    }
+                                }
+                            }
+                            .ownerBox{
+                                width: 100%;
+                                max-width: 310px;
+                                .ownerInfo{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    width: 100%;
+                                    p{
+                                        text-transform: uppercase;
+                                        font-size: 18px;
+                                    }
+                                    img{
+                                        height: 120px;
+                                        width: 120px;
+                                        object-fit: cover;
+                                        margin-right: 25px;
+                                    }
+                                    .rating {
+                                        display: flex;
+                                        align-items: center;
+                                        text-decoration: underline;
+                                        width: 35px;
+                                        justify-content: space-between;
+                                        margin-left: auto;
+                                      }
+                                }
+                            }
+                        }
+                        .revenueBox{
+                            width: 60%;
+                            padding-left: 30px;
+                            border-left: 1px solid rgba(77,77,79,.25);
+                            padding-bottom: 47px;
+                            h3{
+                                margin-bottom: 45px;
+                                line-height: normal;
+                            }
+                            h3 + div{
+                                border-bottom: 1px solid rgba(77,77,79,.25);
+                                margin-bottom: 32px !important;
+                                padding-bottom: 7px;
+                            }
+                            .revenueDiv{
+                                font-size: 16px;
+                                color: $black-color;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                margin-bottom: 8px;
+                                &.hostRevenue{
+                                    border-top: 1px solid rgba(77,77,79,.25);
+                                    padding-top: 33px;
+                                    margin-top: 23px;
+                                    margin-bottom: 14px;
+                                }
+                                p{
+                                    margin: 0;
+                                    line-height: 20px;
+                                    font-size: 14px;
+                                }
+                                .revenuePrice{
+                                    p{
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                        h3{
+                            font-size: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .messageBox{
+                        width: 100%;
+                        padding-top: 40px;
+                        border-top: 1px solid rgba(77,77,79,.25);
+                        .messageDetails{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            flex-wrap: wrap;
+                            h4{
+                                text-transform: uppercase;
+                            }
+                            p{
+                                width: 100%;
+                            }
+                        }
+                        hr{
+                            border: none;
+                            height: 1px;
+                            background-color: rgba(77,77,79,.25);
+                            width: 100%;
+                            margin-bottom: 20px;
+                            margin-top: 10px;
+                            display: inline-block;
+                        }
+                        form{
+                            .halfDiv{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 40px;
+                                input{
+                                    width: 79.5%;
+                                    margin: 0;
+                                }
+                                .allBtn{
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .allBtn{
+                    margin: 0;
+                }
+                &.confirmBooking{
+                    .requestDate{
+                        background-color: $green-color;
+                    }
+                    .buttonContainer{
+                        display: flex;
+                        align-items: center;
+                        a{
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+            .allBtn{
+                margin: 0 auto;
+                height: 50px;
+                font-family: $default-font;
+                display: block;
             }
         }
       }
