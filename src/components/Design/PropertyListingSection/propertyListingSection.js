@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import VerifyIdentityPopup from "@/components/Design/CommonPopup/verifyIdentity";
+import VerifyIdentityPopup from "@/components/Design/CommonPopup/verifyIdentityPopup";
 import RemovePropertyPopup from "@/components/Design/CommonPopup/removePropertyPopup";
 import DeactivatePropertyPopup from "@/components/Design/CommonPopup/deactivatePropertyPopup";
 import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
