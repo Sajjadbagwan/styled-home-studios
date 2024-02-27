@@ -424,6 +424,8 @@ form {
 }
 
 .inputGroup {
+  position: relative;
+  text-align: left;
   input {
     padding: 5px 20px;
     border: 1px solid $breadcumb-color;
@@ -447,6 +449,12 @@ form {
     height: auto !important;
     font-family: $default-font;
   }
+  .errorMsg {
+    margin: -15px 0 15px 0;
+    width: 100%;
+    color: #be1600;
+    display: block;
+  }
 }
 .menuClose {
   .menuOverlay {
@@ -458,7 +466,7 @@ form {
     display: none !important;
   }
 }
-button{
+button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -484,5 +492,14 @@ button{
     @include md {
       padding: 0;
     }
+  }
+}
+
+.link {
+  color: $green-color;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
   }
 }

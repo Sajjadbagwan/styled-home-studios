@@ -8,6 +8,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import styles from "./locationInfowithform.module.scss";
+import AvalibleSpacePopup from "../CommonPopup/avalibleSpace";
 
 function LocationInfowithform() {
   const [expanded, setExpanded] = React.useState("panel1");
@@ -15,6 +16,16 @@ function LocationInfowithform() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  const [avalibleSpaceIsOpen, SetavalibleSpaceIsOpen] = useState(false);
+  const openavalibleSpaceModal = () => {
+    SetavalibleSpaceIsOpen(true);
+  };
+
+  const closeavalibleSpaceModal = () => {
+    SetavalibleSpaceIsOpen(false);
+  };
+
   return (
     <section className={styles.locationInfowithform}>
       <div className="container">
@@ -22,7 +33,9 @@ function LocationInfowithform() {
           <div className="formLeft">
             <div className="title">
               <h2>Available Spaces</h2>
-              <a href="#">View All 30</a>
+              <span className="link" onClick={openavalibleSpaceModal}>
+                View All 30
+              </span>
             </div>
             <div className="allAvalible">
               <div>
@@ -304,6 +317,10 @@ function LocationInfowithform() {
             </div>
           </div>
         </div>
+        <AvalibleSpacePopup
+          avalibleSpaceIsOpen={avalibleSpaceIsOpen}
+          closeavalibleSpaceModal={closeavalibleSpaceModal}
+        />
       </div>
     </section>
   );
