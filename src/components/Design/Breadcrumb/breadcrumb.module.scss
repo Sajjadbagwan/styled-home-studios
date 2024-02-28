@@ -5,6 +5,9 @@
   padding: 12px 0 5px;
   position: relative;
   z-index: 2;
+  @include md{
+    padding: 25px 0;
+  }
   p {
     margin: 0;
     font-size: 12px;

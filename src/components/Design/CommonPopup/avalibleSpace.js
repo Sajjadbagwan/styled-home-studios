@@ -12,6 +12,7 @@ const AvalibleSpacePopup = (props) => {
         isOpen={avalibleSpaceIsOpen}
         onRequestClose={closeavalibleSpaceModal}
         contentLabel="Example Modal"
+        ariaHideApp={false}
         className={
           styles.verifyIdentityPopup +
           " " +

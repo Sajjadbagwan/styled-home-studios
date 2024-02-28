@@ -9,6 +9,46 @@
             @include x-lg{
                 flex-wrap: wrap;
             }
+            .sidebarDiv{
+                width: 27.3%;
+                max-width: 400px;
+                @include x-lg{
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+                &.hide{
+                    @include md{
+                        display: none;
+                    }
+                }
+            }
+            .rightSide{
+                width: 71%;
+                max-width: 1100px;
+                @include x-lg{
+                    width: 100%;
+                } 
+                .backbtn{
+                    display: flex;
+                    align-items: center;
+                    max-width: 200px;
+                    margin-top: -4px;
+                    @include min-md{
+                        display: none;
+                    }
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+                &.hide{
+                    @include md{
+                        display: none;
+                    }
+                }
+                &.show{
+                    display: block;
+                }
+            }
         }
     }
 }

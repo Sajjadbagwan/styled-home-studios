@@ -12,6 +12,7 @@ const AllReviewPopup = (props) => {
         isOpen={AllReviewIsOpen}
         onRequestClose={closeAllReviewModal}
         contentLabel="Example Modal"
+        ariaHideApp={false}
         className={styles.verifyIdentityPopup + " " + styles.allReviewPopup}
       >
         <div>

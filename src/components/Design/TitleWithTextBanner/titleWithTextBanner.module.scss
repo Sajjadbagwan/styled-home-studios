@@ -5,6 +5,9 @@
   margin: 25px 0 0 0;
   position: relative;
   z-index: 1;
+  @include md{
+    margin: 0;
+  }
   :global {
     .heroImg {
       position: relative;
@@ -44,9 +47,9 @@
           left: 53%;
         }
         @include md{
-          top: -148px;
-          left: 50%;
-          width: 85%;
+          top: -132px;
+          left: 47%;
+          width: 78%;
         }
         h1{
           color: $white-color;
@@ -62,6 +65,9 @@
         }
         p{
           color: $white-color;
+          @include md{
+            line-height: normal;
+          }
         }
       }
     }
@@ -84,8 +90,10 @@
         height: 45%;
     }
     @include md{
-      width: 36%;
-      height: 18%;
+      width: 44%;
+      height: 16%;
+      top: -1px;
+      right: -2px;
     }
   }
 }

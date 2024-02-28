@@ -9,6 +9,7 @@ import ConfirmDeclineBookingPopup from "@/components/Design/CommonPopup/confirmD
 import CancelBookingPopup from "@/components/Design/CommonPopup/cancelBookingPopup";
 import ConfirmCancelBookingPopup from "@/components/Design/CommonPopup/confirmCancelBookingPopup";
 import CancelConfirmationPopup from "@/components/Design/CommonPopup/cancelConfirmationPopup";
+import LeaveReviewPopup from "@/components/Design/CommonPopup/leaveReviewPopup";
 import DownArrow from "../../../../public/assets/images/down-arrow.svg"
 import BookingRequested from "../../../../public/assets/images/requested-booking.svg"
 import OwnnerImage from "../../../../public/assets/images/booking.jpg"
@@ -71,8 +72,17 @@ function MainBookingSection() {
   const closeCancelConfirmationModal =()=> {
     SetCancelConfirmationIsOpen(false);
   }
+
+  const [LeaveReviewIsOpen, SetLeaveReviewIsOpen] = useState(false);
+  const openLeaveReviewModal = ()=> {
+    SetLeaveReviewIsOpen(true);
+  }
+  const closeLeaveReviewModal =()=> {
+    SetLeaveReviewIsOpen(false);
+  }
   return (
     <div className={styles.mainBookingSection}>
+      
       <h3>Requested Bookings</h3>
       <hr/>
       <form>
@@ -165,13 +175,13 @@ function MainBookingSection() {
                     4.5
                   </span>       
                   </div>
-                </div>
+                  </div>
                 </div>                
                 <div className="revenueBox">
                   <h3>Revenue</h3>
                   <div className="revenueDiv">
                     <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
+                      <p>Revenue <br/> Collected</p>
                     </div>
                     <div className="revenuePrice">
                       <p>£109.60</p>
@@ -179,15 +189,15 @@ function MainBookingSection() {
                   </div>
                   <div className="revenueDiv">
                     <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
+                      <p>Styled Home Studios <br/> Commission & Service <br/> Charge</p>
                     </div>
                     <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
+                      <p>£23.00 <br/> (8%)</p>
                     </div>
                   </div>
                   <div className="revenueDiv">
                     <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
+                      <p>Styled Home Studios VAT <br/> on Commission & Service <br/> Charge</p>
                     </div>
                     <div className="revenuePrice">
                       <p>£4.60</p>
@@ -210,7 +220,34 @@ function MainBookingSection() {
                     </div>
                   </div>
                   <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
-                </div>                
+                </div>   
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>  
+                  </div>
+                  </div>
+                </div>             
               </div>
               <div className="messageBox">
                 <h3>Messages</h3>
@@ -308,7 +345,7 @@ function MainBookingSection() {
                   <h3>Revenue</h3>
                   <div className="revenueDiv">
                     <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
+                      <p>Revenue<br/> Collected</p>
                     </div>
                     <div className="revenuePrice">
                       <p>£109.60</p>
@@ -316,15 +353,15 @@ function MainBookingSection() {
                   </div>
                   <div className="revenueDiv">
                     <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
+                      <p>Styled Home Studios<br/> Commission & Service<br/> Charge</p>
                     </div>
                     <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
+                      <p>£23.00<br/> (8%)</p>
                     </div>
                   </div>
                   <div className="revenueDiv">
                     <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
+                      <p>Styled Home Studios VAT<br/> on Commission & Service<br/> Charge</p>
                     </div>
                     <div className="revenuePrice">
                       <p>£4.60</p>
@@ -347,7 +384,34 @@ function MainBookingSection() {
                     </div>
                   </div>
                   <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
-                </div>                
+                </div> 
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>
+                  </div>
+                  </div>
+                </div>                   
               </div>
               <div className="messageBox">
                 <h3>Messages</h3>
@@ -488,6 +552,33 @@ function MainBookingSection() {
                     <Link href="">Download Statement</Link>
                   </div>
                   
+                </div>    
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>    
+                  </div>
+                  </div>
                 </div>                
               </div>
               <div className="messageBox">
@@ -635,7 +726,34 @@ function MainBookingSection() {
                     <Link href="">Download Statement</Link>
                   </div>
                   
-                </div>                
+                </div>     
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>                    
+                  </div>
+                  </div>
+                </div>               
               </div>
               <div className="messageBox">
                 <h3>Messages</h3>
@@ -662,6 +780,524 @@ function MainBookingSection() {
             </div>
         </div>
 
+        <div className="singleBooking cancelBooking">
+            <div className="bookingId">
+                <h3>Booking #007</h3>
+                {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
+                <p>Bright and Light Townhouse – N1</p>
+            </div>
+            <div className="requestDate">
+                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
+                <div className="dateTime">
+                    <span>Booking Declined</span>
+                    <span>Requested on 04th July 2023 by Sarah</span>
+                </div>
+            </div>
+            <button type="button" className={open == 5 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 5) ? 0 : 5)}>
+                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+            </button>
+
+            <div className="accordionSummary">
+              <div className="summaryBox">
+                <div className="bookingInfo">
+                  <div className="dateTimeBox">
+                    <h3>Dates & Times</h3>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Day 1</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>28/06/24</p>
+                        <p>15:00 - 17:00</p>
+                      </div>
+                    </div>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Day 2</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>29/06/24</p>
+                        <p>11:00 - 14:00</p>
+                      </div>
+                    </div>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Crew</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>4 Members</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <p>Sarah A</p>
+                    <span className="rating">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                      >
+                        <path
+                          id="Polygon_1"
+                          data-name="Polygon 1"
+                          d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                          fill="#20535a"
+                        />
+                      </svg>
+                    4.5
+                  </span>       
+                  </div>
+                </div>
+                </div>                
+                <div className="revenueBox">
+                  <h3>Revenue</h3>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Revenue<br/>Collected</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£109.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£23.00<br/>(8%)</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£4.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£27.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv hostRevenue">
+                    <div className="revenueTitle">
+                      <p>Host Revenue</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£82.00</p>
+                    </div>
+                  </div>
+                  <div className="buttonContainer">
+                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
+                  </div>
+                  
+                </div>    
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>    
+                  </div>
+                  </div>
+                </div>                
+              </div>
+              <div className="messageBox">
+                <div className="messageDetails">
+                  <h3>Booking Declined</h3>                  
+                  <span>Declined: 8th July 2023 at 19:21</span>                  
+                </div>
+                <h5>Reason</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+              <div className="messageBox">
+                <h3>Messages</h3>
+                <div className="messageDetails">
+                  <h4>Sarah</h4>
+                  <span>25th May 2023 at 9:12 am</span>
+                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
+                </div>
+                <form>
+                  <div className="inputGroup">
+                    <div className="halfDiv">
+                      <input type="text" name="type-message" placeholder="Type message" />
+                      <button type="button" className="allBtn dark">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+
+        <div className="singleBooking cancelBooking">
+            <div className="bookingId">
+                <h3>Booking #008</h3>
+                {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
+                <p>Bright and Light Townhouse – N1</p>
+            </div>
+            <div className="requestDate">
+                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
+                <div className="dateTime">
+                    <span>Booking Cancelled</span>
+                    <span>Requested on 04th July 2023 by Sarah</span>
+                </div>
+            </div>
+            <button type="button" className={open == 6 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 6) ? 0 : 6)}>
+                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+            </button>
+
+            <div className="accordionSummary">
+              <div className="summaryBox">
+                <div className="bookingInfo">
+                  <div className="dateTimeBox">
+                    <h3>Dates & Times</h3>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Day 1</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>28/06/24</p>
+                        <p>15:00 - 17:00</p>
+                      </div>
+                    </div>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Day 2</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>29/06/24</p>
+                        <p>11:00 - 14:00</p>
+                      </div>
+                    </div>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Crew</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>4 Members</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <p>Sarah A</p>
+                    <span className="rating">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                      >
+                        <path
+                          id="Polygon_1"
+                          data-name="Polygon 1"
+                          d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                          fill="#20535a"
+                        />
+                      </svg>
+                    4.5
+                  </span>       
+                  </div>
+                </div>
+                </div>                
+                <div className="revenueBox">
+                  <h3>Revenue</h3>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Revenue<br/>Collected</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£109.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£23.00<br/>(8%)</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£4.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£27.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv hostRevenue">
+                    <div className="revenueTitle">
+                      <p>Host Revenue</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£82.00</p>
+                    </div>
+                  </div>
+                  <div className="buttonContainer">
+                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
+                  </div>
+                  
+                </div>    
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>    
+                  </div>
+                  </div>
+                </div>                
+              </div>
+              <div className="messageBox">
+                <div className="messageDetails">
+                  <h3>Booking Cancelled</h3>                  
+                  <span>Cancelled: 9th July 2023 at 19:21</span>                  
+                </div>
+                <h5>Reason</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+              <div className="messageBox">
+                <h3>Messages</h3>
+                <div className="messageDetails">
+                  <h4>Sarah</h4>
+                  <span>25th May 2023 at 9:12 am</span>
+                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
+                </div>
+                <form>
+                  <div className="inputGroup">
+                    <div className="halfDiv">
+                      <input type="text" name="type-message" placeholder="Type message" />
+                      <button type="button" className="allBtn dark">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+
+        <div className="singleBooking">
+            <div className="bookingId">
+                <h3>Booking #009</h3>
+                {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
+                <p>Bright and Light Townhouse – N1</p>
+            </div>
+            <div className="requestDate">
+                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
+                <div className="dateTime">
+                    <span>Past Booking</span>
+                    <span>Requested on 04th July 2023 by Sarah</span>
+                </div>
+            </div>
+            <button type="button" className={open == 7 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 7) ? 0 : 7)}>
+                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+            </button>
+
+            <div className="accordionSummary">
+              <div className="summaryBox">
+                <div className="bookingInfo">
+                  <div className="dateTimeBox">
+                    <h3>Dates & Times</h3>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Day 1</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>28/06/24</p>
+                        <p>15:00 - 17:00</p>
+                      </div>
+                    </div>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Day 2</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>29/06/24</p>
+                        <p>11:00 - 14:00</p>
+                      </div>
+                    </div>
+                    <div className="dayCrew">
+                      <div className="dayDiv">
+                        <p>Crew</p>
+                      </div>
+                      <div className="timeDiv">
+                        <p>4 Members</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <p>Sarah A</p>
+                    <span className="rating">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                      >
+                        <path
+                          id="Polygon_1"
+                          data-name="Polygon 1"
+                          d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                          fill="#20535a"
+                        />
+                      </svg>
+                    4.5
+                  </span>       
+                  </div>
+                </div>
+                </div>                
+                <div className="revenueBox">
+                  <h3>Revenue</h3>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Revenue<br/>Collected</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£109.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£23.00<br/>(8%)</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£4.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv">
+                    <div className="revenueTitle">
+                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£27.60</p>
+                    </div>
+                  </div>
+                  <div className="revenueDiv hostRevenue">
+                    <div className="revenueTitle">
+                      <p>Host Revenue</p>
+                    </div>
+                    <div className="revenuePrice">
+                      <p>£82.00</p>
+                    </div>
+                  </div>
+                  <div className="buttonContainer">
+                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Resend Confirmation</button>
+                    <button type="button" onClick={openLeaveReviewModal}>Leave A Review</button>
+                  </div>
+                  
+                </div>     
+                <div className="mobileOwnerBox">
+                  <div className="ownerBox">
+                  <h3>Requested By</h3>
+                  <div className="ownerInfo">
+                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <div className="nameStar">
+                      <p>Sarah A</p>
+                      <span className="rating">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                        >
+                          <path
+                            id="Polygon_1"
+                            data-name="Polygon 1"
+                            d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                            fill="#20535a"
+                          />
+                        </svg>
+                      4.5
+                      </span>       
+                    </div>                    
+                  </div>
+                  </div>
+                </div>               
+              </div>
+              <div className="messageBox">
+                <h3>Messages</h3>
+                <div className="messageDetails">
+                  <h4>Sarah</h4>
+                  <span>25th May 2023 at 9:12 am</span>
+                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
+                </div>
+                <form>
+                  <div className="inputGroup">
+                    <div className="halfDiv">
+                      <input type="text" name="type-message" placeholder="Type message" />
+                      <button type="button" className="allBtn dark">Send</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+
         <button type="button" className="allBtn dark border">Load More</button>
       </div>
       <DeclineBookingPopup openConfirmDeclineBookingModal={openConfirmDeclineBookingModal} DeclineBookingIsOpen={DeclineBookingIsOpen} closeDeclineBookingModal={closeDeclineBookingModal} />
@@ -672,6 +1308,8 @@ function MainBookingSection() {
       <CancelBookingPopup openConfirmCancelBookingModal={openConfirmCancelBookingModal} CancelBookingIsOpen={CancelBookingIsOpen} closeCancelBookingModal={closeCancelBookingModal} />
       <ConfirmCancelBookingPopup openCancelConfirmationModal={openCancelConfirmationModal} ConfirmCancelBookingIsOpen={ConfirmCancelBookingIsOpen} closeConfirmCancelBookingModal={closeConfirmCancelBookingModal}  />
       <CancelConfirmationPopup CancelConfirmationIsOpen={CancelConfirmationIsOpen} closeCancelConfirmationModal={closeCancelConfirmationModal}  />
+
+      <LeaveReviewPopup LeaveReviewIsOpen={LeaveReviewIsOpen} closeLeaveReviewModal={closeLeaveReviewModal}  />
     </div>
   );
 }

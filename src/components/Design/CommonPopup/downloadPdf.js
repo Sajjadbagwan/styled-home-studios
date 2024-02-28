@@ -12,6 +12,7 @@ const DownloadPdfPopup = (props) => {
         isOpen={DownloadPdfIsOpen}
         onRequestClose={closeDownloadPdfModal}
         contentLabel="Example Modal"
+        ariaHideApp={false}
         className={
           styles.verifyIdentityPopup +
           " " +

@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "react-modal";
+import CloseIcon from "../../../../public/assets/images/close-icon.svg"
 import styles from "./verifyIdentity.module.scss";
 const CancelConfirmationPopup = (props) => {
   const { CancelConfirmationIsOpen, closeCancelConfirmationModal } = props;
@@ -12,11 +13,14 @@ const CancelConfirmationPopup = (props) => {
                 isOpen={CancelConfirmationIsOpen}
                 onRequestClose={closeCancelConfirmationModal}
                 contentLabel="Example Modal"
+                ariaHideApp={false}
                 className={styles.verifyIdentityPopup + " " + styles.confirmAcceptBookingPopup}
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeCancelConfirmationModal}>x</button>  
+                        <button type="button" className="close-btn" onClick={closeCancelConfirmationModal}>
+                          <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>
+                        </button>  
                     </div>                           
                     <div className="popup-body removeCompare-body">
                         <h3>Confirmation</h3>
