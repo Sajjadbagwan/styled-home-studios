@@ -104,6 +104,9 @@ h6 {
   max-width: 1470px;
   margin: 0 auto;
   padding: 0 15px;
+  @include x-lg {
+    padding: 0 35px;
+  }
 }
 
 .container-fluid {

@@ -3,10 +3,23 @@
 .mainHeader {
   padding: 25px 0;
   margin: 0;
+  @include lg {
+    padding: 25px 0 17px;
+  }
   :global {
     .container {
       .row {
         justify-content: space-between;
+        .logoMain {
+          @include lg {
+            flex: 0 0 40%;
+            text-align: center;
+            img {
+              width: 132px;
+              height: auto;
+            }
+          }
+        }
         .mainMenu {
           display: flex;
           align-items: center;
@@ -14,6 +27,9 @@
           & > ul {
             display: flex;
             align-items: center;
+            @include lg {
+              display: none;
+            }
             li {
               margin-right: 90px;
               a {
@@ -41,6 +57,9 @@
               z-index: 9;
               top: 105px;
               min-width: 305px;
+              @include lg {
+                top: 80px;
+              }
               ul {
                 // padding: 10px 50px;
                 padding: 20px 50px;
@@ -95,6 +114,9 @@
                 width: max-content;
                 left: auto;
                 max-width: 525px;
+                @include lg {
+                  width: 100%;
+                }
                 .notifyTitle {
                   display: flex;
                   align-items: center;
@@ -165,6 +187,9 @@
         z-index: -1;
         opacity: 0;
         top: 130px;
+        @include lg {
+          top: 105px;
+        }
       }
       &.active {
         &::after {
