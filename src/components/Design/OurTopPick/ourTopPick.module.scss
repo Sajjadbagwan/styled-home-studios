@@ -5,12 +5,18 @@
   padding: 55px 0 0 0;
   overflow: hidden;
   position: relative;
+  @include lg {
+    margin: 0 0 75px 0;
+  }
   :global {
     .container {
       .picImg {
         position: relative;
         padding-bottom: 46%;
         z-index: 2;
+        @include lg {
+          padding-bottom: 82%;
+        }
         img,
         iframe {
           width: 100%;
@@ -37,6 +43,9 @@
           background-position: center;
           background-repeat: no-repeat;
           background-size: 195px;
+          @include lg {
+            background-size: 90px;
+          }
         }
       }
       .picDetail {
@@ -46,12 +55,18 @@
         margin: -75px 0 0 0;
         position: relative;
         z-index: 9;
+        @include lg {
+          margin: -30px 0 0 0;
+        }
         .inner {
           flex: 0 0 645px;
           padding: 90px 160px 90px 0;
           max-width: 100%;
           position: relative;
           z-index: 1;
+          @include lg {
+            padding: 80px 48px;
+          }
           p {
             line-height: 25px;
             margin-bottom: 0;
@@ -65,6 +80,9 @@
               color: $green-color;
               letter-spacing: 2px;
               margin: 0 0 7px 0;
+              @include lg {
+                margin: 0 0 15px 0;
+              }
             }
             &::before {
               left: -18px;
@@ -81,6 +99,9 @@
           right: 0;
           background: $cream-color;
           clip-path: polygon(100% 100%, -4% 35%, 120% -45%, 100% 100%, 0 0);
+          @include lg {
+            height: 13%;
+          }
         }
         &::before {
           content: "";
@@ -90,6 +111,9 @@
           position: absolute;
           top: 0;
           margin-top: 75px;
+          @include lg {
+            margin-top: 30px;
+          }
         }
       }
     }

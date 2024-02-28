@@ -1,10 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./howDoesItWork.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function HowDoesItWork() {
+  const settings = {
+    dots: true,
+    arrows: false,
+    slidesToScroll: 1,
+    settings: "unslick",
+    responsive: [
+      {
+        breakpoint: 3840,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className={styles.howDoesItWork}>
       <Image
@@ -20,7 +48,8 @@ function HowDoesItWork() {
           <span>Quick guide</span>
           <h2>How Does It Work?</h2>
         </div>
-        <div className="workList">
+
+        <Slider {...settings} className="workList sliderDots">
           <div className="listBox">
             <h3>1. Find Your Ideal Location</h3>
             <p>
@@ -49,7 +78,8 @@ function HowDoesItWork() {
               nonumy eirmod.
             </p>
           </div>
-        </div>
+        </Slider>
+
         <div className="centerBtn">
           <Link href="#" className="allBtn">
             Browse our locations

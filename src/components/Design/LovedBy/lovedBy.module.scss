@@ -5,31 +5,56 @@
   margin: 122px 0 0 0;
   padding: 37px 0;
   position: relative;
+  @include lg {
+    margin: 105px 0 0 0;
+    padding: 55px 0;
+  }
   :global {
     .container {
       .row {
         align-items: center;
+        @include lg {
+          margin: 0 0 0 30px;
+        }
         .title {
           flex: 0 0 26%;
           justify-content: center;
           margin: 0;
+          @include lg {
+            flex: 0 0 100%;
+          }
           h2 {
             color: $white-color;
             margin: 0;
             text-align: center;
             font-size: 30px;
             letter-spacing: 1px;
+            @include lg {
+              text-align: left;
+            }
           }
         }
         .logos {
           flex: 0 0 74%;
+          @include lg {
+            flex: 0 0 100%;
+          }
           .logoList {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            @include lg {
+              flex-wrap: nowrap;
+              margin-top: 17px;
+            }
             img {
               max-width: 180px;
               margin: 0 45px 0 0;
+              @include lg {
+                max-width: 30%;
+                height: auto;
+                margin: 0 38px 0 0;
+              }
               &:last-child {
                 margin: 0;
               }
@@ -49,5 +74,10 @@
     background: #8b9297;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
     z-index: 1;
+    @include lg {
+      width: 50%;
+      height: 11%;
+      bottom: -20px;
+    }
   }
 }

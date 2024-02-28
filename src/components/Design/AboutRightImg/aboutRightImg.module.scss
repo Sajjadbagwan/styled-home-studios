@@ -7,9 +7,17 @@
     .container {
       .row {
         align-items: center;
+        @include lg {
+          flex-direction: column-reverse;
+        }
         .aboutInfo {
           flex: 0 0 49%;
           padding: 100px 60px 0 155px;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 70px 60px 0 50px;
+          }
           .titleDouble {
             padding: 0;
             span {
@@ -35,6 +43,12 @@
         .aboutImg {
           flex: 0 0 51%;
           position: relative;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 0 0 0 33px;
+            margin: -18px 0 0 0;
+          }
           .innerImg {
             .imgFront {
               position: relative;
@@ -42,6 +56,10 @@
               img {
                 width: 375px;
                 height: 619px;
+                @include lg {
+                  height: 320px;
+                  width: 190px;
+                }
               }
               &.whiteBG {
                 &::before {
@@ -58,6 +76,11 @@
                 background: $white-color;
                 clip-path: polygon(0 0, 0 100%, 0 100%, 100% 0, 0 0);
                 z-index: 1;
+                @include lg {
+                  width: 25%;
+                  height: 19%;
+                  top: 18px;
+                }
               }
               &::before {
                 content: "";
@@ -69,15 +92,26 @@
                 background: $cream-color;
                 clip-path: polygon(0 0, 0% 0, 87% 100%, 100% 0, 0 0);
                 z-index: 2;
+                @include lg {
+                  display: none;
+                }
               }
             }
             .imgBack {
               position: absolute;
               bottom: -90px;
               left: 205px;
+              @include lg {
+                bottom: -45px;
+                left: 137px;
+              }
               img {
                 width: 375px;
                 height: 427px;
+                @include lg {
+                  width: 193px;
+                  height: 218px;
+                }
               }
               &::after {
                 content: "";

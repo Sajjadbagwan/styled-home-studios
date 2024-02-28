@@ -36,6 +36,16 @@ function PopularLocations() {
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "5%",
+        },
+      },
+    ],
   };
 
   return (
