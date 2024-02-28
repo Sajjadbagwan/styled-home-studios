@@ -1,0 +1,60 @@
+@import "../../../../styles/global.scss";
+.leaveAreviewSectionForm{
+    margin: 0;
+    :global{
+        .backbtn{
+            display: flex;
+            align-items: center;
+            max-width: 200px;
+            img{
+                margin-right: 10px;
+            }
+        }
+        .leaveReview{
+            max-width: 1070px;
+            margin: 20px auto 0 auto;
+            border: 1px solid $black-color;
+            padding: 40px;
+            hr{
+                border: 0;
+                height: 1px;
+                background-color: $black-color;
+                width: 100%;
+                margin: 39px auto 44px auto;
+            }
+            h3{
+                padding-bottom: 0;
+                margin-bottom: 0;
+                letter-spacing: 1px;
+                line-height: 40px;
+            }
+            h4{
+                margin-bottom: 32px;
+            }
+            h5{
+                font-size: 16px;
+            }
+            .ratingStartIcon{
+                margin-bottom: 20px;
+                .star-svg{
+                    margin-right: 18px;
+                }
+            }
+            form{
+                textarea{
+                    min-height: 158px;
+                }
+            }
+            .rating{
+                font-size: 26px;
+                position: relative;
+                top: -8px;
+                right: 2px;
+            }
+            .button-container{
+                display: flex;
+                justify-content: flex-end;
+              }
+        }
+    }
+}

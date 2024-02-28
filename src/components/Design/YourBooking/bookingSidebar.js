@@ -4,19 +4,19 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./bookingSidebar.module.scss";
 
-function BookingSidebar() {
+function BookingSidebar (props) {
   
   return (
     <div className={styles.bookingSidebarPage}>
       <ul>
         <li>
-            <Link className="activeSidebar" href="">Requested Bookings</Link>
+            <Link onClick={() => props.handleSidebar(true)} className="activeSidebar" href="">Requested Bookings</Link>
         </li>
         <li>
-            <Link href="">Confirmed Bookings</Link>
+            <Link onClick={() => props.handleSidebar(true)} href="">Confirmed Bookings</Link>
         </li>
         <li>
-            <Link href="">Booking History</Link>
+            <Link onClick={() => props.handleSidebar(true)} href="">Booking History</Link>
         </li>
       </ul>
     </div>

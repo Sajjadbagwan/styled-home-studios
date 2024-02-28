@@ -12,6 +12,7 @@ const LoginPopup = (props) => {
         isOpen={LoginPopupIsOpen}
         onRequestClose={closeLoginPopupModal}
         contentLabel="Example Modal"
+        ariaHideApp={false}
         className={
           styles.verifyIdentityPopup +
           " " +

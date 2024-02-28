@@ -4,16 +4,20 @@ $breakpoints: (
   "smd": 567px,
   "min-smd": 567px,
   "md": 767px,
-  "min-md": 768px,
+  "min-md": 767px,
   "lg": 991px,
   "min-lg": 991px,
   "x-lg": 1024px,
   "min-x-lg": 1024px,
   "xl": 1200px,
   "min-xl": 1200px,
+  "xmd": 1240px,
+  "min-xmd": 1240px,
   "x-xl": 1366px,
   "min-x-xl": 1366px,
-  "min-desk": 1600px,
+  "x-xxl": 1400px,
+  "min-x-xxl": 1400px,
+  "max-desk": 1600px,
 );
 
 @mixin sm {
@@ -87,6 +91,18 @@ $breakpoints: (
   }
 }
 
+@mixin xmd {
+  @media (max-width: map-get($breakpoints, "xmd")) {
+    @content;
+  }
+}
+
+@mixin min-xmd {
+  @media (min-width: map-get($breakpoints, "min-xmd")) {
+    @content;
+  }
+}
+
 @mixin x-xl {
   @media (max-width: map-get($breakpoints, "x-xl")) {
     @content;
@@ -95,6 +111,24 @@ $breakpoints: (
 
 @mixin min-x-xl {
   @media (min-width: map-get($breakpoints, "min-x-xl")) {
+    @content;
+  }
+}
+
+@mixin x-xxl {
+  @media (max-width: map-get($breakpoints, "x-xxl")) {
+    @content;
+  }
+}
+
+@mixin min-x-xxl {
+  @media (min-width: map-get($breakpoints, "min-x-xxl")) {
+    @content;
+  }
+}
+
+@mixin max-desk {
+  @media (max-width: map-get($breakpoints, "max-desk")) {
     @content;
   }
 }

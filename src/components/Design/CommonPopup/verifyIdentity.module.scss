@@ -6,6 +6,10 @@
   padding: 40px !important;
   top: 50%;
   transform: translate(0%, -50%);
+  @include md{
+    max-width: 90% !important;
+    padding: 30px !important;
+  }
   :global {
     .productAdded {
       display: flex;
@@ -16,6 +20,7 @@
         border: none;
         cursor: pointer;
         color: $green-color;
+        font-size: 16px;
       }
     }
     .popup-body {
@@ -27,12 +32,17 @@
         margin-top: 20px;
       }
       .button-container {
+        
         button {
           &:last-child {
             margin-left: 40px;
             color: $green-color;
             text-decoration: underline;
             font-size: 14px;
+            @include md{
+              margin: 0;
+              width: 100%;
+            }
           }
           &.allBtn {
             color: $white-color;
@@ -70,6 +80,9 @@
   }
   &.confirmDeclineBookingPopup {
     height: 300px !important;
+    @include md{
+      height: auto !important;
+    }
   }
   &.declinedBooking {
     margin: 0 auto !important;
@@ -83,6 +96,49 @@
             }
           }
         }
+      }
+    }
+  }
+  &.leaveReviewPopup{
+    margin: 0 auto !important;
+    height: auto !important;
+    max-width: 70% !important;
+    padding: 80px 90px 80px 90px !important;
+    @include xl{
+      padding: 40px !important;
+    }
+    :global{
+      .popup-body{
+        text-align: left;
+        h3{
+          border-bottom: 1px solid rgba(77,77,79,.25);
+          padding-bottom: 30px;
+          margin-bottom: 30px;
+        }
+        h5{
+          font-size: 14px;
+        }
+        .ratingStartIcon{
+          margin-bottom: 20px;
+          .star-svg{
+            margin-right: 18px;
+          }
+        }
+        form{
+          textarea{
+            min-height: 145px;
+          }
+        }
+        .rating{
+          font-size: 26px;
+          position: relative;
+          top: -8px;
+          right: 2px;
+        }
+      }
+      .button-container{
+        display: flex;
+        justify-content: flex-end;
       }
     }
   }
@@ -273,4 +329,5 @@
       }
     }
   }
+
 }
