@@ -6,6 +6,9 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            @include x-lg{
+                flex-wrap: wrap;
+            }
         }
     }
 }

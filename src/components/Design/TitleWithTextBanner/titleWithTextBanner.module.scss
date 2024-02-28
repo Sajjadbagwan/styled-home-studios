@@ -9,11 +9,20 @@
     .heroImg {
       position: relative;
       padding-bottom: 11.5%;
+      @include x-lg{
+        padding: 0;
+        height: 170px;
+      }
       img {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
+        @include x-lg{
+          height: 170px;
+          position: static;
+          object-fit: cover;
+        }
       }
     }
     .container {
@@ -24,6 +33,21 @@
         left: 51%;
         width: 100%;
         transform: translate(-50%, 0);  
+        @include max-desk{
+          top: -128px;
+        }
+        @include x-xl{
+          top: -113px;
+        }
+        @include x-lg{
+          top: -128px;
+          left: 53%;
+        }
+        @include md{
+          top: -148px;
+          left: 50%;
+          width: 85%;
+        }
         h1{
           color: $white-color;
           font-family: $default-font;
@@ -31,6 +55,10 @@
           text-transform: uppercase;
           letter-spacing: 1px;
           margin: 0 0 10px 0;
+          @include md{
+            letter-spacing: 0;
+            line-height: normal;
+          }
         }
         p{
           color: $white-color;
@@ -47,5 +75,17 @@
     right: 0;
     background: $white-color;
     clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+    @include max-desk{
+      width: 23%;
+      height: 62%;
+    }
+    @include lg{
+        width: 23%;
+        height: 45%;
+    }
+    @include md{
+      width: 36%;
+      height: 18%;
+    }
   }
 }
