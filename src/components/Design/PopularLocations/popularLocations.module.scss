@@ -60,7 +60,8 @@
     width: 50%;
     height: 11%;
     position: absolute;
-    bottom: -77px;
+    //  bottom: -77px;
+    bottom: -10%;
     right: 0;
     background: $cream-color;
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%, 0 0);
@@ -76,7 +77,8 @@
     width: 50%;
     height: 14%;
     position: absolute;
-    top: -95px;
+    //top: -95px;
+    top: -13%;
     right: 0;
     background: #e6e2df;
     clip-path: polygon(100% 100%, 0 100%, 100% 0, 100% 100%, 0 0);
