@@ -31,10 +31,14 @@
           max-width: 72%;
           top: 80px;
         }
+        @include md {
+          max-width: 85%;
+          top: 80px;
+        }
         .boxInfo {
           background-color: $cream-color;
           flex: 0 0 21.5%;
-          padding: 55px 0;
+          padding: 55px 20px;
           h3 {
             color: $black-color;
             font-size: 22px;
@@ -42,6 +46,14 @@
           }
           .allBtn {
             //margin: 0;
+          }
+        }
+        .slick-list {
+          margin: 0 -18px;
+          .slick-track {
+            .slick-slide {
+              padding: 0 18px;
+            }
           }
         }
         .slick-dots {

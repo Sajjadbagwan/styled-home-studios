@@ -51,6 +51,7 @@
             max-width: 100%;
             @include lg {
               padding: 70px 35px;
+              float: none;
             }
             h1 {
               font-family: $default-font;

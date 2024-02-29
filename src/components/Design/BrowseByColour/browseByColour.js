@@ -50,7 +50,15 @@ function BrowseByColour() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: "12%",
+        },
+      },
+      {
+        breakpoint: 767,
         settings: {
           slidesToShow: 1,
           centerMode: true,

@@ -59,6 +59,10 @@
             width: 100%;
           }
           .innerImg {
+            @include lg {
+              width: 340px;
+              position: relative;
+            }
             .imgFront {
               position: relative;
               z-index: 1;
