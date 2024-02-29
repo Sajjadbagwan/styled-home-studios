@@ -1,0 +1,604 @@
+@import "../../../../styles/global.scss";
+.accountHostAccountSection{
+    margin: 0;
+    :global{
+        .balanceDiv{
+            background-color: $cream-color;
+            padding: 68px 37px 64px 37px;
+            text-align: center;
+            max-width: 466px;
+            color: $green-color;
+            margin-top: 8px;
+            @include md{
+                padding: 48px 37px 48px 37px;
+                margin: 0;
+            }
+            h5{
+                margin-bottom: 30px;
+                @include md{
+                    margin-bottom: 25px;
+                    font-size: 20px;
+                }
+            }
+            h2{
+                font-size: 28px;
+                margin-bottom: 0;
+                @include md{
+                    font-size: 23px;
+                }
+            }
+            .allBtn{
+                border-color: $green-color;
+            }
+        }
+        .transactionLog{
+            margin-top: 56px;
+            @include md{
+                margin-top: 34px;
+            }
+            h3{
+                margin: 0 0 16px 0;
+                font-size: 28px;
+                letter-spacing: 1px;     
+                @include md{
+                    font-size: 23px;
+                    margin-bottom: 28px;
+                }       
+            }
+            .logDetails{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                @include x-lg{
+                    flex-wrap: wrap;
+                }
+                > form {
+                    background: $white-color;
+                    padding: 0 0 0 20px;
+                    margin-bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 570px;
+                    margin-top: 0;
+                    border: 1px solid $black-color;
+                    margin-right: 42px;
+                    @include x-xl{
+                        max-width: 440px;
+                    }
+                    @include xmd{
+                        max-width: 350px;
+                    }
+                    @include md{
+                        max-width: 100%;
+                        margin: 0 0 18px 0;
+                    }
+                    & > div {
+                      flex: 0 0 88%;
+                      display: flex;
+                      flex-direction: column;
+                      @include xmd{
+                        flex: 0 0 84%;
+                      }
+                      @include md{
+                        flex: 0 0 78%;
+                      }
+                      label {
+                        font-size: 16px;
+                        font-weight: 600;
+                      }
+                    }
+                    input {
+                      border: none;
+                      font-size: 14px;
+                      padding: 0;
+                      min-height: auto;
+                      margin: 0;
+                    }
+                    button {
+                      flex: 0 0 12%;
+                      border: none;
+                      background: transparent;
+                      cursor: pointer;
+                      height: 62px;
+                      border-left: 1px solid $black-color;
+                      @include xmd{
+                        flex: 0 0 16%;
+                      }
+                      @include md{
+                        flex: 0 0 21%;
+                        height: 70px;
+                      }
+                    }
+                  }
+                .allBtn{
+                    display: flex;
+                    align-items: center;
+                    margin: 13px 0 0 0;
+                    padding: 10px 36px;
+                    @include md{
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        padding: 12px 36px;
+                    }
+                    svg{
+                        margin-right: 10px;
+                        height: 22px;
+                        width: 22px;
+                    }
+                    &:hover{
+                        svg{
+                            g{
+                                stroke:$green-color;
+                                path{
+                                    stroke:$green-color;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                .drop_down{
+                    max-width: 144px;
+                    width: 100%;
+                    margin: 0 38px 0 auto;  
+                    @include x-lg{
+                        margin-top: 40px;
+                    }     
+                    @include md{
+                        margin: 37px 10px 0 0;
+                        max-width: 137px;
+                    }         
+                    .wrapper_dropdown{
+                      width: 100%;
+                      background: #fff;
+                      position: relative;
+                      transition: 0.5s li;
+                      margin-bottom: 0;
+                      .selected_value{
+                        width: 100%;
+                        padding: 10px 25px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #4D4D4F;
+                        text-align: left;
+                        position: relative;
+                        z-index: 9;
+                        cursor: pointer;
+                        // @include ipad_view {
+                        //   font-size: 14px;
+                        //   padding: 12px 20px;
+                        // }
+                      }
+                      > div{
+                        width: 100%;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 99;                  
+                    }
+                    :global{
+                      .react-select__control {
+                        border: 0;
+                        border-radius: 0;
+                        outline: none !important;
+                        box-shadow: none !important;
+                        padding: 0;
+                        cursor: pointer;
+                        background-color: #fff;
+                        min-height: 50px;
+                        padding: 0 15px;
+                        text-align: left;
+                        border: 1px solid rgba(77,77,79,.5);
+                        // @include ipad_view {
+                        //   padding-left: 20px;
+                        //   padding-right: 20px;
+                        // }
+                        :global{
+                            .react-select__placeholder{
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #4D4D4F;
+                            //   @include ipad_view {
+                            //     font-size: 14px;
+                            //   }
+                            }
+                            .react-select__value-container{
+                                padding: 0;
+                                
+                                .react-select__single-value{
+                                  color: #4D4D4F;
+                                  font-weight: 400;
+                                  font-size: 15px;
+                                  @media only screen and (max-width:1240px){
+                                    font-size: 14px;
+                                  }
+                                }
+                            }
+                            .react-select__input-container{
+                                margin: 0;
+                                padding: 0;
+                                color: #000;
+                                input[type="text"]{
+                                    height: 35px !important;
+                                    color: #000 !important;
+                                    min-height: auto;
+                                }
+                            }
+                        }
+                        &.react-select__control--menu-is-open{
+                          border: 1px solid rgba(77,77,79,.5);
+                          border-bottom: 0;
+                          .react-select__indicators{
+                            &::after{
+                              transform: rotate(180deg);
+                            }
+                          }
+                        }
+                      } 
+                      .react-select__menu{
+                        margin: 0;
+                        border-radius: 0;
+                        box-shadow: none;
+                        border: 1px solid rgba(77,77,79,.5);
+                        border-top: 0;
+                        font-size: 15px;
+                        .react-select__menu-list {
+                          padding-left: 25px;
+                          padding-right: 25px;
+                          padding-top: 0;
+                          padding-bottom: 20px;
+                          max-height: 320px;
+                          .react-select__option{
+                            color: $black-color;
+                            font-weight: 400;
+                            padding: 10px 0;
+                            border-top: 1px solid rgba(77,77,79,.25);
+                            cursor: pointer;
+                            text-align: left;
+                            background-color: #fff;     
+                            font-size: 15px;                 
+                            // @include ipad_view {
+                            //   font-size: 14px;
+                            // }
+                            &:last-child{
+                                border-bottom: 1px solid rgba(77,77,79,.25);
+                            }
+                            &.react-select__option--is-focused{
+                              background-color: #fff;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    
+                    input{
+                        box-shadow: none!important;
+                        height: 36px;
+                    }
+                    
+                    >div{
+                        >div{
+                            >div{
+                                span{
+                                    display:none;
+                                }
+                                svg{
+                                    display:none;
+                                }
+                                & + div:after{
+                                    content:"";
+                                    background-image:url('/assets/images/down-arrow.svg');
+                                    background-position: right center;
+                                    background-size: contain;
+                                    background-origin: border-box;
+                                    background-repeat: no-repeat !important;
+                                    position: absolute;
+                                    width: 12px;
+                                    height: 12px;
+                                    right: 22px;                                  
+                                }
+                            }
+                        }
+                    }
+                    }
+                }
+                .pagination{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    li{
+                        img{
+                            height: 7px;
+                            width: 13px;
+                        }
+                        a{
+                            text-decoration: none;
+                            display: inline-block;
+                            padding: 10px 15px;
+                            @include md{
+                                padding: 10px 12px;
+                            }
+                            &.activePage{
+                                background-color: $green-color;
+                                color: $white-color;
+                                position: relative;
+                                padding: 10px 24px;
+                                @include md{
+                                    padding: 5px 17px;
+                                }
+                                &::after{
+                                    content: "";
+                                    width: 42%;
+                                    height: 42%;
+                                    position: absolute;
+                                    top: -1px;
+                                    right: -1px;
+                                    background: #ffffff;
+                                    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+                                    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+                                }
+                            }
+                        }
+                        &.prevIcon{
+                            transform: rotate(90deg);    
+                            padding: 0 10px;        
+                            position: relative;
+                            left: -6px;    
+                            @include md{
+                                left: 0;
+                            }            
+                            a{
+                                padding: 0;
+                            }
+                        }
+                        &.nextIcon{
+                            transform: rotate(-90deg);
+                            padding: 0 10px;    
+                            position: relative;
+                            right: -14px;        
+                            @include x-xl{
+                                right: -5px;
+                            } 
+                            @include md{
+                                right: 0;
+                            }
+                            a{
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .allTransactionDetails{
+                margin-top: 54px;
+                .titleHeadDiv{
+                    width: 100%;
+                    background-color: $green-color;
+                    padding: 26px 54px 26px 88px;   
+                    color: $white-color;
+                    @include x-xl{
+                        padding: 26px 40px;
+                    }
+                    @include x-lg{
+                        padding: 15px 15px;
+                    }
+                    @include md{
+                        padding: 29px 32px;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: nowrap;
+                        @include md{
+                            justify-content: flex-start;
+                        }
+                        li{
+                            text-align: left;
+                            width: 11.11%;
+                            &:first-child{
+                                @include x-lg{
+                                    width: 8%;
+                                }
+                                @include md{
+                                    display: block;
+                                    width: 46%;
+                                }
+                            }
+                            &:last-child{
+                                @include x-lg{
+                                    width: 8%;
+                                }
+                                text-align: center;
+                            }
+                            &:nth-child(2){
+                                width: 5%;
+                                @include x-lg{
+                                    width: 4%;
+                                }
+                                @include md{
+                                    display: block;
+                                    width: 46%;
+                                }
+                            }
+                            &:nth-child(3){
+                                width: 18%;
+                                @include x-xl{
+                                    width: 19%;
+                                }
+                            }
+                            &:nth-child(5){
+                                width: 15%;
+                                @include x-xl{
+                                    width: 14%;
+                                }
+                                @include x-lg{
+                                    width: 11%;
+                                }
+                            }
+                            @include x-lg{
+                                font-size: 13px;
+                                line-height: 18px;                            
+                            }
+                            @include md{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .tableBody{
+                    .tableRow{
+                        background-color: $cream-color;
+                        padding: 37px 60px 37px 87px;
+                        @include x-xl{
+                            padding: 37px 40px;
+                        }
+                        @include x-lg{
+                            padding: 30px 15px;
+                        }
+                        @include md{
+                            padding: 30px 27px 30px 32px;
+                        }
+                        ul{
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: nowrap;
+                            li{
+                                text-align: left;
+                                width: 11.11%;
+                                &:first-child{
+                                    @include x-lg{
+                                        width: 8%;
+                                    }
+                                    @include md{
+                                        display: block;
+                                        width: 46%;
+                                    }
+                                }
+                                &:nth-last-child(2){
+                                    text-align: center;
+                                    @include x-lg{
+                                        width: 8%;
+                                    }
+                                    @include md{
+                                        text-align: left;
+                                    }
+                                    img{
+                                        position: relative;
+                                        top: 10px;
+                                    }
+                                }
+                                &:nth-child(2){
+                                    width: 5%;
+                                    @include x-lg{
+                                        width: 4%;
+                                    }
+                                    @include md{
+                                        display: block;
+                                        width: 48%;
+                                    }
+                                }
+                                &:nth-child(3){
+                                    width: 18%;
+                                    @include x-xl{
+                                        width: 19%;
+                                    }
+                                }
+                                &:nth-child(5){
+                                    width: 15%;
+                                    @include x-xl{
+                                        width: 14%;
+                                    }
+                                    @include x-lg{
+                                        width: 11%;
+                                    }
+                                }
+                                &.declined{
+                                    color: #BE1600;
+                                    font-weight: 700;
+                                }
+                                @include x-lg{
+                                    font-size: 13px;
+                                    line-height: 18px;                                
+                                }
+                                @include md{
+                                    display: none;
+                                }
+                                &.mobileShow{
+                                    @include min-md{
+                                        display: none;
+                                    }
+                                    @include md{
+                                        display: block;
+                                        text-align: right;
+                                        button{
+                                            padding: 0;
+                                        }
+                                        img{
+                                            top: 0;
+                                            width: 16px;
+                                            height: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.showMobile{
+                            ul{
+                                flex-wrap: wrap;
+                                position: relative;
+                                .mobileShow{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    button{
+                                        img{
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+                                }
+                                li{
+                                    &[data-th]{
+                                        display: block;
+                                        width: 100%;
+                                        padding-bottom: 30px;
+                                        font-size: 15px;
+                                        &::before{
+                                            content: attr(data-th);
+                                            display: inline-block;
+                                            color: $black-color;
+                                            width: 100%;
+                                            font-size: 15px;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                    &:first-child{
+                                        width: 42%;
+                                    }
+                                    &:nth-child(2){
+                                        width: 56.2%;
+                                    }
+                                    &:nth-child(3){
+                                        margin: 30px 0 0 0;
+                                        border-top: 1px solid rgba(77,77,79,.5);
+                                        padding-bottom: 30px;
+                                        padding-top: 30px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    &:nth-child(odd){
+                        .tableRow{
+                            background-color: rgba(230,226,223,.5);
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

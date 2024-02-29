@@ -2,15 +2,6 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Select from 'react-select';
-import InstaIcon from "../../../../public/assets/images/insta-white.svg"
-import Image1 from "../../../../public/assets/images/color-1.png"
-import Image2 from "../../../../public/assets/images/color-2.png"
-import Image3 from "../../../../public/assets/images/color-3.png"
-import Image4 from "../../../../public/assets/images/color-4.png"
-import Image5 from "../../../../public/assets/images/color-5.png"
-import UploadButton from "../../../../public/assets/images/upload-image.svg"
-import SelectedImage from "../../../../public/assets/images/host-2.png"
 import styles from "./confirmPropertyDetailsForm.module.scss";
 
 function ConfirmPropertyDetailsStep6() {
