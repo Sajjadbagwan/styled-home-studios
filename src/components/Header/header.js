@@ -113,6 +113,17 @@ function Header() {
                       isActiveLogin ? "active" : ""
                     }`}
                   >
+                    <ul className="forMobile">
+                      <li>
+                        <Link href="#">Book A Location</Link>
+                      </li>
+                      <li>
+                        <Link href="/become-a-host/">Become A Host</Link>
+                      </li>
+                      <li>
+                        <Link href="#">Directory</Link>
+                      </li>
+                    </ul>
                     <ul>
                       <li>
                         <Link href="#" onClick={handleClickNotify}>

@@ -24,6 +24,9 @@
           display: flex;
           align-items: center;
           position: relative;
+          @include md {
+            position: unset;
+          }
           & > ul {
             display: flex;
             align-items: center;
@@ -48,6 +51,13 @@
                   display: block;
                 }
               }
+
+              // @include lg {
+              //   display: none;
+              //   &.active {
+              //     display: block;
+              //   }
+              // }
             }
             .secondMenu {
               display: none;
@@ -60,9 +70,31 @@
               @include lg {
                 top: 80px;
               }
+              @include md {
+                top: 105px;
+                min-width: 100%;
+              }
               ul {
                 // padding: 10px 50px;
                 padding: 20px 50px;
+                &.forMobile {
+                  display: none;
+                  padding-bottom: 0;
+                  @include lg {
+                    display: block;
+                  }
+                  li {
+                    background-image: none;
+                    a {
+                      color: $green-color;
+                      font-size: 25px;
+                    }
+                    &:last-child {
+                      padding-bottom: 15px;
+                      border-bottom: 1px solid rgb(77 77 79 / 50%);
+                    }
+                  }
+                }
                 li {
                   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8.659" height="15.318" viewBox="0 0 8.659 15.318"><path id="Path_3980" data-name="Path 3980" d="M6.952,0,0,6.952,6.952,13.9" transform="translate(7.659 14.611) rotate(180)" fill="none" stroke="%23455c58" stroke-width="2"/></svg>');
                   background-repeat: no-repeat;
@@ -94,6 +126,9 @@
                     //padding: 29px 0;
                     padding: 12px 0;
                     color: $black-color;
+                    @include lg {
+                      font-size: 20px;
+                    }
                   }
                 }
               }
@@ -171,6 +206,9 @@
                 position: absolute;
                 top: -11px;
                 right: 40px;
+                @include md {
+                  right: 70px;
+                }
               }
             }
           }
