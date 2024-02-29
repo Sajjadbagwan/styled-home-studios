@@ -5,19 +5,38 @@
   margin: 50px 0 0 0;
   padding: 131px 0 145px;
   position: relative;
+  @include lg {
+    margin: 37px 0 0 0;
+    padding: 80px 0 117px;
+  }
   :global {
     .container {
+      @include lg {
+        padding: 0;
+      }
+      h2 {
+        @include lg {
+          padding: 0 65px;
+          margin-bottom: 20px;
+        }
+      }
       .hostSlider {
         width: 1165px;
         margin: 0 auto;
-        max-width: 85%;
+        max-width: 100%;
       }
       .allLocation {
         & > .slick-list {
           margin: 0 -25px;
+          @include lg {
+            margin: 0;
+          }
           & > .slick-track {
             & > .slick-slide {
               padding: 0 25px;
+              @include lg {
+                padding: 0 15px;
+              }
               .slide {
                 .slideImg {
                   position: relative;
@@ -49,6 +68,9 @@
                   .subDetailLast {
                     p {
                       margin-bottom: 0;
+                      @include lg {
+                        font-size: 13px;
+                      }
                     }
                     svg {
                       margin: 4px 5px -1px 0;
@@ -61,6 +83,9 @@
         }
         .slick-dots {
           bottom: -47px;
+          @include lg {
+            bottom: -40px;
+          }
         }
       }
     }
@@ -75,6 +100,9 @@
     background: $white-color;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
     z-index: 1;
+    @include lg {
+      height: 2%;
+    }
   }
   &::before {
     content: "";
@@ -86,5 +114,9 @@
     background: $cream-color;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
     z-index: 1;
+    @include lg {
+      height: 5%;
+      bottom: -25px;
+    }
   }
 }

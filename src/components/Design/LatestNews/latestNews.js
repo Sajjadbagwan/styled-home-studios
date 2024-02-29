@@ -52,6 +52,14 @@ function LatestNews() {
     arrows: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (

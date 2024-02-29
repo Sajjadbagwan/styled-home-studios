@@ -48,6 +48,16 @@ function BrowseByColour() {
     arrows: false,
     slidesToShow: 6,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "18%",
+        },
+      },
+    ],
   };
 
   return (

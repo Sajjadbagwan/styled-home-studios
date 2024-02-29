@@ -48,6 +48,9 @@
         }
         .slick-dots {
           bottom: -59px;
+          @include lg {
+            bottom: -40px;
+          }
         }
       }
     }

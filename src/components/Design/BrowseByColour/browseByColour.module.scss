@@ -4,14 +4,27 @@
   background-color: $white-color;
   margin: 0;
   padding: 100px 0;
+  @include lg {
+    padding: 87px 0;
+  }
   :global {
     .container {
+      @include lg {
+        padding: 0;
+      }
       h2 {
         margin-bottom: 40px;
+        @include lg {
+          padding: 0 35px;
+          margin-bottom: 20px;
+        }
       }
       .styleSlider {
         & > .slick-list {
           margin: 0 -18px;
+          @include lg {
+            margin: 0;
+          }
           & > .slick-track {
             & > .slick-slide {
               padding: 0 18px;
@@ -32,6 +45,9 @@
         }
         .slick-dots {
           bottom: -53px;
+          @include lg {
+            bottom: -46px;
+          }
         }
       }
     }

@@ -27,6 +27,10 @@
         align-items: center;
         width: 1440px;
         max-width: 90%;
+        @include lg {
+          max-width: 72%;
+          top: 80px;
+        }
         .boxInfo {
           background-color: $cream-color;
           flex: 0 0 21.5%;
@@ -38,6 +42,18 @@
           }
           .allBtn {
             //margin: 0;
+          }
+        }
+        .slick-dots {
+          @include lg {
+            bottom: -50px;
+          }
+          li {
+            button {
+              &::before {
+                background-color: $white-color;
+              }
+            }
           }
         }
       }

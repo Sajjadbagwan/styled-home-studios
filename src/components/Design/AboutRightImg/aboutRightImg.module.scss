@@ -3,6 +3,9 @@
 .aboutRightImg {
   margin: 0;
   padding-bottom: 90px;
+  @include lg {
+    padding-bottom: 0;
+  }
   :global {
     .container {
       .row {
@@ -25,6 +28,9 @@
             }
             h2 {
               color: $green-color;
+              @include lg {
+                margin: 0 0 15px 0;
+              }
             }
             &::before {
               left: -18px;

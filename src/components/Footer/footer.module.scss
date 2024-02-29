@@ -79,6 +79,9 @@
     right: 0;
     background: $cream-color;
     clip-path: polygon(100% 53%, 0% 100%, 0% 0%, 0 0, 50% 0);
+    @include lg {
+      clip-path: polygon(140% 26%, 0% 100%, 0% 0%, 0 0, 50% 0);
+    }
   }
   &::before {
     content: "";

@@ -347,6 +347,9 @@ form {
     font-size: 15px;
     font-family: $default-font;
     appearance: none;
+    @include lg {
+      min-height: 68px;
+    }
   }
   input[type="number"]::-webkit-inner-spin-button {
     display: none;
