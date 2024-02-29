@@ -2,21 +2,31 @@
 
 .signUpForm {
   margin: 155px 0 100px;
+  @include lg {
+    margin: 123px 0 80px;
+  }
   :global {
     .container {
       .innerForm {
         background-color: $cream-color;
         width: 1160px;
         margin: 0 auto;
-        max-width: 90%;
+        max-width: 100%;
         display: flex;
         flex-wrap: wrap;
         .formImg {
           flex: 0 0 42%;
           position: relative;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+          }
           img {
             width: 100%;
             height: 100%;
+            @include lg {
+              height: 396px;
+            }
           }
           &::after {
             content: "";
@@ -27,13 +37,33 @@
             right: 0;
             background: $cream-color;
             clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+            @include lg {
+              width: 45%;
+              height: 7%;
+              background: $white-color;
+              top: -1px;
+              right: -1px;
+            }
           }
         }
         .formRight {
           flex: 0 0 58%;
           padding: 90px 85px;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 74px 30px;
+          }
           form {
             margin: 28px 0 0 0;
+            @include lg {
+              margin: 22px 0 0 0;
+            }
+            .checkMain {
+              @include lg {
+                margin: 18px 0 0 0;
+              }
+            }
           }
         }
       }

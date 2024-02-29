@@ -6,7 +6,7 @@
   padding: 40px !important;
   top: 50%;
   transform: translate(0%, -50%);
-  @include md{
+  @include md {
     max-width: 90% !important;
     padding: 30px !important;
   }
@@ -32,14 +32,13 @@
         margin-top: 20px;
       }
       .button-container {
-        
         button {
           &:last-child {
             margin-left: 40px;
             color: $green-color;
             text-decoration: underline;
             font-size: 14px;
-            @include md{
+            @include md {
               margin: 0;
               width: 100%;
             }
@@ -80,7 +79,7 @@
   }
   &.confirmDeclineBookingPopup {
     height: 300px !important;
-    @include md{
+    @include md {
       height: auto !important;
     }
   }
@@ -99,44 +98,44 @@
       }
     }
   }
-  &.leaveReviewPopup{
+  &.leaveReviewPopup {
     margin: 0 auto !important;
     height: auto !important;
     max-width: 70% !important;
     padding: 80px 90px 80px 90px !important;
-    @include xl{
+    @include xl {
       padding: 40px !important;
     }
-    :global{
-      .popup-body{
+    :global {
+      .popup-body {
         text-align: left;
-        h3{
-          border-bottom: 1px solid rgba(77,77,79,.25);
+        h3 {
+          border-bottom: 1px solid rgba(77, 77, 79, 0.25);
           padding-bottom: 30px;
           margin-bottom: 30px;
         }
-        h5{
+        h5 {
           font-size: 14px;
         }
-        .ratingStartIcon{
+        .ratingStartIcon {
           margin-bottom: 20px;
-          .star-svg{
+          .star-svg {
             margin-right: 18px;
           }
         }
-        form{
-          textarea{
+        form {
+          textarea {
             min-height: 145px;
           }
         }
-        .rating{
+        .rating {
           font-size: 26px;
           position: relative;
           top: -8px;
           right: 2px;
         }
       }
-      .button-container{
+      .button-container {
         display: flex;
         justify-content: flex-end;
       }
@@ -313,6 +312,7 @@
     height: auto !important;
     padding: 98px !important;
     min-width: 40%;
+    max-width: 90% !important;
     :global {
       .productAdded {
         .close-btn {
@@ -329,5 +329,4 @@
       }
     }
   }
-
 }

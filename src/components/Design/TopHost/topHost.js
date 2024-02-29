@@ -51,6 +51,24 @@ function TopHost() {
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: "18%",
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "19%",
+        },
+      },
+    ],
   };
 
   return (

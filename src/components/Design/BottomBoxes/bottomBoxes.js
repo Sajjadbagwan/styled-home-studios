@@ -3,8 +3,36 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./bottomBoxes.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function BottomBoxes() {
+  const settings = {
+    dots: true,
+    arrows: false,
+    slidesToScroll: 1,
+    settings: "unslick",
+    responsive: [
+      {
+        breakpoint: 3840,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className={styles.bottomBoxes}>
       <div className="backImg overlay">
@@ -17,7 +45,7 @@ function BottomBoxes() {
         />
       </div>
       <div className="container">
-        <div className="ctaData">
+        <Slider {...settings} className="ctaData sliderDots">
           <div className="boxInfo">
             <h3>Book A Location</h3>
             <Link href="#" className="allBtn dark">
@@ -42,7 +70,7 @@ function BottomBoxes() {
               Get booked as a creative
             </Link>
           </div>
-        </div>
+        </Slider>
       </div>
     </section>
   );

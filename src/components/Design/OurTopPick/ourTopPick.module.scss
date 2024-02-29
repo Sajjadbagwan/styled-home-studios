@@ -7,6 +7,7 @@
   position: relative;
   @include lg {
     margin: 0 0 75px 0;
+    padding: 35px 0 0 0;
   }
   :global {
     .container {
@@ -100,6 +101,9 @@
           background: $cream-color;
           clip-path: polygon(100% 100%, -4% 35%, 120% -45%, 100% 100%, 0 0);
           @include lg {
+            height: 16%;
+          }
+          @include md {
             height: 13%;
           }
         }

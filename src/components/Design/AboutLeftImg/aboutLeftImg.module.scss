@@ -3,6 +3,9 @@
 .aboutLeftImg {
   margin: 0;
   padding: 100px 0;
+  @include lg {
+    padding: 100px 0 85px;
+  }
   :global {
     .container {
       .row {
@@ -10,6 +13,12 @@
         .aboutInfo {
           flex: 0 0 49%;
           padding: 150px 155px 0 30px;
+          width: 49%;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 60px 35px 0 47px;
+          }
           .titleDouble {
             padding: 0;
             span {
@@ -17,6 +26,9 @@
             }
             h2 {
               color: $green-color;
+              @include lg {
+                margin: 0 0 10px 0;
+              }
             }
             &::before {
               left: -18px;
@@ -27,29 +39,61 @@
             margin-bottom: 0;
           }
           .allBtn {
+            @include lg {
+              margin: 0;
+            }
             &:hover {
               background-color: $cream-color;
             }
+          }
+          .twoBtns {
+            flex-direction: unset;
+            align-items: center;
+            justify-content: space-between;
           }
         }
         .aboutImg {
           flex: 0 0 51%;
           position: relative;
+          width: 51%;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+          }
           .innerImg {
+            @media screen and (min-width: 992px) and (max-width: 1200px) {
+              width: 100%;
+              position: relative;
+            }
+            @include lg {
+              width: 340px;
+              position: relative;
+            }
             .imgFront {
               position: relative;
               z-index: 1;
               top: 100px;
               left: 140px;
               width: fit-content;
+              @media screen and (min-width: 992px) and (max-width: 1200px) {
+                left: 0;
+              }
+              @include lg {
+                top: 33px;
+                left: 33px;
+              }
               & > img {
                 width: 417px;
                 height: 417px;
+                @include lg {
+                  width: 225px;
+                  height: 225px;
+                }
               }
               .imgInfo {
                 margin: 12px 0 0 0;
                 width: 415px;
-                max-width: 100%;
+                max-width: 55%;
                 div {
                   display: flex;
                   align-items: center;
@@ -62,6 +106,9 @@
                 }
                 h4 {
                   font-family: $default-font;
+                  @include lg {
+                    margin: 0;
+                  }
                 }
               }
             }
@@ -69,9 +116,21 @@
               position: absolute;
               top: 0;
               right: 45px;
+              @media screen and (min-width: 992px) and (max-width: 1200px) {
+                right: auto;
+                left: 200px;
+              }
+              @include lg {
+                top: -22px;
+                right: 30px;
+              }
               img {
                 width: 300px;
                 height: 305px;
+                @include lg {
+                  width: 163px;
+                  height: 165px;
+                }
               }
               &::after {
                 content: "";

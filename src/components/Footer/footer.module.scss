@@ -4,6 +4,10 @@
   margin: -105px 0 55px 0;
   padding: 90px 0 45px;
   position: relative;
+  @include lg {
+    padding: 50px 0 45px;
+    text-align: center;
+  }
   :global {
     .container {
       position: relative;
@@ -12,6 +16,10 @@
         justify-content: space-between;
         .footerBox {
           flex: 0 0 25%;
+          @include lg {
+            flex: 0 0 100% !important;
+            // margin-bottom: 60px;
+          }
           &:first-child {
             flex: 0 0 32%;
           }
@@ -21,17 +29,46 @@
           .footerLogo {
             width: 270px;
             height: auto;
+            @include lg {
+              width: 135px;
+              margin-bottom: 70px;
+            }
           }
           h3 {
             letter-spacing: 1px;
+            @include lg {
+              font-size: 20px;
+              margin-bottom: 20px;
+            }
+            span {
+              display: none;
+              margin: 0 0 0 10px;
+              cursor: pointer;
+              @include lg {
+                display: inline-block;
+              }
+            }
           }
           ul {
+            @include lg {
+              display: none;
+              margin-bottom: 55px;
+              &.show {
+                display: block;
+              }
+            }
             li {
               margin-bottom: 8px;
+              @include lg {
+                margin-bottom: 10px;
+              }
               a {
                 font-size: 16px;
                 color: $black-color;
                 text-decoration: none;
+                @include lg {
+                  font-size: 14px;
+                }
                 &:hover {
                   text-decoration: underline;
                 }
@@ -39,30 +76,66 @@
             }
           }
           form {
+            @include lg {
+              margin: 30px 0 0 0;
+              text-align: left;
+            }
             input[type="email"],
             [type="text"],
             select {
               padding: 12px 20px;
               min-height: 45px;
               font-size: 14px;
+              @include lg {
+                min-height: 68px;
+              }
             }
             .selectMain {
               &::after {
                 background-size: 12px;
               }
             }
+            .checkMain {
+              @include lg {
+                text-align: left;
+                margin: 15px 0 0 0;
+              }
+            }
           }
           .socialFooter {
             margin: 20px 0 0 0;
+            @include lg {
+              margin: 45px 0 0 0;
+            }
             ul {
               display: flex;
               align-items: center;
+              @include lg {
+                justify-content: center;
+              }
               li {
                 margin: 0 20px 0 0;
+                @include lg {
+                  margin: 0 10px;
+                }
                 img {
                   width: 40px;
                   height: 40px;
+                  @include lg {
+                    width: 50px;
+                    height: 50px;
+                  }
                 }
+              }
+            }
+            &.phone {
+              @include min-lg {
+                display: none;
+              }
+            }
+            &.desktop {
+              @include lg {
+                display: none;
               }
             }
           }
@@ -79,6 +152,9 @@
     right: 0;
     background: $cream-color;
     clip-path: polygon(100% 53%, 0% 100%, 0% 0%, 0 0, 50% 0);
+    @include lg {
+      clip-path: polygon(140% 26%, 0% 100%, 0% 0%, 0 0, 50% 0);
+    }
   }
   &::before {
     content: "";
@@ -88,6 +164,7 @@
     position: absolute;
     top: 0;
     margin-top: 30px;
+    left: 0;
   }
 }
 
@@ -100,6 +177,11 @@
         .copyInfo {
           flex: 0 0 33.33%;
           text-align: right;
+          @include lg {
+            flex: 0 0 100%;
+            text-align: center;
+            margin: 4px 0;
+          }
           ul {
             display: flex;
             justify-content: center;
@@ -110,6 +192,9 @@
               img {
                 width: 23px;
                 height: auto;
+                @include lg {
+                  width: 28px;
+                }
               }
             }
           }

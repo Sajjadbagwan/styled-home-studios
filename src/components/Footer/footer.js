@@ -5,6 +5,16 @@ import Image from "next/image";
 import styles from "./footer.module.scss";
 
 function Footer() {
+  const [isFooterMenu, setIsFooterMenu] = useState(false);
+  const handleFooterMenuClick = () => {
+    setIsFooterMenu(!isFooterMenu);
+  };
+
+  const [isFooterMenuone, setIsFooterMenuone] = useState(false);
+  const handleFooterMenuoneClick = () => {
+    setIsFooterMenuone(!isFooterMenuone);
+  };
+
   return (
     <>
       <section className={styles.mainFooter}>
@@ -23,8 +33,11 @@ function Footer() {
               </Link>
             </div>
             <div className="footerBox">
-              <h3>Helpful Links</h3>
-              <ul>
+              <h3 onClick={handleFooterMenuClick}>
+                Helpful Links
+                <span>+</span>
+              </h3>
+              <ul className={isFooterMenu ? "show" : ""}>
                 <li>
                   <Link href="#">Rent Property</Link>
                 </li>
@@ -44,7 +57,7 @@ function Footer() {
                   <Link href="#">Journals</Link>
                 </li>
               </ul>
-              <div className="socialFooter">
+              <div className="socialFooter desktop">
                 <ul>
                   <li>
                     <Link href="#">
@@ -70,8 +83,11 @@ function Footer() {
               </div>
             </div>
             <div className="footerBox">
-              <h3>Customer Care</h3>
-              <ul>
+              <h3>
+                Customer Care
+                <span onClick={handleFooterMenuoneClick}>+</span>
+              </h3>
+              <ul className={isFooterMenuone ? "show" : ""}>
                 <li>
                   <Link href="#">Help</Link>
                 </li>
@@ -85,6 +101,30 @@ function Footer() {
                   <Link href="#">FAQs</Link>
                 </li>
               </ul>
+              <div className="socialFooter phone">
+                <ul>
+                  <li>
+                    <Link href="#">
+                      <Image
+                        src="/assets/images/pin.png"
+                        width={46}
+                        height={46}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      <Image
+                        src="/assets/images/insta.png"
+                        width={46}
+                        height={46}
+                        alt=""
+                      />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="footerBox">
               <h3>Subscribe To Our Newsletter</h3>

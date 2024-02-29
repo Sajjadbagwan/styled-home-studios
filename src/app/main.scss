@@ -257,6 +257,11 @@ body {
   font-family: $default-font;
   cursor: pointer;
   line-height: 30px;
+  @include lg {
+    min-height: 55px;
+    padding: 10px 40px;
+    font-size: 13px;
+  }
   &:hover {
     background-color: $green-color;
     color: $white-color;
@@ -347,6 +352,9 @@ form {
     font-size: 15px;
     font-family: $default-font;
     appearance: none;
+    @include lg {
+      min-height: 68px;
+    }
   }
   input[type="number"]::-webkit-inner-spin-button {
     display: none;
@@ -428,6 +436,10 @@ form {
     padding: 15px 40px;
     font-family: $default-font;
     cursor: pointer;
+    @include lg {
+      padding: 10px 40px;
+      font-size: 13px;
+    }
   }
 }
 
