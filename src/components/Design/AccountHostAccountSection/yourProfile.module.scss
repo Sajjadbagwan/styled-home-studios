@@ -1,7 +1,7 @@
 @import "../../../../styles/global.scss";
 .yourProfileSection{
     background-color: rgba(139,146,151,0.25);
-    padding: 50px 42px;
+    padding: 50px 42px 44px 42px;
     width: 100%;
     @include x-xl{
         padding: 35px 25px;
@@ -22,5 +22,123 @@
     }
     h3{
         margin-bottom: 24px;
+        font-size: 29px;
+        letter-spacing: 1px;
+    }
+    .yourProfileInformation{
+        margin: 40px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #fff;
+        padding: 50px 43px 45px 43px;
+        :global{
+            .profileDiv{
+                width: 21%;
+                .imageSection{
+                    h2{
+                        text-align: left;
+                        letter-spacing: 0;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                    .upload-btn{
+                        max-width: 175px;
+                        width: 100%;
+                        display: inline-block;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: none;
+                        box-shadow: none;
+                        outline: 0;
+                        padding: 0;
+                        margin-top: 5px;
+                        .file-btn{
+                            height: 175px;
+                            width: 175px;
+                            background-color: $grey-color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 0;
+                            img{
+                                height: 145px;
+                                width: 145px;
+                            }
+                        }
+                        .add-img{
+                            text-align: center;
+                            width: 100%;
+                            display: inline-block;
+                            margin-top: 7px;
+                            text-decoration: underline;
+                            color: $green-color;
+                            text-decoration: underline;
+                            font-size: 16px;
+                        }
+                    }
+                    & + hr{
+                        margin-top: 30px;
+                    }
+                    .selected-file{
+                        margin-top: 20px;
+                        max-width: 132px;
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                        p{
+                            width: 100%;
+                            line-height: normal;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                        button{
+                            text-decoration: underline;
+                            cursor: pointer;
+                            background-color: transparent;
+                            border: none;
+                            box-shadow: none;
+                            outline: 0;
+                            padding: 0;
+                            color: $green-color;
+                            text-align: center;
+                            width: 100%;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .informationDiv{
+                width: 74.5%;    
+                h3{
+                    margin-bottom: 30px;
+                    font-size: 30px;
+                }
+                .inputGroup{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    .halfInput{
+                        width: 48.8%;
+                        input{
+                            margin-bottom: 19px;
+                        }
+                    }
+                }            
+                
+                hr{
+                    margin: 42px 0 20px 0;
+                }
+                .allBtn{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-left: auto;
+                    margin-top: 43px;
+                }
+            }         
+
+        }
     }
 }
