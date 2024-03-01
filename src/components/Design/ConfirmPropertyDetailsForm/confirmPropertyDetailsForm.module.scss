@@ -632,6 +632,16 @@
                             left: -2px;
                         }
                     }
+                    .commonSection{
+                        .hourDiv{
+                            .inputGroup{
+                                .halfInput{
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
                     > .inputGroup{
                         input{
                             margin-bottom: 27px;

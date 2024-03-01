@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React,{useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "react-modal";
@@ -7,6 +7,10 @@ import CloseIcon from "../../../../public/assets/images/close-icon.svg"
 import styles from "./verifyIdentity.module.scss";
 const CancelConfirmationPopup = (props) => {
   const { CancelConfirmationIsOpen, closeCancelConfirmationModal } = props;
+  useEffect(() => {
+    const body = document.querySelector('html');
+    body.style.overflow = CancelConfirmationIsOpen ? 'hidden' : 'auto';
+  }, [CancelConfirmationIsOpen])
   return (
     <>
       <Modal

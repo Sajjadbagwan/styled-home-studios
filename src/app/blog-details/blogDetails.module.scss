@@ -1,0 +1,25 @@
+@import "../../../styles/global.scss";
+.blogDetailsPage{
+    margin: 0;
+    :global{
+        .ourTopPick{
+            margin-bottom: 42px;
+            padding-top: 20px;
+            &::before{
+                display: none;
+            }
+        }
+        .signUpForm{
+            margin-top: 65px;
+        } 
+        .aboutRightImg{
+            .aboutImg{
+                .imgFront{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        } 
+    }
+}

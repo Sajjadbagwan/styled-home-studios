@@ -6,7 +6,7 @@ import styles from "./signUpForm.module.scss";
 
 function SignUpForm() {
   return (
-    <section className={styles.signUpForm}>
+    <section className={styles.signUpForm + " signUpForm"}>
       <div className="container">
         <div className="innerForm">
           <div className="formImg">

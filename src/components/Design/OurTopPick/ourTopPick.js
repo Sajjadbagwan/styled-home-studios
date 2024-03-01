@@ -6,7 +6,7 @@ import styles from "./ourTopPick.module.scss";
 
 function OurTopPick() {
   return (
-    <section className={styles.ourTopPick}>
+    <section className={styles.ourTopPick + " ourTopPick"}>
       <div className="container">
         <div className="picImg">
           <Image
