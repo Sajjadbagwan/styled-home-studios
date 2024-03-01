@@ -35,7 +35,7 @@ function Footer() {
             <div className="footerBox">
               <h3 onClick={handleFooterMenuClick}>
                 Helpful Links
-                <span>+</span>
+                <span> {isFooterMenu ? "-" : "+"}</span>
               </h3>
               <ul className={isFooterMenu ? "show" : ""}>
                 <li>
@@ -85,7 +85,9 @@ function Footer() {
             <div className="footerBox">
               <h3>
                 Customer Care
-                <span onClick={handleFooterMenuoneClick}>+</span>
+                <span onClick={handleFooterMenuoneClick}>
+                  {isFooterMenuone ? "-" : "+"}
+                </span>
               </h3>
               <ul className={isFooterMenuone ? "show" : ""}>
                 <li>
