@@ -1,0 +1,18 @@
+@import "../../../styles/global.scss";
+.blogListingPage{
+    margin: 0;
+    :global{
+        .aboutRightImg{
+            .aboutImg{
+                .imgFront{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        } 
+        .signUpForm{
+            margin-top: 89px;
+        }      
+    }
+}
