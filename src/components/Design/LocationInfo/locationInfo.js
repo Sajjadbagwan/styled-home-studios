@@ -31,6 +31,42 @@ function LocationInfo() {
           </div>
           <div className="aboutForm">
             <div>
+              <div className="mobileBook">
+                <div className="backBtn">
+                  <Link href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8.659"
+                      height="15.318"
+                      viewBox="0 0 8.659 15.318"
+                    >
+                      <path
+                        id="Path_3990"
+                        data-name="Path 3990"
+                        d="M6.952,0,0,6.952,6.952,13.9"
+                        transform="translate(1 0.707)"
+                        fill="none"
+                        stroke="#20535a"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    Back To Bright And Light Townhouse - N1
+                  </Link>
+                </div>
+                <h3>Confirm And Pay</h3>
+                <div className="productBox">
+                  <Image
+                    src="/assets/images/gallery.png"
+                    width={142}
+                    height={46}
+                    alt=""
+                  />
+                  <div className="productInfo">
+                    <h4>Bright and Light Townhouse – N1</h4>
+                    <span>Area: London, UK</span>
+                  </div>
+                </div>
+              </div>
               <form>
                 <h2>£215 Per Hour</h2>
                 <p>1 hour minimum booking</p>

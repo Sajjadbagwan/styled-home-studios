@@ -8,10 +8,16 @@
   // overflow: hidden;
   :global {
     .container {
+      @include lg {
+        //padding-right: 0;
+      }
       .allReviews {
         width: 1160px;
         margin: 0 auto;
         max-width: 90%;
+        @include lg {
+          max-width: 100%;
+        }
         .title {
           h2 {
             svg {
@@ -22,6 +28,9 @@
             cursor: pointer;
             color: $green-color;
             text-decoration: underline;
+          }
+          @include lg {
+            display: flex;
           }
         }
         .mainReview {
@@ -46,6 +55,14 @@
               }
             }
           }
+          .slick-list {
+            margin: 0 -2%;
+            .slick-track {
+              .slick-slide {
+                padding: 0 1%;
+              }
+            }
+          }
         }
       }
     }
@@ -60,5 +77,9 @@
     background: #e6e2df;
     clip-path: polygon(100% 100%, 0 100%, 100% 0, 100% 100%, 0 0);
     z-index: 1;
+    @include lg {
+      width: 100%;
+      top: -55px;
+    }
   }
 }

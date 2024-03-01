@@ -10,7 +10,7 @@ function LocationFilter() {
     <section className={styles.locationFilter}>
       <div className="container">
         <div className="filterMain">
-          <Link href="#" className="allBtn dark border">
+          <Link href="/location-listing-map" className="allBtn dark border">
             Show results as map
           </Link>
 

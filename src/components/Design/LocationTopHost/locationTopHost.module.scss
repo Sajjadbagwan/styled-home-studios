@@ -14,9 +14,16 @@
         .slide {
           display: flex;
           align-items: flex-start;
+          flex-wrap: wrap;
           .hostLeft {
             flex: 0 0 22%;
             margin: 0 40px 0 0;
+            @include lg {
+              flex: 0 0 100%;
+              width: 22%;
+              margin-bottom: 28px;
+              max-width: 300px;
+            }
             .slideImg {
               position: relative;
               img {
@@ -57,6 +64,10 @@
           }
           .hostRight {
             flex: 0 0 70%;
+            @include lg {
+              flex: 0 0 100%;
+              width: 100%;
+            }
             .allBtn {
               margin-top: 15px;
             }

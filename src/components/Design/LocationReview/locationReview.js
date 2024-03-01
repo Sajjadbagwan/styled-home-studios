@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./locationReview.module.scss";
 import AllReviewPopup from "../CommonPopup/allReviewPopup";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function LocationReview() {
   const [AllReviewIsOpen, SetAllReviewIsOpen] = useState(false);
@@ -13,6 +16,22 @@ function LocationReview() {
 
   const closeAllReviewModal = () => {
     SetAllReviewIsOpen(false);
+  };
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -38,7 +57,7 @@ function LocationReview() {
             </h2>
             <span onClick={openAllReviewModal}>View All 37 Reviews</span>
           </div>
-          <div className="mainReview">
+          <Slider {...settings} className="mainReview sliderDots">
             <div className="reviewBox">
               <div className="img">
                 <Image
@@ -113,7 +132,7 @@ function LocationReview() {
                 in reprehenderit in voluptate velit esse.
               </p>
             </div>
-          </div>
+          </Slider>
         </div>
         <AllReviewPopup
           AllReviewIsOpen={AllReviewIsOpen}

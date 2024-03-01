@@ -1,4 +1,9 @@
 @import "../../../../styles/global.scss";
 
 .mainMap {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 0;
+  margin-bottom: 0;
 }
