@@ -5,7 +5,7 @@
   padding: 12px 0 5px;
   position: relative;
   z-index: 2;
-  @include md{
+  @include md {
     padding: 25px 0 13px;
   }
   p {
@@ -17,6 +17,8 @@
       font-weight: 400;
       color: $breadcumb-color;
       margin-right: 3px;
+      font-family: $default-font;
+      font-size: 12px;
       &:last-child {
         font-weight: 400;
         margin-left: 3px;

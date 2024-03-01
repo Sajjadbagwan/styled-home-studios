@@ -124,6 +124,14 @@
                 }
               }
             }
+            .ulList {
+              .list {
+                a {
+                  font-family: $title-font;
+                  font-size: 16px;
+                }
+              }
+            }
           }
         }
       }

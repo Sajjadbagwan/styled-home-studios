@@ -6,14 +6,24 @@
       .row {
         .formLeft {
           flex: 0 0 57%;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+          }
           .title {
             margin-bottom: 30px;
+            @include lg {
+              display: flex;
+            }
           }
           .allAvalible {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             margin-bottom: 45px;
+            @include lg {
+              display: block;
+            }
             & > div {
               flex: 0 0 33.33%;
               display: flex;
@@ -23,6 +33,10 @@
               margin-bottom: 23px;
               position: relative;
               padding-bottom: 30px;
+              @include lg {
+                margin-bottom: 20px;
+                padding-bottom: 0;
+              }
               & > p {
                 position: absolute;
                 font-size: 12px;
@@ -36,6 +50,10 @@
                 height: 35px;
                 margin: 0 25px 0 0;
                 width: auto;
+                @include lg {
+                  height: 28px;
+                  margin: 0 10px 0 0;
+                }
               }
             }
             &.tick {
@@ -60,10 +78,10 @@
                   p {
                     font-family: $title-font;
                     font-style: normal;
-                    font-size: 30px;
+                    font-size: 25px;
                     letter-spacing: 1px;
                     font-weight: 400;
-                    line-height: 35px;
+                    line-height: 32px;
                   }
                   &.Mui-expanded {
                     margin: 26px 0;

@@ -9,6 +9,9 @@
       .aboutinfo {
         width: 60%;
         padding: 0 40px 0 0;
+        @include lg {
+          width: 100%;
+        }
         .titleDouble {
           span {
             color: $black-color;
@@ -24,15 +27,87 @@
       .aboutForm {
         position: relative;
         width: 40%;
-        & > div {
+        @include lg {
+          width: 100%;
+        }
+        .bookForm {
           background-color: $white-color;
           position: absolute;
           width: 100%;
           box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
           padding: 50px 60px;
+          @include lg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99999;
+            padding: 20px 38px;
+            display: none;
+          }
+          &.show {
+            display: block;
+          }
+          .mobileBook {
+            @include min-lg {
+              display: none;
+            }
+            .backBtn {
+              margin: 18px 0;
+              font-size: 16px;
+              span {
+                display: flex;
+                align-items: center;
+                font-family: $title-font;
+                svg {
+                  margin: 0 10px 0 0;
+                }
+              }
+            }
+            h3 {
+              text-align: center;
+            }
+            .productBox {
+              display: flex;
+              margin: 30px 0 20px 0;
+              img {
+                flex: 0 0 40%;
+                width: 40%;
+                height: 100%;
+                margin: 0 10px 0 0;
+              }
+              .productInfo {
+                flex: 0 0 60%;
+                width: 60%;
+                h4 {
+                  font-family: $default-font;
+                  text-transform: uppercase;
+                  font-size: 18px;
+                  letter-spacing: 1.5px;
+                  line-height: 27px;
+                  margin: 0 0 8px 0;
+                }
+              }
+            }
+          }
           form {
+            h2 {
+              @include lg {
+                margin: 0 0 15px 0;
+              }
+            }
+            p {
+              @include lg {
+                margin: 0 0 5px 0;
+              }
+            }
             h3 {
               margin: 30px 0 20px 0;
+              @include lg {
+                border-top: 1px solid rgba(77, 77, 79, 0.5);
+                padding-top: 30px;
+                font-size: 18px;
+              }
             }
             .dateFiled {
               position: relative;
@@ -42,6 +117,10 @@
                   padding: 21px 20px;
                   font-size: 16px;
                   margin-bottom: 17px;
+                  border: 1px solid $black-color;
+                  @include lg {
+                    margin-bottom: 23px;
+                  }
                 }
               }
               &::after {
@@ -73,9 +152,17 @@
               display: flex;
               justify-content: space-between;
               margin: 35px 0 0 0;
+              @include lg {
+                border-top: 1px solid rgba(77, 77, 79, 0.5);
+                padding-top: 32px;
+              }
               h4 {
                 margin-bottom: 8px;
                 font-size: 23px;
+                @include lg {
+                  margin-bottom: 0;
+                  font-size: 20px;
+                }
               }
             }
             .allBtn {
@@ -85,6 +172,34 @@
             .askForm {
               text-align: center;
             }
+          }
+        }
+        .mobileBookBtn {
+          @include min-lg {
+            display: none;
+          }
+          position: fixed;
+          background: $white-color;
+          bottom: 0;
+          z-index: 999;
+          left: 0;
+          right: 0;
+          box-shadow: 0px 0px 6px #8b9297;
+          padding: 30px 36px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            margin: 0;
+            font-size: 20px;
+            font-family: $title-font;
+          }
+          span {
+            display: block;
+            margin-bottom: 7px;
+          }
+          .allBtn {
+            margin: 0;
           }
         }
       }

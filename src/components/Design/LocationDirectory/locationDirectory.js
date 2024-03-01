@@ -35,6 +35,33 @@ function LocationDirectory() {
     },
   ];
 
+  const settings = {
+    dots: false,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          centerMode: true,
+          centerPadding: "12%",
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: "18%",
+        },
+      },
+    ],
+  };
+
   return (
     <section className={styles.locationDirectory}>
       <div className="container">
@@ -43,7 +70,7 @@ function LocationDirectory() {
             <span>Meet creatives</span>
             <h2>Our Directory - Creatives In This Area</h2>
           </div>
-          <div className="allDirectory">
+          <Slider {...settings} className="allDirectory sliderDots">
             {sliderData.map((slide, index) => (
               <div key={index} className="slide">
                 <div className="slideImg">
@@ -73,7 +100,7 @@ function LocationDirectory() {
                 </div>
               </div>
             ))}
-          </div>
+          </Slider>
         </div>
       </div>
     </section>

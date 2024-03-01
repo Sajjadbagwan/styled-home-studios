@@ -38,6 +38,8 @@ ol {
 
 a {
   color: $green-color;
+  font-family: $title-font;
+  font-size: 16px;
   &:hover {
     color: $green-color;
     text-decoration: none;
@@ -55,7 +57,7 @@ h1 {
   margin: 0 0 20px 0;
   font-weight: normal;
   line-height: 45px;
-  font-weight: 600;
+  //font-weight: 600;
   @include lg {
     font-size: 25px;
     line-height: 40px;
@@ -68,7 +70,7 @@ h2 {
   margin: 0 0 20px 0;
   font-weight: normal;
   line-height: 35px;
-  font-weight: 600;
+  //font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -221,6 +223,10 @@ body {
     @include lg {
       margin: 0 0 0 -10px;
     }
+  }
+  span {
+    font-family: $title-font;
+    font-size: 16px;
   }
 }
 
@@ -565,5 +571,24 @@ button {
   justify-content: space-between;
   & > .inputGroup {
     flex: 0 0 48.5%;
+  }
+}
+
+.subDetail,
+.subDetailLast {
+  & > * {
+    font-family: $title-font;
+  }
+  img {
+    display: inline-block !important;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+.slideInfo {
+  h3 {
+    font-size: 16px !important;
   }
 }

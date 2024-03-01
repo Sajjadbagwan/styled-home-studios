@@ -3,8 +3,26 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./lovedBy.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function LovedBy() {
+  const settings = {
+    dots: false,
+    arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
+
   return (
     <section className={styles.lovedBy}>
       <div className="container">
@@ -13,7 +31,7 @@ function LovedBy() {
             <h2>Loved By</h2>
           </div>
           <div className="logos">
-            <div className="logoList">
+            <Slider {...settings} className="logoList">
               <Image
                 src="/assets/images/logo-1.png"
                 width={180}
@@ -44,7 +62,7 @@ function LovedBy() {
                 height={78}
                 alt=""
               />
-            </div>
+            </Slider>
           </div>
         </div>
       </div>

@@ -87,7 +87,11 @@ function Header() {
               </ul>
               <div className="menuBtn">
                 <Image
-                  src="/assets/images/menu-icon.svg"
+                  src={
+                    isActive
+                      ? "/assets/images/menu-icon-close.svg"
+                      : "/assets/images/menu-icon.svg"
+                  }
                   width={95}
                   height={55}
                   alt=""

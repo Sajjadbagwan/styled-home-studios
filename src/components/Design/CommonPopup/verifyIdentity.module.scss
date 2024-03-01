@@ -315,7 +315,9 @@
     height: auto !important;
     padding: 98px !important;
     min-width: 40%;
-    max-width: 90% !important;
+    @include lg {
+      max-width: 90% !important;
+    }
     :global {
       .productAdded {
         .close-btn {

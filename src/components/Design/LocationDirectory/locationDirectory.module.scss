@@ -7,24 +7,47 @@
   position: relative;
   :global {
     .container {
+      @include lg {
+        padding: 0;
+      }
       .hostSlider {
         width: 1165px;
         margin: 0 auto;
         max-width: 85%;
+        @include lg {
+          max-width: 100%;
+        }
         .line {
           padding: 0;
+          @include lg {
+            padding: 0 0 0 70px;
+          }
           h2 {
             margin-bottom: 40px;
           }
           &::before {
             left: -13px;
+            @include lg {
+              left: 50px;
+            }
           }
         }
       }
       .allDirectory {
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        column-gap: 53px;
+        // display: grid;
+        // grid-template-columns: repeat(4, auto);
+        // column-gap: 53px;
+        & > .slick-list {
+          margin: 0 -27px;
+          @include lg {
+            margin: 0;
+          }
+          & > .slick-track {
+            & > .slick-slide {
+              padding: 0 27px;
+            }
+          }
+        }
         .slide {
           min-width: 100%;
           .slideImg {
