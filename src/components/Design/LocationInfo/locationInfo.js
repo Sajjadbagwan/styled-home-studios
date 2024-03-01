@@ -5,6 +5,11 @@ import Image from "next/image";
 import styles from "./locationInfo.module.scss";
 
 function LocationInfo() {
+  const [isBookFormClose, setIsBookFormClose] = useState(true);
+  const handleBookFormCloseClick = () => {
+    setIsBookFormClose(!isBookFormClose);
+  };
+
   return (
     <section className={styles.locationInfo}>
       <div className="container">
@@ -30,10 +35,10 @@ function LocationInfo() {
             </p>
           </div>
           <div className="aboutForm">
-            <div>
+            <div className={`${"bookForm"} ${isBookFormClose ? "show" : ""}`}>
               <div className="mobileBook">
                 <div className="backBtn">
-                  <Link href="#">
+                  <span onClick={handleBookFormCloseClick} className="link">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="8.659"
@@ -51,7 +56,7 @@ function LocationInfo() {
                       />
                     </svg>
                     Back To Bright And Light Townhouse - N1
-                  </Link>
+                  </span>
                 </div>
                 <h3>Confirm And Pay</h3>
                 <div className="productBox">
@@ -96,6 +101,18 @@ function LocationInfo() {
                   <Link href="#">Message The Host / Ask A Question</Link>
                 </div>
               </form>
+            </div>
+            <div className="mobileBookBtn">
+              <div>
+                <span>28/06/2024</span>
+                <p>£215 Per Hour</p>
+              </div>
+              <span
+                onClick={handleBookFormCloseClick}
+                className="allBtn dark border"
+              >
+                Book Now
+              </span>
             </div>
           </div>
         </div>
