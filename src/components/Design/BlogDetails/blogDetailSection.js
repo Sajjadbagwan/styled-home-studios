@@ -14,7 +14,7 @@ function BlogDetailSection() {
       <div className="container">
         <div className="blogDetailsTop">
             <div className="shareSidebar">
-                <Link className="backbtn" href=""> 
+                <Link className="backbtn" href="/blog-listing/"> 
                     <Image src={BackArrow} alt="backarrow" height={14} width={9}></Image> 
                     Back To Journal Enteries 
                 </Link>
