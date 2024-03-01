@@ -3,8 +3,26 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./homeHero.module.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function HomeHero() {
+  const settings = {
+    dots: false,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
+
   return (
     <section className={styles.homeHero}>
       <div className="container-fluid">
@@ -38,20 +56,23 @@ function HomeHero() {
                   />
                 </button>
               </form>
-              <ul>
-                <li>
+              <Slider {...settings} className="ulList">
+                <div className="list">
                   <Link href="#">Category 1</Link>
-                </li>
-                <li>
+                </div>
+                <div className="list">
                   <Link href="#">Category 2</Link>
-                </li>
-                <li>
+                </div>
+                <div className="list">
                   <Link href="#">Category 3</Link>
-                </li>
-                <li>
+                </div>
+                <div className="list">
                   <Link href="#">Category 4</Link>
-                </li>
-              </ul>
+                </div>
+                <div className="list">
+                  <Link href="#">Category 5</Link>
+                </div>
+              </Slider>
             </div>
           </div>
           <div className="heroImg">

@@ -18,10 +18,12 @@
         }
         .title {
           flex: 0 0 26%;
+          width: 26%;
           justify-content: center;
           margin: 0;
           @include lg {
             flex: 0 0 100%;
+            width: 100%;
           }
           h2 {
             color: $white-color;
@@ -36,8 +38,10 @@
         }
         .logos {
           flex: 0 0 74%;
+          width: 74%;
           @include lg {
             flex: 0 0 100%;
+            width: 100%;
           }
           .logoList {
             display: flex;
@@ -47,12 +51,23 @@
               flex-wrap: nowrap;
               margin-top: 17px;
             }
+            .slick-list {
+              .slick-track {
+                display: flex;
+                align-items: center;
+                .slick-slide {
+                  text-align: center;
+                }
+              }
+            }
             img {
               max-width: 180px;
+              height: auto;
+              width: auto !important;
               margin: 0 45px 0 0;
               @include lg {
-                max-width: 30%;
-                height: auto;
+                // max-width: 30%;
+                // height: auto;
                 margin: 0 38px 0 0;
               }
               &:last-child {
@@ -67,7 +82,7 @@
   &::after {
     content: "";
     width: 60%;
-    height: 50%;
+    height: 45%;
     position: absolute;
     bottom: -75px;
     left: 0;
