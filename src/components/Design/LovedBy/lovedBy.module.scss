@@ -65,10 +65,9 @@
               height: auto;
               width: auto !important;
               margin: 0 45px 0 0;
-              @include lg {
-                // max-width: 30%;
-                // height: auto;
-                margin: 0 38px 0 0;
+              @include x-lg {
+                height: 70% !important;
+                max-width: 75%;
               }
               &:last-child {
                 margin: 0;

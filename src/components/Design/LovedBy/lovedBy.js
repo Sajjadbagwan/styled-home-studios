@@ -17,7 +17,7 @@ function LovedBy() {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 3.1,
+          slidesToShow: 3,
         },
       },
     ],
