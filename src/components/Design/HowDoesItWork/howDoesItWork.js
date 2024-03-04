@@ -34,7 +34,7 @@ function HowDoesItWork() {
   };
 
   return (
-    <section className={styles.howDoesItWork}>
+    <section className={styles.howDoesItWork + " howDoesItWork"}>
       <Image
         src="/assets/images/work.png"
         width={1920}

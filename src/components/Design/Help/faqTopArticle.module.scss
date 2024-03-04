@@ -1,0 +1,78 @@
+@import "../../../../styles/global.scss";
+.faqTopArticleSection{
+    margin: 100px 0;
+    :global{
+        .title {
+            align-items: flex-end;
+            & > div {
+              span {
+                color: $black-color;
+              }
+              h2 {
+                color: $black-color;
+                @include lg {
+                  margin: 0;
+                }
+              }
+            }
+            &::before {
+              background-color: $black-color;
+            }
+            a {
+              @include lg {
+                margin: 0;
+              }
+            }
+          }
+          .allLocation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .slide {
+                width: 29%;
+                padding: 0;
+                .slideImg {
+                  position: relative;
+                  padding-bottom: 68%;
+                  img {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                  }
+                }
+                .slideInfo {
+                  margin: 22px 0 0 0;
+                  .titleDouble {
+                    span {
+                      color: $black-color;
+                      margin-bottom: 19px;
+                    }
+                    h3 {
+                      color: $black-color;
+                      font-size: 19px;
+                      line-height: 25px;
+                      letter-spacing: 1.5px;
+                      margin-bottom: 10px;
+                    }
+                    &::before {
+                      background-color: $black-color;
+                    }
+                  }
+                  p {
+                    margin: 0 0 20px 13px;
+                  }
+                  a {
+                    margin: 0 0 0 9px;
+                  }
+                }
+            }
+            a{
+                text-decoration: none;
+                &:hover{
+                    text-decoration: none;
+                }
+            }  
+          }
+    }
+}
