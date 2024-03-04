@@ -1,0 +1,39 @@
+@import "../../../../styles/global.scss";
+.ourMissionSection{
+    margin: 0;
+    :global{
+        .container{
+            max-width: 1190px;
+            margin: 106px auto 100px;
+            .title {
+                align-items: flex-end;
+                margin-bottom: 13px;
+                & > div {
+                  span {
+                    color: $black-color;
+                  }
+                  h2 {
+                    color: $black-color;
+                    @include lg {
+                      margin: 0;
+                    }
+                  }
+                }
+                &::before {
+                  background-color: $black-color;
+                }
+                a {
+                  @include lg {
+                    margin: 0;
+                  }
+                }
+            }
+            .contentBlock{
+                padding-left: 15px;
+                p{
+                    margin-bottom: 23px;
+                }
+            }
+        }
+    }
+}

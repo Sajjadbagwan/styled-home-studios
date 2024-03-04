@@ -25,17 +25,17 @@
           .titleDouble {
             padding: 0;
             span {
-              color: $green-color;
+              color: $black-color;
             }
             h2 {
-              color: $green-color;
+              color: $black-color;
               @include lg {
                 margin: 0 0 15px 0;
               }
             }
             &::before {
               left: -18px;
-              background-color: #eeeeee;
+              background-color: $grey-color;
             }
           }
           p {
