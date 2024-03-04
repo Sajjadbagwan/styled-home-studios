@@ -561,6 +561,8 @@ button {
   color: $green-color;
   text-decoration: underline;
   cursor: pointer;
+  font-family: $title-font;
+  font-size: 16px;
   &:hover {
     text-decoration: none;
   }

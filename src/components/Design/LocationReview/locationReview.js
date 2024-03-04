@@ -55,7 +55,9 @@ function LocationReview() {
               </svg>
               4.7
             </h2>
-            <span onClick={openAllReviewModal}>View All 37 Reviews</span>
+            <span className="link" onClick={openAllReviewModal}>
+              View All 37 Reviews
+            </span>
           </div>
           <Slider {...settings} className="mainReview sliderDots">
             <div className="reviewBox">
