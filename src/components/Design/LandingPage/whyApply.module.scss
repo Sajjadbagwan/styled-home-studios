@@ -1,0 +1,154 @@
+@import "../../../../styles/global.scss";
+.whyApplySection{
+    margin: -45px 0 0 0;
+    padding:55px 0 190px 0;
+    background-color: $cream-color;
+    @include lg {
+        padding: 100px 0 85px;
+    }
+    :global {
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        .row {
+            align-items: center;
+            .aboutInfo {
+                flex: 0 0 49%;
+                padding: 95px 0 0 60px;
+                width: 49%;
+            @include lg {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 95px 0 0 60px;
+            }
+            .titleDouble {
+                padding: 0;
+                span {
+                color: $black-color;
+                }
+                h2 {
+                color: $black-color;
+                @include lg {
+                    margin: 0 0 10px 0;
+                }
+                }
+                &::before {
+                left: -18px;
+                background-color:$grey-color;
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .allBtn {
+                @include lg {
+                margin: 0;
+                }
+                &:hover {
+                background-color: $cream-color;
+                }
+            }
+            .twoBtns {
+                flex-direction: unset;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            }
+            .aboutImg {
+            flex: 0 0 51%;
+            position: relative;
+            width: 51%;
+            @include lg {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+            .innerImg {
+                @media screen and (min-width: 992px) and (max-width: 1200px) {
+                width: 100%;
+                position: relative;
+                }
+                @include lg {
+                width: 340px;
+                position: relative;
+                }
+                .imgFront {
+                position: relative;
+                z-index: 1;
+                top: 96px;
+                left: 40px;
+                width: fit-content;
+                @media screen and (min-width: 992px) and (max-width: 1200px) {
+                    left: 0;
+                }
+                @include lg {
+                    top: 33px;
+                    left: 33px;
+                }
+                & > img {
+                    width: 417px;
+                    height: 417px;
+                    @include lg {
+                    width: 225px;
+                    height: 225px;
+                    }
+                }
+                .imgInfo {
+                    margin: 12px 0 0 0;
+                    width: 415px;
+                    max-width: 55%;
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    span {
+                        img {
+                        margin: 3px 3px -3px 0;
+                        }
+                    }
+                    }
+                    h4 {
+                    font-family: $default-font;
+                    @include lg {
+                        margin: 0;
+                    }
+                    }
+                }
+                }
+                .imgBack {
+                position: absolute;
+                top: 0;
+                right: 45px;
+                @media screen and (min-width: 992px) and (max-width: 1200px) {
+                    right: auto;
+                    left: 200px;
+                }
+                @include lg {
+                    top: -22px;
+                    right: 30px;
+                }
+                img {
+                    width: 300px;
+                    height: 305px;
+                    @include lg {
+                    width: 163px;
+                    height: 165px;
+                    }
+                }
+                &::after {
+                    content: "";
+                    width: 35%;
+                    height: 20%;
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    background: transparent;
+                    clip-path: polygon(0 0, 100% 100%, 100% 100%, 100% 0, 0 0);
+                    z-index: 1;
+                }
+                }
+            }
+            }
+        }
+        }
+    }
+}

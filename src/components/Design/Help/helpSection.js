@@ -8,7 +8,6 @@ import styles from "./helpSection.module.scss";
 
 function HelpSection() {
     const [open, setOpen] = useState(0); 
-    const [openContent, setOpenContent] = useState(0);
   return (
     <div className={styles.helpSection}>
       <div className="container">

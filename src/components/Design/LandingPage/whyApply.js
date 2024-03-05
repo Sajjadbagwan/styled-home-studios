@@ -1,0 +1,54 @@
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./whyApply.module.scss";
+
+function WhyApplySection() {
+  return (
+    <div className={styles.whyApplySection}>
+        <div className="container">
+            <div className="row">
+                <div className="aboutInfo">
+                    <div className="titleDouble line">
+                    <span>Hosting</span>
+                    <h2>Why Apply To Become A Host?</h2>
+                    </div>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia.
+                    </p>                
+                </div>
+                <div className="aboutImg">
+                    <div className="innerImg">
+                    <div className="imgFront">
+                        <Image
+                        src="/assets/images/about-11.png"
+                        width={474}
+                        height={474}
+                        alt=""
+                        />
+                        
+                    </div>
+                    <div className="imgBack">
+                        <Image
+                        src="/assets/images/about-22.png"
+                        width={340}
+                        height={344}
+                        alt=""
+                        />
+                    </div>
+                    </div>
+                </div>          
+            </div>
+      </div>
+    </div>
+  );
+}
+
+export default WhyApplySection;

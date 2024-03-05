@@ -1,0 +1,26 @@
+@import "../../../../styles/global.scss";
+.mainLegalLanding {
+    margin: 0;
+    :global{
+        .container{
+            ul{
+                max-width: 1160px;
+                margin: 0 auto;
+                width: 100%;
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid rgba(77,77,79,.25);
+                    padding: 20px 0;
+                    .allBtn{
+                        margin: 0;
+                    }
+                    h3{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

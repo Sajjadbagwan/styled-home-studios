@@ -16,7 +16,7 @@ function FaqTopArticle() {
                 <div>
                     <h2>Top Articles</h2>
                 </div>
-                <Link href="#">View All Journal Entries</Link>
+                <Link href="/blog-listing/">View All Journal Entries</Link>
             </div>
             <div className="allLocation">
                 <Link href="" className="slide">

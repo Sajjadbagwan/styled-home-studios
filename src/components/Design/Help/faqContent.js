@@ -8,7 +8,7 @@ import styles from "./helpSection.module.scss";
 function FaqContent() {
     const [openContent, setOpenContent] = useState(0);
   return (
-    <div className={styles.helpSection}>
+    <div className={styles.helpSection + " helpSection"}>
        <div className="singleFilterContent">
             <div className={openContent == 1 ? "accordian openAccordion" : "accordian"} onClick={() => setOpenContent((openContent == 1) ? 0 : 1)} >
                 <div className="accordionSummary">

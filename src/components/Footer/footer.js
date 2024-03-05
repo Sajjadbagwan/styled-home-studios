@@ -42,7 +42,7 @@ function Footer() {
                   <Link href="#">Rent Property</Link>
                 </li>
                 <li>
-                  <Link href="#">Become A Host</Link>
+                  <Link href="/become-a-host/">Become A Host</Link>
                 </li>
                 <li>
                   <Link href="#">Book A Creative</Link>
@@ -51,10 +51,10 @@ function Footer() {
                   <Link href="#">Join The Directory</Link>
                 </li>
                 <li>
-                  <Link href="#">About Us</Link>
+                  <Link href="/about-us/">About Us</Link>
                 </li>
                 <li>
-                  <Link href="#">Journals</Link>
+                  <Link href="/blog-listing/">Journals</Link>
                 </li>
               </ul>
               <div className="socialFooter desktop">
@@ -91,16 +91,16 @@ function Footer() {
               </h3>
               <ul className={isFooterMenuone ? "show" : ""}>
                 <li>
-                  <Link href="#">Help</Link>
+                  <Link href="/help/">Help</Link>
                 </li>
                 <li>
                   <Link href="#">Contact Us</Link>
                 </li>
                 <li>
-                  <Link href="#">Legal</Link>
+                  <Link href="/legal-landing/">Legal</Link>
                 </li>
                 <li>
-                  <Link href="#">FAQs</Link>
+                  <Link href="/help/">FAQs</Link>
                 </li>
               </ul>
               <div className="socialFooter phone">

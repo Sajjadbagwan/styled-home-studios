@@ -2,14 +2,6 @@
 .leaveAreviewSectionForm{
     margin: 0;
     :global{
-        .backbtn{
-            display: flex;
-            align-items: center;
-            max-width: 200px;
-            img{
-                margin-right: 10px;
-            }
-        }
         .leaveReview{
             max-width: 1070px;
             margin: 20px auto 0 auto;
