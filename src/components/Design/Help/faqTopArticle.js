@@ -10,7 +10,7 @@ import styles from "./faqTopArticle.module.scss";
 function FaqTopArticle() {
 
   return (
-    <div className={styles.faqTopArticleSection}>
+    <div className={styles.faqTopArticleSection + " faqTopArticleSection"}>
         <div className="container">
             <div className="title titleDouble">
                 <div>
