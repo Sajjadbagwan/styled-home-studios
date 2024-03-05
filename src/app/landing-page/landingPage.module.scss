@@ -1,0 +1,29 @@
+@import "../../../styles/global.scss";
+.landingPage{
+    margin: 0;
+    :global{
+        .aboutRightImg{
+            margin: 100px 0;
+            .aboutImg{
+                .imgFront{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        } 
+        .lovedBy{
+            margin-top: 0;
+        }
+        .hostTestimonialSection{
+            .backImg{
+                &::before{
+                    background-color: $cream-color;
+                }
+            }
+        }
+        .faqTopArticleSection{
+            margin-bottom: 0;
+        }
+    }
+}

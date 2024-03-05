@@ -251,7 +251,7 @@ body {
 
 .allBtn {
   text-align: center;
-  padding: 10px 45px;
+  padding: 12px 45px 10px 45px;
   display: inline-block;
   background-color: $white-color;
   text-decoration: none;
@@ -556,7 +556,15 @@ button {
     }
   }
 }
-
+.backbtn{
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  margin-top: 12px;
+  img{
+      margin-right: 10px;
+  }
+}
 .link {
   color: $green-color;
   text-decoration: underline;

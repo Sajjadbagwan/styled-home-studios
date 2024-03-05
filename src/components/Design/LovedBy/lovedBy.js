@@ -24,7 +24,7 @@ function LovedBy() {
   };
 
   return (
-    <section className={styles.lovedBy}>
+    <section className={styles.lovedBy + " lovedBy"}>
       <div className="container">
         <div className="row">
           <div className="title">

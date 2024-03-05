@@ -10,13 +10,13 @@ import styles from "./faqTopArticle.module.scss";
 function FaqTopArticle() {
 
   return (
-    <div className={styles.faqTopArticleSection}>
+    <div className={styles.faqTopArticleSection + " faqTopArticleSection"}>
         <div className="container">
             <div className="title titleDouble">
                 <div>
                     <h2>Top Articles</h2>
                 </div>
-                <Link href="#">View All Journal Entries</Link>
+                <Link href="/blog-listing/">View All Journal Entries</Link>
             </div>
             <div className="allLocation">
                 <Link href="" className="slide">

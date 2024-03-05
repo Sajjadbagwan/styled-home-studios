@@ -7,7 +7,7 @@ import Breadcrumb from "@/components/Design/Breadcrumb/breadcrumb";
 import PropertyFilterTab from "@/components/Design/PropertyFilterTab/propertyFilterTab";
 import HelpSection from "@/components/Design/Help/helpSection";
 import FaqTopArticle from "@/components/Design/Help/faqTopArticle";
-import AboutRightImg from "@/components/Design/AboutRightImg/aboutRightImg";
+import FaqContactForm from "@/components/Design/Help/faqContactForm";
 
 export default function HelpPage() {
   return (
@@ -17,6 +17,7 @@ export default function HelpPage() {
       <PropertyFilterTab />
       <HelpSection />
       <FaqTopArticle />
+      <FaqContactForm />
     </div>
   );
 }

@@ -1,0 +1,65 @@
+@import "../../../../styles/global.scss";
+@import "../../../../styles/global.scss";
+
+.uspsBlock {
+  background-color: #8b9297;
+  margin: 0 0 0 0;
+  padding: 76px 0 67px 0;
+  position: relative;
+  @include lg {
+    margin: 105px 0 0 0;
+    padding: 55px 0;
+  }
+  :global {
+    .container {
+        max-width: 1190px;
+        margin: 0 auto;
+      .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .column3{
+            display: flex;
+            align-items: center;
+            .circleDiv{
+                height: 75px;
+                width: 75px;
+                border: 1px solid $white-color;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                margin: 0 20px 0 0;
+                background-color: #8b9297;
+                position: relative;
+                img{
+                    width: 36px;
+                    height: 33px;
+                }
+            }
+            h5{
+                color: $white-color;
+                margin: 0;
+            }
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 60%;
+    height: 45%;
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    background: #8b9297;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
+    z-index: 1;
+    @include lg {
+      width: 50%;
+      height: 11%;
+      bottom: -20px;
+    }
+  }
+}

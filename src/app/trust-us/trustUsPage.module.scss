@@ -1,0 +1,33 @@
+@import "../../../styles/global.scss";
+.trustUsPage{
+    margin: 0;
+    :global{
+        .aboutRightImg{
+            margin: 100px 0;
+            .aboutImg{
+                .imgFront{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        } 
+        .lovedBy{
+            margin-top: -45px;
+            &::after{
+                display: none;
+            }
+        }
+        .hostTestimonialSection{
+            .backImg{
+                &::before{
+                    background-color: $white-color;
+                }
+            }
+        }
+        .landingFaqSection{
+            background-color: $white-color;
+            padding: 0;
+        }
+    }
+}

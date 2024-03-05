@@ -30,7 +30,7 @@ function HostTestimonials() {
         ],
       };
   return (
-    <div className={styles.hostTestimonialSection}>
+    <div className={styles.hostTestimonialSection + " hostTestimonialSection"}>
       <div className="backImg overlay">
         <Image
           src={HostImageMain}

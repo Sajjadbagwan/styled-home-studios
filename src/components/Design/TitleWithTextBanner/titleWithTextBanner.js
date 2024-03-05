@@ -20,9 +20,13 @@ function TitleWithTextBanner() {
       </div>
       <div className="container">
         <div className="titleText">
-          <h1>Become a styled home studio’s Host</h1>
-          <p>Join our community of hosts, earn extra money and see your home become a hub ion creativity.</p>
-        </div>        
+          <div className="titleCont">
+            <h1>Become a styled home studio’s Host</h1>
+            <p>Join our community of hosts, earn extra money and see your home become a hub ion creativity.</p>         
+          </div>
+          <Link href="" className="allBtn border dark">Hire Out Your Home</Link>       
+        </div> 
+        
       </div>
     </div>
   );

@@ -1,0 +1,62 @@
+@import "../../../../styles/global.scss";
+.landingFaqSection{
+    margin: 0;
+    background-color: $cream-color;
+    padding: 100px 0;
+    :global{
+        .container{
+            .title{
+                margin: 0;
+                h2{
+                    color: $black-color;
+                }
+            }
+            .helpSection{
+                .accordian{
+                    .accordionSummary{
+                        .typography{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 22px 0 22px 0;
+                            border-bottom: 1px solid rgba(77,77,79,.25);
+                            cursor: pointer;
+                            button{
+                                padding: 0;
+                                img{
+                                    height: 9px;
+                                    width: 15px;
+                                }
+                            }
+                            h4{
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .accordionDetails{
+                        display: none;
+                    }
+                    &.openAccordion{
+                        .accordionSummary{
+                            .typography{
+                                border-bottom: 0;
+                            }
+                            button{
+                                img{
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                        .accordionDetails{
+                            display: block;
+                            border-bottom: 1px solid rgba(77,77,79,.25);
+                        } 
+                    }
+                }
+                .allBtn{
+                    display: none;
+                }
+            }
+        }
+    }
+}
