@@ -9,8 +9,16 @@ function BookingOrderSummary() {
     <div className={styles.bookingOrderSummary}>
       <div>
         <div className="title">
-          <h3>Order Summary</h3>
-          <Link href="#">Edit Details</Link>
+          <h2>Order Summary</h2>
+          <Link href="#">
+            <Image
+              src="/assets/images/edit.svg"
+              alt="host"
+              width={10}
+              height={17}
+            />
+            Edit Details
+          </Link>
         </div>
         <div className="subDetail">
           <span>Day 1</span>
@@ -26,19 +34,19 @@ function BookingOrderSummary() {
             <span>15:00 - 17:00</span>
           </div>
         </div>
-        <hr></hr>
+        <hr />
         <div className="subDetail">
           <span>Total:</span>
           <div>
             <span>£1045.00</span>
-            <span>(5 hours)</span>
+            <span className="normal">(5 hours)</span>
           </div>
         </div>
         <div className="subDetail">
           <span>Service Charge</span>
           <div>
             <span>£83.60</span>
-            <span>(8%)</span>
+            <span className="normal">(8%)</span>
           </div>
         </div>
         <div className="subDetail">
@@ -48,13 +56,16 @@ function BookingOrderSummary() {
           </div>
         </div>
         <div className="subDetail">
-          <span>-£104.50</span>
+          <span>Voucher Code</span>
           <div>
-            <span className="link">Remove</span>
-            <span>(10JN)</span>
+            <span>-£104.50</span>
+            <div>
+              <span className="link">Remove</span>
+              <span className="normal">(10JN)</span>
+            </div>
           </div>
         </div>
-        <hr></hr>
+        <hr />
         <div className="subDetail total">
           <span>Grand Total</span>
           <div>

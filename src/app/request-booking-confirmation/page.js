@@ -1,16 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./requestBookingCheckout.module.scss";
+import styles from "./requestBookingConfirmation.module.scss";
 import TitleWithTextBanner from "@/components/Design/TitleWithTextBanner/titleWithTextBanner";
 import Breadcrumb from "@/components/Design/Breadcrumb/breadcrumb";
 import RequestBookingSlider from "@/components/Design/RequestBookingSlider/requestBookingSlider";
 import BookingOrderSummary from "@/components/Design/BookingOrderSummary/bookingOrderSummary";
-import BookingOrderForm from "@/components/Design/BookingOrderForm/bookingOrderForm";
+import SingleHostDetail from "@/components/Design/SingleHostDetail/singleHostDetail";
 
 function Layout({ children }) {
   return (
-    <div className={styles.requestBookingCheckout}>
+    <div className={styles.requestBookingConfirmation}>
       <TitleWithTextBanner />
       <Breadcrumb />
       <div className="mainBooking">
@@ -37,10 +37,23 @@ function Layout({ children }) {
           <div className="row">
             <div className="leftBooking">
               <RequestBookingSlider />
-              <BookingOrderSummary />
+              <p>
+                Shoot location with a pared back aesthetic, clean lines and
+                neutral tones
+              </p>
+              <SingleHostDetail />
             </div>
             <div className="rightBooking">
-              <BookingOrderForm />
+              <h3>What Happens Next?</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+              <BookingOrderSummary />
             </div>
           </div>
         </div>

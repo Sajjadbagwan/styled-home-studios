@@ -1,0 +1,55 @@
+@import "../../../../styles/global.scss";
+
+.singleHostDetail {
+  margin: 10px 0 90px 0;
+  :global {
+    .hostBox {
+      padding: 45px 80px;
+      background-color: rgb(139 146 151 / 5%);
+      & > h3 {
+        margin-bottom: 45px;
+      }
+      .slide {
+        .slideImg {
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .slideInfo {
+          margin: 0;
+          .subDetail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+            align-items: baseline;
+            h3 {
+              font-family: $default-font;
+              font-size: 18px;
+              text-transform: uppercase;
+              flex: 0 0 85%;
+              margin: 0;
+            }
+            .rating {
+              display: flex;
+              align-items: center;
+              text-decoration: underline;
+            }
+          }
+          .subDetailLast {
+            p {
+              margin-bottom: 0;
+            }
+            svg {
+              margin: 4px 5px -1px 0;
+            }
+          }
+        }
+      }
+      .allBtn {
+        width: 100%;
+      }
+    }
+  }
+}

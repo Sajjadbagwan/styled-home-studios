@@ -3,6 +3,57 @@
 .bookingOrderSummary {
   & > div {
     background-color: $cream-color;
-    padding: 50px;
+    padding: 43px;
+    margin-top: 25px;
+    :global {
+      .title {
+        margin-bottom: 23px;
+      }
+      .subDetail {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 0 20px 0;
+        span {
+          font-size: 16px;
+        }
+        & > div {
+          line-height: 23px;
+          span {
+            display: block;
+            text-align: right;
+            &.normal {
+              font-family: $default-font;
+              font-size: 14px;
+            }
+          }
+          & > div {
+            display: flex;
+            span:first-child {
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+        &.total {
+          margin: 0;
+          span {
+            font-size: 25px;
+          }
+          & > div {
+            span:first-child {
+              font-size: 20px;
+            }
+            span:last-child {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      hr {
+        border-top: 1px solid rgba(77, 77, 79, 0.5) !important;
+        border: none;
+        margin: 20px 0 27px;
+      }
+    }
   }
 }
