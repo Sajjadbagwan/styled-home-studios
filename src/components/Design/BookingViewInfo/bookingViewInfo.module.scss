@@ -1,0 +1,35 @@
+@import "../../../../styles/global.scss";
+
+.bookingViewInfo {
+  :global {
+    .container {
+      .row {
+        justify-content: space-between;
+        align-items: center;
+        .viewTitle {
+          h2 {
+            margin: 24px 0 12px;
+          }
+        }
+        .viewBox {
+          display: flex;
+          align-items: center;
+          background-color: #8b9297;
+          padding: 20px 30px;
+          span {
+            font-size: 16px;
+            font-family: $title-font;
+            color: $white-color;
+            display: block;
+            line-height: 20px;
+            margin: 0 0 0 15px;
+            &:last-child {
+              font-size: 14px;
+              font-family: $default-font;
+            }
+          }
+        }
+      }
+    }
+  }
+}

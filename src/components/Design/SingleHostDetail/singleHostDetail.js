@@ -8,7 +8,7 @@ function SingleHostDetail() {
   return (
     <div className={styles.singleHostDetail}>
       <div className="hostBox">
-        <h3>Your Host</h3>
+        <h2>Your Host</h2>
         <div className="slide">
           <div className="slideImg">
             <Image src="/assets/images/host-1.png" width={285} height={285} />

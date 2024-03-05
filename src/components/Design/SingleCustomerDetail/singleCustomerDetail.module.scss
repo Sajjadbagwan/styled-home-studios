@@ -1,7 +1,6 @@
 @import "../../../../styles/global.scss";
 
-.singleHostDetail {
-  margin: 23px 0;
+.singleCustomerDetail {
   :global {
     .hostBox {
       padding: 45px 80px;
@@ -44,11 +43,19 @@
             svg {
               margin: 4px 5px -1px 0;
             }
+            .content {
+              margin-top: 25px;
+              p {
+                font-family: $default-font;
+                font-size: 14px;
+              }
+            }
           }
         }
       }
       .allBtn {
         width: 100%;
+        background-color: transparent;
       }
     }
   }

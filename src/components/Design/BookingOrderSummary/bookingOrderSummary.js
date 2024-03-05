@@ -6,7 +6,7 @@ import styles from "./bookingOrderSummary.module.scss";
 
 function BookingOrderSummary() {
   return (
-    <div className={styles.bookingOrderSummary}>
+    <div className={styles.bookingOrderSummary + " bookingOrderSummary"}>
       <div>
         <div className="title">
           <h2>Order Summary</h2>

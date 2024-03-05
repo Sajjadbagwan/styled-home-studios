@@ -4,6 +4,7 @@
   margin: 0;
   :global {
     .mainBooking {
+      margin-bottom: -50px;
       .container {
         .backBtn {
           display: flex;
@@ -22,6 +23,35 @@
           .rightBooking {
             flex: 0 0 65%;
             width: 65%;
+            .bookTxt {
+              margin-bottom: 50px;
+            }
+            .bookingOrderSummary {
+              & > div {
+                padding: 90px;
+                .subDetail {
+                  span {
+                    font-size: 20px;
+                    &.normal {
+                      font-size: 14px;
+                    }
+                  }
+                  &.total {
+                    span {
+                      font-size: 25px;
+                      &:last-child {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+                hr {
+                  &:nth-of-type(2) {
+                    margin: 37px 0;
+                  }
+                }
+              }
+            }
           }
         }
       }

@@ -1,0 +1,42 @@
+@import "../../../../styles/global.scss";
+
+.customerProfileReview {
+  :global {
+    .container {
+      .allReviews {
+        .title {
+          h2 {
+            svg {
+              margin: 0 10px -7px 0;
+            }
+          }
+          @include lg {
+            display: flex;
+          }
+        }
+        .mainReview {
+          .reviewBox {
+            border-bottom: 1px solid rgba(77, 77, 79, 0.25);
+            margin: 35px 0;
+            .img {
+              margin-bottom: 28px;
+              display: flex;
+              img {
+                width: 120px;
+                height: auto;
+                margin: 0 27px 0 0;
+              }
+            }
+            .info {
+              h5 {
+                font-family: $default-font;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
