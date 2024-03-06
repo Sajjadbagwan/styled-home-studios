@@ -57,7 +57,7 @@ function PopularLocations() {
   };
 
   return (
-    <section className={styles.popularLocations}>
+    <section className={styles.popularLocations + " popularLocations"}>
       <div className="container">
         <div className="title">
           <h2>Popular Locations</h2>
