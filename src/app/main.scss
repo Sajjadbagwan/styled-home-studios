@@ -264,7 +264,7 @@ body {
   cursor: pointer;
   @include lg {
     min-height: 55px;
-    padding: 10px 40px;
+    padding: 12px 40px 10px 40px;
     font-size: 13px;
   }
   &:hover {

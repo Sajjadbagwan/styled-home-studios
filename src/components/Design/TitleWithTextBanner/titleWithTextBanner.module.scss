@@ -14,7 +14,10 @@
       padding-bottom: 11.5%;
       @include x-lg{
         padding: 0;
-        height: 170px;
+        height: 200px;
+      }
+      @include md{
+        height: 250px;
       }
       img {
         width: 100%;
@@ -22,9 +25,12 @@
         position: absolute;
         top: 0;
         @include x-lg{
-          height: 170px;
+          height: 200px;
           position: static;
           object-fit: cover;
+        }
+        @include md{
+          height: 250px;
         }
       }
     }
@@ -46,13 +52,15 @@
           top: -113px;
         }
         @include x-lg{
-          top: -128px;
+          top: -168px;
           left: 53%;
         }
         @include md{
-          top: -132px;
-          left: 47%;
-          width: 78%;
+          top: -210px;
+          left: 50%;
+          width: 100%;
+          max-width: 85%;
+          flex-wrap: wrap;
         }
         h1{
           color: $white-color;
@@ -75,7 +83,25 @@
         .allBtn{
           border-color: $green-color;
           margin-right: 171px;
-          margin-top: -11px;      
+          margin-top: -11px;  
+          &:hover{
+            border-color: $white-color;
+          }   
+          @include lg{
+            margin-right: 65px;
+            margin-top: 0;
+          } 
+          @include md{
+            margin: 0 auto;
+          }
+        }
+        .titleCont{
+          @include lg{
+            max-width: 50%;
+          }
+          @include md{
+            max-width: 100%;
+          }
         }
       }
     }
@@ -96,6 +122,7 @@
     @include lg{
         width: 23%;
         height: 45%;
+        top: -1px;
     }
     @include md{
       width: 44%;
