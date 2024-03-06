@@ -10,153 +10,173 @@ import CancelBookingPopup from "@/components/Design/CommonPopup/cancelBookingPop
 import ConfirmCancelBookingPopup from "@/components/Design/CommonPopup/confirmCancelBookingPopup";
 import CancelConfirmationPopup from "@/components/Design/CommonPopup/cancelConfirmationPopup";
 import LeaveReviewPopup from "@/components/Design/CommonPopup/leaveReviewPopup";
-import DownArrow from "../../../../public/assets/images/down-arrow.svg"
-import BookingRequested from "../../../../public/assets/images/requested-booking.svg"
-import OwnnerImage from "../../../../public/assets/images/booking.jpg"
+import DownArrow from "../../../../public/assets/images/down-arrow.svg";
+import BookingRequested from "../../../../public/assets/images/requested-booking.svg";
+import OwnnerImage from "../../../../public/assets/images/booking.jpg";
 import styles from "./mainBooking.module.scss";
+import CustomerBookingSummery from "./CustomerBookingSummery/customerBookingSummery";
 
 function MainBookingSection() {
-  const [open, setOpen] = useState(0);    
-  const [ConfirmDeclineBookingIsOpen, SetConfirmDeclineBookingIsOpen] = useState(false);
-  const openConfirmDeclineBookingModal = ()=> {
+  const [open, setOpen] = useState(0);
+  const [ConfirmDeclineBookingIsOpen, SetConfirmDeclineBookingIsOpen] =
+    useState(false);
+  const openConfirmDeclineBookingModal = () => {
     SetConfirmDeclineBookingIsOpen(true);
-  }
-  const closeConfirmDeclineBookingModal =()=> {
+  };
+  const closeConfirmDeclineBookingModal = () => {
     SetConfirmDeclineBookingIsOpen(false);
-  }
+  };
 
   const [DeclineBookingIsOpen, SetDeclineBookingIsOpen] = useState(false);
-  const openDeclineBookingModal = ()=> {
+  const openDeclineBookingModal = () => {
     SetDeclineBookingIsOpen(true);
-  }
-  const closeDeclineBookingModal =()=> {
+  };
+  const closeDeclineBookingModal = () => {
     SetDeclineBookingIsOpen(false);
-  }
-  
-  const [AcceptBookingIsOpen, SetAcceptBookingIsOpen] = useState(false);
-  const openAcceptBookingModal = ()=> {
-    SetAcceptBookingIsOpen(true);
-  }
-  const closeAcceptBookingModal =()=> {
-    SetAcceptBookingIsOpen(false);
-  }
+  };
 
-  const [ConfirmAcceptBookingIsOpen, SetConfirmAcceptBookingIsOpen] = useState(false);
-  const openConfirmAcceptBookingModal = ()=> {
+  const [AcceptBookingIsOpen, SetAcceptBookingIsOpen] = useState(false);
+  const openAcceptBookingModal = () => {
+    SetAcceptBookingIsOpen(true);
+  };
+  const closeAcceptBookingModal = () => {
+    SetAcceptBookingIsOpen(false);
+  };
+
+  const [ConfirmAcceptBookingIsOpen, SetConfirmAcceptBookingIsOpen] =
+    useState(false);
+  const openConfirmAcceptBookingModal = () => {
     SetConfirmAcceptBookingIsOpen(true);
-  }
-  const closeConfirmAcceptBookingModal =()=> {
+  };
+  const closeConfirmAcceptBookingModal = () => {
     SetConfirmAcceptBookingIsOpen(false);
-  }
+  };
 
   const [CancelBookingIsOpen, SetCancelBookingIsOpen] = useState(false);
-  const openCancelBookingModal = ()=> {
+  const openCancelBookingModal = () => {
     SetCancelBookingIsOpen(true);
-  }
-  const closeCancelBookingModal =()=> {
+  };
+  const closeCancelBookingModal = () => {
     SetCancelBookingIsOpen(false);
-  }
+  };
 
-  const [ConfirmCancelBookingIsOpen, SetConfirmCancelBookingIsOpen] = useState(false);
-  const openConfirmCancelBookingModal = ()=> {
+  const [ConfirmCancelBookingIsOpen, SetConfirmCancelBookingIsOpen] =
+    useState(false);
+  const openConfirmCancelBookingModal = () => {
     SetConfirmCancelBookingIsOpen(true);
-  }
-  const closeConfirmCancelBookingModal =()=> {
+  };
+  const closeConfirmCancelBookingModal = () => {
     SetConfirmCancelBookingIsOpen(false);
-  }
+  };
 
-  const [CancelConfirmationIsOpen, SetCancelConfirmationIsOpen] = useState(false);
-  const openCancelConfirmationModal = ()=> {
+  const [CancelConfirmationIsOpen, SetCancelConfirmationIsOpen] =
+    useState(false);
+  const openCancelConfirmationModal = () => {
     SetCancelConfirmationIsOpen(true);
-  }
-  const closeCancelConfirmationModal =()=> {
+  };
+  const closeCancelConfirmationModal = () => {
     SetCancelConfirmationIsOpen(false);
-  }
+  };
 
   const [LeaveReviewIsOpen, SetLeaveReviewIsOpen] = useState(false);
-  const openLeaveReviewModal = ()=> {
+  const openLeaveReviewModal = () => {
     SetLeaveReviewIsOpen(true);
-  }
-  const closeLeaveReviewModal =()=> {
+  };
+  const closeLeaveReviewModal = () => {
     SetLeaveReviewIsOpen(false);
-  }
+  };
   return (
     <div className={styles.mainBookingSection}>
-      
       <h3>Requested Bookings</h3>
-      <hr/>
+      <hr />
       <form>
-      <div>
-            <label>Search</label>
-            <input
+        <div>
+          <label>Search</label>
+          <input
             type="text"
             placeholder="Customer Name, Order ID"
             name="search"
-            />
+          />
         </div>
         <button type="submit">
-                <Image
-                src="/assets/images/search.svg"
-                width={24}
-                height={24}
-                alt=""
-                />
-            </button>
+          <Image
+            src="/assets/images/search.svg"
+            width={24}
+            height={24}
+            alt=""
+          />
+        </button>
       </form>
       <div className="bookingsData">
         <div className="singleBooking">
-            <div className="bookingId">
-                <h3>Booking #003</h3>
-                <button type="button" onClick={openDeclineBookingModal}>Decline Request</button>
-                <p>Bright and Light Townhouse – N1</p>
-            </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Booking Requested</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 1 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 1) ? 0 : 1)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+          <div className="bookingId">
+            <h3>Booking #003</h3>
+            <button type="button" onClick={openDeclineBookingModal}>
+              Decline Request
             </button>
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Booking Requested</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            className={open == 1 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 1 ? 0 : 1)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -172,60 +192,84 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
+                </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue <br /> Collected
+                    </p>
                   </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue <br/> Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios <br/> Commission & Service <br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00 <br/> (8%)</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios <br /> Commission & Service <br />{" "}
+                      Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT <br/> on Commission & Service <br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00 <br /> (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT <br /> on Commission & Service{" "}
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
                   </div>
-                  <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
-                </div>   
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={openAcceptBookingModal}
+                  className="allBtn border dark"
+                >
+                  Accept request
+                </button>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -242,85 +286,112 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
-                    </div>  
-                  </div>
-                  </div>
-                </div>             
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
-                </div>
-                <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
+                        4.5
+                      </span>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+              </div>
+              <p>
+                Hi, love the property, is there anywhere suitable for us to stay
+                in the surrounding area that you can recommend?
+              </p>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <CustomerBookingSummery />
+          </div>
         </div>
 
         <div className="singleBooking">
-            <div className="bookingId">
-                <h3>Booking #004</h3>
-                <button type="button" onClick={openDeclineBookingModal}>Decline Request</button>
-                <p>Bright and Light Townhouse – N1</p>
-            </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Booking Requested</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 2 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 2) ? 0 : 2)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+          <div className="bookingId">
+            <h3>Booking #004</h3>
+            <button type="button" onClick={openDeclineBookingModal}>
+              Decline Request
             </button>
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Booking Requested</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            className={open == 2 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 2 ? 0 : 2)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -336,60 +407,88 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
                 </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue<br/> Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue
+                      <br /> Collected
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios<br/> Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00<br/> (8%)</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/> on Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios
+                      <br /> Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00
+                      <br /> (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT
+                      <br /> on Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
-                </div> 
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={openAcceptBookingModal}
+                  className="allBtn border dark"
+                >
+                  Accept request
+                </button>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -406,85 +505,110 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
+                        4.5
+                      </span>
                     </div>
                   </div>
-                  </div>
-                </div>                   
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
                 </div>
-                <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
-                    </div>
-                  </div>
-                </form>
               </div>
             </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+              </div>
+              <p>
+                Hi, love the property, is there anywhere suitable for us to stay
+                in the surrounding area that you can recommend?
+              </p>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div className="singleBooking confirmBooking">
-            <div className="bookingId">
-                <h3>Booking #005</h3>
-                <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button>
-                <p>Bright and Light Townhouse – N1</p>
-            </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Booking Confirmed</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 3 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 3) ? 0 : 3)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+          <div className="bookingId">
+            <h3>Booking #005</h3>
+            <button type="button" onClick={openCancelBookingModal}>
+              Cancel Booking
             </button>
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Booking Confirmed</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            className={open == 3 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 3 ? 0 : 3)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -500,64 +624,96 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
                 </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue
+                      <br />
+                      Collected
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios
+                      <br />
+                      Commission & Service
+                      <br />
+                      Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00
+                      <br />
+                      (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT
+                      <br />
+                      on Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="buttonContainer">
-                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Resend Confirmation</button>
-                    <Link href="">Download Statement</Link>
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
                   </div>
-                  
-                </div>    
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <div className="buttonContainer">
+                  <button
+                    type="button"
+                    onClick={openAcceptBookingModal}
+                    className="allBtn border dark"
+                  >
+                    Resend Confirmation
+                  </button>
+                  <Link href="">Download Statement</Link>
+                </div>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -574,91 +730,119 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
-                    </div>    
-                  </div>
-                  </div>
-                </div>                
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
-                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                </div>
-                <hr/>
-                <div className="messageDetails">
-                  <h4>Fabien</h4>
-                  <span>25th May 2023 at 9:50 am</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                </div>                
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
+                        4.5
+                      </span>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+                <p>
+                  Hi, love the property, is there anywhere suitable for us to
+                  stay in the surrounding area that you can recommend?
+                </p>
+              </div>
+              <hr />
+              <div className="messageDetails">
+                <h4>Fabien</h4>
+                <span>25th May 2023 at 9:50 am</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div className="singleBooking confirmBooking">
-            <div className="bookingId">
-                <h3>Booking #006</h3>
-                <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button>
-                <p>Bright and Light Townhouse – N1</p>
-            </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Booking Confirmed</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 4 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 4) ? 0 : 4)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
+          <div className="bookingId">
+            <h3>Booking #006</h3>
+            <button type="button" onClick={openCancelBookingModal}>
+              Cancel Booking
             </button>
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Booking Confirmed</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            className={open == 4 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 4 ? 0 : 4)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -674,64 +858,96 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
                 </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue
+                      <br />
+                      Collected
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios
+                      <br />
+                      Commission & Service
+                      <br />
+                      Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00
+                      <br />
+                      (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT
+                      <br />
+                      on Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="buttonContainer">
-                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Resend Confirmation</button>
-                    <Link href="">Download Statement</Link>
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
                   </div>
-                  
-                </div>     
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <div className="buttonContainer">
+                  <button
+                    type="button"
+                    onClick={openAcceptBookingModal}
+                    className="allBtn border dark"
+                  >
+                    Resend Confirmation
+                  </button>
+                  <Link href="">Download Statement</Link>
+                </div>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -748,91 +964,117 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
-                    </div>                    
-                  </div>
-                  </div>
-                </div>               
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
-                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                </div>
-                <hr/>
-                <div className="messageDetails">
-                  <h4>Fabien</h4>
-                  <span>25th May 2023 at 9:50 am</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                </div>                
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
+                        4.5
+                      </span>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+                <p>
+                  Hi, love the property, is there anywhere suitable for us to
+                  stay in the surrounding area that you can recommend?
+                </p>
+              </div>
+              <hr />
+              <div className="messageDetails">
+                <h4>Fabien</h4>
+                <span>25th May 2023 at 9:50 am</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div className="singleBooking cancelBooking">
-            <div className="bookingId">
-                <h3>Booking #007</h3>
-                {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
-                <p>Bright and Light Townhouse – N1</p>
+          <div className="bookingId">
+            <h3>Booking #007</h3>
+            {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Booking Declined</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
             </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Booking Declined</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 5 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 5) ? 0 : 5)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
-            </button>
+          </div>
+          <button
+            type="button"
+            className={open == 5 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 5 ? 0 : 5)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -848,63 +1090,95 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
                 </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue
+                      <br />
+                      Collected
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios
+                      <br />
+                      Commission & Service
+                      <br />
+                      Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00
+                      <br />
+                      (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT
+                      <br />
+                      on Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="buttonContainer">
-                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
                   </div>
-                  
-                </div>    
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <div className="buttonContainer">
+                  <button
+                    type="button"
+                    onClick={openAcceptBookingModal}
+                    className="allBtn border dark"
+                  >
+                    Accept request
+                  </button>
+                </div>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -921,93 +1195,119 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
-                    </div>    
-                  </div>
-                  </div>
-                </div>                
-              </div>
-              <div className="messageBox">
-                <div className="messageDetails">
-                  <h3>Booking Declined</h3>                  
-                  <span>Declined: 8th July 2023 at 19:21</span>                  
-                </div>
-                <h5>Reason</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
-                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                </div>
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
+                        4.5
+                      </span>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+            <div className="messageBox">
+              <div className="messageDetails">
+                <h3>Booking Declined</h3>
+                <span>Declined: 8th July 2023 at 19:21</span>
+              </div>
+              <h5>Reason</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore.
+              </p>
+            </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+                <p>
+                  Hi, love the property, is there anywhere suitable for us to
+                  stay in the surrounding area that you can recommend?
+                </p>
+              </div>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div className="singleBooking cancelBooking">
-            <div className="bookingId">
-                <h3>Booking #008</h3>
-                {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
-                <p>Bright and Light Townhouse – N1</p>
+          <div className="bookingId">
+            <h3>Booking #008</h3>
+            {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Booking Cancelled</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
             </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Booking Cancelled</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 6 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 6) ? 0 : 6)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
-            </button>
+          </div>
+          <button
+            type="button"
+            className={open == 6 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 6 ? 0 : 6)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -1023,63 +1323,95 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
                 </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue
+                      <br />
+                      Collected
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios
+                      <br />
+                      Commission & Service
+                      <br />
+                      Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00
+                      <br />
+                      (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT
+                      <br />
+                      on Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="buttonContainer">
-                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Accept request</button>
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
                   </div>
-                  
-                </div>    
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <div className="buttonContainer">
+                  <button
+                    type="button"
+                    onClick={openAcceptBookingModal}
+                    className="allBtn border dark"
+                  >
+                    Accept request
+                  </button>
+                </div>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -1096,93 +1428,119 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
-                    </div>    
-                  </div>
-                  </div>
-                </div>                
-              </div>
-              <div className="messageBox">
-                <div className="messageDetails">
-                  <h3>Booking Cancelled</h3>                  
-                  <span>Cancelled: 9th July 2023 at 19:21</span>                  
-                </div>
-                <h5>Reason</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
-                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                </div>
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
+                        4.5
+                      </span>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+            <div className="messageBox">
+              <div className="messageDetails">
+                <h3>Booking Cancelled</h3>
+                <span>Cancelled: 9th July 2023 at 19:21</span>
+              </div>
+              <h5>Reason</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore.
+              </p>
+            </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+                <p>
+                  Hi, love the property, is there anywhere suitable for us to
+                  stay in the surrounding area that you can recommend?
+                </p>
+              </div>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div className="singleBooking">
-            <div className="bookingId">
-                <h3>Booking #009</h3>
-                {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
-                <p>Bright and Light Townhouse – N1</p>
+          <div className="bookingId">
+            <h3>Booking #009</h3>
+            {/* <button type="button" onClick={openCancelBookingModal}>Cancel Booking</button> */}
+            <p>Bright and Light Townhouse – N1</p>
+          </div>
+          <div className="requestDate">
+            <Image
+              src={BookingRequested}
+              height={35}
+              width={35}
+              alt="requested"
+            />
+            <div className="dateTime">
+              <span>Past Booking</span>
+              <span>Requested on 04th July 2023 by Sarah</span>
             </div>
-            <div className="requestDate">
-                <Image src={BookingRequested} height={35} width={35} alt="requested"/>
-                <div className="dateTime">
-                    <span>Past Booking</span>
-                    <span>Requested on 04th July 2023 by Sarah</span>
-                </div>
-            </div>
-            <button type="button" className={open == 7 ? "accordian openAccordion" : "accordian"} onClick={() => setOpen((open == 7) ? 0 : 7)}>
-                <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
-            </button>
+          </div>
+          <button
+            type="button"
+            className={open == 7 ? "accordian openAccordion" : "accordian"}
+            onClick={() => setOpen(open == 7 ? 0 : 7)}
+          >
+            <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
+          </button>
 
-            <div className="accordionSummary">
-              <div className="summaryBox">
-                <div className="bookingInfo">
-                  <div className="dateTimeBox">
-                    <h3>Dates & Times</h3>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 1</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>28/06/24</p>
-                        <p>15:00 - 17:00</p>
-                      </div>
+          <div className="accordionSummary">
+            <div className="summaryBox">
+              <div className="bookingInfo">
+                <div className="dateTimeBox">
+                  <h3>Dates & Times</h3>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 1</p>
                     </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Day 2</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>29/06/24</p>
-                        <p>11:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <div className="dayCrew">
-                      <div className="dayDiv">
-                        <p>Crew</p>
-                      </div>
-                      <div className="timeDiv">
-                        <p>4 Members</p>
-                      </div>
+                    <div className="timeDiv">
+                      <p>28/06/24</p>
+                      <p>15:00 - 17:00</p>
                     </div>
                   </div>
-                  <div className="ownerBox">
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Day 2</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>29/06/24</p>
+                      <p>11:00 - 14:00</p>
+                    </div>
+                  </div>
+                  <div className="dayCrew">
+                    <div className="dayDiv">
+                      <p>Crew</p>
+                    </div>
+                    <div className="timeDiv">
+                      <p>4 Members</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <p>Sarah A</p>
                     <span className="rating">
                       <svg
@@ -1198,64 +1556,98 @@ function MainBookingSection() {
                           fill="#20535a"
                         />
                       </svg>
-                    4.5
-                  </span>       
+                      4.5
+                    </span>
                   </div>
                 </div>
-                </div>                
-                <div className="revenueBox">
-                  <h3>Revenue</h3>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Revenue<br/>Collected</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£109.60</p>
-                    </div>
+              </div>
+              <div className="revenueBox">
+                <h3>Revenue</h3>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Revenue
+                      <br />
+                      Collected
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios<br/>Commission & Service<br/>Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£23.00<br/>(8%)</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>£109.60</p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Styled Home Studios VAT<br/>on Commission & Service<br/> Charge</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£4.60</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios
+                      <br />
+                      Commission & Service
+                      <br />
+                      Charge
+                    </p>
                   </div>
-                  <div className="revenueDiv">
-                    <div className="revenueTitle">
-                      <p>Total Styled Home Studio<br/> Fees (Including (VAT)</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£27.60</p>
-                    </div>
+                  <div className="revenuePrice">
+                    <p>
+                      £23.00
+                      <br />
+                      (8%)
+                    </p>
                   </div>
-                  <div className="revenueDiv hostRevenue">
-                    <div className="revenueTitle">
-                      <p>Host Revenue</p>
-                    </div>
-                    <div className="revenuePrice">
-                      <p>£82.00</p>
-                    </div>
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Styled Home Studios VAT
+                      <br />
+                      on Commission & Service
+                      <br /> Charge
+                    </p>
                   </div>
-                  <div className="buttonContainer">
-                    <button type="button" onClick={openAcceptBookingModal} className="allBtn border dark">Resend Confirmation</button>
-                    <button type="button" onClick={openLeaveReviewModal}>Leave A Review</button>
+                  <div className="revenuePrice">
+                    <p>£4.60</p>
                   </div>
-                  
-                </div>     
-                <div className="mobileOwnerBox">
-                  <div className="ownerBox">
+                </div>
+                <div className="revenueDiv">
+                  <div className="revenueTitle">
+                    <p>
+                      Total Styled Home Studio
+                      <br /> Fees (Including (VAT)
+                    </p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£27.60</p>
+                  </div>
+                </div>
+                <div className="revenueDiv hostRevenue">
+                  <div className="revenueTitle">
+                    <p>Host Revenue</p>
+                  </div>
+                  <div className="revenuePrice">
+                    <p>£82.00</p>
+                  </div>
+                </div>
+                <div className="buttonContainer">
+                  <button
+                    type="button"
+                    onClick={openAcceptBookingModal}
+                    className="allBtn border dark"
+                  >
+                    Resend Confirmation
+                  </button>
+                  <button type="button" onClick={openLeaveReviewModal}>
+                    Leave A Review
+                  </button>
+                </div>
+              </div>
+              <div className="mobileOwnerBox">
+                <div className="ownerBox">
                   <h3>Requested By</h3>
                   <div className="ownerInfo">
-                    <Image src={OwnnerImage} alt="owner-image" height={120} width={120} />
+                    <Image
+                      src={OwnnerImage}
+                      alt="owner-image"
+                      height={120}
+                      width={120}
+                    />
                     <div className="nameStar">
                       <p>Sarah A</p>
                       <span className="rating">
@@ -1272,44 +1664,83 @@ function MainBookingSection() {
                             fill="#20535a"
                           />
                         </svg>
-                      4.5
-                      </span>       
-                    </div>                    
-                  </div>
-                  </div>
-                </div>               
-              </div>
-              <div className="messageBox">
-                <h3>Messages</h3>
-                <div className="messageDetails">
-                  <h4>Sarah</h4>
-                  <span>25th May 2023 at 9:12 am</span>
-                  <p>Hi, love the property, is there anywhere suitable for us to stay in the surrounding area that you can recommend?</p>
-                </div>
-                <form>
-                  <div className="inputGroup">
-                    <div className="halfDiv">
-                      <input type="text" name="type-message" placeholder="Type message" />
-                      <button type="button" className="allBtn dark">Send</button>
+                        4.5
+                      </span>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
+            <div className="messageBox">
+              <h3>Messages</h3>
+              <div className="messageDetails">
+                <h4>Sarah</h4>
+                <span>25th May 2023 at 9:12 am</span>
+                <p>
+                  Hi, love the property, is there anywhere suitable for us to
+                  stay in the surrounding area that you can recommend?
+                </p>
+              </div>
+              <form>
+                <div className="inputGroup">
+                  <div className="halfDiv">
+                    <input
+                      type="text"
+                      name="type-message"
+                      placeholder="Type message"
+                    />
+                    <button type="button" className="allBtn dark">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
-        <button type="button" className="allBtn dark border">Load More</button>
+        <button type="button" className="allBtn dark border">
+          Load More
+        </button>
       </div>
-      <DeclineBookingPopup openConfirmDeclineBookingModal={openConfirmDeclineBookingModal} DeclineBookingIsOpen={DeclineBookingIsOpen} closeDeclineBookingModal={closeDeclineBookingModal} />
-      <AcceptBookingPopup openConfirmAcceptBookingModal={openConfirmAcceptBookingModal} AcceptBookingIsOpen={AcceptBookingIsOpen} closeAcceptBookingModal={closeAcceptBookingModal} />
-      <ConfirmAcceptBookingPopup ConfirmAcceptBookingIsOpen={ConfirmAcceptBookingIsOpen} closeConfirmAcceptBookingModal={closeConfirmAcceptBookingModal}  />
-      <ConfirmDeclineBookingPopup ConfirmDeclineBookingIsOpen={ConfirmDeclineBookingIsOpen} closeConfirmDeclineBookingModal={closeConfirmDeclineBookingModal} />
+      <DeclineBookingPopup
+        openConfirmDeclineBookingModal={openConfirmDeclineBookingModal}
+        DeclineBookingIsOpen={DeclineBookingIsOpen}
+        closeDeclineBookingModal={closeDeclineBookingModal}
+      />
+      <AcceptBookingPopup
+        openConfirmAcceptBookingModal={openConfirmAcceptBookingModal}
+        AcceptBookingIsOpen={AcceptBookingIsOpen}
+        closeAcceptBookingModal={closeAcceptBookingModal}
+      />
+      <ConfirmAcceptBookingPopup
+        ConfirmAcceptBookingIsOpen={ConfirmAcceptBookingIsOpen}
+        closeConfirmAcceptBookingModal={closeConfirmAcceptBookingModal}
+      />
+      <ConfirmDeclineBookingPopup
+        ConfirmDeclineBookingIsOpen={ConfirmDeclineBookingIsOpen}
+        closeConfirmDeclineBookingModal={closeConfirmDeclineBookingModal}
+      />
 
-      <CancelBookingPopup openConfirmCancelBookingModal={openConfirmCancelBookingModal} CancelBookingIsOpen={CancelBookingIsOpen} closeCancelBookingModal={closeCancelBookingModal} />
-      <ConfirmCancelBookingPopup openCancelConfirmationModal={openCancelConfirmationModal} ConfirmCancelBookingIsOpen={ConfirmCancelBookingIsOpen} closeConfirmCancelBookingModal={closeConfirmCancelBookingModal}  />
-      <CancelConfirmationPopup CancelConfirmationIsOpen={CancelConfirmationIsOpen} closeCancelConfirmationModal={closeCancelConfirmationModal}  />
+      <CancelBookingPopup
+        openConfirmCancelBookingModal={openConfirmCancelBookingModal}
+        CancelBookingIsOpen={CancelBookingIsOpen}
+        closeCancelBookingModal={closeCancelBookingModal}
+      />
+      <ConfirmCancelBookingPopup
+        openCancelConfirmationModal={openCancelConfirmationModal}
+        ConfirmCancelBookingIsOpen={ConfirmCancelBookingIsOpen}
+        closeConfirmCancelBookingModal={closeConfirmCancelBookingModal}
+      />
+      <CancelConfirmationPopup
+        CancelConfirmationIsOpen={CancelConfirmationIsOpen}
+        closeCancelConfirmationModal={closeCancelConfirmationModal}
+      />
 
-      <LeaveReviewPopup LeaveReviewIsOpen={LeaveReviewIsOpen} closeLeaveReviewModal={closeLeaveReviewModal}  />
+      <LeaveReviewPopup
+        LeaveReviewIsOpen={LeaveReviewIsOpen}
+        closeLeaveReviewModal={closeLeaveReviewModal}
+      />
     </div>
   );
 }

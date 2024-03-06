@@ -1,0 +1,11 @@
+.customerBookingRequested {
+  :global {
+    .aboutRightImg {
+      .imgFront {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

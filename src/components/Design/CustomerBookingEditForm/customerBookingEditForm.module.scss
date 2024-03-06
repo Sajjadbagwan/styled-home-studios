@@ -1,0 +1,140 @@
+@import "../../../../styles/global.scss";
+
+.customerBookingEditForm {
+  :global {
+    .bookingInfo {
+      border: 1px solid rgba(77, 77, 79, 0.5);
+      padding: 87px;
+      margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      form {
+        flex: 0 0 58%;
+        width: 58%;
+        border-right: 1px solid rgba(77, 77, 79, 0.25);
+        padding-right: 5%;
+        h2 {
+          @include lg {
+            margin: 0 0 15px 0;
+          }
+        }
+        p {
+          @include lg {
+            margin: 0 0 5px 0;
+          }
+        }
+        h3 {
+          margin: 30px 0 20px 0;
+          @include lg {
+            border-top: 1px solid rgba(77, 77, 79, 0.25);
+            padding-top: 30px;
+            font-size: 18px;
+          }
+        }
+        h6 {
+          margin-bottom: 25px;
+        }
+        .addTime {
+          margin-bottom: 30px;
+          border-bottom: 1px solid rgba(77, 77, 79, 0.25);
+          padding-bottom: 30px;
+        }
+        .spaceTxt {
+          margin-bottom: 40px;
+        }
+        .dateFiled {
+          position: relative;
+          input {
+            &[type="date"] {
+              width: 100%;
+              padding: 21px 20px;
+              font-size: 16px;
+              margin-bottom: 17px;
+              border: 1px solid $black-color;
+              @include lg {
+                margin-bottom: 23px;
+              }
+            }
+          }
+          &::after {
+            content: "";
+            background-image: url("/assets/images/calendar.png");
+            width: 35px;
+            height: 36px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background-color: $white-color;
+            pointer-events: none;
+          }
+        }
+        .timeFiled {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          input {
+            flex: 0 0 48%;
+            border: 1px solid $black-color;
+            margin-bottom: 12px;
+          }
+        }
+        .dayAdd {
+          font-size: 15px;
+          text-decoration: underline;
+        }
+        .costBox {
+          display: flex;
+          justify-content: space-between;
+          margin: 20px 0 0 0;
+          @include lg {
+            border-top: 1px solid rgba(77, 77, 79, 0.5);
+            padding-top: 32px;
+          }
+          h6 {
+            margin-bottom: 5px;
+          }
+          h4 {
+            margin-bottom: 8px;
+            font-size: 23px;
+            @include lg {
+              margin-bottom: 0;
+              font-size: 20px;
+            }
+          }
+        }
+        .allBtn {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        .askForm {
+          text-align: center;
+        }
+      }
+      .editInfo {
+        flex: 0 0 37%;
+        width: 37%;
+        .infoList {
+          .list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            span {
+              font-family: $title-font;
+              font-size: 16px;
+            }
+          }
+        }
+        .infoBtns {
+          margin: 32px 0 0 0;
+          text-align: center;
+          a {
+            display: block;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

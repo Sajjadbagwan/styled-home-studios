@@ -1,0 +1,26 @@
+@import "../../../styles/global.scss";
+
+.customerBookingEditRequest {
+  margin: 0;
+  :global {
+    .mainBooking {
+      margin-bottom: -50px;
+      .container {
+        .row {
+          justify-content: space-between;
+          .leftBooking {
+            flex: 0 0 29%;
+            width: 29%;
+          }
+          .rightBooking {
+            flex: 0 0 68%;
+            width: 68%;
+            .bookingInfo {
+              padding: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
