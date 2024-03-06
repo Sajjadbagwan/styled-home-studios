@@ -1,0 +1,16 @@
+@import "/styles/global.scss";
+.pageNotFoundPage{  
+    margin: 0;
+    :global{
+        .aboutRightImg{
+            padding: 100px 0 0 0;
+            .innerImg{
+                .imgFront{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
