@@ -1,0 +1,30 @@
+@import "../../../../../styles/global.scss";
+
+.customerBookingSummery {
+  width: 100%;
+  :global {
+    .bookingBtns {
+      a {
+        text-align: center;
+        margin-bottom: 20px !important;
+        display: block;
+      }
+    }
+    .bookingOrderSummary {
+      & > div {
+        background-color: transparent;
+        padding: 0;
+        .title {
+          display: none;
+        }
+        .subDetail {
+          &.total {
+            span {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
