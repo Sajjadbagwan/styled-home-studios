@@ -72,7 +72,7 @@ function TopHost() {
   };
 
   return (
-    <section className={styles.topHost}>
+    <section className={styles.topHost + " topHost"}>
       <div className="container">
         <div className="hostSlider">
           <div className="title">
