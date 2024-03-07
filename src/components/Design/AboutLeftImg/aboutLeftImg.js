@@ -6,7 +6,7 @@ import styles from "./aboutLeftImg.module.scss";
 
 function AboutLeftImg() {
   return (
-    <section className={styles.aboutLeftImg}>
+    <section className={styles.aboutLeftImg + " aboutLeftImg"}>
       <div className="container">
         <div className="row">
           <div className="aboutImg">

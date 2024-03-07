@@ -3,7 +3,26 @@
     margin: 0;
     :global{
         .popularLocations{
+            padding-top: 55px;
             background-color: $white-color;
+            .container{
+                .title{
+                    margin-bottom: 33px;
+                }
+                .styleSlider{
+                    .slick-list{
+                        .slick-track{
+                            .slick-slide{
+                                .slideInfo{
+                                    h3{
+                                        margin: 12px 0 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             &::before{
                 display: none;
             }
@@ -13,12 +32,49 @@
         }
         .topHost{
             margin: 0;
+            padding-bottom: 183px;
+            .title{
+                margin-bottom: 48px;
+            }
+            .container{
+                .allLocation {
+                    .slick-list{
+                        .slick-track{
+                            .slick-slide{
+                                .slideInfo{
+                                    margin-top: 10px;
+                                    .subDetail{
+                                        margin-bottom: 7px;
+                                        .rating{
+                                            display: none;
+                                        }
+                                    }
+                                    .subDetailLast{
+                                        p{
+                                            &:last-child{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .slick-dots{
+                        bottom: -53px;
+                    }
+                }
+            }
+            
             &::before{
                 display: none;
             }
             &::after{
                 display: none;
             }
+        }
+        .faqTopArticleSection{
+            margin-top: 113px;
         }
     }
 }

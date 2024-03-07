@@ -16,7 +16,7 @@ function LocationGallery() {
     SetDownloadPdfIsOpen(false);
   };
   return (
-    <section className={styles.locationGallery}>
+    <section className={styles.locationGallery + " locationGallery"}>
       <div className="container">
         <div className="backBtn">
           <Link href="#">

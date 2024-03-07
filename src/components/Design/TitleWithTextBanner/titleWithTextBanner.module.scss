@@ -12,6 +12,7 @@
     .heroImg {
       position: relative;
       padding-bottom: 11.5%;
+      min-height: 220px;
       @include x-lg{
         padding: 0;
         height: 200px;
@@ -22,6 +23,8 @@
       img {
         width: 100%;
         height: 100%;
+        min-height: 220px;
+        object-fit: cover;
         position: absolute;
         top: 0;
         @include x-lg{
@@ -45,18 +48,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include max-desk{
-          top: -128px;
-        }
+        // @include max-desk{
+        //   top: -128px;
+        // }
         @include x-xl{
-          top: -113px;
+          top: -178px;
         }
         @include x-lg{
-          top: -168px;
+          top: -180px;
           left: 53%;
         }
         @include md{
-          top: -210px;
+          //top: -210px;
           left: 50%;
           width: 100%;
           max-width: 85%;
@@ -80,24 +83,45 @@
             line-height: normal;
           }
         }
+        .buttonContainer{
+          margin-top: -12px;
+          @include md{
+            display: none;
+          }
+        }
         .allBtn{
           border-color: $green-color;
-          margin-right: 171px;
-          margin-top: -11px;  
+          margin-right: 45px;
+          margin-top: 0;  
           &:hover{
             border-color: $white-color;
           }   
-          @include lg{
-            margin-right: 65px;
-            margin-top: 0;
-          } 
+          @include x-lg{
+            margin: 0 0 15px 0;
+          }
           @include md{
             margin: 0 auto;
           }
+          &:last-child{
+            margin: 0 170px 0 0;
+            background-color: $white-color;
+            color: $green-color;
+            border: $white-color;
+            &:hover{
+              background-color: $green-color;
+              color: $white-color;
+            }
+            @include x-lg{
+              margin: 0;
+            }
+          }
         }
         .titleCont{
+          @include x-xl{
+            max-width: 40%;
+          }
           @include lg{
-            max-width: 50%;
+            max-width: 57%;
           }
           @include md{
             max-width: 100%;

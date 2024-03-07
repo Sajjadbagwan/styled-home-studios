@@ -1,0 +1,41 @@
+@import "../../../styles/global.scss";
+.directorySalesLandingPage{
+    margin: 0;
+    :global{
+        .whyApplySection{
+            padding-bottom: 200px;
+            @include md{
+                margin-top: -65px;
+            }
+        }
+        .joinOurDirectory{
+            margin-bottom: 115px;
+        }
+        .uspsBlock{
+            padding-bottom: 54px;
+        }
+        .aboutLeftImg{
+            .container{
+                .row{
+                    .aboutImg{
+                        .innerImg{
+                            .imgFront{
+                                .imgInfo{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .aboutInfo{
+                        padding: 85px 155px 0 42px;
+                    }
+                }
+            }
+        }
+        // .howDoesItWork{
+        //     .centerBtn{
+        //         display: none;
+        //     }
+        // }
+    }
+}   

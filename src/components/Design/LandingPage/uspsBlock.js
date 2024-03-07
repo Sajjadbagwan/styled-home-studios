@@ -7,7 +7,7 @@ import styles from "./uspsBlock.module.scss";
 
 function UspsBlock() {
     return (
-    <section className={styles.uspsBlock}>
+    <section className={styles.uspsBlock + " uspsBlock"}>
       <div className="container">
         <div className="row">
             <div className="column3">
