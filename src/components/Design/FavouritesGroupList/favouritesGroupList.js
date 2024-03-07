@@ -24,9 +24,9 @@ function FavouritesGroupList() {
   ];
 
   return (
-    <div className={styles.favouritesGroupList}>
+    <section className={styles.favouritesGroupList}>
       <div className="container">
-        <div className="allLocation sliderDots">
+        <div className="allLocation">
           {sliderData.map((slide, index) => (
             <div key={index} className="slide">
               <div className="slideImg">
@@ -45,11 +45,13 @@ function FavouritesGroupList() {
             </div>
           ))}
         </div>
-        <Link href="#" className="allBtn dark">
-          View more
-        </Link>
+        <div className="moreBtn">
+          <Link href="#" className="allBtn dark">
+            View more
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
