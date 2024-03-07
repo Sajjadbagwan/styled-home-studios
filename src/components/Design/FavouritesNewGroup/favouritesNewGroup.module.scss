@@ -1,0 +1,73 @@
+@import "../../../../styles/global.scss";
+
+.favouritesNewGroup {
+  margin-top: 8px;
+  :global {
+    .container {
+      .titleLinks {
+        a {
+          margin: 0 0 0 35px;
+          img {
+            margin: 0 5px -3px 0;
+          }
+        }
+      }
+      .popupInfo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+        column-gap: 95px;
+        .popupBox {
+          .popupImg {
+            position: relative;
+            padding-bottom: 68%;
+            margin-bottom: 27px;
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+            }
+          }
+          &.createGroup {
+            position: relative;
+            .popupImg {
+              padding-bottom: 80%;
+              margin-bottom: 0;
+              &::after {
+                content: "";
+                width: 30%;
+                height: 22%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $white-color;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+              }
+            }
+            .addGroup {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              transform: translate(0, -50%);
+              z-index: 9;
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                color: $white-color;
+                img {
+                  width: 75px;
+                  height: auto;
+                  margin-bottom: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
