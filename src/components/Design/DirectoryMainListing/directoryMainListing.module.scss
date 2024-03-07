@@ -1,0 +1,66 @@
+@import "../../../../styles/global.scss";
+.directoryMainListing {
+    margin: 0;
+    :global{
+        .container{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .filterBy{
+                margin-top: 87px;
+            }
+            .creativeTeam{
+                width: 80.2%;
+                margin-top: 85px;
+                .creativeTeamInfo{
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 54px;    
+                    row-gap: 39px;
+                    .slide{
+                        .slideImg{
+                            margin-bottom: 5px;
+                            img{
+                                height: 252px;
+                                width: 249px;
+                                object-fit: cover;
+                            }
+                        }
+                        h3{
+                            text-transform: uppercase;
+                            font-family: $default-font;
+                            font-size: 18px;
+                            margin: 0;
+                        }
+                        .slideInfo{
+                            max-width: 249px;
+                            .subDetail{
+                                width: 100%;
+                                > div{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 14px;
+                                    span{
+                                        img{
+                                            position: relative;
+                                            top: 3px;
+                                            margin-right: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }                
+                }
+                .allBtn{
+                    display: block;
+                    margin: 34px auto 0 auto;
+                }
+            }
+        }
+        
+    }
+}

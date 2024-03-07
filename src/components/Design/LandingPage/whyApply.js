@@ -6,7 +6,7 @@ import styles from "./whyApply.module.scss";
 
 function WhyApplySection() {
   return (
-    <div className={styles.whyApplySection}>
+    <div className={styles.whyApplySection + " whyApplySection"}>
         <div className="container">
             <div className="row">
                 <div className="aboutInfo">

@@ -82,6 +82,7 @@ function HomeHero() {
               height={931}
               sizes="100vw"
               alt=""
+              priority
             />
           </div>
         </div>

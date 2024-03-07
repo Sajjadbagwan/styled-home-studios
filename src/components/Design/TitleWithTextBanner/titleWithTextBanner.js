@@ -24,7 +24,11 @@ function TitleWithTextBanner() {
             <h1>Become a styled home studio’s Host</h1>
             <p>Join our community of hosts, earn extra money and see your home become a hub ion creativity.</p>         
           </div>
-          <Link href="" className="allBtn border dark">Hire Out Your Home</Link>       
+          <div className="buttonContainer">
+            <Link href="" className="allBtn border dark">Join the directory</Link>       
+            <Link href="" className="allBtn border dark">Book your team</Link>       
+          </div>
+          
         </div> 
         
       </div>

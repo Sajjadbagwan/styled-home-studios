@@ -1,0 +1,140 @@
+@import "../../../../styles/global.scss";
+
+.getStarted {
+  position: relative;
+  margin: 0;
+  padding: 125px 0 101px;
+  @include lg {
+    padding: 78px 0 85px;
+  }
+  :global {
+    .backImg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1085px;
+      .workList {
+        margin: 45px auto 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 25px;        
+        @include x-lg {
+          grid-template-columns: repeat(1, 1fr);
+          margin: 27px 0 0 0;
+        }
+        .listBox {
+          background-color: $cream-color;
+          text-align: center;
+          height: 100%;
+          padding: 45px 40px 40px;
+          position: relative;
+          max-width: 340px;
+          @include lg {
+            min-height: 230px;
+            padding: 50px;
+            margin: 0;
+          }
+          @include md {
+            min-height: 265px;
+            padding: 60px 50px;
+            margin: 0 0 17px 0;
+          }
+          h3 {
+            margin: 0 0 5px 0;
+            @include lg {
+              font-size: 20px;
+            }
+            @include md {
+              margin: 0 69px 13px;
+              font-size: 20px;
+            }
+          }
+          p {
+            margin: 0;
+            line-height: 25px;
+          }
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+          &::after {
+            content: "";
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8.659" height="15.318" viewBox="0 0 8.659 15.318"><path id="Path_3990" data-name="Path 3990" d="M6.952,0,0,6.952,6.952,13.9" transform="translate(7.659 14.611) rotate(180)" fill="none" stroke="%23eee" stroke-width="2"/></svg>');
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            background-color: #8b9297;
+            right: -30px;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 9;
+          }
+        }
+        .slick-list {
+          margin: 0 -30px;
+          .slick-track {
+            .slick-slide {
+              padding: 0 10px;
+              position: relative;
+              &.slick-current {
+                &::after {
+                  content: "";
+                  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8.659" height="15.318" viewBox="0 0 8.659 15.318"><path id="Path_3990" data-name="Path 3990" d="M6.952,0,0,6.952,6.952,13.9" transform="translate(7.659 14.611) rotate(180)" fill="none" stroke="%23eee" stroke-width="2"/></svg>');
+                  width: 35px;
+                  height: 35px;
+                  position: absolute;
+                  background-color: #8b9297;
+                  right: -17px;
+                  top: 50%;
+                  transform: translate(0, -50%);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  z-index: 9;
+                  @include md {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .slick-dots {
+          li {
+            button {
+              &::before {
+                background-color: $white-color;
+              }
+            }
+          }
+        }
+      }
+      .centerBtn {
+        text-align: center;
+        margin: 17px 0 0 0;
+        @include lg {
+          margin: 30px 0 0 0;
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(139 146 151 / 60%);
+  }
+}
