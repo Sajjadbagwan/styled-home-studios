@@ -2,6 +2,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import EmailIcon from "../../../../public/assets/images/color-email.svg"
+import PinterestIcon from "../../../../public/assets/images/color-pinterest.svg"
+import CallIcon from "../../../../public/assets/images/color-call.svg"
+import InstagramIcon from "../../../../public/assets/images/color-instagram.svg"
+import WebIcon from "../../../../public/assets/images/color-web.svg"
 import styles from "./aboutArtist.module.scss";
 
 function AboutArtist() {
@@ -22,17 +27,47 @@ function AboutArtist() {
             </div>
             <div className="hostRight">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
               <Link href="#" className="allBtn dark border">
               Contact Creative
               </Link>
             </div>
+          </div>
+          <div className="socialInfo">
+            <ul>
+                <li>
+                    <Link href="mailto:Info@johnjames.co.uk">
+                        <Image src={EmailIcon} alt="email" height={30} width={30} />
+                        <span>Info@johnjames.co.uk</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="">
+                        <Image src={PinterestIcon} alt="pinterest" height={30} width={30} />
+                        <span>johnjamesbeauty</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="">
+                        <Image src={CallIcon} alt="call" height={30} width={30} />
+                        <span>07123 456 7890</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="">
+                        <Image src={InstagramIcon} alt="instagram" height={30} width={30} />
+                        <span>@johnjamesbeauty</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="" target="_blank">
+                        <Image src={WebIcon} alt="web" height={30} width={30} />
+                        <span>johnjamesbeauty.com</span>
+                    </Link>
+                </li>
+            </ul>
           </div>
         </div>
       </div>

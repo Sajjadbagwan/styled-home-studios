@@ -2,19 +2,22 @@
 .aboutArtistSection{
     margin: 0;
     background-color: $cream-color;
+    padding: 22px 0 95px 0;
     :global{
         .container {
             .hostSlider {
-              width: 1165px;
               margin: 0 auto;
-              max-width: 85%;
+              max-width: 100%;
+              display: flex;
+              justify-content: space-between;
               .slide {
                 display: flex;
                 align-items: flex-start;
                 flex-wrap: wrap;
+                width: 67%;
                 .hostLeft {
-                  flex: 0 0 22%;
-                  margin: 0 40px 0 0;
+                    flex: 0 0 27%;
+                    margin: 0 51px 0 0;
                   @include lg {
                     flex: 0 0 100%;
                     width: 22%;
@@ -26,7 +29,7 @@
                     img {
                       width: 100%;
                       height: 100%;
-                      min-height: 260px;
+                      min-height: 250px;
                     }
                   }
                   .slideInfo {
@@ -60,7 +63,7 @@
                   }
                 }
                 .hostRight {
-                  flex: 0 0 70%;
+                  flex: 0 0 63%;
                   @include lg {
                     flex: 0 0 100%;
                     width: 100%;
@@ -68,6 +71,29 @@
                   .allBtn {
                     margin-top: 15px;
                   }
+                }
+              }
+              .socialInfo{
+                width: 38%;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    li{
+                        width: 50%;
+                        margin-bottom: 31px;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: $black-color;
+                            font-size: 18px;
+                            img{
+                                margin-right: 23px;
+                            }
+                        }
+                    }
                 }
               }
             }
