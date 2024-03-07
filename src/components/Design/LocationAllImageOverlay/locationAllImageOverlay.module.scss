@@ -1,0 +1,63 @@
+@import "../../../../styles/global.scss";
+
+.locationAllImageOverlay {
+  max-width: 1440px !important;
+  max-height: 97vh !important;
+  height: 97vh !important;
+  padding: 40px !important;
+  top: 50%;
+  transform: translate(0%, -50%);
+  @include md {
+    max-width: 90%;
+    padding: 30px;
+  }
+  :global {
+    .productAdded {
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      .close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: $green-color;
+        font-size: 16px;
+      }
+    }
+    .popup-body {
+      text-align: center;
+      display: block;
+      width: 100%;
+      .GridGallary {
+        display: grid;
+        row-gap: 35px;
+        .fullGrid {
+          display: grid;
+          gap: 35px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .halfGrid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 35px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .smallGrid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 35px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

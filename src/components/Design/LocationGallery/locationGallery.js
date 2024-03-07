@@ -5,6 +5,7 @@ import Image from "next/image";
 import Masonry from "@mui/lab/Masonry";
 import styles from "./locationGallery.module.scss";
 import DownloadPdfPopup from "../CommonPopup/downloadPdf";
+import LocationAllImageOverlay from "../LocationAllImageOverlay/locationAllImageOverlay";
 
 function LocationGallery() {
   const [DownloadPdfIsOpen, SetDownloadPdfIsOpen] = useState(false);
@@ -15,6 +16,16 @@ function LocationGallery() {
   const closeDownloadPdfModal = () => {
     SetDownloadPdfIsOpen(false);
   };
+
+  const [OverlayImagesIsOpen, SetOverlayImagesIsOpen] = useState(false);
+  const openOverlayImagesModal = () => {
+    SetOverlayImagesIsOpen(true);
+  };
+
+  const closeOverlayImagesModal = () => {
+    SetOverlayImagesIsOpen(false);
+  };
+
   return (
     <section className={styles.locationGallery}>
       <div className="container">
@@ -137,10 +148,14 @@ function LocationGallery() {
           </div>
         </div>
         <div className="viewBtn">
-          <Link href="#" className="allBtn dark">
+          <span onClick={openOverlayImagesModal} className="allBtn dark">
             View all images
-          </Link>
+          </span>
         </div>
+        <LocationAllImageOverlay
+          OverlayImagesIsOpen={OverlayImagesIsOpen}
+          closeOverlayImagesModal={closeOverlayImagesModal}
+        />
         <DownloadPdfPopup
           DownloadPdfIsOpen={DownloadPdfIsOpen}
           closeDownloadPdfModal={closeDownloadPdfModal}
