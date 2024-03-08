@@ -147,11 +147,10 @@ function BookingOrderForm() {
               </div>
             </div>
             <hr />
-            <div className="checkMain">
-              <label for="18">
+            <div className="singleCheckbox">
+              <input type="checkbox" id="18" value="18" />
+              <label className="form-control" for="18">
                 I agree to the <Link href="#">Terms & Conditions</Link>
-                <input type="checkbox" id="18" value="18" />
-                <span className="checkmark"></span>
               </label>
             </div>
             <hr />

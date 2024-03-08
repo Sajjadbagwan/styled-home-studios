@@ -25,6 +25,13 @@
               margin-top: 0;
             }
           }
+          .singleCheckbox {
+            .form-control {
+              &::before {
+                border: none;
+              }
+            }
+          }
         }
         .login {
           flex: 0 0 38%;

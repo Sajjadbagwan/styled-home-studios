@@ -64,6 +64,20 @@
                 margin: 18px 0 0 0;
               }
             }
+            .drop_down {
+              .wrapper_dropdown {
+                .react-select__control {
+                  min-height: 64px;
+                }
+              }
+            }
+            .singleCheckbox {
+              .form-control {
+                &::before {
+                  border: none;
+                }
+              }
+            }
           }
         }
       }

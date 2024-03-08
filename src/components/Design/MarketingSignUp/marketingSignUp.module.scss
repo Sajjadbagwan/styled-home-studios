@@ -1,134 +1,148 @@
 @import "../../../../styles/global.scss";
-.makrtingSignUpSection{
-    margin: 0;
-    background-color: $cream-color;
-    :global {
-        .container-fluid {
-          padding: 0;
-          .row {
-            align-items: flex-start;
-            // @include lg {
-            //   flex-direction: column-reverse;
-            // }
-            .heroImg {
-              position: relative;
-              padding-bottom: 43%;
-              flex: 0 0 47.5%;
-              width: 47.5%;
+.makrtingSignUpSection {
+  margin: 0;
+  background-color: $cream-color;
+  :global {
+    .container-fluid {
+      padding: 0;
+      .row {
+        align-items: flex-start;
+        // @include lg {
+        //   flex-direction: column-reverse;
+        // }
+        .heroImg {
+          position: relative;
+          padding-bottom: 43%;
+          flex: 0 0 47.5%;
+          width: 47.5%;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            padding-bottom: 89%;
+            margin: -1px 0 0 0;
+          }
+          &::after {
+            content: "";
+            width: 35%;
+            height: 11%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $cream-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+            @include x-lg {
+              background-color: $white-color;
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+          }
+        }
+        .heroDetail {
+          flex: 0 0 50%;
+          width: 50%;
+          margin-top: 136px;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            margin-top: 0;
+          }
+          .inner {
+            width: 700px;
+            padding: 0 0 0 90px;
+            max-width: 100%;
+            @include lg {
+              padding: 70px 35px;
+              float: none;
+            }
+            h1 {
+              font-family: $default-font;
+              font-weight: 300;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              line-height: 52px;
+              margin-bottom: 10px;
               @include lg {
-                flex: 0 0 100%;
-                width: 100%;
-                padding-bottom: 89%;
-                margin: -1px 0 0 0;
-              }
-              &::after {
-                content: "";
-                width: 35%;
-                height: 11%;
-                position: absolute;
-                top: 0;
-                right: 0;
-                background: $cream-color;
-                clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
-                @include x-lg{
-                    background-color: $white-color;
-                }
-              }
-              img {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
+                letter-spacing: 0px;
+                line-height: 43px;
+                margin: 0 0 30px 0;
               }
             }
-            .heroDetail {
-              flex: 0 0 50%;
-              width: 50%;
-              margin-top: 136px;
+            p {
+              margin-bottom: 28px;
+            }
+            form {
+              max-width: 484px;
               @include lg {
-                flex: 0 0 100%;
-                width: 100%;
-                margin-top: 0;
+                margin: 30px 0 0 0;
+                text-align: left;
               }
-              .inner {
-                width: 700px;
-                padding: 0 0 0 90px;
-                max-width: 100%;
+              input[type="email"],
+              [type="text"],
+              select {
+                padding: 22px 20px;
+                min-height: 45px;
+                font-size: 14px;
                 @include lg {
-                  padding: 70px 35px;
-                  float: none;
+                  min-height: 68px;
                 }
-                h1 {
-                  font-family: $default-font;
-                  font-weight: 300;
-                  text-transform: uppercase;
-                  letter-spacing: 3px;
-                  line-height: 52px;
-                  margin-bottom: 10px;
-                  @include lg {
-                    letter-spacing: 0px;
-                    line-height: 43px;
-                    margin: 0 0 30px 0;
+              }
+              .selectMain {
+                margin-bottom: 16px;
+                &::after {
+                  background-size: 12px;
+                }
+              }
+              .checkMain {
+                @include lg {
+                  text-align: left;
+                  margin: 15px 0 0 0;
+                }
+              }
+              .drop_down {
+                .wrapper_dropdown {
+                  .react-select__control {
+                    min-height: 64px;
                   }
                 }
-                p{
-                    margin-bottom: 28px;
-                }
-                form {
-                    max-width: 484px;
-                    @include lg {
-                      margin: 30px 0 0 0;
-                      text-align: left;
-                    }
-                    input[type="email"],
-                    [type="text"],
-                    select {
-                      padding: 22px 20px;
-                      min-height: 45px;
-                      font-size: 14px;
-                      @include lg {
-                        min-height: 68px;
-                      }
-                    }
-                    .selectMain {
-                        margin-bottom: 16px;
-                      &::after {
-                        background-size: 12px;
-                      }
-                    }
-                    .checkMain {
-                      @include lg {
-                        text-align: left;
-                        margin: 15px 0 0 0;
-                      }
-                    }
-                  }
-                ul {
-                  display: flex;
-                  li {
-                    margin-right: 90px;
-                    @include lg {
-                      margin-right: 19px;
-                    }
-                    &:last-child {
-                      margin-right: 0;
-                    }
-                    a {
-                      color: $green-color;
-                    }
+              }
+              .singleCheckbox {
+                .form-control {
+                  &::before {
+                    border: none;
                   }
                 }
-                .ulList {
-                  .list {
-                    a {
-                      font-family: $title-font;
-                      font-size: 16px;
-                    }
-                  }
+              }
+            }
+            ul {
+              display: flex;
+              li {
+                margin-right: 90px;
+                @include lg {
+                  margin-right: 19px;
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+                a {
+                  color: $green-color;
+                }
+              }
+            }
+            .ulList {
+              .list {
+                a {
+                  font-family: $title-font;
+                  font-size: 16px;
                 }
               }
             }
           }
         }
       }
+    }
+  }
 }
