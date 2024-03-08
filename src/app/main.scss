@@ -13,14 +13,14 @@ body {
   overflow: hidden;
   font-weight: 400;
   color: $black-color;
-  input:focus-visible {
-    outline: 0;
-    box-shadow: none;
-  }
 }
 
 * {
   box-sizing: border-box;
+  :focus-visible {
+    outline: 0 !important;
+    box-shadow: none;
+  }
 }
 
 img {
@@ -556,13 +556,13 @@ button {
     }
   }
 }
-.backbtn{
+.backbtn {
   display: flex;
   align-items: center;
   max-width: 200px;
   margin-top: 12px;
-  img{
-      margin-right: 10px;
+  img {
+    margin-right: 10px;
   }
 }
 .link {

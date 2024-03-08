@@ -28,33 +28,131 @@
       text-align: center;
       display: block;
       width: 100%;
-      .GridGallary {
-        display: grid;
-        row-gap: 35px;
-        .fullGrid {
-          display: grid;
-          gap: 35px;
-          img {
+      .tittle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        @include lg {
+          padding: 30px 35px 0;
+        }
+        .left {
+          flex: 0 0 61.5%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          flex-wrap: wrap;
+          @include lg {
+            flex: 0 0 100%;
             width: 100%;
-            height: 100%;
+          }
+          .backBtn {
+            margin: 18px 0;
+            font-size: 16px;
+            @include lg {
+              padding: 0 35px;
+            }
+            a {
+              display: flex;
+              align-items: center;
+              svg {
+                margin: 0 10px 0 0;
+              }
+            }
+          }
+          h1 {
+            font-family: $default-font;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
           }
         }
-        .halfGrid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 35px;
-          img {
+        .right {
+          flex: 0 0 38.5%;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          flex-wrap: wrap;
+          @include lg {
+            flex: 0 0 100%;
             width: 100%;
-            height: 100%;
+            justify-content: space-between;
+          }
+          a,
+          span {
+            margin: 30px 0 0 65px;
+            display: flex;
+            align-items: center;
+            font-family: $title-font;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: underline;
+            @include lg {
+              margin: 0;
+            }
+            &:hover {
+              text-decoration: none;
+            }
+            img {
+              margin: 0 15px 0 0;
+              width: 30px;
+              height: 30px;
+              @include lg {
+                margin: 0 5px 0 0;
+                width: 27px;
+                height: 27px;
+              }
+            }
           }
         }
-        .smallGrid {
+      }
+      .gallaryList {
+        margin: 55px 0;
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            margin-right: 100px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .categoryGallary {
+        h3 {
+          margin-bottom: 40px;
+          text-align: left;
+        }
+        .GridGallary {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 35px;
-          img {
-            width: 100%;
-            height: 100%;
+          row-gap: 35px;
+          .fullGrid {
+            display: grid;
+            gap: 35px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .halfGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .smallGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
