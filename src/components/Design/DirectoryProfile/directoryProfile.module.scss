@@ -155,6 +155,24 @@
                     textarea{
                         margin-bottom: 17px;
                     }
+                    &.socialGroup{
+                        margin-bottom: 19px;
+                        .halfInput{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            span{
+                                line-height: 10px;
+                            }
+                            input{
+                                width: 95%;
+                                margin: 0;
+                            }
+                        }
+                        &.webGroup{
+                            margin-bottom: 44px;
+                        }
+                    }
                 }            
                 
                 hr{
@@ -163,15 +181,156 @@
                     border: 0;
                     width: 100%;
                     height: 1px;
+                    & + .titleDiv{
+                        margin-bottom: 29px;
+                    }
                 }
                 .allBtn{
                     display: flex;
                     justify-content: flex-end;
                     margin-left: auto;
-                    margin-top: 43px;
+                    margin-top: 27px;
                 }
             }
+            > button{
+                display: flex;
+                justify-content: flex-end;
+                margin-left: auto;
+                line-height: 26px;
+            }
+            .propertyImages{
+                h3{
+                    margin-bottom: 25px;
+                }
+                p{
+                    margin: 0;
+                }
+                .profileDiv{
+                    width: auto;
+                    margin-top: 21px;
+                    .imageSection {
+                        .upload-btn{
+                            max-width: 238px;
+                            .file-btn{
+                                height: 238px;
+                                width: 238px;
+                                img{
+                                    height: 214px;
+                                    width: 214px;
+                                }
+                            }
+                            .add-img{
+                                margin-top: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+        .testimonialInfo{
+            margin-top: 40px;
+            .testiCont{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                .content{
+                    width: 80%;
+                    margin-top: 11px;
+                    h5{
+                        text-transform: uppercase;
+                        margin: 30px 0 0 0;
+                    }
+                }
+                a{
+                    margin-top: 10px;
+                    img{
+                        position: relative;
+                        top: 2px;
+                        left: -2px;
+                    }
+                }
+            }            
+        } 
+        .tagFilter{
+            > ul{
+                width: 100%;
+                > li{
+                    width: 100%;
+                    padding: 5px 0;
+                    position: relative;
+                    cursor: pointer;
+                    .form-control{
+                        position: relative;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0 0 0 30px;
+                        cursor: pointer;
+                        display: inline-block;
+                        &::before{
+                            position: absolute;
+                            top: 4px;
+                            left: 0;
+                            display: inline-block;
+                            box-sizing: border-box;
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 0;
+                            content: "";
+                            border: 1px solid $black-color;
+                            background-color: #fff; 
+                        }
+                        &::after{
+                            background: url('/assets/images/tick-mark.svg') no-repeat center;
+                            content: "";
+                            position: absolute;
+                            top: -5px;
+                            left: 0;
+                            display: inline-block;
+                            box-sizing: border-box;
+                            width: 24px;
+                            height: 31px;
+                            display: none;
+                        }
+                    }
+                    input[type="checkbox"]{
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                        margin: 0 5px 0 0;
+                        border: none;
+                        visibility: hidden;
+                        opacity: 0;
+                        &:checked{
+                            & + .form-control{
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                            & + .form-control + .checkboxDiv{
+                                display: block;
+                            }
+                        }
+                    }
+                    .checkboxDiv{
+                        display: none;
+                        padding-left: 30px;       
+                        margin-top: 15px;  
+                        ul{
+                            li{
+                                padding: 5px 0;
+                            }
+                        }             
+                    }
+                }
+            }
+        }
+        hr{
+            margin: 44px 0 44px 0;
+            background-color: rgba(77,77,79,.25);
+            border: 0;
+            width: 100%;
+            height: 1px;
             
-        }       
+        }  
     }
 }
