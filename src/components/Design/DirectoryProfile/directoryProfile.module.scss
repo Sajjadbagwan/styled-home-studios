@@ -1,0 +1,177 @@
+@import "../../../../styles/global.scss";
+.directoryProfileEditSection{
+    margin: 0;
+    :global{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1194px;
+            margin: 7px auto 0 auto;
+        }
+        .profileDiv{
+            width: 23%;
+            .imageSection{
+                h2{
+                    text-align: left;
+                    letter-spacing: 0;
+                }
+                p{
+                    margin: 0;
+                }
+                .upload-btn{
+                    max-width: 258px;
+                    width: 100%;
+                    display: inline-block;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    box-shadow: none;
+                    outline: 0;
+                    padding: 0;
+                    margin-top: 5px;
+                    .file-btn{
+                        height: 255px;
+                        width: 258px;
+                        background-color: $grey-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 0;
+                        img{
+                            height: 212px;
+                            width: 212px;
+                            margin: 0;
+                        }
+                    }
+                    .add-img{
+                        text-align: center;
+                        width: 100%;
+                        display: inline-block;
+                        margin-top: 16px;
+                        color: $green-color;
+                        text-decoration: underline;
+                        font-size: 16px;
+                        font-family: $title-font;
+                    }
+                }
+                & + hr{
+                    margin-top: 30px;
+                }
+                .selected-file{
+                    margin-top: 20px;
+                    max-width: 132px;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                    p{
+                        width: 100%;
+                        line-height: normal;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                    button{
+                        text-decoration: underline;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: none;
+                        box-shadow: none;
+                        outline: 0;
+                        padding: 0;
+                        color: $green-color;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .informationDiv{
+            width: 74.2%;  
+            margin-top: 6px;
+            .titleDiv{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 26px;
+                h3{
+                    margin-bottom: 0;
+                    font-size: 26px;
+                }
+                img{
+                    position: relative;
+                    top: 2px;
+                    left: -2px;
+                }
+            }  
+            form{
+                max-width: 860px;
+                .inputGroup{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    .halfInput{
+                        width: 48.8%;
+                        input{
+                            margin-bottom: 19px;
+                        }
+                        .drop_down{
+                            margin-top: 0;
+                            .wrapper_dropdown{
+                                .react-select__control{
+                                    border: 1px solid $black-color;
+                                    padding-top: 13px;
+                                    padding-bottom: 13px;
+                                }
+                                .react-select__menu{
+                                    border: 1px solid $black-color;
+                                    border-top: 0;
+                                    .react-select__option{
+                                        border-top: 1px solid $black-color;
+                                        padding: 15px 0;
+                                        &:first-child{
+                                            border-top: 0;
+                                        }         
+                                        &:last-child{
+                                            border-bottom: 1px solid $black-color; 
+                                        }                           
+                                    }
+                                }
+                                > div{
+                                    > div{
+                                        > div{
+                                            & + div{
+                                                &::after{
+                                                    right: 26px;
+                                                }                                            
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    textarea{
+                        margin-bottom: 17px;
+                    }
+                }            
+                
+                hr{
+                    margin: 26px 0 44px 0;
+                    background-color: rgba(77,77,79,.25);
+                    border: 0;
+                    width: 100%;
+                    height: 1px;
+                }
+                .allBtn{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-left: auto;
+                    margin-top: 43px;
+                }
+            }
+            
+        }       
+    }
+}
