@@ -1,0 +1,169 @@
+@import "../../../../styles/global.scss";
+
+.customerMessagesBox {
+  margin: 21px 0;
+  :global {
+    .mainMsgBox {
+      border-top: 1px solid rgb(77 77 79 / 25%);
+      display: flex;
+      flex-wrap: wrap;
+      & > div {
+        border-right: 1px solid rgb(77 77 79 / 25%);
+      }
+      .msgList {
+        flex: 0 0 21.3%;
+        width: 21.3%;
+        .titleBox {
+          padding: 29px 21px;
+          font-size: 21px;
+          font-family: $title-font;
+          border-bottom: 1px solid rgb(77 77 79 / 25%);
+        }
+        .allMsg {
+          position: relative;
+          .subList {
+            height: 645px;
+            overflow-y: auto;
+            padding: 0 20px 0 0;
+            width: calc(100% - 20px);
+            .msgBox {
+              background-color: $white-color;
+              padding: 25px 20px 12px;
+              border-bottom: 1px solid rgb(77 77 79 / 25%);
+              &.newMsg {
+                background-color: $cream-color;
+                border-bottom: none;
+              }
+              &:hover {
+                background-color: $cream-color;
+              }
+              &:first-child {
+                &::after {
+                  content: "";
+                  width: 40px;
+                  right: 0;
+                  position: absolute;
+                  top: 0;
+                  background-color: $white-color;
+                  height: 12px;
+                }
+              }
+              .title {
+                margin-bottom: 13px;
+                span {
+                  &:first-child {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.conversationList {
+          flex: 0 0 49.2%;
+          width: 49.2%;
+          h5 {
+            text-align: center;
+          }
+          .allMsg {
+            .subList {
+              .conversationBox {
+                padding: 25px 0 90px 35px;
+                border-bottom: none;
+                background-color: transparent;
+                .dilogBox {
+                  display: flex;
+                  padding: 30px 0;
+                  margin: 0 0 7px 0;
+                  & > img {
+                    width: 65px;
+                    height: 65px;
+                    margin: 0 27px 0 0;
+                  }
+                  p {
+                    margin-bottom: 0;
+                  }
+                }
+                .dilogNote {
+                  background-color: $cream-color;
+                  padding: 25px 0;
+                  text-align: center;
+                  margin: 0 0 7px 0;
+                  p {
+                    font-size: 16px;
+                    margin: 0;
+                    font-family: $title-font;
+                  }
+                }
+              }
+              .typeMsg {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                input {
+                  border: 1px solid rgb(77 77 79 / 25%);
+                  margin: 0 0 0 35px;
+                  width: calc(100% - 82px);
+                }
+              }
+            }
+          }
+        }
+        &.bookingList {
+          flex: 0 0 29.3%;
+          width: 29.3%;
+          .allMsg {
+            .subList {
+              padding: 0;
+              width: 100%;
+              .bookingBox {
+                background-color: transparent;
+                padding: 30px 10px 30px 30px;
+                .viewBox {
+                  display: flex;
+                  align-items: center;
+                  background-color: $green-color;
+                  padding: 20px;
+                  margin-bottom: 30px;
+                  span {
+                    font-size: 16px;
+                    font-family: $title-font;
+                    color: $white-color;
+                    display: block;
+                    line-height: 20px;
+                    margin: 0 0 0 15px;
+                    &:last-child {
+                      font-size: 14px;
+                      font-family: $default-font;
+                    }
+                  }
+                }
+                .bookingList {
+                  img {
+                    height: 257px;
+                  }
+                  .infoBox {
+                    display: flex;
+                    justify-content: space-between;
+                    h3 {
+                      font-size: 18px;
+                      font-family: $default-font;
+                      flex: 0 0 65%;
+                      width: 65%;
+                    }
+                    a {
+                      width: 35%;
+                      flex: 0 0 35%;
+                      text-align: right;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
