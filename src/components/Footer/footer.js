@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.scss";
+import Select from "react-select";
 
 function Footer() {
   const [isFooterMenu, setIsFooterMenu] = useState(false);
@@ -14,6 +15,11 @@ function Footer() {
   const handleFooterMenuoneClick = () => {
     setIsFooterMenuone(!isFooterMenuone);
   };
+
+  const optionstitle = [
+    { value: "Interested in", label: "Interested in" },
+    { value: "Interested in", label: "Interested in" },
+  ];
 
   return (
     <>
@@ -143,7 +149,17 @@ function Footer() {
                   name="email"
                   placeholder="Email"
                 />
-                <div className="selectMain">
+                <div className="drop_down customDrop">
+                  <div className="wrapper_dropdown">
+                    <Select
+                      classNamePrefix="react-select"
+                      placeholder="Interested in"
+                      options={optionstitle}
+                      className={styles.selectCheckout}
+                    />
+                  </div>
+                </div>
+                {/* <div className="selectMain">
                   <select name="Interested in" id="Interested in">
                     <option value="Interested in">Interested in</option>
                     <option value="Interested in">Interested in</option>
@@ -151,17 +167,16 @@ function Footer() {
                     <option value="Interested in">Interested in</option>
                     <option value="Interested in">Interested in</option>
                   </select>
-                </div>
-                <div className="checkMain">
-                  <label for="consent1">
+                </div> */}
+                <div className="singleCheckbox">
+                  <input
+                    type="checkbox"
+                    id="consent1"
+                    name="consent1"
+                    value="consent1"
+                  />
+                  <label className="form-control" for="consent1">
                     I consent to email marketing
-                    <input
-                      type="checkbox"
-                      id="consent1"
-                      name="consent1"
-                      value="consent1"
-                    />
-                    <span className="checkmark"></span>
                   </label>
                 </div>
                 <input type="submit" className="allBtn dark" value="Submit" />

@@ -3,8 +3,14 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./signUpForm.module.scss";
+import Select from "react-select";
 
 function SignUpForm() {
+  const optionstitle = [
+    { value: "Interested in", label: "Interested in" },
+    { value: "Interested in", label: "Interested in" },
+  ];
+
   return (
     <section className={styles.signUpForm + " signUpForm"}>
       <div className="container">
@@ -30,7 +36,17 @@ function SignUpForm() {
                 placeholder="Full Name"
               />
               <input type="email" id="email" name="email" placeholder="Email" />
-              <div className="selectMain">
+              <div className="drop_down customDrop">
+                <div className="wrapper_dropdown">
+                  <Select
+                    classNamePrefix="react-select"
+                    placeholder="Interested in"
+                    options={optionstitle}
+                    className={styles.selectCheckout}
+                  />
+                </div>
+              </div>
+              {/* <div className="selectMain">
                 <select name="Interested in" id="Interested in">
                   <option value="Interested in">Interested in</option>
                   <option value="Interested in">Interested in</option>
@@ -38,17 +54,16 @@ function SignUpForm() {
                   <option value="Interested in">Interested in</option>
                   <option value="Interested in">Interested in</option>
                 </select>
-              </div>
-              <div className="checkMain">
-                <label for="consent">
+              </div> */}
+              <div className="singleCheckbox">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  value="consent"
+                />
+                <label className="form-control" for="consent">
                   I consent to email marketing
-                  <input
-                    type="checkbox"
-                    id="consent"
-                    name="consent"
-                    value="consent"
-                  />
-                  <span className="checkmark"></span>
                 </label>
               </div>
               <input type="submit" className="allBtn dark" value="Submit" />

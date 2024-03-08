@@ -102,6 +102,13 @@
                 margin: 15px 0 0 0;
               }
             }
+            .singleCheckbox {
+              .form-control {
+                &::before {
+                  border: none;
+                }
+              }
+            }
           }
           .socialFooter {
             margin: 20px 0 0 0;

@@ -62,11 +62,10 @@ function CreateAccountForm() {
                   </div>
                 </div>
                 <div className="rightAlign">
-                  <div className="checkMain">
-                    <label for="signup">
+                  <div className="singleCheckbox">
+                    <input id="signup" type="checkbox" value="signup" />
+                    <label className="form-control" for="signup">
                       I consent to email marketing
-                      <input id="signup" type="checkbox" value="signup" />
-                      <span className="checkmark"></span>
                     </label>
                   </div>
                   <input

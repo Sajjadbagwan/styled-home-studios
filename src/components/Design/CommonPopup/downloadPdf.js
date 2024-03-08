@@ -75,11 +75,10 @@ const DownloadPdfPopup = (props) => {
               </div>
 
               <div className="rightAlign">
-                <div className="checkMain">
-                  <label for="signup">
+                <div className="singleCheckbox">
+                  <input id="signup" type="checkbox" value="signup" />
+                  <label className="form-control" for="signup">
                     Sign me up to receive updates
-                    <input id="signup" type="checkbox" value="signup" />
-                    <span className="checkmark"></span>
                   </label>
                 </div>
                 <input

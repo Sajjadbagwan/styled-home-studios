@@ -157,24 +157,24 @@ body {
     }
   }
 }
-.drop_down{
+.drop_down {
   max-width: 100%;
   width: 100%;
   margin: 7px auto 0 auto;
-  .wrapper_dropdown{
+  .wrapper_dropdown {
     width: 100%;
     background: #fff;
     position: relative;
     transition: 0.5s li;
     margin-bottom: 0;
-    .selected_value{
+    .selected_value {
       width: 100%;
       padding: 10px 25px;
       display: flex;
       justify-content: space-between;
       font-size: 16px;
       font-weight: 700;
-      color: #4D4D4F;
+      color: #4d4d4f;
       text-align: left;
       position: relative;
       z-index: 9;
@@ -184,133 +184,208 @@ body {
       //   padding: 12px 20px;
       // }
     }
-    > div{
+    > div {
       width: 100%;
       cursor: pointer;
       position: relative;
-      z-index: 99;                  
-  }
-  .react-select__control {
-    border: 0;
-    border-radius: 0;
-    outline: none !important;
-    box-shadow: none !important;
-    padding: 0;
-    cursor: pointer;
-    background-color: #fff;
-    min-height: 50px;
-    padding: 0 15px;
-    text-align: left;
-    border: 1px solid rgba(77,77,79,.5);
-    // @include ipad_view {
-    //   padding-left: 20px;
-    //   padding-right: 20px;
-    // }
-    .react-select__placeholder{
-      font-size: 14px;
-      font-weight: 400;
-      color: #4D4D4F;
-    //   @include ipad_view {
-    //     font-size: 14px;
-    //   }
+      z-index: 99;
     }
-    .react-select__value-container{
+    .react-select__control {
+      border: 0;
+      border-radius: 0;
+      outline: none !important;
+      box-shadow: none !important;
+      padding: 0;
+      cursor: pointer;
+      background-color: #fff;
+      min-height: 50px;
+      padding: 0 15px;
+      text-align: left;
+      border: 1px solid rgba(77, 77, 79, 0.5);
+      // @include ipad_view {
+      //   padding-left: 20px;
+      //   padding-right: 20px;
+      // }
+      .react-select__placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: #4d4d4f;
+        //   @include ipad_view {
+        //     font-size: 14px;
+        //   }
+      }
+      .react-select__value-container {
         padding: 0;
-        
-        .react-select__single-value{
-          color: #4D4D4F;
+
+        .react-select__single-value {
+          color: #4d4d4f;
           font-weight: 400;
           font-size: 15px;
-          @media only screen and (max-width:1240px){
+          @media only screen and (max-width: 1240px) {
             font-size: 14px;
           }
         }
-    }
-    .react-select__input-container{
+      }
+      .react-select__input-container {
         margin: 0;
         padding: 0;
         color: #000;
-        input[type="text"]{
-            height: 35px !important;
-            color: #000 !important;
-            min-height: auto;
-            border: none !important;
-        }
-    }
-    &.react-select__control--menu-is-open{
-      border: 1px solid rgba(77,77,79,.5);
-      border-bottom: 0;
-      .react-select__indicators{
-        &::after{
-          transform: rotate(180deg);
+        input[type="text"] {
+          height: 35px !important;
+          color: #000 !important;
+          min-height: auto;
+          border: none !important;
         }
       }
-    }
-  } 
-  .react-select__menu{
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    border: 1px solid rgba(77,77,79,.5);
-    border-top: 0;
-    font-size: 15px;
-    .react-select__menu-list {
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 0;
-      padding-bottom: 20px;
-      max-height: 320px;
-      .react-select__option{
-        color: $black-color;
-        font-weight: 400;
-        padding: 10px 0;
-        border-top: 1px solid rgba(77,77,79,.25);
-        cursor: pointer;
-        text-align: left;
-        background-color: #fff;     
-        font-size: 15px;                 
-        // @include ipad_view {
-        //   font-size: 14px;
-        // }
-        &:last-child{
-            border-bottom: 1px solid rgba(77,77,79,.25);
-        }
-        &.react-select__option--is-focused{
-          background-color: #fff;
-        }
-      }
-    }
-  }
-  
-  input{
-      box-shadow: none!important;
-      height: 36px;
-  }
-  
-  >div{
-      >div{
-          >div{
-              span{
-                  display:none;
-              }
-              svg{
-                  display:none;
-              }
-              & + div:after{
-                  content:"";
-                  background-image:url('/assets/images/down-arrow.svg');
-                  background-position: right center;
-                  background-size: contain;
-                  background-origin: border-box;
-                  background-repeat: no-repeat !important;
-                  position: absolute;
-                  width: 12px;
-                  height: 12px;
-                  right: 15px;                                  
-              }
+      &.react-select__control--menu-is-open {
+        border: 1px solid rgba(77, 77, 79, 0.5);
+        border-bottom: 0;
+        .react-select__indicators {
+          &::after {
+            transform: rotate(180deg);
           }
+        }
       }
+    }
+    .react-select__menu {
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      border: 1px solid rgba(77, 77, 79, 0.5);
+      border-top: 0;
+      font-size: 15px;
+      .react-select__menu-list {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 0;
+        padding-bottom: 20px;
+        max-height: 320px;
+        .react-select__option {
+          color: $black-color;
+          font-weight: 400;
+          padding: 10px 0;
+          border-top: 1px solid rgba(77, 77, 79, 0.25);
+          cursor: pointer;
+          text-align: left;
+          background-color: #fff;
+          font-size: 15px;
+          // @include ipad_view {
+          //   font-size: 14px;
+          // }
+          &:last-child {
+            border-bottom: 1px solid rgba(77, 77, 79, 0.25);
+          }
+          &.react-select__option--is-focused {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    input {
+      box-shadow: none !important;
+      height: 36px;
+    }
+
+    > div {
+      > div {
+        > div {
+          span {
+            display: none;
+          }
+          svg {
+            display: none;
+          }
+          & + div:after {
+            content: "";
+            background-image: url("/assets/images/down-arrow.svg");
+            background-position: right center;
+            background-size: contain;
+            background-origin: border-box;
+            background-repeat: no-repeat !important;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            right: 15px;
+          }
+        }
+      }
+    }
   }
+}
+.customDrop {
+  margin: 0 0 15px 0;
+  .wrapper_dropdown {
+    .react-select__control {
+      border: none;
+    }
+  }
+}
+.singleCheckbox {
+  .form-control {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+    display: inline-block;
+    &::after {
+      background: url("/assets/images/tick-mark.svg") no-repeat center;
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 24px;
+      height: 31px;
+      display: none;
+    }
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 18px;
+      height: 18px;
+      border-radius: 0;
+      content: "";
+      border: 1px solid $black-color;
+      background-color: #fff;
+    }
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    margin: 0 5px 0 0;
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    &:checked {
+      & + .form-control {
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+  input[type="radio"] {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    margin: 0 5px 0 0;
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    &:checked {
+      & + .form-control {
+        &::after {
+          display: block;
+        }
+      }
+    }
   }
 }
 .titleDouble {
