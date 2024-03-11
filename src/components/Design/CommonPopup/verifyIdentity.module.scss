@@ -334,4 +334,11 @@
       }
     }
   }
+  &.joinDirectoryTermsPopup{
+    max-width: 90% !important;
+    height: auto !important;
+    p{
+      text-align: left;
+    }
+  }
 }
