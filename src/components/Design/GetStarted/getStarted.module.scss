@@ -41,11 +41,13 @@
             min-height: 230px;
             padding: 50px;
             margin: 0;
+            max-width: 380px;
           }
           @include md {
             min-height: 265px;
             padding: 60px 50px;
             margin: 0 0 17px 0;
+            max-width: 100%;
           }
           h3 {
             margin: 0 0 5px 0;

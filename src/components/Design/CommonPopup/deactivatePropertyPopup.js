@@ -28,7 +28,7 @@ const DeactivatePropertyPopup = (props) => {
                     </div>                           
                     <div className="popup-body removeCompare-body">
                         <h3>Deactivate This Property?</h3>
-                        <p>This will deactivate the listing.<br/>Any bookings made against the property<br/>will remain.</p>
+                        <p>This will deactivate the listing.<br/> Any bookings made against the property<br/> will remain.</p>
                         <div className="button-container">
                           <button type="button" className="allBtn dark border" onClick={closeDeactivatePropertyodal}>No, Cancel</button>
                           <Link href="" >Yes, Deactivate Property</Link>

@@ -9,6 +9,7 @@
   @include md {
     max-width: 90% !important;
     padding: 30px !important;
+    height: 420px !important;
   }
   :global {
     .productAdded {
@@ -32,6 +33,13 @@
         margin-top: 20px;
       }
       .button-container {
+          @include md{
+            display: flex;
+            flex-direction: column;
+            .allBtn{
+              margin: 0 0 20px 0;
+            }
+          }
         button {
           &:last-child {
             margin-left: 40px;
@@ -67,6 +75,11 @@
     :global {
       .popup-body {
         p {
+          @include md{
+            br{
+              display: none;
+            }
+          }
           &:last-child {
             margin: 0;
           }
@@ -76,7 +89,11 @@
         }
         a{
           margin-left: 30px;
+          @include md{
+            margin: 0;
+          }
         }
+        
       }
     }
   }
@@ -108,6 +125,10 @@
     padding: 80px 90px 80px 90px !important;
     @include xl {
       padding: 40px !important;
+    }
+    @include md{
+      padding: 20px !important;
+      max-width: 90% !important;
     }
     :global {
       .popup-body {

@@ -5,6 +5,11 @@
     padding: 68px 0 50px 0;
     transform: rotate(1deg);
     width: 101%;
+    @include md{
+        margin: -71px 0 0 -5px;
+        width: 104%;
+        padding-bottom: 30px;
+    }
     :global{
         .titleText{
             max-width: 1164px;
@@ -13,14 +18,43 @@
             justify-content: flex-start;
             align-items: center;
             transform: rotate(-1deg);
+            @include md{
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: center;
+            }
             h3{
                 margin: 0 150px 0 0;
+                @include x-lg{
+                    margin: 0 5px 0 0;
+                }
+                @include md{
+                    margin: 0;
+                }
             }
            .filter-tab{
                 display: flex;
                 justify-content: flex-start;
+                @include md{
+                    max-width: 300px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
                 li{
                     padding-right: 98px;
+                    @include xl{
+                        padding-right: 70px;
+                    }
+                    @include x-lg{
+                        padding-right: 30px;
+                    }
+                    @include md{
+                        width: 50%;
+                        padding: 0;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
                     a{
                         text-decoration: none;
                         &:hover{

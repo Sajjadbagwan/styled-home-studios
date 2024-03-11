@@ -1,6 +1,9 @@
 @import "../../../../styles/global.scss";
 .faqTopArticleSection{
     margin: 100px 0;
+    @include md{
+      margin: 50px 0;
+    }
     :global{
         .title {
             align-items: flex-end;
@@ -28,9 +31,19 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            @include md{
+              flex-wrap: wrap;
+            }
             .slide {
                 width: 29%;
                 padding: 0;
+                @include lg{
+                  width: 32%;
+                }
+                @include md{
+                  width: 100%;
+                  margin-bottom: 20px;
+                }
                 .slideImg {
                   position: relative;
                   padding-bottom: 68%;
@@ -47,6 +60,9 @@
                     span {
                       color: $black-color;
                       margin-bottom: 19px;
+                      @include lg{
+                        font-size: 14px;
+                      }
                     }
                     h3 {
                       color: $black-color;
@@ -54,6 +70,9 @@
                       line-height: 25px;
                       letter-spacing: 1.5px;
                       margin-bottom: 10px;
+                      @include lg{
+                        font-size: 16px;
+                      }
                     }
                     &::before {
                       background-color: $black-color;
