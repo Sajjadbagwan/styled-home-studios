@@ -6,6 +6,7 @@
             padding-bottom: 200px;
             @include md{
                 margin-top: -65px;
+                padding-bottom: 80px;
             }
         }
         .joinOurDirectory{
@@ -28,6 +29,10 @@
                     }
                     .aboutInfo{
                         padding: 85px 155px 0 42px;
+                        @include lg{
+                            padding: 60px 35px 0 47px;
+                        }
+                       
                     }
                 }
             }

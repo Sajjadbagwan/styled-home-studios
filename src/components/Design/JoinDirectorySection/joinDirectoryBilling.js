@@ -2,11 +2,19 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import JoinDirectoryPopup from "@/components/Design/CommonPopup/joinDirectoryPopup";
 import DeclineProp from "../../../../public/assets/images/decline-prop.svg"
 import CardIcon from "../../../../public/assets/images/card.svg"
 import styles from "./joinDirectorySection.module.scss";
 
 function JoinDirectoryBilling() {
+    const [JoinDirectoryTermsPopupIsOpen, SetJoinDirectoryTermsPopupIsOpen] = useState(false);
+  const openJoinDirectoryTermsPopup = () => {
+    SetJoinDirectoryTermsPopupIsOpen(true);
+  };
+  const closeJoinDirectoryTermsPopup = () => {
+    SetJoinDirectoryTermsPopupIsOpen(false);
+  };
   
   return (
     <div className={styles.joinDirectoryBilling + " joinDirectoryBilling"}>
@@ -37,7 +45,7 @@ function JoinDirectoryBilling() {
                     </div>
                 </div>
                 <hr/>
-                <h2>Billing Address</h2>
+                <h3>Billing Address</h3>
                 <div className="inputGroup">
                     <input type="text" name="address" placeholder="Start typing your address…" />         
                 </div>
@@ -57,7 +65,7 @@ function JoinDirectoryBilling() {
                     <input type="text" name="pcode" placeholder="Postcode*" />
                 </div>
                 <hr/>
-                <h2>Voucher Code</h2>
+                <h3>Voucher Code</h3>
                 <div className="voucherCode">
                     <div className="inputGroup">
                         <input type="text" name="vcode" placeholder="Voucher Code" />
@@ -65,13 +73,30 @@ function JoinDirectoryBilling() {
                     <button type="button" className="allBtn dark border">Apply</button>
                 </div>
                 <hr/>
-                <h2>Payment Information <Image src={CardIcon} height={30} width={140} alt="card" /></h2>
+                <h3>Payment Information <Image src={CardIcon} height={30} width={140} alt="card" /></h3>
+                <div className="inputGroup">
+                    <input type="text" name="cname" placeholder="Card Name*" />
+                </div>
+                <div className="inputGroup">
+                    <input type="text" name="cnumber" placeholder="Card Number*" />
+                </div>
+                <div className="cardDetails">
+                    <div className="inputGroup">
+                        <input type="text" name="emonth" placeholder="Expiry Month*" />
+                    </div>
+                    <div className="inputGroup">
+                        <input type="text" name="eyear" placeholder="Expiry Year*" />
+                    </div>
+                    <div className="inputGroup">
+                        <input type="text" name="cv" placeholder="CV2*" />
+                    </div>
+                </div>
                 <hr/>
                 <div className="checkboxDiv">
                     <div className="singleCheckbox">
                         <input id="terms" type="checkbox" name="terms"/>
                         <label className="form-control" htmlFor="terms">
-                            I agree to the <Link href="">Terms & Conditions</Link>
+                            I agree to the <button type="button" onClick={openJoinDirectoryTermsPopup}>Terms & Conditions</button>
                         </label>
                     </div>
                 </div>
@@ -81,8 +106,8 @@ function JoinDirectoryBilling() {
                     <button type="button" className="allBtn border">Previous Page</button>
                     <button type="button" className="allBtn dark">Submit</button>
                 </div>     
-            </form>
-            
+                <JoinDirectoryPopup JoinDirectoryTermsPopupIsOpen={JoinDirectoryTermsPopupIsOpen} closeJoinDirectoryTermsPopup={closeJoinDirectoryTermsPopup}/>
+            </form>            
         </div>
     </div>
   );

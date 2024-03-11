@@ -15,6 +15,12 @@
                 width: 32%;
                 background-color: rgba(139,146,151,0.05);
                 padding: 28px 20px 28px 23px;
+                @include x-lg{
+                  width: 48%;
+                }
+                @include md{
+                  width: 100%;
+                }
                 .slideImg {
                   position: relative;
                   &.permenantDeclined{
@@ -38,6 +44,9 @@
                     text-transform: uppercase;
                     font-size: 16px;
                     color: $white-color;
+                    @include xmd{
+                      font-size: 14px;
+                    }
                     &.awaiting{
                         background: rgb(77 77 79 / 75%); 
                     }
@@ -181,6 +190,14 @@
                   padding: 0;
                   margin-top: 75px;
                   width: 33%;
+                  @include x-lg{
+                    width: 48%;
+                    margin-top: 20px;
+                  }
+                  @include md{
+                    width: 100%;
+                    margin: 0;
+                  }
                   .slideImg{
                     img{
                       height: 685px;

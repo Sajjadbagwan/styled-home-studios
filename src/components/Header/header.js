@@ -13,12 +13,15 @@ function Header() {
 
   useEffect(() => {
     const body = document.body;
+    const html = document.querySelector("html");
     if (isActive) {
       body.classList.remove("menuClose");
       body.classList.add("menuOverlay");
+      html.classList.add("scrollHide");
     } else {
       body.classList.remove("menuOverlay");
       body.classList.add("menuClose");
+      html.classList.remove("scrollHide");
     }
   }); // Run useEffect only when isActive changes
 

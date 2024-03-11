@@ -21,8 +21,14 @@
                         display: flex;
                         width: 100%;
                         justify-content: space-between;
+                        @include md{
+                            flex-wrap: wrap;
+                        }
                         .halfInput{
                             width: 49%;
+                            @include md{
+                                width: 100%;
+                            }
                         }
                     }
                     hr{

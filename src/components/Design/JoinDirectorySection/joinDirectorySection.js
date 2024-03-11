@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import YourServiceDetails from "@/components/Design/JoinDirectorySection/yourServiceDetails";
 import JoinDirectoryBilling from "@/components/Design/JoinDirectorySection/joinDirectoryBilling";
+import SubmitForApprovalPage from "@/components/Design/JoinDirectorySection/submitForApproval";
 import styles from "./joinDirectorySection.module.scss";
 
 function JoinTheDirectorySection() {
@@ -54,6 +55,7 @@ function JoinTheDirectorySection() {
         </ul>
         <YourServiceDetails />
         <JoinDirectoryBilling />
+        <SubmitForApprovalPage />
       </div>
     </div>
   );
