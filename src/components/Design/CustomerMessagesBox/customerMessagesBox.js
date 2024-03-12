@@ -1,16 +1,44 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./customerMessagesBox.module.scss";
 
 function CustomerMessagesBox() {
+  const [isActiveMessages, setIsActiveMessages] = useState(false);
+  const handleClickMessages = () => {
+    setIsActiveMessages(!isActiveMessages);
+  };
+
+  const [isActiveConversation, setIsActiveConversation] = useState(false);
+  const elementRef = useRef(null);
+  const handleClickConversation = () => {
+    setIsActiveConversation(!isActiveConversation);
+    if (elementRef.current) {
+      elementRef.current.classList.remove("show");
+    }
+  };
+
+  const [isActiveBooking, setIsActiveBooking] = useState(false);
+  const elementRef1 = useRef(null);
+  const handleClickBooking = () => {
+    setIsActiveBooking(!isActiveBooking);
+    if (elementRef1.current) {
+      elementRef1.current.classList.remove("hide");
+    }
+  };
+
   return (
     <section className={styles.customerMessagesBox}>
       <div className="container">
         <div className="mainMsgBox">
-          <div className="msgList">
-            <div className="titleBox">Messages</div>
+          <div
+            ref={elementRef1}
+            className={`${"msgList"} ${isActiveMessages ? "hide" : ""}`}
+          >
+            <div className="titleBox" onClick={handleClickMessages}>
+              Messages
+            </div>
             <div className="allMsg">
               <div className="subList">
                 <div className="msgBox newMsg">
@@ -71,8 +99,17 @@ function CustomerMessagesBox() {
               </div>
             </div>
           </div>
-          <div className="msgList conversationList">
-            <div className="titleBox">Conversation With Fabien</div>
+
+          <div
+            ref={elementRef}
+            className={`${"msgList conversationList"} ${
+              isActiveMessages ? "show" : ""
+            }`}
+          >
+            {/* <span className="mobileLink link">Back To Messages</span> */}
+            <div className="titleBox" onClick={handleClickConversation}>
+              Conversation With Fabien
+            </div>
             <div className="allMsg">
               <div className="subList">
                 <div className="msgBox conversationBox">
@@ -172,8 +209,48 @@ function CustomerMessagesBox() {
               </div>
             </div>
           </div>
-          <div className="msgList bookingList">
-            <div className="titleBox">Booking Details</div>
+          <div
+            className={`${"msgList bookingList"} ${
+              isActiveConversation ? "show" : ""
+            }`}
+          >
+            <div className="titleBox">
+              <span>Booking Details</span>
+
+              <span className="link" onClick={handleClickBooking}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10.012"
+                  height="10.012"
+                  viewBox="0 0 10.012 10.012"
+                >
+                  <g
+                    id="Group_4550"
+                    data-name="Group 4550"
+                    transform="translate(0.53 0.53)"
+                  >
+                    <path
+                      id="Path_3990"
+                      data-name="Path 3990"
+                      d="M8.951,0,0,8.951"
+                      transform="translate(0 8.951) rotate(-90)"
+                      fill="none"
+                      stroke="#20535a"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      id="Path_4026"
+                      data-name="Path 4026"
+                      d="M8.951,8.951,0,0"
+                      transform="translate(0 8.951) rotate(-90)"
+                      fill="none"
+                      stroke="#20535a"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </div>
             <div className="allMsg">
               <div className="subList">
                 <div className="msgBox bookingBox">
@@ -257,7 +334,7 @@ function CustomerMessagesBox() {
                       <span>Requested on 04th July 2023 by Sarah</span>
                     </div>
                   </div>
-                  <div className="bookingList">
+                  <div className="bookingAll">
                     <Image
                       src="/assets/images/trending.png"
                       alt=""
@@ -268,31 +345,56 @@ function CustomerMessagesBox() {
                       <h3>Bright and Light Townhouse – N1</h3>
                       <Link href="#">View Listing</Link>
                     </div>
+                    <div className="listInfo">
+                      <div>
+                        <span>Your Crew</span>
+                        <span>4 People</span>
+                      </div>
+                      <div>
+                        <span>Booking</span>
+                        <span>
+                          <div>
+                            <span>28/06/24 15:00 - 17:00</span>
+                            <span>29/06/24 11:00 - 14:00</span>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                    <Link href="#" className="allBtn border dark">
+                      View booking
+                    </Link>
                   </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque tincidunt nibh et diam consequat, ut laoreet nulla
-                    pretium. Fusce laoreet, dui eget tempus iaculis, nunc ipsum
-                    viverra enim, a vehicula tortor est eget augue. Proin
-                    interdum pharetra quam, eu gravida ex tempor sit amet. Proin
-                    feugiat magna vel ante imperdiet tincidunt. Morbi eget
-                    pellentesque enim. Duis faucibus, tellus vitae eleifend
-                    tempor, tortor turpis laoreet eros, quis vehicula purus
-                    lorem id ante. Aliquam scelerisque vestibulum tortor,
-                    laoreet dictum felis facilisis vitae. In id dui et magna
-                    congue sollicitudin. Aenean id dapibus ipsum. Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit. Quisque
-                    tincidunt nibh et diam consequat, ut laoreet nulla pretium.
-                    Fusce laoreet, dui eget tempus iaculis, nunc ipsum viverra
-                    enim, a vehicula tortor est eget augue. Proin interdum
-                    pharetra quam, eu gravida ex tempor sit amet. Proin feugiat
-                    magna vel ante imperdiet tincidunt. Morbi eget pellentesque
-                    enim. Duis faucibus, tellus vitae eleifend tempor, tortor
-                    turpis laoreet eros, quis vehicula purus lorem id ante.
-                    Aliquam scelerisque vestibulum tortor, laoreet dictum felis
-                    facilisis vitae. In id dui et magna congue sollicitudin.
-                    Aenean id dapibus ipsum.
-                  </p>
+
+                  <div className="bookingAll">
+                    <Image
+                      src="/assets/images/trending.png"
+                      alt=""
+                      width={474}
+                      height={325}
+                    />
+                    <div className="infoBox">
+                      <h3>Bright and Light Townhouse – N1</h3>
+                      <Link href="#">View Listing</Link>
+                    </div>
+                    <div className="listInfo">
+                      <div>
+                        <span>Your Crew</span>
+                        <span>4 People</span>
+                      </div>
+                      <div>
+                        <span>Booking</span>
+                        <span>
+                          <div>
+                            <span>28/06/24 15:00 - 17:00</span>
+                            <span>29/06/24 11:00 - 14:00</span>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                    <Link href="#" className="allBtn border dark">
+                      View booking
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
