@@ -14,12 +14,17 @@
     .container {
         max-width: 1190px;
         margin: 0 auto;
-      .row{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .column3{
-            display: flex;
+        @include md{
+          padding: 0;
+        }
+      .row{        
+        .workList{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          .column3{ 
+            display: flex !important;
             align-items: center;
             @include lg{
               width: 33.33%;
@@ -49,8 +54,21 @@
             h5{
                 color: $white-color;
                 margin: 0;
+                @include md{
+                  font-size: 16px;
+                }
             }
-        }
+          }
+          .slick-dots {
+            li {
+              button {
+                &::before {
+                  background-color: $white-color;
+                }
+              }
+            }
+          }
+        }        
       }
     }
   }
@@ -72,7 +90,7 @@
     @include md{
       width: 48%;
       height: 9%;
-      bottom: -34px;
+      bottom: -17px;
     }
   }
 }

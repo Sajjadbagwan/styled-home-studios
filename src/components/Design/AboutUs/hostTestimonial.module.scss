@@ -16,6 +16,12 @@
                 z-index: 2;
                 -webkit-clip-path: polygon(100% 51%, 0% 100%, 100% 100%);
                 clip-path: polygon(100% 51%, 0% 100%, 100% 100%);
+                @include lg{
+                    height: 22%;
+                }
+                @include md{
+                    height: 10%;
+                }
             }
             @include lg {
               height: 500px;
