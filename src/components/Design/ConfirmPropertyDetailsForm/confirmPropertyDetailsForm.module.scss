@@ -662,6 +662,9 @@
                         h3{
                             font-size: 22px;
                             margin-bottom: 20px;
+                            @include lg{
+                                font-size: 18px;
+                            }
                         }
                         & + hr{
                             margin-top: 42px;
