@@ -95,9 +95,12 @@
           margin-top: 0;  
           &:hover{
             border-color: $white-color;
-          }   
+          } 
+          @include xl{
+            margin-right: 30px;
+          }  
           @include x-lg{
-            margin: 0 0 15px 0;
+            margin: 0 20px 15px 0;
           }
           @include md{
             margin: 0 auto;
@@ -111,8 +114,11 @@
               background-color: $green-color;
               color: $white-color;
             }
+            @include xl{
+              margin: 0 120px 0 0;
+            }
             @include x-lg{
-              margin: 0;
+              margin: 0 145px 0 0;
             }
           }
         }
@@ -121,7 +127,7 @@
             max-width: 40%;
           }
           @include lg{
-            max-width: 57%;
+            max-width: 52%;
           }
           @include md{
             max-width: 100%;

@@ -85,6 +85,9 @@
             .slick-slide {
               padding: 0 10px;
               position: relative;
+              @include md{
+                padding: 0 30px;
+              }
               &.slick-current {
                 &::after {
                   content: "";

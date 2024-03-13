@@ -1,6 +1,9 @@
 @import "../../../../styles/global.scss";
 .faqContactFormSection{
     margin: 100px 0;
+    @include md{
+        margin: 50px 0;
+    }
     :global{
         .contactForm{
             width: 100%;
@@ -8,6 +11,12 @@
             margin: 0 auto;
             padding: 90px;
             background-color: $cream-color;
+            @include lg{
+                padding: 40px;
+            }
+            @include md{
+                padding: 20px;
+            }
             input,textarea {
                 border: none !important;
             }
@@ -26,6 +35,14 @@
                   margin-top: 0;
                 }
             }
+            .halfInput{
+                @include md{
+                    flex-wrap: wrap;
+                }
+                .inputGroup{
+                    flex: 0 0 100%;
+                }
+            }
             hr{
                 border: 0;
                 height: 1px;
@@ -40,9 +57,16 @@
                 ul{
                     display: flex;
                     align-items: center;
+                    @include lg{
+                        flex-wrap: wrap;
+                    }
                     li{
                         width: auto;
                         margin-right: 96px;
+                        @include lg{
+                            margin-right: 55px;
+                            margin-bottom: 15px;
+                        }
                         a{
                             display: flex;
                             align-items: center;
@@ -52,6 +76,9 @@
                             font-size: 14px;
                             img{
                                 margin-right: 20px;
+                                @include md{
+                                    margin-right: 12px;
+                                }
                             }
                         } 
                         &:last-child{

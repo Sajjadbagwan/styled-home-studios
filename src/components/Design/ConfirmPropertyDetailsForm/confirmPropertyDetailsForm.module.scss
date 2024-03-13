@@ -12,6 +12,9 @@
             margin: 6px auto 50px auto;
             text-align: center;
             position: relative;
+            @include lg{
+                justify-content: center;
+            }
             .singlestep{
                 text-align: center;
                 position: relative;
@@ -25,6 +28,9 @@
                     top: 32%;
                     z-index: -1;
                     left: 76%;
+                    @include lg{
+                        display: none;
+                    }
                 }
                 a{
                    height: 75px;
@@ -64,11 +70,16 @@
                     }
                 }
                 &.activeStep{
+                    @include lg{
+                        display: block;
+                    }
                     a{
                         background-color: $green-color;
                     }                    
                 }
-
+                @include lg{
+                    display: none;
+                }
             }
         }
         form{
@@ -80,6 +91,9 @@
                 background-color: #BE1600;
                 color: $white-color;
                 padding: 29px 50px;
+                @include lg{
+                    padding: 15px 30px;
+                }
                 .reason{
                     display: flex;
                     align-items: flex-start;
@@ -108,9 +122,15 @@
                         text-align: left;
                         font-family: $title-font;
                         margin: 0 0 20px 0;
+                        @include lg{
+                            font-size: 22px;
+                        }
                     }
                     p{
                         margin-bottom: 25px;
+                        @include lg{
+                            margin-bottom: 15px;
+                        }
                     }
                     .inputGroup{
                         display: flex;
@@ -148,8 +168,7 @@
                                         width: 89%;
                                     }
                                 }
-                            }
-                            
+                            }                            
                         }
                         h2  {
                             text-align: left;
@@ -192,6 +211,10 @@
                                             width: 235px;
                                             height: 235px;
                                             object-fit: cover;
+                                            @include lg{
+                                                width: 210px;
+                                                height: 210px;
+                                            }
                                         }
                                     }
                                     &.featuredImage{    
@@ -201,6 +224,10 @@
                                             font-size: 22px;
                                             margin-bottom: 23px;
                                             margin-top: 12px;
+                                            @include lg{
+                                                font-size: 18px;
+                                                margin-bottom: 15px;
+                                            }
                                         }
                                     }
                                     .upload-btn{
@@ -213,6 +240,9 @@
                                         box-shadow: none;
                                         outline: 0;
                                         padding: 0;
+                                        @include lg{
+                                            max-width: 210px;
+                                        }
                                         .file-btn{
                                             height: 235px;
                                             width: 100%;
@@ -221,9 +251,16 @@
                                             align-items: center;
                                             justify-content: center;
                                             margin-top: 0;
+                                            @include lg{
+                                                height: 210px;
+                                            }
                                             img{
                                                 height: 205px;
                                                 width: 205px;
+                                                @include lg{
+                                                    height: 180px;
+                                                    width: 180px;
+                                                }
                                             }
                                         }
                                         .add-img{
@@ -241,6 +278,9 @@
                                         max-width: 240px;
                                         width: 100%;
                                         margin: 7px auto 0 auto;
+                                        @include lg{
+                                            max-width: 210px;
+                                        }
                                         .wrapper_dropdown{
                                           width: 100%;
                                           background: #fff;
@@ -322,6 +362,7 @@
                                             &.react-select__control--menu-is-open{
                                               border: 1px solid rgba(77,77,79,.5);
                                               border-bottom: 0;
+                                              z-index: 2;
                                               .react-select__indicators{
                                                 &::after{
                                                   transform: rotate(180deg);
@@ -342,6 +383,9 @@
                                               padding-top: 0;
                                               padding-bottom: 20px;
                                               max-height: 320px;
+                                              @include lg{
+                                                max-height: 250px;
+                                              }
                                               .react-select__option{
                                                 color: $black-color;
                                                 font-weight: 400;
@@ -480,6 +524,9 @@
                         display: flex;
                         justify-content: flex-end;
                         margin-left: auto;
+                        @include lg{
+                            padding-top: 18px;
+                        }
                     }
                     .form-control{
                         position: relative;
@@ -550,6 +597,11 @@
                         h2{
                             margin-bottom: 20px;
                         }
+                        h3{
+                            @include lg{
+                                font-size: 18px;
+                            }
+                        }
                         p{
                             color: $green-color;
                             display: flex;
@@ -570,8 +622,14 @@
                             justify-content: flex-start;
                             align-items: center;
                             margin-bottom: 20px;
+                            @include lg{
+                                flex-wrap: wrap;
+                            }
                             .singleCheckbox{
                                 width: 14.285%;
+                                @include lg{
+                                    width: 20%;
+                                }
                             }
                         }
                         input{
@@ -604,9 +662,19 @@
                         h3{
                             font-size: 22px;
                             margin-bottom: 20px;
+                            @include lg{
+                                font-size: 18px;
+                            }
                         }
                         & + hr{
                             margin-top: 42px;
+                        }
+                        .checkboxDiv{
+                            .singleCheckbox{
+                                @include lg{
+                                    margin-bottom: 12px;
+                                }
+                            }
                         }
                     }
                     // .commonSection{
@@ -649,6 +717,9 @@
                 .formDetails{
                     h2{
                         margin-bottom:33px;
+                        @include lg{
+                            margin-bottom: 20px;
+                        }
                     }
                     hr{
                         margin: 18px 0 20px 0;
@@ -726,6 +797,9 @@
                 .formDetails{
                     h2{
                         margin-bottom:33px;
+                        @include lg{
+                            margin-bottom: 20px;
+                        }
                     }
                     hr{
                         margin: 18px 0 20px 0;
@@ -743,6 +817,10 @@
                                 margin-right: 20px;
                                 margin-bottom: 15px;
                                 position: relative;
+                                @include lg{
+                                    width: 25%;
+                                    margin-right: 0;
+                                }
                             }
                             
                         }
@@ -750,6 +828,9 @@
                             .singleCheckbox{
                                 width: 16.66%;
                                 margin-right: 0;
+                                @include lg{
+                                    width: 25%;
+                                }
                             }
                         }
                     }
@@ -766,6 +847,9 @@
                 .formDetails{
                     h2{
                         margin-bottom:33px;
+                        @include lg{
+                            margin-bottom: 20px;
+                        }
                     }
                     hr{
                         margin: 18px 0 20px 0;
@@ -790,6 +874,9 @@
                             .singleCheckbox{
                                 width: 14.285%;
                                 margin-right: 0;
+                                @include lg{
+                                    width: 25%;
+                                }
                             }
                         }
                     }
@@ -820,6 +907,9 @@
                                 .singleCheckbox{
                                     width: auto;
                                     margin-right: 30px;
+                                    @include lg{
+                                        margin-bottom: 12px;
+                                    }
                                 }
                             }
                         }
@@ -877,6 +967,10 @@
                     }
                     .button-container{
                         margin-top: 39px;
+                        .allBtn{
+                            padding-left: 30px;
+                            padding-right: 30px;
+                        }
                     }
                 }
             }

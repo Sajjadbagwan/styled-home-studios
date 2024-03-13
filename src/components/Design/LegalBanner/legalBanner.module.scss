@@ -12,6 +12,9 @@
     .heroImg {
       position: relative;
       padding-bottom: 11.5%;
+      @include xl{
+        padding-bottom: 15.5%;
+      }
       @include x-lg{
         padding: 0;
         height: 170px;
@@ -32,11 +35,11 @@
           top: -113px;
         }
         @include x-lg{
-          top: -128px;
+          top: -108px;
           left: 53%;
         }
         @include md{
-          top: -132px;
+          top: -110px;
           left: 47%;
           width: 78%;
         }
@@ -77,6 +80,7 @@
     @include lg{
         width: 23%;
         height: 45%;
+        top: -1px;
     }
     @include md{
       width: 44%;
