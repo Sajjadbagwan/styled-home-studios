@@ -1,0 +1,45 @@
+@import "../../../styles/global.scss";
+.BecomeAHostLanding {
+  margin: 0;
+  :global {
+    .flipRight {
+      .aboutRightImg {
+        .container {
+          .row {
+            flex-direction: row-reverse;
+            .innerImg {
+              margin-left: auto;
+            }
+            .aboutInfo {
+              padding-left: 63px;
+              padding-top: 175px;
+            }
+          }
+        }
+      }
+    }
+    .aboutRightImg {
+      padding-top: 100px;
+      margin-bottom: 100px;
+      .container {
+        .row {
+          .aboutImg {
+            .innerImg {
+              .imgFront {
+                &::before {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .lovedBy {
+      margin-top: 0;
+    }
+    .faqTopArticleSection {
+      margin-bottom: 0;
+    }
+  }
+}

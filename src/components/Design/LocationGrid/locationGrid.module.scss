@@ -11,6 +11,16 @@
         row-gap: 30px;
         column-gap: 95px;
         margin-bottom: 30px;
+        @include xl {
+          column-gap: 50px;
+        }
+        @include x-lg {
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 40px;
+        }
+        @include md {
+          grid-template-columns: repeat(1, 1fr);
+        }
         .locationBox {
           .slideImg {
             position: relative;
@@ -59,6 +69,9 @@
                 text-transform: uppercase;
                 flex: 0 0 55%;
                 margin: 0;
+                @include lg {
+                  flex: 0 0 66%;
+                }
               }
               .rating {
                 display: flex;

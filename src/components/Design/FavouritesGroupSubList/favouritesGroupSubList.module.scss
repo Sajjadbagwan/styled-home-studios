@@ -18,6 +18,9 @@
         row-gap: 30px;
         column-gap: 95px;
         margin-bottom: 30px;
+        @include lg {
+          grid-template-columns: repeat(1, 1fr);
+        }
         .locationBox {
           .slideImg {
             position: relative;

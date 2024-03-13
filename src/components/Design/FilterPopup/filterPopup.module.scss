@@ -5,6 +5,9 @@
       padding: 45px 30px 45px 88px;
       width: 1160px;
       overflow: hidden;
+      @include lg {
+        padding: 45px 30px;
+      }
       h2 {
         margin: 0 0 16px 0;
       }
@@ -15,6 +18,10 @@
         overflow-y: auto;
         width: 99%;
         padding: 0 33px 0 0;
+        overflow-x: hidden;
+        @include lg {
+          max-height: 57vh;
+        }
       }
       .filterUl {
         width: 95%;
@@ -24,6 +31,14 @@
           justify-content: space-between;
           flex-wrap: wrap;
           margin-bottom: 45px;
+          @include lg {
+            justify-content: left;
+          }
+          li {
+            @include lg {
+              margin: 0 20px 0 0;
+            }
+          }
         }
       }
       .outerMain {
@@ -36,6 +51,9 @@
           margin-bottom: 40px;
           position: relative;
           cursor: pointer;
+          @include lg {
+            font-size: 21px;
+          }
           &::after {
             content: "";
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15.319" height="8.659" viewBox="0 0 15.319 8.659"><path id="Path_3994" data-name="Path 3994" d="M6.952,0,0,6.952,6.952,13.9" transform="translate(0.707 7.659) rotate(-90)" fill="none" stroke="%2320535a" stroke-width="2"/></svg>');
@@ -63,6 +81,9 @@
                 margin-right: 3%;
                 margin-bottom: 28px;
                 min-width: 10%;
+                @include lg {
+                  margin-bottom: 15px;
+                }
                 .allBtn {
                   cursor: pointer;
                   color: $green-color;
@@ -86,6 +107,11 @@
               .allBtn {
                 padding: 9px 43px;
                 font-size: 12px;
+                @include lg {
+                  padding: 9px 28px;
+                  min-height: auto;
+                  margin: 10px 0 0 0;
+                }
               }
             }
             .simpleCheckbox {
@@ -158,6 +184,10 @@
               padding: 7px 0;
               margin-bottom: 60px;
               width: 100%;
+              @include lg {
+                width: 80%;
+                margin: 0 auto 60px;
+              }
               .ruler {
                 display: none;
               }
@@ -223,6 +253,9 @@
                 display: block;
                 bottom: -13px;
                 left: -55px;
+                @include lg {
+                  // left: -40px;
+                }
                 span {
                   background: $green-color;
                   box-shadow: none;
@@ -234,6 +267,10 @@
                   min-width: auto;
                   border-radius: 0;
                   pointer-events: none;
+                  @include lg {
+                    // font-size: 11px;
+                    // padding: 1px 8px;
+                  }
                   &::after {
                     content: "";
                     background: transparent;

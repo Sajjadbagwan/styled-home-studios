@@ -3,6 +3,7 @@
 .locationFilter {
   flex: 0 0 100%;
   margin: 0 0 43px 0;
+  width: 100%;
   :global {
     .container {
       padding: 0;
@@ -10,21 +11,35 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         .filterCat {
           display: flex;
           align-items: center;
           margin: 0 0 0 105px;
+          width: 50%;
+          @include lg {
+            width: 100%;
+            margin: 25px 0 0 0;
+            order: 3;
+          }
           li {
             margin: 0 93px 0 0;
+            text-align: right;
             &:last-child {
               margin: 0;
             }
+            @include x-lg {
+              text-align: center;
+            }
           }
         }
-        .allBtn {
+        & > .allBtn {
           margin: 0;
           svg {
             margin: 0 15px 0 0;
+            @include lg {
+              margin: 0;
+            }
           }
           &:hover {
             svg {
@@ -33,6 +48,22 @@
                   stroke: $white-color;
                 }
               }
+            }
+          }
+          &.dark {
+            @include lg {
+              order: 1;
+            }
+          }
+          &:not(.dark) {
+            @include lg {
+              order: 2;
+              font-size: 0;
+              padding: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 55px;
             }
           }
         }

@@ -107,6 +107,9 @@
                 border: none;
                 background: transparent;
                 cursor: pointer;
+                @include lg {
+                  padding: 0;
+                }
               }
             }
             ul {
