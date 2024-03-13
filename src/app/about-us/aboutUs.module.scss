@@ -32,9 +32,15 @@
             .container{
                 .row{
                     flex-direction: row-reverse;
+                    @include lg{
+                        flex-direction: column-reverse;
+                    }
                     .aboutImg{
                         .innerImg{
                             margin-left: auto;
+                            @include lg{
+                                margin-left: 0;
+                            }
                             .imgFront{
                                 &::before{
                                     display: none;
@@ -45,6 +51,23 @@
                     .aboutInfo{
                         padding-left: 63px;
                         padding-top: 175px;
+                        @include lg{
+                            padding-top: 85px;
+                            padding-left: 60px;
+                        }
+
+                    }
+                }
+            }
+        }
+        .aboutLeftImg{
+            @include lg{
+                padding-bottom: 0;
+            }
+            .container{
+                .row{
+                    .aboutInfo{
+                        padding-top: 100px;
                     }
                 }
             }

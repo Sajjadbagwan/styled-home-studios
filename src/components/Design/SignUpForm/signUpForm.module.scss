@@ -54,6 +54,13 @@
             width: 100%;
             padding: 74px 30px;
           }
+          h2{
+            @include md{
+              br{
+                display: none;
+              }
+            }
+          }
           form {
             margin: 28px 0 0 0;
             @include lg {
@@ -68,6 +75,9 @@
               .wrapper_dropdown {
                 .react-select__control {
                   min-height: 64px;
+                  @include md{
+                    min-height: 68px;
+                  }
                 }
               }
             }

@@ -3,6 +3,12 @@
     margin: 60px 0 0 0;
     width: 100%;
     max-width: 255px;
+    @include lg{
+        max-width: 230px;
+    }
+    @include md{
+        max-width: 100%;
+    }
     :global{
         .filterFaq{
             h3{

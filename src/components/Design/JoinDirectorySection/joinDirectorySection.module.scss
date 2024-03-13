@@ -25,6 +25,9 @@
                     top: 32%;
                     z-index: -1;
                     left: 76%;
+                    @include md{
+                        width: 228%;
+                    }
                 }
                 a{
                    height: 75px;
@@ -38,6 +41,10 @@
                    margin: 0 auto;
                    background-color: #fff;
                    position: relative;
+                   @include md{
+                    height: 65px;
+                    width: 65px;
+                   }
                    svg{
                     width: 35px;
                     height: 30px;     
@@ -57,6 +64,9 @@
                     font-size: 16px;
                     color: $black-color;
                     margin-top: 10px;
+                    @include md{
+                        font-size: 14px;
+                    }
                 }
                 &:last-child{
                     &::before{
@@ -77,6 +87,10 @@
             h2{
                 margin-bottom: 38px;
                 display: inline-block;
+                @include md{
+                    margin-bottom: 20px;
+                    line-height: 26px;
+                }
             }
             h3{
                 text-align: left;
@@ -92,6 +106,9 @@
             }
             p{
                 margin-bottom: 25px;
+                @include md{
+                    font-size: 14px;
+                }
             }
             form{     
                 hr{
@@ -107,13 +124,28 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @include md{
+                        flex-wrap: wrap;
+                    }
+                    a{
+                        @include md{
+                            font-size: 14px;
+                            margin-bottom: 15px;
+                        }
+                    }
                     .allBtn{
                         margin: 0;
+                        @include lg{
+                            padding: 10px 30px 11px 30px;
+                        }
                         &.border{
                             margin-left: auto;
                             margin-right: 45px;
                             color: $green-color;
                             border-color: $green-color;
+                            @include lg{
+                                margin-right: 30px;
+                            }
                             &:hover{
                                 color: $white-color;
                             }
@@ -132,6 +164,17 @@
                     background-color: $green-color;
                     color: $white-color;
                     padding: 30px 50px 30px 40px;
+                    @include lg{
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    @include md{
+                        margin-top: 0;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
                     .reason{
                         display: flex;
                         align-items: flex-start;
@@ -146,6 +189,9 @@
                             h3{
                                 margin: 5px 0 18px 0;
                                 font-size: 20px;
+                                @include lg{
+                                    font-size: 18px;
+                                }
                             }
                         }
                     }
@@ -164,6 +210,14 @@
                         align-items: center;
                         height: 130px;
                         margin-right: 43px;
+                        @include md{
+                            margin-right: 15px;
+                        }
+                        &:last-child{
+                            @include md{
+                                margin-right: 0;
+                            }
+                        }
                     }
                     .form-control{
                             position: relative;
@@ -218,6 +272,9 @@
                         width: 77.2%;
                         input{
                             margin: 0;
+                        }
+                        @include md{
+                            width: 59%;
                         }
                     }
                     .allBtn{
@@ -329,15 +386,24 @@
                         p{
                             min-width: 150px;
                             font-size: 14px;
+                            @include lg{
+                                min-width: 125px;
+                            }
                         }
                     }
                     .cardExpiry{
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
+                        @include md{
+                            flex-wrap: wrap;
+                        }
                         .cardData{
                             p{
                                 min-width: 150px;
+                                @include lg{
+                                    min-width: 125px;
+                                }
                                 &:last-child{
                                     width: auto;
                                     min-width: 50px;
@@ -350,6 +416,22 @@
                     margin: 0 0 23px 0;
                     line-height: normal;
                     font-size: 16px;
+                    @include md{
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+                }
+                form{
+                    &:last-child{
+                        .buttonContainer{
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            button{
+                                margin: 0 0 15px 0;
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
             }
             .titleDiv{
@@ -360,6 +442,15 @@
                 h3{
                     margin-bottom: 0;
                     font-size: 23px;
+                    @include md{
+                        font-size: 20px;
+                        width: 70%;
+                    }
+                }
+                a{
+                    @include md{
+                        font-size: 14px;
+                    }
                 }
                 img{
                     position: relative;
