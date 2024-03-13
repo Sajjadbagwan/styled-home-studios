@@ -6,9 +6,21 @@
       .allLocation {
         & > .slick-list {
           margin: 0 -50px;
+          @include xl {
+            margin: 0 -20px;
+          }
+          @include lg {
+            margin: 0 -30px;
+          }
           & > .slick-track {
             & > .slick-slide {
               padding: 0 50px;
+              @include xl {
+                padding: 0 20px;
+              }
+              @include lg {
+                padding: 0 30px;
+              }
               .slide {
                 .slideImg {
                   position: relative;

@@ -33,13 +33,13 @@
         margin-top: 20px;
       }
       .button-container {
-          @include md{
-            display: flex;
-            flex-direction: column;
-            .allBtn{
-              margin: 0 0 20px 0;
-            }
+        @include md {
+          display: flex;
+          flex-direction: column;
+          .allBtn {
+            margin: 0 0 20px 0;
           }
+        }
         button {
           &:last-child {
             margin-left: 40px;
@@ -75,8 +75,8 @@
     :global {
       .popup-body {
         p {
-          @include md{
-            br{
+          @include md {
+            br {
               display: none;
             }
           }
@@ -87,13 +87,12 @@
         .allBtn {
           margin-right: 20px;
         }
-        a{
+        a {
           margin-left: 30px;
-          @include md{
+          @include md {
             margin: 0;
           }
         }
-        
       }
     }
   }
@@ -126,7 +125,7 @@
     @include xl {
       padding: 40px !important;
     }
-    @include md{
+    @include md {
       padding: 20px !important;
       max-width: 90% !important;
     }
@@ -167,10 +166,14 @@
   }
   &.allReviewPopup {
     margin: 0 auto !important;
-    max-width: 1035px !important;
+    width: 1035px !important;
+    max-width: 90% !important;
     height: 80vh !important;
     padding: 75px 40px 55px 90px !important;
     overflow: hidden;
+    @include md {
+      padding: 50px 30px !important;
+    }
     :global {
       .productAdded {
         .close-btn {
@@ -179,6 +182,9 @@
           position: absolute;
           top: 35px;
           right: 36px;
+          @include lg {
+            right: 26px;
+          }
         }
       }
       .popup-body {
@@ -194,8 +200,15 @@
             margin: 0 0 29px;
             border-bottom: 1px solid rgba(77, 77, 79, 0.5);
             padding: 0 0 33px 0;
+            flex-wrap: wrap;
             .img {
               flex: 0 0 14%;
+              @include lg {
+                flex: 0 0 30%;
+              }
+              @include md {
+                flex: 0 0 45%;
+              }
               img {
                 width: 100%;
                 height: 96%;
@@ -203,9 +216,18 @@
             }
             .info {
               flex: 0 0 16%;
+              @include lg {
+                flex: 0 0 65%;
+              }
+              @include md {
+                flex: 0 0 50%;
+              }
             }
             .content {
               flex: 0 0 64%;
+              @include lg {
+                flex: 0 0 100%;
+              }
             }
           }
         }
@@ -243,6 +265,10 @@
           & > div {
             flex: 0 0 45%;
             text-align: left;
+            width: 45%;
+            @include md {
+              flex: 0 0 100%;
+            }
             h3 {
               margin-bottom: 28px;
             }
@@ -250,8 +276,18 @@
               div {
                 background-color: $cream-color;
                 padding: 55px 50px;
+                @include lg {
+                  padding: 30px;
+                }
+                @include md {
+                  padding: 30px 35px;
+                  margin-top: 35px;
+                }
                 .allBtn {
                   border-color: $green-color;
+                  @include lg {
+                    padding: 5px 20px;
+                  }
                   &:hover {
                     border-color: transparent;
                   }
@@ -267,6 +303,9 @@
             left: 50%;
             transform: translate(-50%, 0);
             background: rgb(0 0 0 / 25%);
+            @include md {
+              display: none;
+            }
           }
         }
       }
@@ -336,8 +375,16 @@
     height: auto !important;
     padding: 98px !important;
     min-width: 40%;
+    @include max-desk {
+      max-width: 90% !important;
+    }
     @include lg {
       max-width: 90% !important;
+      padding: 70px 50px !important;
+    }
+    @include md {
+      max-width: 90% !important;
+      padding: 30px !important;
     }
     :global {
       .productAdded {
@@ -355,10 +402,10 @@
       }
     }
   }
-  &.joinDirectoryTermsPopup{
+  &.joinDirectoryTermsPopup {
     max-width: 90% !important;
     height: auto !important;
-    p{
+    p {
       text-align: left;
     }
   }

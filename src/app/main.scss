@@ -455,12 +455,12 @@ body {
       margin: 0 0 9px 0;
     }
   }
-  @include lg {
+  @include md {
     display: block;
     margin-bottom: 25px;
   }
   a {
-    @include lg {
+    @include md {
       margin: 0 0 0 -10px;
     }
   }
@@ -708,6 +708,9 @@ form {
     overflow-y: auto;
     padding: 92px 88px;
     position: relative;
+    @include lg {
+      padding: 60px 30px;
+    }
     .close {
       background: transparent;
       border: none;
@@ -721,6 +724,9 @@ form {
       font-weight: normal;
       font-size: 30px;
       margin-bottom: 35px;
+      @include lg {
+        font-size: 25px;
+      }
     }
   }
 }
@@ -826,8 +832,14 @@ button {
 .halfInput {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   & > .inputGroup {
     flex: 0 0 48.5%;
+    width: 48.5%;
+    @include md {
+      width: 100%;
+      flex: 0 0 100%;
+    }
   }
 }
 

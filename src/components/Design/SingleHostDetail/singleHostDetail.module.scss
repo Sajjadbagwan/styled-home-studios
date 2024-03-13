@@ -6,6 +6,12 @@
     .hostBox {
       padding: 45px 80px;
       background-color: rgb(139 146 151 / 5%);
+      @include xl {
+        padding: 35px;
+      }
+      @include lg {
+        padding: 30px;
+      }
       & > h2 {
         margin-bottom: 45px;
       }

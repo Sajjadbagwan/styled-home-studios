@@ -17,6 +17,9 @@
         grid-template-columns: repeat(3, 1fr);
         row-gap: 30px;
         column-gap: 95px;
+        @include lg {
+          grid-template-columns: repeat(1, 1fr);
+        }
         .popupBox {
           .popupImg {
             position: relative;

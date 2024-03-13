@@ -9,10 +9,26 @@
         .hostLeft {
           flex: 0 0 29%;
           width: 29%;
+          @include lg {
+            flex: 0 0 40%;
+            width: 40%;
+          }
+          @include md {
+            flex: 0 0 100%;
+            width: 100%;
+          }
         }
         .hostRight {
           flex: 0 0 65.5%;
           width: 65.5%;
+          @include lg {
+            flex: 0 0 60%;
+            width: 60%;
+          }
+          @include md {
+            flex: 0 0 100%;
+            width: 100%;
+          }
         }
       }
     }
