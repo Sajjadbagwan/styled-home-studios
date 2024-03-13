@@ -90,6 +90,9 @@
         .informationDiv{
             width: 74.2%;  
             margin-top: 6px;
+            @include xl{
+                width: 71.2%;
+            }
             .titleDiv{
                 display: flex;
                 justify-content: space-between;
