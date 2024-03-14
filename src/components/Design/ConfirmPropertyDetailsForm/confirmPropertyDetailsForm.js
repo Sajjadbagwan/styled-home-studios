@@ -12,12 +12,15 @@ import ConfirmPropertyDetailsStep6 from "@/components/Design/ConfirmPropertyDeta
 import ConfirmPropertyDetailsStep7 from "@/components/Design/ConfirmPropertyDetailsForm/confirmProperyDetailsStep7";
 
 function ConfirmPropertyDetailsForm() {
-  
+  const [show, setShow] = useState(0);
+//   const handleSteps = result => {
+//     setShow(result);
+// };
   return (
     <div className={styles.confirmPropertyDetailsForm}>
       <div className="container">
         <ul className="steps">
-          <li className="singlestep activeStep">
+          <li className={show ? "singlestep " : "singlestep activeStep"}>
             <Link href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">
@@ -30,7 +33,7 @@ function ConfirmPropertyDetailsForm() {
             </Link>
             <h4>Property Details</h4>
           </li>
-          <li className="singlestep">
+          <li className={show ? "singlestep activeStep" : "singlestep"}>
             <Link href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">
@@ -43,7 +46,7 @@ function ConfirmPropertyDetailsForm() {
             </Link>
             <h4>Pricing</h4>
           </li>
-          <li className="singlestep">
+          <li className={show ? "singlestep activeStep" : "singlestep"}>
             <Link href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">
@@ -56,7 +59,7 @@ function ConfirmPropertyDetailsForm() {
             </Link>
             <h4>Spacing</h4>
           </li>
-          <li className="singlestep">
+          <li className={show ? "singlestep activeStep" : "singlestep"}>
             <Link href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">
@@ -69,7 +72,7 @@ function ConfirmPropertyDetailsForm() {
             </Link>
             <h4>Style</h4>
           </li>
-          <li className="singlestep">
+          <li className={show ? "singlestep activeStep" : "singlestep"}>
             <Link href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">
@@ -82,7 +85,7 @@ function ConfirmPropertyDetailsForm() {
             </Link>
             <h4>Colours & Materials</h4>
           </li>
-          <li className="singlestep">
+          <li className={show ? "singlestep activeStep" : "singlestep"}>
             <Link href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">
@@ -95,7 +98,7 @@ function ConfirmPropertyDetailsForm() {
             </Link>
             <h4>Amenities</h4>
           </li>
-          <li className="singlestep">
+          <li className={show ? "singlestep activeStep" : "singlestep"}>
             <Link href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="40.112" height="36.549" viewBox="0 0 40.112 36.549">
                   <g id="Group_4679" data-name="Group 4679" transform="translate(0.85 1.049)">

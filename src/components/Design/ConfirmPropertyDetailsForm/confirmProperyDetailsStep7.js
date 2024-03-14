@@ -7,7 +7,7 @@ import styles from "./confirmPropertyDetailsForm.module.scss";
 function ConfirmPropertyDetailsStep7() {
     
   return (
-    <div className={styles.confirmPropertyDetailsStep7}>
+    <div className={styles.confirmPropertyDetailsStep7 + " commonSteps"}>
       <div className="formDiv">
         <div className="formDetails">           
             <h2>Step 7: House Rules</h2>
@@ -28,8 +28,8 @@ function ConfirmPropertyDetailsStep7() {
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="meterparking" type="checkbox" name="meterparking"/>
-                        <label className="form-control" htmlFor="meterparking">
+                        <input id="sparking" type="checkbox" name="sparking"/>
+                        <label className="form-control" htmlFor="sparking">
                             Meter street parking
                         </label>
                     </div>
@@ -120,7 +120,7 @@ function ConfirmPropertyDetailsStep7() {
             <div className="button-container">
                 <Link href="" className="save-come">Save Progress And Come Back Later</Link>
                 <button type="button" className="allBtn border">Previous Page</button>
-                <button type="button" className="allBtn dark">Submit for approval</button>
+                <button type="button" onClick={() => props.setShow(true)} className="allBtn dark">Submit for approval</button>
             </div>             
         </div>
       </div>
