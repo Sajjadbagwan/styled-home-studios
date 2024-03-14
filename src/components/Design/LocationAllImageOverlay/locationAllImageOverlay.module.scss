@@ -8,8 +8,8 @@
   top: 50%;
   transform: translate(0%, -50%);
   @include md {
-    max-width: 90%;
-    padding: 30px;
+    max-width: 90% !important;
+    padding: 30px !important;
   }
   :global {
     .productAdded {
@@ -34,7 +34,7 @@
         margin-bottom: 10px;
         flex-wrap: wrap;
         @include lg {
-          padding: 30px 35px 0;
+          padding: 30px 0 0;
         }
         .left {
           flex: 0 0 61.5%;
@@ -50,7 +50,7 @@
             margin: 18px 0;
             font-size: 16px;
             @include lg {
-              padding: 0 35px;
+              padding: 0;
             }
             .link {
               display: flex;
@@ -112,8 +112,16 @@
         ul {
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
           li {
             margin-right: 100px;
+
+            @include lg {
+              margin-right: 10px;
+            }
+            @include xl {
+              margin-right: 35px;
+            }
             &:last-child {
               margin-right: 0;
             }
@@ -128,9 +136,15 @@
         .GridGallary {
           display: grid;
           row-gap: 35px;
+          @include lg {
+            row-gap: 20px;
+          }
           .fullGrid {
             display: grid;
             gap: 35px;
+            @include lg {
+              gap: 20px;
+            }
             img {
               width: 100%;
               height: 100%;
@@ -140,6 +154,9 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 35px;
+            @include lg {
+              gap: 20px;
+            }
             img {
               width: 100%;
               height: 100%;
@@ -149,6 +166,9 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 35px;
+            @include lg {
+              gap: 20px;
+            }
             img {
               width: 100%;
               height: 100%;
