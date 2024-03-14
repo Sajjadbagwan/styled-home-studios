@@ -70,7 +70,7 @@ function JoinDirectoryBilling() {
                     <div className="inputGroup">
                         <input type="text" name="vcode" placeholder="Voucher Code" />
                     </div>
-                    <button type="button" className="allBtn dark border">Apply</button>
+                    <button aria-label="apply-btn" type="button" className="allBtn dark border">Apply</button>
                 </div>
                 <hr/>
                 <h3>Payment Information <Image src={CardIcon} height={30} width={140} alt="card" /></h3>
@@ -103,8 +103,8 @@ function JoinDirectoryBilling() {
                 <hr/>
                 <div className="buttonContainer">
                     <Link href="" className="save-come">Save Progress And Come Back Later</Link>
-                    <button type="button" className="allBtn border">Previous Page</button>
-                    <button type="button" className="allBtn dark">Submit</button>
+                    <button aria-label="previous-btn" type="button" className="allBtn border">Previous Page</button>
+                    <button aria-label="submit-btn" type="button" className="allBtn dark">Submit</button>
                 </div>     
                 <JoinDirectoryPopup JoinDirectoryTermsPopupIsOpen={JoinDirectoryTermsPopupIsOpen} closeJoinDirectoryTermsPopup={closeJoinDirectoryTermsPopup}/>
             </form>            

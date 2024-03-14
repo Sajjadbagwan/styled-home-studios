@@ -43,7 +43,7 @@ function YourId() {
                       style={{ display: "none" }}
                     />
                     {/* Button to trigger the file input dialog */}
-                    <button type="button" className="upload-btn" onClick={onChooseFile}>
+                    <button type="button" aria-label="upload" className="upload-btn" onClick={onChooseFile}>
                       <span className="file-btn">
                         <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
                       </span>
@@ -53,7 +53,7 @@ function YourId() {
                       <div className="selected-file">                      
                         <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
                         {/* <p>{selectedFile.name}</p> */}
-                        <button type="button" onClick={removeFile}>
+                        <button aria-label="remove" type="button" onClick={removeFile}>
                           <span class="material-symbols-rounded">Delete</span>
                         </button>
                       </div>
@@ -61,7 +61,7 @@ function YourId() {
                   </div>
             </div>
             <hr/>
-            <button type="button" className="allBtn dark border">Save</button>
+            <button type="button" aria-label="save" className="allBtn dark border">Save</button>
           </form>
         </div>     
     </div>

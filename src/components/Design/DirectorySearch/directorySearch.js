@@ -27,7 +27,7 @@ function DirectorySearch() {
                     name="search"
                     />
                 </div>
-                <button type="submit">
+                <button type="submit" aria-label="search-btn">
                     <Image
                     src="/assets/images/search.svg"
                     width={24}

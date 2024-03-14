@@ -22,7 +22,7 @@ const ConfirmCancelBookingPopup = (props) => {
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeConfirmCancelBookingModal}>
+                        <button aria-label="close-btn" type="button" className="close-btn" onClick={closeConfirmCancelBookingModal}>
                         <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>  
                         </button>  
                     </div>                           
@@ -30,8 +30,8 @@ const ConfirmCancelBookingPopup = (props) => {
                         <h3>Cancel Booking</h3>
                         <p>Are you sure you would like to cancel booking #004<br/>and refund the payment?</p>
                         <div className="button-container">
-                          <button type="button" className="allBtn dark border" onClick={closeConfirmCancelBookingModal}>No, Cancel</button>
-                          <button type="button" onClick={() => {closeConfirmCancelBookingModal(), openCancelConfirmationModal()}}>Yes, Cancel Booking</button>
+                          <button aria-label="cancel-btn" type="button" className="allBtn dark border" onClick={closeConfirmCancelBookingModal}>No, Cancel</button>
+                          <button type="button" aria-label="cancel-book" onClick={() => {closeConfirmCancelBookingModal(), openCancelConfirmationModal()}}>Yes, Cancel Booking</button>
                         </div>
                     </div>
                 </div>

@@ -62,7 +62,7 @@ function BecomeAhostForm() {
                     multiple
                   />
                   {/* Button to trigger the file input dialog */}
-                  <button type="button" className="upload-btn" onClick={onChooseFile}>
+                  <button aria-label="upload" type="button" className="upload-btn" onClick={onChooseFile}>
                     <span className="file-btn">
                       <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
                     </span>
@@ -72,7 +72,7 @@ function BecomeAhostForm() {
                     <div className="selected-file">                      
                       <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
                       <p>{selectedFile.name}</p>
-                      <button type="button" onClick={removeFile}>
+                      <button aria-label="remove" type="button" onClick={removeFile}>
                         <span class="material-symbols-rounded">Delete</span>
                       </button>
                     </div>
@@ -93,7 +93,7 @@ function BecomeAhostForm() {
                   </div>
                   <hr />
               </div>
-              <button type="button" className="allBtn dark">Submit for approval</button>
+              <button aria-label="submit" type="button" className="allBtn dark">Submit for approval</button>
             </form>
           </div>
         </div>

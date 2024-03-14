@@ -117,7 +117,8 @@ function BookingOrderForm() {
                 <button
                   className="allBtn dark border"
                   type="submit"
-                  value="apply"
+                  value="apply" 
+                  aria-label="apply"
                 >
                   Apply
                 </button>
@@ -155,7 +156,7 @@ function BookingOrderForm() {
             </div>
             <hr />
             <div className="inputGroup bookBtn">
-              <button className="allBtn dark border" type="submit">
+              <button aria-label="request" className="allBtn dark border" type="submit">
                 Request a booking
               </button>
             </div>

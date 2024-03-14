@@ -40,7 +40,7 @@ function LeaveAreviewSection() {
                     </div>
                 </form>
                 <div className="button-container">
-                    <button type="button" className="allBtn dark border">Submit</button>
+                    <button aria-label="submit-btn" type="button" className="allBtn dark border">Submit</button>
                 </div>
             </div>
           </div>

@@ -52,7 +52,7 @@ function DirectoryProfileEditSection() {
                       style={{ display: "none" }}
                     />
                     {/* Button to trigger the file input dialog */}
-                    <button type="button" className="upload-btn" onClick={onChooseFile}>
+                    <button aria-label="upload-btn" type="button" className="upload-btn" onClick={onChooseFile}>
                       <span className="file-btn">
                         <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
                       </span>
@@ -62,7 +62,7 @@ function DirectoryProfileEditSection() {
                       <div className="selected-file">                      
                         <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
                         {/* <p>{selectedFile.name}</p> */}
-                        <button type="button" onClick={removeFile}>
+                        <button aria-label="remove-btn" type="button" onClick={removeFile}>
                           <span class="material-symbols-rounded">Delete</span>
                         </button>
                       </div>
@@ -161,7 +161,7 @@ function DirectoryProfileEditSection() {
                 <input type="text" name="company" placeholder="Company" />
               </div>
             </div>
-            <button type="button" className="allBtn dark border">Submit</button>
+            <button aria-label="submit-btn" type="button" className="allBtn dark border">Submit</button>
           </form>
           <div className="testimonialInfo">
             <h3>Testimonials</h3>
@@ -190,7 +190,7 @@ function DirectoryProfileEditSection() {
                             style={{ display: "none" }}
                             />
                             {/* Button to trigger the file input dialog */}
-                            <button type="button" className="upload-btn" onClick={onChooseFile}>
+                            <button aria-label="upload-btn" type="button" className="upload-btn" onClick={onChooseFile}>
                             <span className="file-btn">
                                 <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
                             </span>
@@ -200,7 +200,7 @@ function DirectoryProfileEditSection() {
                             <div className="selected-file">                      
                                 <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
                                 {/* <p>{selectedFile.name}</p> */}
-                                <button type="button" onClick={removeFile}>
+                                <button aria-label="delete-btn" type="button" onClick={removeFile}>
                                 <span class="material-symbols-rounded">Delete</span>
                                 </button>
                             </div>
@@ -335,7 +335,7 @@ function DirectoryProfileEditSection() {
             </ul>
           </div>
           <hr/>
-          <button type="button" className="allBtn dark border">Save</button>
+          <button aria-label="save-btn" type="button" className="allBtn dark border">Save</button>
         </div>  
         </div>
               

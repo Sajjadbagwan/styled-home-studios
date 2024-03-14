@@ -24,7 +24,7 @@ function YourServiceDetails() {
                 <hr/>
                 <div className="buttonContainer">
                     <Link href="" className="save-come">Save Progress and Come Back Later</Link>
-                    <button type="button" className="allBtn dark">Next</button>
+                    <button aria-label="next-btn" type="button" className="allBtn dark">Next</button>
                 </div>     
             </form>
             

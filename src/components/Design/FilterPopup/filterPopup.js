@@ -103,7 +103,7 @@ function FilterPopup() {
       {isOpen && (
         <div className={styles.mainPopup + " mainPopup"}>
           <div className="innerPopup">
-            <button className="close" onClick={handleClickPopup}>
+            <button className="close" aria-label="close-btn" onClick={handleClickPopup}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="10.012"
@@ -2212,7 +2212,7 @@ function FilterPopup() {
                 </div>
               </div>
               <div className="filterSubmit">
-                <button type="submit" className="allBtn dark border">
+                <button aria-label="submit-btn" type="submit" className="allBtn dark border">
                   Submit
                 </button>
               </div>

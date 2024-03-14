@@ -351,8 +351,8 @@ function ConfirmPropertyDetailsStep5() {
             <hr/>
             <div className="button-container">
                 <Link href="" className="save-come">Save Progress And Come Back Later</Link>
-                <button type="button" className="allBtn border">Previous Page</button>
-                <button type="button" onClick={() => props.setShow(true)} className="allBtn dark">Next</button>
+                <button aria-label="previous-btn" type="button" className="allBtn border">Previous Page</button>
+                <button aria-label="next-btn" type="button" className="allBtn dark">Next</button>
             </div>          
         </div>
       </div>

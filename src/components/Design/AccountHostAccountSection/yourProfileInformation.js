@@ -39,7 +39,7 @@ function YourProfileInformation() {
                       style={{ display: "none" }}
                     />
                     {/* Button to trigger the file input dialog */}
-                    <button type="button" className="upload-btn" onClick={onChooseFile}>
+                    <button aria-label="upload" type="button" className="upload-btn" onClick={onChooseFile}>
                       <span className="file-btn">
                         <Image src={UploadButton} height={125} width={125} alt="upload-btn"/>
                       </span>
@@ -49,7 +49,7 @@ function YourProfileInformation() {
                       <div className="selected-file">                      
                         <Image src={SelectedImage} height={110} width={120} alt="selectedimg"/>
                         {/* <p>{selectedFile.name}</p> */}
-                        <button type="button" onClick={removeFile}>
+                        <button aria-label="remove" type="button" onClick={removeFile}>
                           <span class="material-symbols-rounded">Delete</span>
                         </button>
                       </div>
@@ -81,7 +81,7 @@ function YourProfileInformation() {
               <textarea name="desc" placeholder="Bio"></textarea>
             </div>
             <hr/>
-            <button type="button" className="allBtn dark border">Save</button>
+            <button aria-label="save" type="button" className="allBtn dark border">Save</button>
           </form>
         </div>        
     </div>

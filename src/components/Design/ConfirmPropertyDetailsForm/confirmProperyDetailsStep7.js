@@ -113,14 +113,14 @@ function ConfirmPropertyDetailsStep7() {
                 <p>Please enter any additional house rules you may have. These will be added to the list above and will be preselected when submitted.</p>              
                 <div className="inputGroup">
                     <input type="text" name="smoke-detail" placeholder="No smoking on the property"/>
-                    <button type="submit" className="allBtn dark">Submit</button>
+                    <button aria-label="submit" type="submit" className="allBtn dark">Submit</button>
                 </div>         
             </div>
             <hr/>
             <div className="button-container">
                 <Link href="" className="save-come">Save Progress And Come Back Later</Link>
-                <button type="button" className="allBtn border">Previous Page</button>
-                <button type="button" onClick={() => props.setShow(true)} className="allBtn dark">Submit for approval</button>
+                <button aria-label="previous-btn" type="button" className="allBtn border">Previous Page</button>
+                <button aria-label="approval" type="button" className="allBtn dark">Submit for approval</button>
             </div>             
         </div>
       </div>

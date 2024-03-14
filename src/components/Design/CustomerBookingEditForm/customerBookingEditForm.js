@@ -47,7 +47,7 @@ function CustomerBookingEditForm() {
             </div>
             <h4>£215.00</h4>
           </div>
-          <button type="submit" className="allBtn dark border">
+          <button aria-label="booknow" type="submit" className="allBtn dark border">
             Book Now
           </button>
           <div className="askForm">

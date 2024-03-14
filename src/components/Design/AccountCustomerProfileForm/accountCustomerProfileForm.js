@@ -47,6 +47,7 @@ function AccountCustomerProfileForm() {
                     type="button"
                     className="upload-btn"
                     onClick={onChooseFile}
+                    aria-label="upload-btn"
                   >
                     <span className="file-btn">
                       <Image
@@ -67,7 +68,7 @@ function AccountCustomerProfileForm() {
                         alt="selectedimg"
                       />
                       {/* <p>{selectedFile.name}</p> */}
-                      <button type="button" onClick={removeFile}>
+                      <button type="button" onClick={removeFile} aria-label="remove">
                         <span class="material-symbols-rounded">Delete</span>
                       </button>
                     </div>
@@ -189,7 +190,7 @@ function AccountCustomerProfileForm() {
                     </li>
                   </ul>
                 </div>
-                <button type="button" className="allBtn dark border">
+                <button type="button" aria-label="save" className="allBtn dark border">
                   Save
                 </button>
               </div>

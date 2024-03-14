@@ -48,7 +48,7 @@ function ChangePassword() {
                         </li>
                     </ul>
                 </div>
-                <button type="button" className="allBtn dark border">Save</button>
+                <button type="button" aria-label="save" className="allBtn dark border">Save</button>
             </div>            
           </form>
         </div>

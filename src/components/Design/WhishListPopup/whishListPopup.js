@@ -39,7 +39,7 @@ function WhishListPopup() {
       {isOpen && (
         <div className={styles.mainPopup + " mainPopup"}>
           <div className="innerPopup">
-            <button className="close" onClick={handleClickPopup}>
+            <button className="close" aria-label="close-btn" onClick={handleClickPopup}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="10.012"

@@ -22,7 +22,7 @@ const JoinDirectoryPopup = (props) => {
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeJoinDirectoryTermsPopup}>
+                        <button type="button" aria-label="close-btn" className="close-btn" onClick={closeJoinDirectoryTermsPopup}>
                           <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>  
                         </button>  
                     </div>                           

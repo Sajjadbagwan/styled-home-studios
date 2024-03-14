@@ -465,7 +465,7 @@ function DirectoryMainListing() {
                         </div>
                     </div>
                 </div>
-                <button type="button" className="allBtn dark border">Load More</button>
+                <button aria-label="loadmore" type="button" className="allBtn dark border">Load More</button>
             </div>
       </div>
     </div>

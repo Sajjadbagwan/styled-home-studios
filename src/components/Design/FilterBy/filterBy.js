@@ -78,7 +78,7 @@ function FilterBy() {
                         </li>
                     </ul>
                 </div>
-                <button type="button">
+                <button type="button" aria-label="down-btn">
                     <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                 </button>
             </li>
@@ -148,7 +148,7 @@ function FilterBy() {
                         </li>
                     </ul>
                 </div>
-                <button type="button">
+                <button type="button" aria-label="down-btn">
                     <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                 </button>
             </li>
@@ -218,7 +218,7 @@ function FilterBy() {
                         </li>
                     </ul>
                 </div>
-                <button type="button">
+                <button type="button" aria-label="down-btn">
                     <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                 </button>
             </li>
@@ -288,7 +288,7 @@ function FilterBy() {
                         </li>
                     </ul>
                 </div>
-                <button type="button">
+                <button type="button" aria-label="down-btn">  
                     <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                 </button>
             </li>

@@ -98,7 +98,7 @@ function MainBookingSection() {
             name="search"
           />
         </div>
-        <button type="submit">
+        <button type="submit" aria-label="submit-btn">
           <Image
             src="/assets/images/search.svg"
             width={24}
@@ -111,7 +111,7 @@ function MainBookingSection() {
         <div className="singleBooking">
           <div className="bookingId">
             <h3>Booking #003</h3>
-            <button type="button" onClick={openDeclineBookingModal}>
+            <button aria-label="decline-btn" type="button" onClick={openDeclineBookingModal}>
               Decline Request
             </button>
             <p>Bright and Light Townhouse – N1</p>
@@ -132,6 +132,7 @@ function MainBookingSection() {
             type="button"
             className={open == 1 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 1 ? 0 : 1)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -256,6 +257,7 @@ function MainBookingSection() {
                   type="button"
                   onClick={openAcceptBookingModal}
                   className="allBtn border dark"
+                  aria-label="accept-btn"
                 >
                   Accept request
                 </button>
@@ -311,7 +313,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button type="button" className="allBtn dark" aria-label="send-btn">
                       Send
                     </button>
                   </div>
@@ -326,7 +328,7 @@ function MainBookingSection() {
         <div className="singleBooking">
           <div className="bookingId">
             <h3>Booking #004</h3>
-            <button type="button" onClick={openDeclineBookingModal}>
+            <button aria-label="decline-btn" type="button" onClick={openDeclineBookingModal}>
               Decline Request
             </button>
             <p>Bright and Light Townhouse – N1</p>
@@ -347,6 +349,7 @@ function MainBookingSection() {
             type="button"
             className={open == 2 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 2 ? 0 : 2)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -475,6 +478,7 @@ function MainBookingSection() {
                   type="button"
                   onClick={openAcceptBookingModal}
                   className="allBtn border dark"
+                  aria-label="accept-btn"
                 >
                   Accept request
                 </button>
@@ -530,7 +534,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button type="button" className="allBtn dark" aria-label="send-btn">
                       Send
                     </button>
                   </div>
@@ -543,7 +547,7 @@ function MainBookingSection() {
         <div className="singleBooking confirmBooking">
           <div className="bookingId">
             <h3>Booking #005</h3>
-            <button type="button" onClick={openCancelBookingModal}>
+            <button type="button" onClick={openCancelBookingModal} aria-label="cancel-btn">
               Cancel Booking
             </button>
             <p>Bright and Light Townhouse – N1</p>
@@ -564,6 +568,7 @@ function MainBookingSection() {
             type="button"
             className={open == 3 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 3 ? 0 : 3)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -698,6 +703,7 @@ function MainBookingSection() {
                     type="button"
                     onClick={openAcceptBookingModal}
                     className="allBtn border dark"
+                    aria-label="download-btn"
                   >
                     Resend Confirmation
                   </button>
@@ -764,7 +770,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button type="button" className="allBtn dark" aria-label="send-btn">
                       Send
                     </button>
                   </div>
@@ -777,7 +783,7 @@ function MainBookingSection() {
         <div className="singleBooking confirmBooking">
           <div className="bookingId">
             <h3>Booking #006</h3>
-            <button type="button" onClick={openCancelBookingModal}>
+            <button type="button" onClick={openCancelBookingModal} aria-label="cancel-btn">
               Cancel Booking
             </button>
             <p>Bright and Light Townhouse – N1</p>
@@ -798,6 +804,7 @@ function MainBookingSection() {
             type="button"
             className={open == 4 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 4 ? 0 : 4)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -932,6 +939,7 @@ function MainBookingSection() {
                     type="button"
                     onClick={openAcceptBookingModal}
                     className="allBtn border dark"
+                    aria-label="resend-btn"
                   >
                     Resend Confirmation
                   </button>
@@ -998,7 +1006,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button type="button" className="allBtn dark" aria-label="send-btn">
                       Send
                     </button>
                   </div>
@@ -1030,6 +1038,7 @@ function MainBookingSection() {
             type="button"
             className={open == 5 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 5 ? 0 : 5)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -1164,6 +1173,7 @@ function MainBookingSection() {
                     type="button"
                     onClick={openAcceptBookingModal}
                     className="allBtn border dark"
+                    aria-label="accept-btn"
                   >
                     Accept request
                   </button>
@@ -1231,7 +1241,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button type="button" className="allBtn dark" aria-label="send-btn">
                       Send
                     </button>
                   </div>
@@ -1263,6 +1273,7 @@ function MainBookingSection() {
             type="button"
             className={open == 6 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 6 ? 0 : 6)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -1397,6 +1408,7 @@ function MainBookingSection() {
                     type="button"
                     onClick={openAcceptBookingModal}
                     className="allBtn border dark"
+                    aria-label="accept-btn"
                   >
                     Accept request
                   </button>
@@ -1464,7 +1476,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button type="button" className="allBtn dark" aria-label="send-btn">
                       Send
                     </button>
                   </div>
@@ -1496,6 +1508,7 @@ function MainBookingSection() {
             type="button"
             className={open == 7 ? "accordian openAccordion" : "accordian"}
             onClick={() => setOpen(open == 7 ? 0 : 7)}
+            aria-label="down-btn"
           >
             <Image src={DownArrow} alt="down-arrow" height={10} width={18} />
           </button>
@@ -1630,10 +1643,11 @@ function MainBookingSection() {
                     type="button"
                     onClick={openAcceptBookingModal}
                     className="allBtn border dark"
+                    aria-label="resend-btn"
                   >
                     Resend Confirmation
                   </button>
-                  <button type="button" onClick={openLeaveReviewModal}>
+                  <button aria-label="review-btn" type="button" onClick={openLeaveReviewModal}>
                     Leave A Review
                   </button>
                 </div>
@@ -1689,7 +1703,7 @@ function MainBookingSection() {
                       name="type-message"
                       placeholder="Type message"
                     />
-                    <button type="button" className="allBtn dark">
+                    <button aria-label="send-btn" type="button" className="allBtn dark">
                       Send
                     </button>
                   </div>
@@ -1699,7 +1713,7 @@ function MainBookingSection() {
           </div>
         </div>
 
-        <button type="button" className="allBtn dark border">
+        <button aria-label="loadmore" type="button" className="allBtn dark border">
           Load More
         </button>
       </div>

@@ -22,7 +22,7 @@ const CancelBookingPopup = (props) => {
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeCancelBookingModal}>
+                        <button aria-label="close-btn" type="button" className="close-btn" onClick={closeCancelBookingModal}>
                           <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>  
                         </button>  
                     </div>                           
@@ -34,8 +34,8 @@ const CancelBookingPopup = (props) => {
                           </div>
                         </form>
                         <div className="button-container">
-                          <button type="button" className="allBtn dark border" onClick={closeCancelBookingModal}>No, Cancel</button>
-                          <button type="button" href="" onClick={() => {closeCancelBookingModal(), openConfirmCancelBookingModal()}}>Yes, Cancel Booking</button>
+                          <button aria-label="cancel" type="button" className="allBtn dark border" onClick={closeCancelBookingModal}>No, Cancel</button>
+                          <button type="button" aria-label="close-btn" onClick={() => {closeCancelBookingModal(), openConfirmCancelBookingModal()}}>Yes, Cancel Booking</button>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ const LeaveReviewPopup = (props) => {
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeLeaveReviewModal}>
+                        <button type="button" aria-label="close-btn" className="close-btn" onClick={closeLeaveReviewModal}>
                           <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>
                         </button>  
                     </div>                           
@@ -58,7 +58,7 @@ const LeaveReviewPopup = (props) => {
                           </div>
                         </form>
                         <div className="button-container">
-                          <button type="button" className="allBtn dark border" onClick={closeLeaveReviewModal}>Submit</button>
+                          <button aria-label="submit-btn" type="button" className="allBtn dark border" onClick={closeLeaveReviewModal}>Submit</button>
                         </div>
                     </div>
                 </div>

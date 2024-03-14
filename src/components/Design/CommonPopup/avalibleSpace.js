@@ -27,6 +27,7 @@ const AvalibleSpacePopup = (props) => {
               type="button"
               className="close-btn"
               onClick={closeavalibleSpaceModal}
+              aria-label="close-btn"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

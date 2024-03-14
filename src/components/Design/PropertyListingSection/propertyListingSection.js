@@ -73,7 +73,7 @@ function PropertyListingSection() {
                   <p>£100 Per Hour</p>
                 </div>
                 <Link href="" className="allBtn dark border">View Submission</Link>
-                <button className="normalLink" type="button" onClick={openRemovePropertyModal}>Cancel Application</button>
+                <button aria-label="cancel-btn" className="normalLink" type="button" onClick={openRemovePropertyModal}>Cancel Application</button>
               </div>
             </div>
             <div className="slide">
@@ -95,7 +95,7 @@ function PropertyListingSection() {
                   <p>Area: South West</p>
                   <p>£215 Per Hour</p>
                 </div>
-                <button type="button" onClick={openVerifyIdentityModal} className="allBtn dark border">Complete listing</button>
+                <button aria-label="complete-btn" type="button" onClick={openVerifyIdentityModal} className="allBtn dark border">Complete listing</button>
               </div>
             </div>
             <div className="slide">
@@ -136,7 +136,7 @@ function PropertyListingSection() {
                 <Link href="">View Listing</Link>
                 <Link href="" className="allBtn dark border">Edit Listing</Link>
                 <Link href="" className="allBtn border">View bookings</Link>
-                <button type="button" className="normalLink" onClick={openDeactivatePropertyodal}>Deactivate</button>
+                <button aria-label="deactivate" type="button" className="normalLink" onClick={openDeactivatePropertyodal}>Deactivate</button>
               </div>
             </div>
             <div className="slide">

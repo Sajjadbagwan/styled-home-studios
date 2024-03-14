@@ -85,8 +85,8 @@ function SubmitForApprovalPage() {
                 <hr/>
                 <div className="buttonContainer">
                     <Link href="" className="save-come">Save Progress And Come Back Later</Link>
-                    <button type="button" className="allBtn border">Previous Page</button>
-                    <button type="button" className="allBtn dark">Submit for approval</button>
+                    <button aria-label="previous-btn" type="button" className="allBtn border">Previous Page</button>
+                    <button aria-label="approval-btn" type="button" className="allBtn dark">Submit for approval</button>
                 </div> 
             </form>            
         </div>

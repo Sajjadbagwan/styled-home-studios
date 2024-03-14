@@ -76,7 +76,7 @@ function BrowseByColour() {
           {sliderData.map((slide, index) => (
             <div key={index} className="slide">
               <div className="slideInfo">
-                <Image src={slide.image} width={242} height={328}></Image>
+                <Image src={slide.image} width={242} height={328} alt="image-color"></Image>
                 <h3>{slide.category}</h3>
               </div>
             </div>

@@ -14,7 +14,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -34,7 +34,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -54,7 +54,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -74,7 +74,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -94,7 +94,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -114,7 +114,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -134,7 +134,7 @@ function FaqContent() {
                 <div className="accordionSummary">
                     <div className="typography">
                         <h4>FAQ Question Goes Here Lorem Ipsum Dolor Sit Amet Onsectetur Adipiscing </h4>
-                        <button type="button">
+                        <button aria-label="down-btn" type="button">
                             <Image src={DownArrow} alt="down-arrow" height={10} width={18}/>
                         </button>
                     </div>
@@ -150,7 +150,7 @@ function FaqContent() {
                     </div>
                 </div>
             </div>
-            <button type="button" className="allBtn border dark">Load More</button>
+            <button aria-label="load-btn" type="button" className="allBtn border dark">Load More</button>
         </div>
     </div>
   );

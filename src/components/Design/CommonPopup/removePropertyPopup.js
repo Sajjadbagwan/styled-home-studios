@@ -18,7 +18,7 @@ const RemovePropertyPopup = (props) => {
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeRemovePropertyModal}>
+                        <button aria-label="close-btn" type="button" className="close-btn" onClick={closeRemovePropertyModal}>
                           <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>  
                         </button>  
                     </div>                           
@@ -26,7 +26,7 @@ const RemovePropertyPopup = (props) => {
                         <h3>Remove This Property?</h3>
                         <p>This will remove the listing completely from your account.<br/>Are you sure you want to cancel your application for<br/><span> ELEGANT EDINBURGH TOWNHOUSE - EH15 </span></p>
                         <div className="button-container">
-                          <button type="button" className="allBtn dark border" onClick={closeRemovePropertyModal}>No, Cancel</button>
+                          <button aria-label="remove" type="button" className="allBtn dark border" onClick={closeRemovePropertyModal}>No, Cancel</button>
                           <Link href="" >Yes, Remove Property</Link>
                         </div>
                     </div>

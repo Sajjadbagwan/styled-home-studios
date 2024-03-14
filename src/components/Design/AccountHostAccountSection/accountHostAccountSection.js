@@ -36,7 +36,7 @@ function AccountHostAccountSection() {
                             name="search"
                             />
                     </div>
-                    <button type="submit">
+                    <button type="submit" aria-label="search">
                             <Image
                             src="/assets/images/search.svg"
                             width={24}
@@ -45,7 +45,7 @@ function AccountHostAccountSection() {
                             />
                     </button>
                 </form>
-                <button type="button" className="allBtn dark border">
+                <button type="button" className="allBtn dark border" aria-label="search">
                 <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 27 27">
                     <g id="Group_5148" data-name="Group 5148" transform="translate(-1644.915 -842.915)">
                     <g id="Group_4547" data-name="Group 4547" transform="translate(1645 843)">
@@ -119,7 +119,7 @@ function AccountHostAccountSection() {
                             <li data-th="SHS Fees">£27.60</li>
                             <li data-th="My Revenue">£82.00</li>
                             <li data-th="Statement"><Link href=""><Image src={DownloadStatement} alt="download-statment" height={26} width={26} /></Link></li>
-                            <li className="mobileShow"><button type="button" className={open == 1 ? " " : " showMobile"} onClick={() => setOpen((open == 1) ? 0 : 1)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
+                            <li className="mobileShow"><button aria-label="arrow" type="button" className={open == 1 ? " " : " showMobile"} onClick={() => setOpen((open == 1) ? 0 : 1)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
                         </ul>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ function AccountHostAccountSection() {
                             <li data-th="SHS Fees">£27.60</li>
                             <li data-th="My Revenue">£82.00</li>
                             <li data-th="Statement"><Link href=""><Image src={DownloadStatement} alt="download-statment" height={26} width={26} /></Link></li>
-                            <li className="mobileShow"><button type="button" className={open == 2 ? " " : " showMobile"} onClick={() => setOpen((open == 2) ? 0 : 2)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
+                            <li className="mobileShow"><button aria-label="search" type="button" className={open == 2 ? " " : " showMobile"} onClick={() => setOpen((open == 2) ? 0 : 2)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
                         </ul>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ function AccountHostAccountSection() {
                             <li data-th="SHS Fees">£27.60</li>
                             <li data-th="My Revenue">£82.00</li>
                             <li data-th="Statement"><Link href=""><Image src={DownloadStatement} alt="download-statment" height={26} width={26} /></Link></li>
-                            <li className="mobileShow"><button type="button" className={open == 3 ? " " : " showMobile"} onClick={() => setOpen((open == 3) ? 0 : 3)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
+                            <li className="mobileShow"><button aria-label="search" type="button" className={open == 3 ? " " : " showMobile"} onClick={() => setOpen((open == 3) ? 0 : 3)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
                         </ul>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ function AccountHostAccountSection() {
                             <li data-th="SHS Fees">£27.60</li>
                             <li data-th="My Revenue">£82.00</li>
                             <li data-th="Statement"><Link href=""><Image src={DownloadStatement} alt="download-statment" height={26} width={26} /></Link></li>
-                            <li className="mobileShow"><button type="button" className={open == 4 ? " " : " showMobile"} onClick={() => setOpen((open == 4) ? 0 : 4)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
+                            <li className="mobileShow"><button aria-label="search" type="button" className={open == 4 ? " " : " showMobile"} onClick={() => setOpen((open == 4) ? 0 : 4)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
                         </ul>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ function AccountHostAccountSection() {
                             <li data-th="SHS Fees" className="declined">-£262.20</li>
                             <li data-th="My Revenue" className="declined">-£779.00</li>
                             <li data-th="Statement"><Link href=""><Image src={DownloadStatement} alt="download-statment" height={26} width={26} /></Link></li>
-                            <li className="mobileShow"><button type="button" className={open == 5 ? " " : " showMobile"} onClick={() => setOpen((open == 5) ? 0 : 5)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
+                            <li className="mobileShow"><button aria-label="search" type="button" className={open == 5 ? " " : " showMobile"} onClick={() => setOpen((open == 5) ? 0 : 5)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
                         </ul>
                     </div>
                 </div>
@@ -199,7 +199,7 @@ function AccountHostAccountSection() {
                             <li data-th="SHS Fees">£27.60</li>
                             <li data-th="My Revenue">£82.00</li>
                             <li data-th="Statement"><Link href=""><Image src={DownloadStatement} alt="download-statment" height={26} width={26} /></Link></li>
-                            <li className="mobileShow"><button type="button" className={open == 6 ? " " : " showMobile"} onClick={() => setOpen((open == 6) ? 0 : 6)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
+                            <li className="mobileShow"><button aria-label="search" type="button" className={open == 6 ? " " : " showMobile"} onClick={() => setOpen((open == 6) ? 0 : 6)}><Image src={DownArrow} alt="down-arrow" height={10} width={18}/></button></li>
                         </ul>
                     </div>
                 </div>

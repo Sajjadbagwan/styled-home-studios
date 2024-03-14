@@ -22,7 +22,7 @@ const DeactivatePropertyPopup = (props) => {
                 >
                 <div>
                     <div className='productAdded removeCompare'>
-                        <button type="button" className="close-btn" onClick={closeDeactivatePropertyodal}>
+                        <button aria-label="close-btn" type="button" className="close-btn" onClick={closeDeactivatePropertyodal}>
                         <Image src={CloseIcon} height={12} width={12} alt="close-icon"/>
                         </button>  
                     </div>                           
@@ -30,7 +30,7 @@ const DeactivatePropertyPopup = (props) => {
                         <h3>Deactivate This Property?</h3>
                         <p>This will deactivate the listing.<br/> Any bookings made against the property<br/> will remain.</p>
                         <div className="button-container">
-                          <button type="button" className="allBtn dark border" onClick={closeDeactivatePropertyodal}>No, Cancel</button>
+                          <button aria-label="cancel-btn" type="button" className="allBtn dark border" onClick={closeDeactivatePropertyodal}>No, Cancel</button>
                           <Link href="" >Yes, Deactivate Property</Link>
                         </div>
                     </div>
