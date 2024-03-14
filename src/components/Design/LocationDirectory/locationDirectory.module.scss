@@ -95,5 +95,11 @@
     background: $cream-color;
     clip-path: polygon(0 0, 100% 25%, 100% 0, 0 0, 0 0);
     z-index: 1;
+    @include xl {
+      bottom: -83px;
+    }
+    @include md {
+      bottom: -87px;
+    }
   }
 }

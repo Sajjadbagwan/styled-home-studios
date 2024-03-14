@@ -9,10 +9,19 @@
         .hostLeft {
           flex: 0 0 29%;
           width: 29%;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+            margin-bottom: 30px;
+          }
         }
         .hostRight {
           flex: 0 0 65.5%;
           width: 65.5%;
+          @include lg {
+            flex: 0 0 100%;
+            width: 100%;
+          }
         }
       }
     }

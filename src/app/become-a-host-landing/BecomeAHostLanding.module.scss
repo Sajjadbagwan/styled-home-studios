@@ -13,6 +13,10 @@
             .aboutInfo {
               padding-left: 63px;
               padding-top: 175px;
+              @include md {
+                padding-top: 0;
+                padding-bottom: 95px;
+              }
             }
           }
         }
@@ -21,6 +25,9 @@
     .aboutRightImg {
       padding-top: 100px;
       margin-bottom: 100px;
+      @include lg {
+        margin-bottom: 0;
+      }
       .container {
         .row {
           .aboutImg {

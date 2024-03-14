@@ -19,19 +19,48 @@
           .leftBooking {
             flex: 0 0 29%;
             width: 29%;
+            @include lg {
+              flex: 0 0 100%;
+              width: 100%;
+              margin-bottom: 30px;
+            }
           }
           .rightBooking {
             flex: 0 0 65%;
             width: 65%;
+            @include lg {
+              flex: 0 0 100%;
+              width: 100%;
+            }
             .bookTxt {
               margin-bottom: 50px;
             }
             .bookingOrderSummary {
               & > div {
                 padding: 90px;
+                @include xl {
+                  padding: 45px;
+                }
+                @include lg {
+                  padding: 30px;
+                }
+                .title {
+                  @include lg {
+                    display: flex;
+                    h2 {
+                      font-size: 20px;
+                    }
+                    a {
+                      font-size: 14px;
+                    }
+                  }
+                }
                 .subDetail {
                   span {
                     font-size: 20px;
+                    @include md {
+                      font-size: 16px;
+                    }
                     &.normal {
                       font-size: 14px;
                     }
@@ -39,6 +68,9 @@
                   &.total {
                     span {
                       font-size: 25px;
+                      @include md {
+                        font-size: 20px;
+                      }
                       &:last-child {
                         font-size: 14px;
                       }

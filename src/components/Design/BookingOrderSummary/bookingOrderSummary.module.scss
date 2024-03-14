@@ -8,6 +8,9 @@
     :global {
       .title {
         margin-bottom: 23px;
+        @include lg {
+          display: flex;
+        }
       }
       .subDetail {
         display: flex;

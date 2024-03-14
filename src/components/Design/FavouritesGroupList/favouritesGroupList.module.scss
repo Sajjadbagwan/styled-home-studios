@@ -5,6 +5,9 @@
   padding: 60px 0 85px;
   margin-top: -50px;
   position: relative;
+  @include md {
+    margin-top: -65px;
+  }
   :global {
     .container {
       .allLocation {
@@ -12,7 +15,16 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 100px;
         margin-bottom: 15px;
+        @include lg {
+          column-gap: 40px;
+        }
+        @include md {
+          grid-template-columns: repeat(1, 1fr);
+        }
         .slide {
+          @include md {
+            margin-bottom: 20px;
+          }
           .slideImg {
             position: relative;
             & > div {
