@@ -4,6 +4,9 @@
   margin: 0;
   :global {
     .aboutRightImg {
+      @include lg {
+        padding-bottom: 90px;
+      }
       .container {
         .row {
           .aboutImg {

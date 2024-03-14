@@ -11,12 +11,24 @@
           .leftBooking {
             flex: 0 0 29%;
             width: 29%;
+            @include lg {
+              flex: 0 0 100%;
+              width: 100%;
+              margin-bottom: 30px;
+            }
           }
           .rightBooking {
             flex: 0 0 68%;
             width: 68%;
+            @include lg {
+              flex: 0 0 100%;
+              width: 100%;
+            }
             .bookingInfo {
               padding: 60px;
+              @include lg {
+                padding: 30px;
+              }
             }
           }
         }

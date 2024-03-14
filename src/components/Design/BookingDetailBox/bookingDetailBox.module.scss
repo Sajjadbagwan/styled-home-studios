@@ -6,6 +6,12 @@
       border: 1px solid rgba(77, 77, 79, 0.5);
       padding: 87px;
       margin: 45px 0;
+      @include xl {
+        padding: 45px;
+      }
+      @include lg {
+        padding: 30px;
+      }
       .infoList {
         margin: 29px 0 23px;
         .list {
@@ -16,6 +22,21 @@
           span {
             font-family: $title-font;
             font-size: 16px;
+          }
+        }
+      }
+      .twoBtns {
+        .allBtn {
+          @include xl {
+            padding: 10px 25px;
+            margin: 0 25px 0 0;
+          }
+          @include lg {
+            margin: 0 0 20px 0;
+          }
+          @include md {
+            width: 100%;
+            margin: 0 0 20px 0;
           }
         }
       }
