@@ -28,6 +28,12 @@
                     top: 32%;
                     z-index: -1;
                     left: 76%;
+                    @include xl{
+                        width: 210%;
+                    }
+                    @include x-lg{
+                        width: 188%;
+                    }
                     @include lg{
                         display: none;
                     }
@@ -44,9 +50,17 @@
                    margin: 0 auto;
                    background-color: #fff;
                    position: relative;
+                   @include md{
+                    height: 82px;
+                    width: 82px;
+                   }
                    svg{
                     width: 35px;
-                    height: 30px;     
+                    height: 30px; 
+                    @include md{
+                        width: 38px;
+                        height: 34px;
+                    }    
                   }
                    span{
                         width: 35px;
@@ -63,6 +77,9 @@
                     font-size: 16px;
                     color: $black-color;
                     margin-top: 10px;
+                    @include md{
+                        margin-top: 13px;
+                    }
                 }
                 &:last-child{
                     &::before{
@@ -94,6 +111,9 @@
                 @include lg{
                     padding: 15px 30px;
                 }
+                @include md{
+                    margin-bottom: 65px;
+                }
                 .reason{
                     display: flex;
                     align-items: flex-start;
@@ -118,6 +138,9 @@
                 .formDetails{
                     max-width: 980px;
                     margin: 0 auto;
+                    @include md{
+                        max-width: 300px;
+                    }
                     h2{
                         text-align: left;
                         font-family: $title-font;
@@ -131,13 +154,29 @@
                         @include lg{
                             margin-bottom: 15px;
                         }
+                        @include md{
+                            margin-bottom: 21px;
+                        }
                     }
                     .inputGroup{
                         display: flex;
                         width: 100%;
                         justify-content: space-between;
+                        @include md{
+                            flex-wrap: wrap;
+                        }
+                        textarea{
+                            @include md{
+                                min-height: 268px;
+                                line-height: 28px;
+                                padding: 19px 25px 5px 25px;
+                            }
+                        }
                         .halfInput{
                             width: 49%;
+                            @include md{
+                                width: 100%;
+                            }
                         }
                     }
                     hr{
@@ -146,6 +185,9 @@
                         background-color: $breadcumb-color;
                         border: 0;
                         margin: 44px 0 38px 0;
+                        @include md{
+                            margin-top: 36px;
+                        }
                     }
                     .aboutYou{
                         .inputGroup{
@@ -163,9 +205,20 @@
                                         border-radius: 50%;
                                         margin-right: 20px;
                                         margin-top: -15px;
+                                        @include md{
+                                            margin-right: 10px;
+                                            height: 34px;
+                                            width: 34px;
+                                        }
                                     }
                                     input{
                                         width: 89%;
+                                        @include lg{
+                                            width: 85%;
+                                        }
+                                        @include md{
+                                            width: 84%;
+                                        }
                                     }
                                 }
                             }                            
@@ -174,12 +227,19 @@
                             text-align: left;
                             letter-spacing: 0;
                             margin-bottom: 27px;
+                            @include md{
+                                margin-bottom: 21px;
+                            }
                         }
                         textarea{
                             min-height: 147px;
                         }
                         hr{
                             margin-top: 23px;
+                            @include md{
+                                margin-top: 15px;
+                                margin-bottom: 30px;
+                            }
                         }
                     }
                     .imageSection{
@@ -187,6 +247,9 @@
                             text-align: left;
                             letter-spacing: 0;
                             margin-bottom: 20px;
+                            @include md{
+                                margin-bottom: 27px;
+                            }
                         }
                         p{
                             margin: 0;
@@ -194,16 +257,29 @@
                         .imageBox{
                             margin: 25px 0 0 0;
                             max-width: 890px;
+                            @include md{
+                                margin: 15px -30px 66px -30px;
+                            }
                             ul{
                                 display: grid;
                                 grid-template-columns: 1fr 1fr 1fr;
                                 grid-row-gap: 8px;
                                 align-items: flex-start;
                                 grid-column-gap: 12px;
+                                @include md{
+                                    grid-template-columns: auto;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
                                 li{
                                     text-align: center;
                                     padding-top: 30px;
                                     padding-bottom: 0;
+                                    @include md{
+                                        width: 48.3%;
+                                        padding-top: 0;
+                                        margin-bottom: 14px;
+                                    }
                                     a{
                                         max-width: 235px;
                                         width: 100%;
@@ -215,10 +291,25 @@
                                                 width: 210px;
                                                 height: 210px;
                                             }
+                                            @include md{
+                                                width: 173px;
+                                                height: 176px;
+                                            }
                                         }
                                     }
                                     &.featuredImage{    
                                         background-color: $green-color;
+                                        @include md{
+                                            width: 100%;
+                                            padding-top: 26px;
+                                            margin-bottom: 26px;
+                                        }
+                                        img{
+                                            @include md{
+                                                height: 244px;
+                                                width: 244px;
+                                            }                                            
+                                        }
                                         h3{
                                             color: #fff;
                                             font-size: 22px;
@@ -226,6 +317,10 @@
                                             margin-top: 12px;
                                             @include lg{
                                                 font-size: 18px;
+                                                margin-bottom: 15px;
+                                            }
+                                            @include md{
+                                                margin-top: 4px;
                                                 margin-bottom: 15px;
                                             }
                                         }
@@ -254,12 +349,19 @@
                                             @include lg{
                                                 height: 210px;
                                             }
+                                            @include md{
+                                                height: 175px;
+                                            }
                                             img{
                                                 height: 205px;
                                                 width: 205px;
                                                 @include lg{
                                                     height: 180px;
                                                     width: 180px;
+                                                }
+                                                @include md{
+                                                    height: 152px;
+                                                    width: 152px;
                                                 }
                                             }
                                         }
@@ -272,6 +374,9 @@
                                             color: $green-color;
                                             text-decoration: underline;
                                             font-size: 16px;
+                                            @include md{
+                                                margin-top: 16px;
+                                            }
                                         }
                                     }
                                     .drop_down{
@@ -327,6 +432,9 @@
                                             //   padding-left: 20px;
                                             //   padding-right: 20px;
                                             // }
+                                            @include md{
+                                                min-height: 69px;
+                                            }
                                             :global{
                                                 .react-select__placeholder{
                                                   font-size: 14px;
@@ -335,6 +443,9 @@
                                                 //   @include ipad_view {
                                                 //     font-size: 14px;
                                                 //   }
+                                                @include md{
+                                                    line-height: normal;
+                                                }
                                                 }
                                                 .react-select__value-container{
                                                     padding: 0;
@@ -385,6 +496,10 @@
                                               max-height: 320px;
                                               @include lg{
                                                 max-height: 250px;
+                                                font-size: 14px;
+                                              }
+                                              @include md{
+                                                max-height: 182px;
                                               }
                                               .react-select__option{
                                                 color: $black-color;
@@ -398,6 +513,12 @@
                                                 // @include ipad_view {
                                                 //   font-size: 14px;
                                                 // }
+                                                @include lg{
+                                                    font-size: 14px;
+                                                }
+                                                @include md{
+                                                    padding: 8px 0;
+                                                }
                                                 &:last-child{
                                                     border-bottom: 1px solid rgba(77,77,79,.25);
                                                 }
@@ -433,7 +554,12 @@
                                                         position: absolute;
                                                         width: 12px;
                                                         height: 12px;
-                                                        right: 15px;                                  
+                                                        right: 15px;        
+                                                        @include md{
+                                                            width: 15px;
+                                                            height: 13px;
+                                                            right: 23px;
+                                                        }                          
                                                     }
                                                 }
                                             }
@@ -479,17 +605,36 @@
                         }
                         & + hr{
                             margin-top: 30px;
+                            @include md{
+                                margin-bottom: 36px;
+                            }
                         }
                     }
                     .button-container{
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        @include md{
+                            flex-wrap: wrap;
+                        }
+                        a{
+                            @include md{
+                                width: 100%;
+                                margin-bottom: 20px;
+                            }
+                        }
                         .allBtn{
                             margin: 0;
+                            @include md{
+                                padding: 19px 50px 11px 50px;
+                                font-size: 14px;
+                            }
                             &.border{
                                 margin-left: auto;
                                 margin-right: 45px;
+                                @include md{
+                                    margin: 0 0 20px 0;
+                                }
                             }
                         }
                     }
@@ -607,9 +752,15 @@
                             display: flex;
                             align-items: center;
                             margin-bottom: 17px;
+                            @include md{
+                                flex-wrap: wrap;
+                            }
                             span{
                                 font-size: 12px;
                                 margin-left: 26px;
+                                @include md{
+                                    margin-left: 0;
+                                }
                                 img{
                                     margin: 0px 8px 0 0;
                                     position: relative;
@@ -629,6 +780,9 @@
                                 width: 14.285%;
                                 @include lg{
                                     width: 20%;
+                                }
+                                @include md{
+                                    width: 50%;
                                 }
                             }
                         }
@@ -652,9 +806,17 @@
                 }
             }
         }
-        
+        // .commonSteps{
+        //     @include lg{
+        //         display: none;
+        //     }
+        //     &.activePropertyStep{
+        //         display: block;
+        //     }
+        // }
     }
     .confirmPropertyDetailsStep2{
+        margin-top: 30px;
         :global{
             .formDiv{
                 .formDetails{
@@ -712,6 +874,7 @@
         }
     }
     .confirmPropertyDetailsStep3{
+        margin-top: 30px;
         :global{
             .formDiv{
                 .formDetails{
@@ -736,6 +899,9 @@
                                 width: 25%;
                                 margin-bottom: 12px;
                                 position: relative;
+                                @include md{
+                                    width: 50%;
+                                }
                                 input{
                                     &:checked{
                                         & + label + .hideDiv{
@@ -792,6 +958,7 @@
         }
     }
     .confirmPropertyDetailsStep4{
+        margin-top: 30px;
         :global{
             .formDiv{
                 .formDetails{
@@ -821,6 +988,9 @@
                                     width: 25%;
                                     margin-right: 0;
                                 }
+                                @include md{
+                                    width: 100%;
+                                }
                             }
                             
                         }
@@ -830,6 +1000,9 @@
                                 margin-right: 0;
                                 @include lg{
                                     width: 25%;
+                                }
+                                @include md{
+                                    width: 100%;
                                 }
                             }
                         }
@@ -842,6 +1015,7 @@
         }
     }
     .confirmPropertyDetailsStep5{
+        margin-top: 30px;
         :global{
             .formDiv{
                 .formDetails{
@@ -867,6 +1041,9 @@
                                 margin-right: 20px;
                                 margin-bottom: 15px;
                                 position: relative;
+                                @include md{
+                                    width: 100%;
+                                }
                             }
                             
                         }
@@ -876,6 +1053,9 @@
                                 margin-right: 0;
                                 @include lg{
                                     width: 25%;
+                                }
+                                @include md{
+                                    width: 50%;
                                 }
                             }
                         }
@@ -888,6 +1068,7 @@
         }
     }
     .confirmPropertyDetailsStep6{
+        margin-top: 30px;
         :global{
             .formDiv{
                 .formDetails{
@@ -900,6 +1081,10 @@
                             .singleCheckbox{
                                 width: auto;
                                 margin-right: 40px;
+                                @include md{
+                                    width: 100%;
+                                    margin-right: 0;
+                                }
                             }
                         }
                         &.lightingSection{
@@ -909,6 +1094,10 @@
                                     margin-right: 30px;
                                     @include lg{
                                         margin-bottom: 12px;
+                                    }
+                                    @include md{
+                                        width: 100%;
+                                        margin-right: 0;
                                     }
                                 }
                             }
@@ -925,6 +1114,7 @@
         }
     }
     .confirmPropertyDetailsStep7{
+        margin-top: 30px;
         :global{
             .formDiv{
                 .formDetails{
@@ -938,6 +1128,9 @@
                                 width: auto;
                                 margin-right: 40px;
                                 margin-bottom: 11px;
+                                @include md{
+                                    margin-right: 0;
+                                }
                             }
                         }
                         &.houseRules{
@@ -956,6 +1149,10 @@
                             align-items: center;
                             input{
                                 margin-right: 40px;
+                                @include md{
+                                    margin-right: 0;
+                                    margin-bottom: 15px;
+                                }
                             }
                             .allBtn{
                                 margin: 0;

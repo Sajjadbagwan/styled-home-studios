@@ -8,7 +8,7 @@ import styles from "./confirmPropertyDetailsForm.module.scss";
 function ConfirmPropertyDetailsStep5() {
      
   return (
-    <div className={styles.confirmPropertyDetailsStep5}>
+    <div className={styles.confirmPropertyDetailsStep5 + " commonSteps"}>
       <div className="formDiv">
         <div className="formDetails">           
             <h2>Step 5: Colours & Materials</h2>
@@ -352,7 +352,7 @@ function ConfirmPropertyDetailsStep5() {
             <div className="button-container">
                 <Link href="" className="save-come">Save Progress And Come Back Later</Link>
                 <button type="button" className="allBtn border">Previous Page</button>
-                <button type="button" className="allBtn dark">Next</button>
+                <button type="button" onClick={() => props.setShow(true)} className="allBtn dark">Next</button>
             </div>          
         </div>
       </div>

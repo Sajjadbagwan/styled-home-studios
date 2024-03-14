@@ -7,7 +7,7 @@ import styles from "./confirmPropertyDetailsForm.module.scss";
 function ConfirmPropertyDetailsStep6() {
     
   return (
-    <div className={styles.confirmPropertyDetailsStep6}>
+    <div className={styles.confirmPropertyDetailsStep6 + " commonSteps"}>
       <div className="formDiv">
         <div className="formDetails">           
             <h2>Step 6: Amenities</h2>
@@ -55,7 +55,7 @@ function ConfirmPropertyDetailsStep6() {
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="lighting" type="radio" name="lighting"/>
+                        <input id="nfacing" type="radio" name="lighting"/>
                         <label className="form-control" htmlFor="nfacing">
                             North facing
                         </label>
@@ -76,19 +76,19 @@ function ConfirmPropertyDetailsStep6() {
                 <h3>Sound</h3>
                 <div className="checkboxDiv">
                     <div className="singleCheckbox">
-                        <input id="wheelchair" type="radio" name="sound"/>
+                        <input id="wheelchair" type="checkbox" name="wheelchair"/>
                         <label className="form-control" htmlFor="wheelchair">
                             Wheelchair accessible
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="ramps" type="radio" name="sound"/>
+                        <input id="ramps" type="checkbox" name="ramps"/>
                         <label className="form-control" htmlFor="ramps">
                             Ramps available
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="lift" type="radio" name="sound"/>
+                        <input id="lift" type="checkbox" name="lift"/>
                         <label className="form-control" htmlFor="lift">
                             Lift available
                         </label>
@@ -103,31 +103,31 @@ function ConfirmPropertyDetailsStep6() {
                 <h3>Amenities</h3>
                 <div className="checkboxDiv">
                     <div className="singleCheckbox">
-                        <input id="wifi" type="radio" name="amenities"/>
+                        <input id="wifi" type="checkbox" name="wifi"/>
                         <label className="form-control" htmlFor="wifi">
                             Wifi
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="tea" type="radio" name="amenities"/>
+                        <input id="tea" type="checkbox" name="tea"/>
                         <label className="form-control" htmlFor="tea">
                             Tea & coffee
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="equipment" type="radio" name="amenities"/>
+                        <input id="equipment" type="checkbox" name="equipment"/>
                         <label className="form-control" htmlFor="equipment">
                             Lighting equipment
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="backdrop" type="radio" name="amenities"/>
+                        <input id="backdrop" type="checkbox" name="backdrop"/>
                         <label className="form-control" htmlFor="backdrop">
                             White backdrop
                         </label>
                     </div>
                     <div className="singleCheckbox">
-                        <input id="rail" type="radio" name="amenities"/>
+                        <input id="rail" type="checkbox" name="rail"/>
                         <label className="form-control" htmlFor="rail">
                             Wardrobe rail
                         </label>
@@ -141,7 +141,7 @@ function ConfirmPropertyDetailsStep6() {
             <div className="button-container">
                 <Link href="" className="save-come">Save Progress And Come Back Later</Link>
                 <button type="button" className="allBtn border">Previous Page</button>
-                <button type="button" className="allBtn dark">Next</button>
+                <button type="button" onClick={() => props.setShow(true)} className="allBtn dark">Next</button>
             </div>             
         </div>
       </div>

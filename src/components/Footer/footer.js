@@ -54,7 +54,7 @@ function Footer() {
                   <Link href="#">Book A Creative</Link>
                 </li>
                 <li>
-                  <Link href="#">Join The Directory</Link>
+                  <Link href="/directory-home/">Join The Directory</Link>
                 </li>
                 <li>
                   <Link href="/about-us/">About Us</Link>

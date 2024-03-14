@@ -14,7 +14,7 @@ import SelectedImage from "../../../../public/assets/images/host-2.png"
 import DeclineProp from "../../../../public/assets/images/decline-prop.svg"
 import styles from "./confirmPropertyDetailsForm.module.scss";
 
-function ConfirmPropertyDetailsStep1() {
+function ConfirmPropertyDetailsStep1(props) {
     const optionstitle = [
         { value: 'Living Area', label: 'Living Area' },
         { value: 'Bedrooms', label: 'Bedrooms' },
@@ -22,7 +22,7 @@ function ConfirmPropertyDetailsStep1() {
         { value: 'Dinning Area', label: 'Dinning Area' },
         { value: 'Exteriors', label: 'Exteriors' },
         { value: 'Outdoor Space', label: 'Outdoor Space' },
-      ];
+    ];
   const inputRef = useRef();
 
   const [selectedFile, setSelectedFile] = useState(null);
@@ -43,7 +43,7 @@ function ConfirmPropertyDetailsStep1() {
   };
   
   return (
-    <div className={styles.confirmPropertyDetailsStep1}>
+    <div className={styles.confirmPropertyDetailsStep1 + " commonSteps activePropertyStep"}>
       <div className="formDiv">
         <div className="declinedError">
             <div className="reason">

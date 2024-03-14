@@ -85,7 +85,7 @@ function Header() {
                   <Link href="/become-a-host/">Become A Host</Link>
                 </li>
                 <li>
-                  <Link href="#">Directory</Link>
+                  <Link href="/directory-home/">Directory</Link>
                 </li>
               </ul>
               <div className="menuBtn">
