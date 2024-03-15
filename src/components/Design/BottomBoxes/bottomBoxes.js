@@ -48,25 +48,25 @@ function BottomBoxes() {
         <Slider {...settings} className="ctaData sliderDots">
           <div className="boxInfo">
             <h3>Book A Location</h3>
-            <Link href="#" className="allBtn dark">
+            <Link href="/location-listing-map/" className="allBtn dark">
               Find location
             </Link>
           </div>
           <div className="boxInfo">
             <h3>Become A Host</h3>
-            <Link href="#" className="allBtn dark">
+            <Link href="/become-a-host/ " className="allBtn dark">
               List your property
             </Link>
           </div>
           <div className="boxInfo">
             <h3>Book Your Team</h3>
-            <Link href="#" className="allBtn dark">
+            <Link href="/directory-listing/" className="allBtn dark">
               Book A Creative
             </Link>
           </div>
           <div className="boxInfo">
             <h3>Join Our Directory</h3>
-            <Link href="#" className="allBtn dark">
+            <Link href="/join-directory/" className="allBtn dark">
               Get booked as a creative
             </Link>
           </div>

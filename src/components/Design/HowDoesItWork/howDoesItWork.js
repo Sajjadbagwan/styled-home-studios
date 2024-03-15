@@ -81,7 +81,7 @@ function HowDoesItWork() {
         </Slider>
 
         <div className="centerBtn">
-          <Link href="#" className="allBtn">
+          <Link href="/location-listing/" className="allBtn">
             Browse our locations
           </Link>
         </div>

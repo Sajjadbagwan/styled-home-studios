@@ -26,7 +26,7 @@ function TitleWithTextBanner() {
           </div>
           <div className="buttonContainer">
             <Link href="/join-directory/" className="allBtn border dark">Join the directory</Link>       
-            <Link href="" className="allBtn border dark">Book your team</Link>       
+            <Link href="/directory-listing/" className="allBtn border dark">Book your team</Link>       
           </div>
           
         </div> 

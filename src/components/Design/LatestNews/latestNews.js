@@ -16,7 +16,7 @@ function LatestNews() {
         "Title of news article goes here on one or two lines of text if needed",
       content:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-      link: "/",
+      link: "/blog-details/",
     },
     {
       image: "/assets/images/news-2.png",
@@ -25,7 +25,7 @@ function LatestNews() {
         "Title of news article goes here on one or two lines of text if needed",
       content:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-      link: "/",
+      link: "/blog-details/",
     },
     {
       image: "/assets/images/news-3.png",
@@ -34,7 +34,7 @@ function LatestNews() {
         "Title of news article goes here on one or two lines of text if needed",
       content:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-      link: "/",
+      link: "/blog-details/",
     },
     {
       image: "/assets/images/news-1.png",
@@ -43,7 +43,7 @@ function LatestNews() {
         "Title of news article goes here on one or two lines of text if needed",
       content:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.",
-      link: "/",
+      link: "/blog-details/",
     },
   ];
 
@@ -76,7 +76,7 @@ function LatestNews() {
             <span>Keep up to date</span>
             <h2>Read Our Latest Journal Enteries</h2>
           </div>
-          <Link href="#">View All Journal Entries</Link>
+          <Link href="/blog-listing/">View All Journal Entries</Link>
         </div>
         <Slider {...settings} className="allLocation sliderDots">
           {sliderData.map((slide, index) => (

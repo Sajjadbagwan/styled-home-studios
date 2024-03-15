@@ -61,13 +61,13 @@ function PopularLocations() {
       <div className="container">
         <div className="title">
           <h2>Popular Locations</h2>
-          <Link href="#">Browse Our Locations</Link>
+          <Link href="/location-listing/">Browse Our Locations</Link>
         </div>
         <Slider {...settings} className="styleSlider sliderDots">
           {sliderData.map((slide, index) => (
             <div key={index} className="slide">
               <div className="slideInfo">
-                <Image src={slide.image} width={367} height={360}></Image>
+                <Image src={slide.image} width={367} height={360} alt="popular-location"></Image>
                 <h3>{slide.category}</h3>
               </div>
             </div>

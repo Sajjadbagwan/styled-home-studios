@@ -96,11 +96,7 @@ const LoginPopup = (props) => {
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </p>
-                  <input
-                    type="submit"
-                    className="allBtn dark border"
-                    value="Create an account"
-                  />
+                  <Link href="/create-an-account/" className="allBtn dark border">Create An Account</Link>
                 </div>
               </div>
             </div>

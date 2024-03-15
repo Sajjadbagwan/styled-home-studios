@@ -250,6 +250,12 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            @include md{
+              flex-direction: column;
+            }
+            .allBtn{
+              margin-top: 20px;
+            }
           }
           .checkMain {
             .checkmark {

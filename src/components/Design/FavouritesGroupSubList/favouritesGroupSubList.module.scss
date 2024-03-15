@@ -22,6 +22,10 @@
           grid-template-columns: repeat(1, 1fr);
         }
         .locationBox {
+          a{
+            color: inherit;
+            text-decoration: none;
+          }
           .slideImg {
             position: relative;
             padding-bottom: 69%;

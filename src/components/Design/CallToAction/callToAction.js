@@ -26,7 +26,7 @@ function CallToAction() {
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillu.
           </p>
-          <Link href="#" className="allBtn">
+          <Link href="/location-listing/" className="allBtn">
             Discover our corporate listings
           </Link>
         </div>

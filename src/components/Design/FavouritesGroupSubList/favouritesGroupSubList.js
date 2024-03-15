@@ -71,39 +71,41 @@ function FavouritesGroupSubList() {
         <div className="LocationMain">
           {locationData.map((location, index) => (
             <div key={index} className="locationBox">
-              <div className="slideImg">
-                <Image
-                  src={location.image}
-                  alt="title"
-                  width={474}
-                  height={325}
-                />
-              </div>
-              <div className="slideInfo">
-                <div className="subDetail">
-                  <h3>{location.title}</h3>
-                  <span className="rating">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17"
-                      height="16"
-                      viewBox="0 0 17 16"
-                    >
-                      <path
-                        id="Polygon_1"
-                        data-name="Polygon 1"
-                        d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
-                        fill="#20535a"
-                      />
-                    </svg>
-                    {location.star}
-                  </span>
+              <Link href="/location-detail/">
+                <div className="slideImg">
+                  <Image
+                    src={location.image}
+                    alt="title"
+                    width={474}
+                    height={325}
+                  />
                 </div>
-                <div className="subDetail">
-                  <p>Area: {location.area}</p>
-                  <p>{location.rate} Per Hour</p>
+                <div className="slideInfo">
+                  <div className="subDetail">
+                    <h3>{location.title}</h3>
+                    <span className="rating">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                      >
+                        <path
+                          id="Polygon_1"
+                          data-name="Polygon 1"
+                          d="M8.5,0l2.125,5.95L17,6.111,11.938,9.95,13.753,16,8.5,12.422,3.247,16,5.062,9.95,0,6.111,6.375,5.95Z"
+                          fill="#20535a"
+                        />
+                      </svg>
+                      {location.star}
+                    </span>
+                  </div>
+                  <div className="subDetail">
+                    <p>Area: {location.area}</p>
+                    <p>{location.rate} Per Hour</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

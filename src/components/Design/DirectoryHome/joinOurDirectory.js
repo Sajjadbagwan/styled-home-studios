@@ -25,7 +25,7 @@ function JoinOurDirectory() {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia.
             </p>
-            <Link href="#" className="allBtn dark border">
+            <Link href="/join-directory/" className="allBtn dark border">
                 Join the directory
             </Link>
           </div>

@@ -45,13 +45,13 @@ function Footer() {
               </h3>
               <ul className={isFooterMenu ? "show" : ""}>
                 <li>
-                  <Link href="#">Rent Property</Link>
+                  <Link href="/confirm-property-details/">Rent Property</Link>
                 </li>
                 <li>
                   <Link href="/become-a-host/">Become A Host</Link>
                 </li>
                 <li>
-                  <Link href="#">Book A Creative</Link>
+                  <Link href="/directory-listing/">Book A Creative</Link>
                 </li>
                 <li>
                   <Link href="/directory-home/">Join The Directory</Link>

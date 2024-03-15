@@ -30,7 +30,7 @@ function LocationGallery() {
     <section className={styles.locationGallery + " locationGallery"}>
       <div className="container">
         <div className="backBtn">
-          <Link href="#">
+          <Link href="/location-listing/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8.659"

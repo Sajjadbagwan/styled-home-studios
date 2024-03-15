@@ -57,7 +57,7 @@ function TrendingLocations() {
 
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -90,7 +90,7 @@ function TrendingLocations() {
       <div className="container">
         <div className="title">
           <h2>Trending Locations</h2>
-          <Link href="#">Browse Locations</Link>
+          <Link href="/location-listing/">Browse Locations</Link>
         </div>
         <Slider {...settings} className="allLocation sliderDots">
           {sliderData.map((slide, index) => (

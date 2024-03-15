@@ -59,10 +59,10 @@ function AboutLeftImg() {
               sunt in culpa qui officia.
             </p>
             <div className="twoBtns">
-              <Link href="#" className="allBtn dark">
+              <Link href="/directory-listing/" className="allBtn dark">
                 Discover Now
               </Link>
-              <Link href="#">Sign Up</Link>
+              <Link href="/create-an-account/">Sign Up</Link>
             </div>
           </div>
         </div>

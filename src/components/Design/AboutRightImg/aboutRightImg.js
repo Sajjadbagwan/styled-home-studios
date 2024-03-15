@@ -23,7 +23,7 @@ function AboutRightImg() {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia.
             </p>
-            <Link href="#" className="allBtn dark">
+            <Link href="/about-us/" className="allBtn dark">
               Discover Now
             </Link>
           </div>

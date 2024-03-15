@@ -40,7 +40,7 @@ function DirectoryMainListing() {
                                     London
                                     </span>
                                 </div>
-                                <Link href="">View Details</Link>               
+                                <Link href="/directory-service-provider/">View Details</Link>               
                         </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@ function DirectoryMainListing() {
                                     London
                                     </span>
                                 </div>
-                                <Link href="">View Details</Link>               
+                                <Link href="/directory-service-provider/">View Details</Link>               
                         </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -236,7 +236,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -264,7 +264,7 @@ function DirectoryMainListing() {
                                     London
                                     </span>
                                 </div>
-                                <Link href="">View Details</Link>               
+                                <Link href="/directory-service-provider/">View Details</Link>               
                         </div>
                         </div>
                     </div>
@@ -292,7 +292,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -320,7 +320,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -348,7 +348,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -376,7 +376,7 @@ function DirectoryMainListing() {
                                     London
                                     </span>
                                 </div>
-                                <Link href="">View Details</Link>               
+                                <Link href="/directory-service-provider/">View Details</Link>               
                         </div>
                         </div>
                     </div>
@@ -404,7 +404,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -432,7 +432,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
@@ -460,7 +460,7 @@ function DirectoryMainListing() {
                                         London
                                         </span>
                                     </div> 
-                                    <Link href="">View Details</Link>              
+                                    <Link href="/directory-service-provider/">View Details</Link>              
                             </div>
                         </div>
                     </div>
