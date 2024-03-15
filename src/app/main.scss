@@ -530,6 +530,9 @@ body {
 
 .sliderDots {
   & > .slick-dots {
+    // width: auto;
+    // left: 50%;
+    // transform: translate(-50%, 0);
     li {
       width: 50px;
       margin: 0;

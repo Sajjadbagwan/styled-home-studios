@@ -33,10 +33,10 @@ function OurTopPick() {
               sunt in culpa qui officia.
             </p>
             <div className="twoBtns">
-              <Link href="#" className="allBtn dark">
+              <Link href="/location-detail/" className="allBtn dark">
                 Book Now
               </Link>
-              <Link href="#">View All Wabi Sabi</Link>
+              <Link href="/location-listing/">View All Wabi Sabi</Link>
             </div>
           </div>
         </div>
