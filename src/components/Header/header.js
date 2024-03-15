@@ -11,6 +11,16 @@ function Header() {
     setIsActive(!isActive);
   };
 
+  const handleScroll = () => {
+    const position = window.scrollY;
+    if(position > 100)
+    {
+      document.body.classList.add(styles.stickyHeader);
+    }else if(position == 0)
+    {
+      document.body.classList.remove(styles.stickyHeader);
+    }
+}   
   useEffect(() => {
     const body = document.body;
     const html = document.querySelector("html");
@@ -23,6 +33,7 @@ function Header() {
       body.classList.add("menuClose");
       html.classList.remove("scrollHide");
     }
+    window.addEventListener('scroll', handleScroll);  
   }); // Run useEffect only when isActive changes
 
   const [isActiveLogin, setIsActiveLogin] = useState(false);
@@ -79,7 +90,7 @@ function Header() {
             <div className="mainMenu">
               <ul>
                 <li>
-                  <Link href="#">Book A Location</Link>
+                  <Link href="/location-listing/">Book A Location</Link>
                 </li>
                 <li>
                   <Link href="/become-a-host/">Become A Host</Link>
@@ -138,22 +149,22 @@ function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="#">Messages</Link>
+                        <Link href="/account-customer-messages/">Messages</Link>
                       </li>
                       <li>
-                        <Link href="#">Bookings</Link>
+                        <Link href="/customer-booking-requested/">Bookings</Link>
                       </li>
                       <li>
-                        <Link href="#">Favourites</Link>
+                        <Link href="/account-favourites-grouplist/">Favourites</Link>
                       </li>
                       <li className="hasBorder">
-                        <Link href="#">Become A Host</Link>
+                        <Link href="/become-a-host/">Become A Host</Link>
                       </li>
                       <li>
-                        <Link href="#">Join The Directory</Link>
+                        <Link href="/join-directory/">Join The Directory</Link>
                       </li>
                       <li>
-                        <Link href="#">Your Profile</Link>
+                        <Link href="/account-host-accounts/">Your Profile</Link>
                       </li>
                       <li>
                         <Link href="#">Sign Out</Link>

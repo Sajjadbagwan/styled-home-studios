@@ -19,7 +19,7 @@ function FaqTopArticle() {
                 <Link href="/blog-listing/">View All Journal Entries</Link>
             </div>
             <div className="allLocation">
-                <Link href="" className="slide">
+                <Link href="/blog-details/" className="slide">
                     <div className="slideImg">
                         <Image
                         src={News1}
@@ -35,7 +35,7 @@ function FaqTopArticle() {
                         </div>
                     </div>
                 </Link>
-                <Link href="" className="slide">
+                <Link href="/blog-details/" className="slide">
                     <div className="slideImg">
                         <Image
                         src={News2}
@@ -51,7 +51,7 @@ function FaqTopArticle() {
                         </div>
                     </div>
                 </Link>
-                <Link href="" className="slide">
+                <Link href="/blog-details/" className="slide">
                     <div className="slideImg">
                         <Image
                         src={News3}
