@@ -226,6 +226,7 @@
         z-index: -1;
         opacity: 0;
         top: 130px;
+        display: none;
         @include lg {
           top: 105px;
         }
@@ -234,6 +235,7 @@
         &::after {
           z-index: 3;
           opacity: 0.25;
+          display: block;
         }
       }
     }
