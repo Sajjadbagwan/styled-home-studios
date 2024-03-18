@@ -27,7 +27,7 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="footerBox">
-              <Link href="#">
+              <Link href="/">
                 <Image
                   src="/assets/images/footer-logo.png"
                   width={308}

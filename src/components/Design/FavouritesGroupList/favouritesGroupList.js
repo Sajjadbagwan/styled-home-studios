@@ -47,7 +47,7 @@ function FavouritesGroupList() {
         </div>
         <div className="moreBtn">
           <Link href="#" className="allBtn dark">
-            View more
+            Load more
           </Link>
         </div>
       </div>
