@@ -12,6 +12,9 @@
       width: 1165px;
       max-width: 95%;
       flex-wrap: wrap;
+      @include lg{
+        max-width: 100%;
+      }
       .profileDiv {
         width: 22%;
         @include md {

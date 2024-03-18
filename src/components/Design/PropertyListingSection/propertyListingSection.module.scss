@@ -201,6 +201,12 @@
                   .slideImg{
                     img{
                       height: 685px;
+                      @include lg{
+                        height: 550px;
+                      }
+                      @include md{
+                        height: 450px;
+                      }
                     }
                     &::before{
                       content: "";
