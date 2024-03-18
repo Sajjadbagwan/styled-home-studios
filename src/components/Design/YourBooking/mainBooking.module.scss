@@ -228,6 +228,13 @@
                 width: 100%;
                 margin-bottom: 13px;
               }
+              .allBtn{
+                @include lg{
+                  padding-left: 30px;
+                  padding-right: 30px;
+                }
+                
+              }
               .dateTimeBox {
                 background-color: $cream-color;
                 padding: 48px 44px 20px 44px;
@@ -243,6 +250,7 @@
                   padding: 25px 30px;
                   width: 97%;
                 }
+                
                 .dayCrew {
                   display: flex;
                   justify-content: space-between;

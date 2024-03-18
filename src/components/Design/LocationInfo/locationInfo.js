@@ -35,7 +35,7 @@ function LocationInfo() {
             </p>
           </div>
           <div className="aboutForm">
-            <div className={`${"bookForm"} ${isBookFormClose ? "show" : ""}`}>
+            <div className={`${"bookForm"} ${isBookFormClose ? "" : "show"}`}>
               <div className="mobileBook">
                 <div className="backBtn">
                   <span onClick={handleBookFormCloseClick} className="link">

@@ -89,9 +89,9 @@ function Footer() {
               </div>
             </div>
             <div className="footerBox">
-              <h3>
+              <h3 onClick={handleFooterMenuoneClick}>
                 Customer Care
-                <span onClick={handleFooterMenuoneClick}>
+                <span>
                   {isFooterMenuone ? "-" : "+"}
                 </span>
               </h3>

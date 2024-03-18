@@ -52,6 +52,9 @@
                 @include x-lg{
                     flex-wrap: wrap;
                 }
+                @include md{
+                    justify-content: space-between;
+                }
                 > form {
                     background: $white-color;
                     padding: 0 0 0 20px;
@@ -149,7 +152,7 @@
                     }     
                     @include md{
                         margin: 37px 10px 0 0;
-                        max-width: 137px;
+                        max-width: 125px;
                     }         
                     .wrapper_dropdown{
                       width: 100%;
