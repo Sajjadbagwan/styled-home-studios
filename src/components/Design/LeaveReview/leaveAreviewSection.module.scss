@@ -31,9 +31,14 @@
             }
             .ratingStartIcon{
                 margin-bottom: 20px;
-                .star-svg{
-                    margin-right: 18px;
-                }
+                // > span {
+                //     display: grid;                    
+                //     column-gap: 18px;
+                //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                // }
+                // .star-svg{
+                //     margin-right: 18px;
+                // }
             }
             form{
                 textarea{
