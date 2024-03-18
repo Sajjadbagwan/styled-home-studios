@@ -8,6 +8,13 @@
     :global {
       .title {
         margin-bottom: 23px;
+        a{
+          img{
+            position: relative;
+            top: 4px;
+            left: -2px;
+          }
+        }
         @include lg {
           display: flex;
         }

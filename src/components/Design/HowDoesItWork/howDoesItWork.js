@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { EqualHeight, EqualHeightElement } from "react-equal-height/clean";
 import styles from "./howDoesItWork.module.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -48,38 +49,46 @@ function HowDoesItWork() {
           <span>Quick guide</span>
           <h2>How Does It Work?</h2>
         </div>
-
+        <EqualHeight>
         <Slider {...settings} className="workList sliderDots">
           <div className="listBox">
-            <h3>1. Find Your Ideal Location</h3>
+            <EqualHeightElement name="title">
+                <h3>1. Find Your Ideal Location</h3>
+            </EqualHeightElement>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod.
             </p>
           </div>
           <div className="listBox">
-            <h3>2. Make Your Request</h3>
+            <EqualHeightElement name="title">
+              <h3>2. Make Your Request</h3>
+            </EqualHeightElement>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod.
             </p>
           </div>
           <div className="listBox">
-            <h3>3. Confirm Your Booking</h3>
+            <EqualHeightElement name="title">
+              <h3>3. Confirm Your Booking</h3>
+            </EqualHeightElement> 
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod.
             </p>
           </div>
           <div className="listBox">
-            <h3>4. Arrive & Get Creative</h3>
+            <EqualHeightElement name="title">
+              <h3>4. Arrive & Get Creative</h3>
+            </EqualHeightElement>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod.
             </p>
           </div>
         </Slider>
-
+        </EqualHeight>
         <div className="centerBtn">
           <Link href="/location-listing/" className="allBtn">
             Browse our locations

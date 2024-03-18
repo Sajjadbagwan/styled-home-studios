@@ -31,6 +31,9 @@
             right: 0;
             background: $white-color;
             clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+            @include x-lg{
+              top: -1px;
+            }
           }
           img {
             width: 100%;
@@ -51,6 +54,9 @@
             float: right;
             padding: 0 125px 0 0;
             max-width: 100%;
+            @include x-lg{
+              padding: 0 55px 0 30px;
+            }
             @include lg {
               padding: 70px 35px;
               float: none;

@@ -118,6 +118,9 @@
     background: $cream-color;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
     z-index: 1;
+    @include x-lg{
+      bottom: -87px;
+    }
     @include lg {
       height: 5%;
       bottom: -25px;

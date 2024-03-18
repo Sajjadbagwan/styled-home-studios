@@ -18,7 +18,7 @@ function CallToAction() {
       </div>
       <div className="container">
         <div className="ctaData">
-          <h2>Book Your Next Corporate Event</h2>
+          <h2>How To Become A Host</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -26,8 +26,8 @@ function CallToAction() {
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillu.
           </p>
-          <Link href="/location-listing/" className="allBtn">
-            Discover our corporate listings
+          <Link href="/become-a-host/" className="allBtn">
+          List your property
           </Link>
         </div>
       </div>

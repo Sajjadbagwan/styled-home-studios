@@ -2,6 +2,11 @@
 
 .hostDetail {
   margin: 10px 0 90px 0;
+  section{
+    @include md{
+      margin: 50px 0 0 0;
+    }
+  }
   :global {
     .container {
       .row {

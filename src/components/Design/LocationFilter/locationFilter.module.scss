@@ -17,6 +17,9 @@
           align-items: center;
           margin: 0 0 0 105px;
           width: 50%;
+          @include x-lg{
+            margin: 0;
+          }
           @include lg {
             width: 100%;
             margin: 25px 0 0 0;

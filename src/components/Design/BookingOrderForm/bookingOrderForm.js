@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import CardIcon from "../../../../public/assets/images/card.svg"
 import styles from "./bookingOrderForm.module.scss";
 
 function BookingOrderForm() {
@@ -125,7 +126,7 @@ function BookingOrderForm() {
               </div>
             </div>
             <hr />
-            <h4>Payment Information</h4>
+            <h4>Payment Information <Image src={CardIcon} height={30} width={140} alt="card" /></h4>
             <div className="inputGroup">
               <input type="text" name="" placeholder="Card Name*" />
             </div>

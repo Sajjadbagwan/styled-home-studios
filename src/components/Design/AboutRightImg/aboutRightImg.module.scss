@@ -6,6 +6,9 @@
   @include lg {
     // padding-bottom: 0;
   }
+  @include md{
+    padding-bottom: 0;
+  }
   :global {
     .container {
       .row {

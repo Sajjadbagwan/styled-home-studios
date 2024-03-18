@@ -83,11 +83,14 @@
     width: 60%;
     height: 45%;
     position: absolute;
-    bottom: -75px;
+    bottom: -78px;
     left: 0;
     background: #8b9297;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 0);
     z-index: 1;
+    @include x-lg{
+      bottom: -65px;
+    }
     @include lg {
       width: 50%;
       height: 11%;

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import BackArrow from "../../../public/assets/images/back-arrow.svg"
 import styles from "./header.module.scss";
 import LoginPopup from "../Design/CommonPopup/LoginPopup";
 
@@ -177,6 +178,10 @@ function Header() {
                       isActiveNotify ? "active" : ""
                     }`}
                   >
+                    <Link className="backbtn" onClick={handleClickNotify} href=""> 
+                        <Image src={BackArrow} alt="backarrow" height={14} width={9}></Image> 
+                        Back
+                    </Link>
                     <ul>
                       <div className="notifyTitle">
                         <span>Notifications</span>
