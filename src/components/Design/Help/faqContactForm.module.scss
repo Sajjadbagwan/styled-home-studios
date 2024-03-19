@@ -40,7 +40,9 @@
                     flex-wrap: wrap;
                 }
                 .inputGroup{
-                    flex: 0 0 100%;
+                    @include md{
+                        flex: 0 0 100%;
+                    }                    
                 }
             }
             hr{
