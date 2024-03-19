@@ -26,6 +26,23 @@
                     }
                 }
             }
+            .viewBtn{
+                .allBtn{
+                    background-color: transparent;
+                    color: $green-color;
+                    text-decoration: underline;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-top: 0;
+                    font-weight: normal;
+                    font-family: $title-font;
+                    text-transform: capitalize;
+                    font-size: 16px;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
         }
     }
 }
