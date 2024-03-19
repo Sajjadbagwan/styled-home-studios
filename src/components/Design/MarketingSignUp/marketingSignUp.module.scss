@@ -45,6 +45,9 @@
           flex: 0 0 50%;
           width: 50%;
           margin-top: 136px;
+          @include min-big-desktop{
+            margin-top: 300px;
+          }
           @include lg {
             flex: 0 0 100%;
             width: 100%;

@@ -5,6 +5,10 @@
     padding: 68px 0 50px 0;
     transform: rotate(1deg);
     width: 101%;
+    @include min-big-desktop{
+        margin-top: -66px;
+        padding-top: 74px;
+    }
     @include md{
         margin: -71px 0 0 -5px;
         width: 104%;
