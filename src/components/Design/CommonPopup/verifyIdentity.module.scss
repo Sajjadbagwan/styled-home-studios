@@ -140,12 +140,17 @@
         h5 {
           font-size: 14px;
         }
-        .ratingStartIcon {
-          margin-bottom: 20px;
-          .star-svg {
-            margin-right: 18px;
-          }
-        }
+        .ratingStartIcon{
+                margin-bottom: 20px;
+                // > span {
+                //     display: grid;                    
+                //     column-gap: 18px;
+                //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                // }
+                // .star-svg{
+                //     margin-right: 18px;
+                // }
+            }
         form {
           textarea {
             min-height: 145px;

@@ -28,6 +28,9 @@
         left: 51%;
         width: 100%;
         transform: translate(-50%, 0);  
+        @include min-big-desktop{
+          top: -168px;
+        }
         @include max-desk{
           top: -128px;
         }
@@ -73,6 +76,9 @@
     right: 0;
     background: $white-color;
     clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 0);
+    @include min-big-desktop{
+      top: -1px;
+    }
     @include max-desk{
       width: 23%;
       height: 62%;

@@ -153,6 +153,10 @@
             position: absolute;
             bottom: -55px;
             right: 12.5%;
+            @include min-big-desktop{
+              bottom: -80px;
+              right: 22.5%;
+            }
             @include max-desk{
               right: 5.5%;
               bottom: -100px;
