@@ -32,7 +32,11 @@
                         @include lg{
                             padding: 60px 35px 0 47px;
                         }
-                       
+                       .twoBtns{
+                        .dark + a{
+                            display: none;
+                        }
+                       }
                     }
                 }
             }

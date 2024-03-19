@@ -422,7 +422,8 @@
                     }
                 }
                 form{
-                    &:last-child{
+                    @include md{
+                        &:last-child{
                         .buttonContainer{
                             flex-wrap: wrap;
                             flex-direction: column;
@@ -432,6 +433,7 @@
                             }
                         }
                     }
+                }
                 }
             }
             .titleDiv{
