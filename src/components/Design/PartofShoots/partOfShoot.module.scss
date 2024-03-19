@@ -42,12 +42,12 @@
           .slick-list{
             .slick-track{
               .slick-slide{
-                padding: 0 20px;
+                padding: 0 0;
               }
             }
           }
             .slide{
-                max-width: 83%;
+                max-width: 90%;
                 position: relative;
                 cursor: pointer;
                 @include x-xxl{

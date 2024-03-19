@@ -41,6 +41,9 @@
                             }
                             h4{
                                 margin: 0;
+                                @include lg{
+                                    line-height: 32px;
+                                }
                                 @include md{
                                     width: 90%;
                                     font-size: 18px;

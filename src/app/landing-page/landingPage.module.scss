@@ -4,6 +4,12 @@
     :global{
         .aboutRightImg{
             margin: 100px 0;
+            @include lg{
+                margin-bottom: 0;
+            }
+            @include md{
+                margin-bottom: 80px;
+            }
             .aboutImg{
                 .imgFront{
                     &::before{

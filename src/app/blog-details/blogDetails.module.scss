@@ -13,6 +13,9 @@
             margin-top: 65px;
         } 
         .aboutRightImg{
+            @include lg{
+                padding-bottom: 0;
+            }
             .aboutImg{
                 .imgFront{
                     &::before{
