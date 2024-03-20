@@ -37,6 +37,7 @@
             .slide {
                 width: 29%;
                 padding: 0;
+                font-family: $title-font;
                 @include lg{
                   width: 32%;
                 }

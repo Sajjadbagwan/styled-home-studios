@@ -1,6 +1,9 @@
 @import "../../../../styles/global.scss";
 
 .trendingLocations {
+  a{
+    font-family: $title-font;
+  }
   :global {
     .container {
       .allLocation {
@@ -108,7 +111,7 @@
                       margin-bottom: 5px;
                     }
                     h3 {
-                      font-family: $default-font;
+                      
                       font-size: 18px;
                       text-transform: uppercase;
                       flex: 0 0 85%;
@@ -121,6 +124,7 @@
                       display: flex;
                       align-items: center;
                       text-decoration: underline;
+                      font-family: $title-font;
                       svg{
                         position: relative;
                         left: -5px;

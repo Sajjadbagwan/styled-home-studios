@@ -31,6 +31,9 @@
             &:last-child {
               margin: 0;
             }
+            a{
+              font-family: $title-font;
+            }
             @include x-lg {
               text-align: center;
             }

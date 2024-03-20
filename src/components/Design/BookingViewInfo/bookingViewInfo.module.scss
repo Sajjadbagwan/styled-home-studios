@@ -10,6 +10,9 @@
           h2 {
             margin: 24px 0 12px;
           }
+          a{
+            font-family: $title-font;
+          }
         }
         .viewBox {
           display: flex;
@@ -25,7 +28,7 @@
             margin: 0 0 0 15px;
             &:last-child {
               font-size: 14px;
-              font-family: $default-font;
+              font-family: inherit;
             }
           }
         }

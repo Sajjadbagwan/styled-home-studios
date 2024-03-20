@@ -12,6 +12,9 @@
       @include lg {
         padding: 30px;
       }
+      h3,h5{
+        font-family: $title-font;
+      }
       .infoList {
         margin: 29px 0 23px;
         .list {

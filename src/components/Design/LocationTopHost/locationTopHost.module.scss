@@ -40,7 +40,6 @@
                 margin-bottom: 3px;
                 align-items: baseline;
                 h3 {
-                  font-family: $default-font;
                   font-size: 18px;
                   text-transform: uppercase;
                   flex: 0 0 85%;
@@ -50,6 +49,7 @@
                   display: flex;
                   align-items: center;
                   text-decoration: underline;
+                  font-family: $title-font;
                 }
               }
               .subDetailLast {
@@ -64,6 +64,9 @@
           }
           .hostRight {
             flex: 0 0 70%;
+            h3{
+              font-family: $title-font;
+            }
             @include lg {
               flex: 0 0 100%;
               width: 100%;

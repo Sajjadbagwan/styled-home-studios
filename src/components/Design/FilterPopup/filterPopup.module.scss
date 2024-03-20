@@ -1,5 +1,8 @@
 @import "../../../../styles/global.scss";
 .mainPopup {
+  a{
+    font-family: $title-font;
+  }
   :global {
     .innerPopup {
       padding: 45px 30px 45px 88px;

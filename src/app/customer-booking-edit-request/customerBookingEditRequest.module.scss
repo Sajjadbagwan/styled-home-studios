@@ -26,6 +26,9 @@
             }
             .bookingInfo {
               padding: 60px;
+              h4,h6{
+                font-family: $title-font;
+              }
               @include lg {
                 padding: 30px;
               }

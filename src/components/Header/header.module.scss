@@ -204,6 +204,7 @@
                     color: $green-color;
                     text-decoration: underline;
                     font-size: 14px;
+                    font-family: inherit;
                   }
                 }
                 ul {
@@ -214,7 +215,7 @@
                     padding-bottom: 13px;
                     margin-bottom: 13px;
                     a {
-                      font-family: $default-font;
+                      font-family: inherit;
                       font-size: 15px;
                     }
                     &:last-child {

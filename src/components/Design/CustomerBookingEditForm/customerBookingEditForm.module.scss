@@ -47,6 +47,9 @@
           margin-bottom: 30px;
           border-bottom: 1px solid rgba(77, 77, 79, 0.25);
           padding-bottom: 30px;
+          a{
+            font-family: $title-font;
+          }
         }
         .spaceTxt {
           margin-bottom: 40px;
@@ -90,6 +93,7 @@
         .dayAdd {
           font-size: 15px;
           text-decoration: underline;
+          font-family: $title-font;
         }
         .costBox {
           display: flex;
@@ -117,6 +121,9 @@
         }
         .askForm {
           text-align: center;
+          a{
+            font-family: $title-font;
+          }
         }
       }
       .editInfo {

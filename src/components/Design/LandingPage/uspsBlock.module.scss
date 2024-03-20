@@ -54,6 +54,7 @@
             h5{
                 color: $white-color;
                 margin: 0;
+                font-family: $title-font;
                 @include md{
                   font-size: 16px;
                 }

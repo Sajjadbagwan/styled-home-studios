@@ -68,7 +68,7 @@
                       margin-bottom: 3px;
                       align-items: baseline;
                       h3 {
-                        font-family: $default-font;
+                        
                         font-size: 18px;
                         text-transform: uppercase;
                         flex: 0 0 85%;
@@ -78,6 +78,7 @@
                         display: flex;
                         align-items: center;
                         text-decoration: underline;
+                        font-family: $title-font;
                       }
                     }
                     .subDetailLast {
@@ -133,7 +134,7 @@
                             text-decoration: none;
                             color: $black-color;
                             font-size: 16px;
-                            font-family: $default-font;
+                            
                             img{
                                 margin-right: 23px;
                                 @include x-xl{

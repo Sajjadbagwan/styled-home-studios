@@ -88,6 +88,7 @@
             }
             h3{
               margin: 0;
+              font-family: $title-font;
             }
             .yearly{
               h3{
@@ -95,7 +96,7 @@
                 margin: 0;
               }
               span{
-                font-family: $default-font;
+                
                 width: 100%;
                 display: inline-block;
                 font-size: 14px;

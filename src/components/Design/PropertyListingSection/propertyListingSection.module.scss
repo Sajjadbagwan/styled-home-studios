@@ -132,13 +132,14 @@
                     justify-content: space-between;
                     margin-bottom: 5px;
                     align-items: baseline;
+                    font-family: $title-font;
                     .equal-height-JlocK{
                       display: flex;
                       justify-content: space-between;
                       align-items: baseline;
                     }
                     h3 {
-                      font-family: $default-font;
+                      
                       font-size: 18px;
                       text-transform: uppercase;
                       flex: 0 0 93%;
@@ -150,24 +151,26 @@
                       text-decoration: underline;
                       width: 42px;
                       justify-content: space-between;
+                      font-family: $title-font;
                     }
                   }
                   .allBtn{
                     width: 100%;
                     margin-top: 15px;
                     margin-bottom: 10px;
+                    font-family: inherit;
                   }
                   a{
                     text-align: center;
                     margin: 25px auto 0 auto;
                     display: block;
+                    font-family: $title-font;
                     &:last-child{
                       margin-top: 18px;
                     }
                   }
                   button{
-                    height: 50px;
-                    font-family: $default-font;
+                    height: 50px;                    
                     cursor: pointer;
                     font-size: 14px;
                     &.normalLink{
@@ -178,6 +181,7 @@
                       text-decoration: underline;
                       margin: 0 auto;
                       display: block;
+                      font-family: $title-font;
                       &:hover{
                         text-decoration: none;
                       }

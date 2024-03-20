@@ -37,6 +37,7 @@
           h3 {
             letter-spacing: 1px;
             font-size: 20px;
+            font-family: $title-font;
             @include lg {
               margin-bottom: 20px;
             }
@@ -66,7 +67,7 @@
                 font-size: 16px;
                 color: $black-color;
                 text-decoration: none;
-                font-family: $default-font;
+                
                 @include lg {
                   font-size: 14px;
                 }

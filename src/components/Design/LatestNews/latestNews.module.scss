@@ -48,6 +48,9 @@
                 }
                 .slideInfo {
                   margin: 22px 0 0 0;
+                  h3{
+                    font-family: $title-font;
+                  }
                   .titleDouble {
                     span {
                       color: $black-color;

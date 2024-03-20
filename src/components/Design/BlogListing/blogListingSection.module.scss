@@ -99,7 +99,7 @@
                         text-overflow: ellipsis;
                         padding-left: 15px;
                         margin-bottom: 18px;
-                        font-family: $default-font;
+                        font-family: inherit;
                         font-size: 14px;
                     }
                   }
@@ -119,7 +119,7 @@
                   }
                   button{
                     height: 50px;
-                    font-family: $default-font;
+                    
                     cursor: pointer;
                     font-size: 14px;
                     &.normalLink{

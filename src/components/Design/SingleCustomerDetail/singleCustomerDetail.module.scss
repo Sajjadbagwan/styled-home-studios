@@ -33,7 +33,7 @@
             margin-bottom: 3px;
             align-items: baseline;
             h3 {
-              font-family: $default-font;
+              
               font-size: 18px;
               text-transform: uppercase;
               flex: 0 0 85%;
@@ -43,19 +43,23 @@
               display: flex;
               align-items: center;
               text-decoration: underline;
+              font-family: $title-font;
             }
           }
           .subDetailLast {
+            font-family: inherit;
             p {
               margin-bottom: 0;
+              font-family: inherit;
             }
             svg {
               margin: 4px 5px -1px 0;
             }
             .content {
               margin-top: 25px;
+              font-family: inherit;
               p {
-                font-family: $default-font;
+                
                 font-size: 14px;
               }
             }

@@ -4,6 +4,9 @@
   background-color: $cream-color;
   margin: 0;
   padding: 35px 0 90px;
+  a{
+    font-family: $title-font;
+  }
   :global {
     .container {
       .aboutinfo {
@@ -81,7 +84,7 @@
                 flex: 0 0 60%;
                 width: 60%;
                 h4 {
-                  font-family: $default-font;
+                  
                   text-transform: uppercase;
                   font-size: 18px;
                   letter-spacing: 1.5px;
@@ -161,6 +164,7 @@
               h4 {
                 margin-bottom: 8px;
                 font-size: 23px;
+                font-family: $title-font;
                 @include lg {
                   margin-bottom: 0;
                   font-size: 20px;
