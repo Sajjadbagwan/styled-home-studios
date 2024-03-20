@@ -54,6 +54,7 @@
           margin-bottom: 40px;
           position: relative;
           cursor: pointer;
+          font-family: $title-font;
           @include lg {
             font-size: 21px;
           }
@@ -366,7 +367,7 @@
       }
       .filterSubmit {
         text-align: right;
-        padding: 50px 0;
+        padding: 0 0;
         width: 95%;
       }
     }
