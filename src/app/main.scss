@@ -46,7 +46,9 @@ a {
     text-decoration: none;
   }
 }
-
+button{
+  border-radius: 0 !important;
+}
 p {
   margin: 0 0 15px 0;
   line-height: 25px;
@@ -502,8 +504,9 @@ body {
   font-size: 12px;
   margin: 25px 0 0;
   min-height: 50px;  
+  border-radius: 0;
   cursor: pointer;
-  font-family: $default-font;
+  font-family:inherit;
   @include lg {
     min-height: 55px;
     padding: 14px 40px 10px 40px;
@@ -772,7 +775,8 @@ form {
     outline: none;
     font-size: 16px;
     width: 100%;
-    font-family: inherit;    
+    font-family: inherit;   
+    border-radius: 0; 
     &:placeholder {
       opacity: 0.5;
     }
@@ -790,6 +794,7 @@ form {
     min-height: 185px;
     height: auto !important;
     font-family: inherit;
+    border-radius: 0;
     @include md {
       font-size: 14px;
     }

@@ -127,6 +127,9 @@
       .centerBtn {
         text-align: center;
         margin: 17px 0 0 0;
+        a{
+          font-family: inherit;
+        }
         @include lg {
           margin: 30px 0 0 0;
         }

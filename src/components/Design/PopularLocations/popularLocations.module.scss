@@ -18,6 +18,9 @@
         @include lg {
           padding: 0 35px;
         }
+        a{
+          font-family: $title-font;
+        }
       }
       .styleSlider {
         & > .slick-list {

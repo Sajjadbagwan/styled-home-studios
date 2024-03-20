@@ -145,27 +145,27 @@ function Header() {
                     </ul>
                     <ul>
                       <li>
-                        <Link href="#" onClick={handleClickNotify}>
+                        <Link  href="#" onClick={handleClickNotify}>
                           Notifications
                         </Link>
                       </li>
                       <li>
-                        <Link href="/account-customer-messages/">Messages</Link>
+                        <Link onClick={handleClick} href="/account-customer-messages/">Messages</Link>
                       </li>
                       <li>
-                        <Link href="/customer-booking-requested/">Bookings</Link>
+                        <Link onClick={handleClick} href="/customer-booking-requested/">Bookings</Link>
                       </li>
                       <li>
-                        <Link href="/account-favourites-grouplist/">Favourites</Link>
+                        <Link onClick={handleClick} href="/account-favourites-grouplist/">Favourites</Link>
                       </li>
                       <li className="hasBorder">
-                        <Link href="/become-a-host/">Become A Host</Link>
+                        <Link onClick={handleClick} href="/become-a-host/">Become A Host</Link>
                       </li>
                       <li>
-                        <Link href="/join-directory/">Join The Directory</Link>
+                        <Link onClick={handleClick} href="/join-directory/">Join The Directory</Link>
                       </li>
                       <li>
-                        <Link href="/account-host-accounts/">Your Profile</Link>
+                        <Link onClick={handleClick} href="/account-host-accounts/">Your Profile</Link>
                       </li>
                       <li>
                         <Link href="#">Sign Out</Link>

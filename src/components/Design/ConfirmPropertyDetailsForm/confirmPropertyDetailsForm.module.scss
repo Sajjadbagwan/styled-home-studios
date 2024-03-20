@@ -217,7 +217,7 @@
                                     input{
                                         width: 89%;
                                         @include lg{
-                                            width: 85%;
+                                            width: 83%;
                                         }
                                         @include md{
                                             width: 84%;
@@ -639,6 +639,8 @@
                                 margin-right: 45px;
                                 @include md{
                                     margin: 0 0 20px 0;
+                                    border-color: $green-color;
+                                    color: $green-color;
                                 }
                             }
                         }
@@ -1188,6 +1190,10 @@
                         .allBtn{
                             padding-left: 30px;
                             padding-right: 30px;
+                            @include lg{
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
                         }
                     }
                 }

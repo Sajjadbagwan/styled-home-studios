@@ -68,6 +68,13 @@
           @include lg {
             padding: 80px 48px;
           }
+          .twoBtns{
+            a{
+              &:last-child{
+                font-family: $title-font;
+              }
+            }
+          }
           p {
             line-height: 25px;
             margin-bottom: 0;

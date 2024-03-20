@@ -66,7 +66,7 @@ function SignUpForm() {
                   I consent to email marketing
                 </label>
               </div>
-              <input type="submit" className="allBtn dark" value="Submit" />
+              <button type="button" className="allBtn dark">Submit</button>
             </form>
           </div>
         </div>
