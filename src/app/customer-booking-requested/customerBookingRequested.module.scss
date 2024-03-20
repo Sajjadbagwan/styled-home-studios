@@ -1,6 +1,10 @@
+@import "../../../styles/global.scss";
 .customerBookingRequested {
   :global {
     .aboutRightImg {
+      @include md{
+        padding-bottom: 90px;
+      }
       .imgFront {
         &::before {
           display: none;

@@ -16,6 +16,9 @@
                     width: 100%;
                     margin-bottom: 40px;
                 }
+                @include md{
+                    margin-bottom: 0;
+                }
                 &.hide{
                     @include md{
                         display: none;
