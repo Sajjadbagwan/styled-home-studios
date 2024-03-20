@@ -264,6 +264,20 @@
                     border-radius: 0px;
                     margin: -6px 0;
                   }
+                  &.positionUp{
+                    .caption{
+                      bottom: auto !important;
+                      top: -50px;
+                      .max-caption{
+                        &::after{
+                          top: 36px;
+                          border-left: 4px solid transparent;
+                          border-right: 4px solid transparent;
+                          border-top: 10px solid #20535a;
+                        }
+                      }
+                    }
+                  }
                 }
               }
               .labels {
